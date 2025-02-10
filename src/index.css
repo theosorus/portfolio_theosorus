@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-purple : rgb(41,41,85);
+  --color-light-purple : rgb(86, 68, 196);
+  --color-font-color : #F1F1F1;
+
+  --font-main: "Poppins", sans-serif;
+}
+
+
+body {
+  font-family: var(--font-main);
+  background-color: #575656;
+  color: var(--color-font-color);
+}

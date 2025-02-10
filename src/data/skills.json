@@ -1,0 +1,88 @@
+{
+  "Programming Languages": [
+    { "name": "TypeScript", "image": "ts.png" },
+    { "name": "Haskell", "image": "hs.png" },
+    { "name": "Python", "image": "python.png" },
+    { "name": "Java", "image": "java.webp" },
+    { "name": "JavaScript", "image": "js.png" },
+    { "name": "HTML", "image": "html.png" },
+    { "name": "CSS", "image": "css.png" },
+    { "name": "PHP", "image": "php.png" },
+    { "name": "C", "image": "c.png" },
+    { "name": "C++", "image": "cpp.png" },
+    { "name": "C#", "image": "csharp.png" },
+    { "name": "Bash", "image": "bash.png" },
+    { "name": "ASM", "image": "asm.png" }
+  ],
+  "AI / ML Data Science": [
+    { "name": "Pytorch", "image": "pytorch.png" },
+    { "name": "TensorFlow", "image": "tf.png" },
+    { "name": "Pandas", "image": "pandas.png" },
+    { "name": "Numpy", "image": "numpy.png" },
+    { "name": "Matplotlib", "image": "matplotlib.png" },
+    { "name": "Seaborn", "image": "seaborn.png" },
+    { "name": "HuggingFace", "image": "huggingface.png" },
+    { "name": "Kaggle", "image": "kaggle.png" },
+    { "name": "Scikit-learn", "image": "Scikit_learn.png" },
+    { "name": "Langchain", "image": "langchain.png" },
+    { "name": "Gymnasium", "image": "gym.svg" },
+    { "name": "LM Studio", "image": "lmstudio.webp" },
+    { "name": "Ollama", "image": "ollama_logo.png" },
+    { "name": "XGBoost", "image": "xgb.png" },
+    { "name": "OpenCV", "image": "opencv.png" },
+    { "name": "Yolo", "image": "yolo.png" }
+  ],
+  "Web Development": [
+    { "name": "React", "image": "react.png" },
+    { "name": "Tailwind CSS", "image": "Tailwind.png" },
+    { "name": "Symfony", "image": "symfony.webp" },
+    { "name": "Postman", "image": "postman.png" },
+    { "name": "AWS", "image": "aws.png" },
+    { "name": "Django", "image": "django.png" },
+    { "name": "GSAP", "image": "gsap.svg" },
+    { "name": "Swagger", "image": "swagger.png" },
+    { "name": "Flask", "image": "flask.png" },
+    { "name": "FastAPI", "image": "fastapi.png" },
+    { "name": "NodeJS", "image": "nodejs.png" },
+    { "name": "Vite", "image": "vite.png" },
+    { "name": "Three.js", "image": "threejs.png" },
+    { "name": "Bootstrap", "image": "Bootstrap.png" },
+    { "name": "P5.js", "image": "P5.png" }
+  ],
+  "Development Tools & Software": [
+    { "name": "GitHub", "image": "github.png" },
+    { "name": "GitLab", "image": "gitlab.png" },
+    { "name": "Git", "image": "git.png" },
+    { "name": "Cmake", "image": "CMake.png" },
+    { "name": "Unix", "image": "unix.png" },
+    { "name": "Jupyter", "image": "Jupyter.png" },
+    { "name": "Arduino", "image": "arduino.png" },
+    { "name": "VSCode", "image": "vscode.png" },
+    { "name": "NetBeans", "image": "netbeans.png" },
+    { "name": "Eclipse", "image": "eclipse.png" },
+    { "name": "JetBrains Suite", "image": "jetbrain.png" },
+    { "name": "Android Studio", "image": "android_studio.png" }
+  ],
+  "Databases": [
+    { "name": "MySQL", "image": "mysql.png" },
+    { "name": "Oracle SQL Developer", "image": "oraclesql.png" },
+    { "name": "Microsoft SQL Server", "image": "microsoft-sql-server.png" },
+    { "name": "SQLite", "image": "SQLite.png" },
+    { "name": "PostgreSQL", "image": "Postgresql.png" },
+    { "name": "WinDesign", "image": "Windesign.png" }
+  ],
+  "Graphics & 3D": [
+    { "name": "JavaFX", "image": "JavaFX.png" },
+    { "name": ".NET", "image": "net.png" },
+    { "name": "OpenGL", "image": "opengl.svg" },
+    { "name": "SFML", "image": "sfml.png" },
+    { "name": "PyGame", "image": "pygame.png" }
+    
+  ],
+  "Testing & Quality": [
+    { "name": "Junit4/5", "image": "junit5.png" },
+    { "name": "Jacoco", "image": "jacoco.png" }
+  ]
+  
+  
+}

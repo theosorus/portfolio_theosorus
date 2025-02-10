@@ -1,0 +1,98 @@
+ Langages de Programmation
+
+    Typescript
+    Haskell
+    Python
+    Java
+    Javascript
+    HTML
+    CSS
+    PHP
+    C
+    C++
+    C#
+    Bash
+    ASM
+
+2. Bases de données
+
+    MySQL
+    Oracle SQL Developer
+    Microsoft SQL Server
+    SQLite
+    PostgreSQL
+    WinDesign
+
+3. Intelligence Artificielle / Data Science
+
+    Pytorch
+    TensorFlow
+    Pandas
+    Numpy
+    Matplotlib
+    Seaborn
+    HuggingFace
+    Kaggle
+    Scikit-learn
+    Langchain
+    Gymnasium
+    LM Studio
+    Ollama
+    XGBoost
+    OpenCV
+    Yolo
+
+4. Développement Web
+
+    React
+    Tailwind CSS
+    Symfony
+    Postman
+    AWS
+    Django
+    GSAP
+    Swagger
+    Flask
+    FastAPI
+    NodeJS
+    Vite
+    Three.js
+    Bootstrap
+    P5.js
+
+5. Tests et Qualité
+
+    Junit4/5
+    unittest
+    Jacoco
+
+6. Graphisme et 3D
+
+    OpenGL
+    SFML
+    PyGame
+
+7. Outils de Développement et Contrôle de Version
+
+    GitHub
+    GitLab
+    Git
+    Cmake
+    MakeFile
+    Unix
+    Jupyter
+    Arduino
+
+8. Frameworks et Environnements de Développement
+
+    JavaFX
+    .NET
+    WinForm
+
+9. Logiciels
+
+    VSCode
+    NetBeans
+    Eclipse
+    JetBrains Suite
+    Android Studio
