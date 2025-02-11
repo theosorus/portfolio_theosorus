@@ -37,10 +37,12 @@ const Skills = () => {
             ref={(el) => {
               if (el) setItemRef(el, index);
             }}
-            className="text-center cursor-pointer p-6 py-7 relative"
+            className="relative text-center cursor-pointer p-6 py-7 z-10"
             onClick={() => setActiveItem(index)}
           >
-            <h3 className="text-l">{category}</h3>
+            <h3 className={`text-l ${activeItem === index ? "text-openai-dark-blue" : "text-white"}`}>
+              {category}
+            </h3>
           </div>
         ))}
       </div>
