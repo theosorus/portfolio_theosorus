@@ -4,13 +4,17 @@
   --color-dark-purple : rgb(41,41,85);
   --color-light-purple : rgb(86, 68, 196);
   --color-font-color : #F1F1F1;
+  --color-openai-dark-blue : #0E315C;
 
   --font-main: "Poppins", sans-serif;
+  --font-domine: url('/fonts/domine/Domine-VariableFont_wght.ttf');
 }
 
 
 body {
   font-family: var(--font-main);
-  background-color: #575656;
+  background-color: var(--color-openai-dark-blue);
   color: var(--color-font-color);
 }
+
+
