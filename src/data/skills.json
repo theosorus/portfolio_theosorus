@@ -5,8 +5,8 @@
     { "name": "Python", "image": "python.png" },
     { "name": "Java", "image": "java.webp" },
     { "name": "JavaScript", "image": "js.png" },
-    { "name": "HTML", "image": "html.png" },
-    { "name": "CSS", "image": "css.png" },
+    { "name": "HTML", "image": "html.webp" },
+    { "name": "CSS", "image": "css.svg" },
     { "name": "PHP", "image": "php.png" },
     { "name": "C", "image": "c.png" },
     { "name": "C++", "image": "cpp.png" },
@@ -16,6 +16,7 @@
   ],
   "AI / ML Data Science": [
     { "name": "Pytorch", "image": "pytorch.png" },
+    { "name": "Keras", "image": "keras.png" },
     { "name": "TensorFlow", "image": "tf.png" },
     { "name": "Pandas", "image": "pandas.png" },
     { "name": "Numpy", "image": "numpy.png" },
@@ -72,7 +73,7 @@
     { "name": "WinDesign", "image": "Windesign.png" }
   ],
   "Graphics & 3D": [
-    { "name": "JavaFX", "image": "JavaFX.png" },
+    { "name": "JavaFX", "image": "Javafx.svg" },
     { "name": ".NET", "image": "net.png" },
     { "name": "OpenGL", "image": "opengl.svg" },
     { "name": "SFML", "image": "sfml.png" },
