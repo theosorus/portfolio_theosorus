@@ -29,14 +29,7 @@ const Skills: React.FC = () => {
   
       <div className={ `w-3/4 text-openai-dark-blue rounded-xl bg-white
         ${activeItem === 0 ? " rounded-tl-none" : ""}
-        ${activeItem === Object.keys(skillsData).length - 1 ? " rounded-bl-none" : ""}`
-
-      }
-      
-      
-      
-      
-      >
+        ${activeItem === Object.keys(skillsData).length - 1 ? " rounded-bl-none" : ""}`}>
       <div className="grid grid-cols-5">
       {Object.values(skillsData)[activeItem].map(
             (skill: { name: string; image: string }) => (
@@ -44,7 +37,7 @@ const Skills: React.FC = () => {
                 <img
                   src={`/skills/${skill.image}`}
                   alt={skill.name}
-                  className="w-20 h-20 mx-auto object-contain"
+                  className="w-19 h-19 mx-auto object-contain"
                 />
                 <h4 className="text-m text-center">{skill.name}</h4>
               </div>

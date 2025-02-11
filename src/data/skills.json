@@ -78,8 +78,7 @@
     { "name": "OpenGL", "image": "opengl.svg" },
     { "name": "SFML", "image": "sfml.png" },
     { "name": ".NET", "image": "net.png" },
-    
-    
+    { "name": "QtWidgets", "image": "qtwidget.svg" },
     { "name": "PyGame", "image": "pygame.png" }
     
   ],
