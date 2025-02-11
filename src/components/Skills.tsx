@@ -1,5 +1,5 @@
+import { useRef, useLayoutEffect, useState } from "react";
 import skillsData from "../data/skills.json";
-import { useRef, useEffect, useState } from "react";
 
 const Skills = () => {
   const listRef = useRef<HTMLDivElement>(null);
@@ -7,19 +7,22 @@ const Skills = () => {
   const [highlight, setHighlight] = useState({ top: 0, height: 0 });
   const [activeItem, setActiveItem] = useState(0);
 
-  const setItemRef = (el: HTMLDivElement, index: number) => {
-    itemRefs.current[index] = el;
+  const setItemRef = (el: HTMLDivElement | null, index: number) => {
+    if (el) {
+      itemRefs.current[index] = el;
+    }
   };
 
-  useEffect(() => {
-    if (listRef.current && itemRefs.current[activeItem]) {
-      const containerRect = listRef.current.getBoundingClientRect();
-      const itemRect = itemRefs.current[activeItem].getBoundingClientRect();
-      setHighlight({
-        top: itemRect.top - containerRect.top,
-        height: itemRect.height,
-      });
-    }
+  useLayoutEffect(() => {
+    if (!listRef.current || !itemRefs.current[activeItem]) return;
+
+    const containerRect = listRef.current.getBoundingClientRect();
+    const itemRect = itemRefs.current[activeItem].getBoundingClientRect();
+
+    setHighlight({
+      top: itemRect.top - containerRect.top,
+      height: itemRect.height,
+    });
   }, [activeItem, skillsData]);
 
   return (
@@ -39,9 +42,7 @@ const Skills = () => {
         {Object.keys(skillsData).map((category, index) => (
           <div
             key={category}
-            ref={(el) => {
-              if (el) setItemRef(el, index);
-            }}
+            ref={(el) => setItemRef(el, index)}
             className="relative text-center cursor-pointer p-6 py-7 z-10"
             onClick={() => setActiveItem(index)}
           >
@@ -49,7 +50,7 @@ const Skills = () => {
               className={`text-l ${
                 activeItem === index
                   ? "text-openai-dark-blue font-main"
-                  : "text-white "
+                  : "text-white"
               }`}
             >
               {category}
@@ -58,13 +59,11 @@ const Skills = () => {
         ))}
       </div>
 
-      <div
-        className={`w-3/4 text-openai-dark-blue rounded-xl bg-white`}
-      >
+      <div className="w-3/4 text-openai-dark-blue rounded-xl bg-white">
         <div className="grid grid-cols-5">
           {Object.values(skillsData)[activeItem].map(
             (skill: { name: string; image: string }) => (
-              <div key={skill.name} className="p-4 ">
+              <div key={skill.name} className="p-4">
                 <img
                   src={`/skills/${skill.image}`}
                   alt={skill.name}
