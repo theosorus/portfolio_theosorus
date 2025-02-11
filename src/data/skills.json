@@ -55,6 +55,7 @@
     { "name": "GitHub", "image": "github.png" },
     { "name": "GitLab", "image": "gitlab.png" },
     { "name": "Git", "image": "git.png" },
+    { "name": "Docker", "image": "docker.png" },
     { "name": "Cmake", "image": "CMake.png" },
     { "name": "Unix", "image": "unix.png" },
     { "name": "Jupyter", "image": "Jupyter.png" },
