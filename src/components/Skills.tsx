@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useState } from "react";
+import { useRef, useLayoutEffect, useState, useCallback } from "react";
 import skillsData from "../data/skills.json";
 
 const Skills = () => {
@@ -13,7 +13,7 @@ const Skills = () => {
     }
   };
 
-  useLayoutEffect(() => {
+  const updateHighlight = useCallback(() => {
     if (!listRef.current || !itemRefs.current[activeItem]) return;
 
     const containerRect = listRef.current.getBoundingClientRect();
@@ -23,20 +23,34 @@ const Skills = () => {
       top: itemRect.top - containerRect.top,
       height: itemRect.height,
     });
-  }, [activeItem, skillsData]);
+  }, [activeItem]);
+
+  useLayoutEffect(() => {
+    updateHighlight();
+
+    const handleResize = () => {
+      updateHighlight();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [activeItem, skillsData, updateHighlight]);
 
   return (
-    <div className="w-2/3 m-10 rounded-xl flex items-stretch">
+    <div className="w-full md:w-2/3 m-4 md:m-10 rounded-xl flex flex-col md:flex-row items-stretch">
       <div
         ref={listRef}
-        className="w-1/3 relative text-white font-domine rounded-xl"
+        className="w-full md:w-1/3 relative text-white font-domine rounded-xl"
       >
         <div
           className="absolute left-0 rounded-l-xl bg-white text-openai-dark-blue font-main transition-all duration-300"
           style={{
             top: highlight.top,
             height: highlight.height,
-            width: "103%",
+            width: "104%",
           }}
         />
         {Object.keys(skillsData).map((category, index) => (
@@ -59,8 +73,8 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className="w-3/4 text-openai-dark-blue rounded-xl bg-white">
-        <div className="grid grid-cols-5">
+      <div className="w-full md:w-3/4 text-openai-dark-blue rounded-xl bg-white">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {Object.values(skillsData)[activeItem].map(
             (skill: { name: string; image: string }) => (
               <div key={skill.name} className="p-4">

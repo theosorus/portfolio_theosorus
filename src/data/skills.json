@@ -1,5 +1,5 @@
 {
-  "Programming Languages": [
+  "Languages": [
     { "name": "Python", "image": "python.png" },
     { "name": "Java", "image": "java.webp" },
     { "name": "Haskell", "image": "hs.png" },
