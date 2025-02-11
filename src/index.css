@@ -6,8 +6,13 @@
   --color-font-color : #F1F1F1;
   --color-openai-dark-blue : #0E315C;
 
-  --font-main: "Poppins", sans-serif;
-  --font-domine: url('/fonts/domine/Domine-VariableFont_wght.ttf');
+    --font-main: "Poppins", sans-serif;
+    --font-domine: "Domine", serif;
+  }
+  
+  @font-face {
+    font-family: 'Domine';
+    src: url('/fonts/domine/Domine-VariableFont_wght.ttf') format('truetype');
 }
 
 
