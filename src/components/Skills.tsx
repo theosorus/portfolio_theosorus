@@ -33,7 +33,7 @@ const Skills = () => {
           style={{
             top: highlight.top,
             height: highlight.height,
-            width: "100%",
+            width: "103%",
           }}
         />
         {Object.keys(skillsData).map((category, index) => (
@@ -59,13 +59,7 @@ const Skills = () => {
       </div>
 
       <div
-        className={`w-3/4 text-openai-dark-blue rounded-xl bg-white
-        ${activeItem === 0 ? " rounded-tl-none" : ""}
-        ${
-          activeItem === Object.keys(skillsData).length - 1
-            ? " rounded-bl-none"
-            : ""
-        }`}
+        className={`w-3/4 text-openai-dark-blue rounded-xl bg-white`}
       >
         <div className="grid grid-cols-5">
           {Object.values(skillsData)[activeItem].map(
