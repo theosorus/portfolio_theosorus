@@ -40,13 +40,20 @@ const Skills = () => {
   }, [activeItem, skillsData, updateHighlight]);
 
   return (
-    <div className="w-full md:w-2/3 m-4 md:m-10 rounded-xl flex flex-col md:flex-row items-stretch">
+    <div className="w-full m-4 rounded-xl flex flex-col items-stretch 
+    md:w-2/3 md:flex-row md:m-10
+    ">
+
+
+      {/* Categories Title  (667) */}
       <div
         ref={listRef}
-        className="w-full md:w-1/3 relative text-white font-domine rounded-xl"
+        className=" flex  w-100px relative  font-domine rounded-xl text-black
+        md:w-1/3 md:flex-col md:text-white"
       >
         <div
-          className="absolute left-0 rounded-l-xl bg-white text-openai-dark-blue font-main transition-all duration-300"
+          className="absolute left-0 rounded-l-xl bg-white text-openai-dark-blue font-main transition-all duration-300 hidden
+          md:inline"
           style={{
             top: highlight.top,
             height: highlight.height,
@@ -73,6 +80,9 @@ const Skills = () => {
         ))}
       </div>
 
+
+
+        {/* Skills image */}
       <div className="w-full md:w-3/4 text-openai-dark-blue rounded-xl bg-white">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {Object.values(skillsData)[activeItem].map(
