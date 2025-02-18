@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const langIcons: Record<'en' | 'fr', string> = {
   en: '/icons/uk.webp',
@@ -6,15 +7,10 @@ const langIcons: Record<'en' | 'fr', string> = {
 };
 
 const NavBar = () => {
+  const [t, i18n] = useTranslation('global');
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [language, setLanguage] = useState<'fr' | 'en'>('en');
   const langMenuRef = useRef<HTMLDivElement>(null);
-
-  const toggleLanguage = (lang: 'fr' | 'en') => {
-    setLanguage(lang);
-    setLangOpen(false);
-  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -28,31 +24,33 @@ const NavBar = () => {
     };
   }, []);
 
+  const currentLang = i18n.language as 'fr' | 'en';
+
   return (
     <nav className="w-full h-14 border-b flex items-center justify-between px-3">
       <div className="font-main text-3xl">
         <h1 className="flex items-center">Theo Castillo</h1>
       </div>
       <div className="flex items-center justify-center md:mr-6 mr-2">
-        <div ref={langMenuRef} className="relative inline-block bg-openai-dark-blue md:mr-6 mr-2 font-main text-xl z-1">
+        <div
+          ref={langMenuRef}
+          className="relative inline-block bg-openai-dark-blue md:mr-6 mr-2 font-main text-xl z-1"
+        >
           <button onClick={() => setLangOpen(!langOpen)} className="flex items-center">
-            <img
-              src={langIcons[language]}
-              alt={language}
-              className="w-7 h-5 inline-block"
-            />
+            <img src={langIcons[currentLang]} alt={currentLang} className="w-7 h-5 inline-block" />
             <svg
-              className={`w-4 h-4 ml-1 inline-block transition-transform duration-200 ${langOpen ? 'rotate-180' : ''
-                }`}
+              className={`w-4 h-4 ml-1 inline-block transition-transform duration-200 ${
+                langOpen ? 'rotate-180' : ''
+              }`}
               viewBox="0 0 20 20"
               fill="currentColor"
             >
               <path
                 fillRule="evenodd"
                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293
-       a1 1 0 011.414 1.414l-4 4
-       a1 1 0 01-1.414 0l-4-4
-       a1 1 0 010-1.414z"
+                  a1 1 0 011.414 1.414l-4 4
+                  a1 1 0 01-1.414 0l-4-4
+                  a1 1 0 010-1.414z"
                 clipRule="evenodd"
               />
             </svg>
@@ -60,13 +58,13 @@ const NavBar = () => {
           {langOpen && (
             <div className="absolute left-0 top-full mt-2 border shadow z-1">
               <button
-                onClick={() => toggleLanguage('fr')}
+                onClick={() => {i18n.changeLanguage('fr');setLangOpen(false);}}
                 className="block px-4 py-2 w-full text-left bg-openai-dark-blue mr-4 z-1"
               >
                 <span>fr</span>
               </button>
               <button
-                onClick={() => toggleLanguage('en')}
+                onClick={() => {i18n.changeLanguage('en');setLangOpen(false);}}
                 className="block px-4 py-2 w-full text-left"
               >
                 <span>en</span>
@@ -75,10 +73,10 @@ const NavBar = () => {
           )}
         </div>
         <div className="hidden md:flex items-center space-x-4 items-center justify-center">
-          <a href="#" className="text-xl a-underline">home</a>
-          <a href="#" className="text-xl a-underline">about me</a>
-          <a href="#" className="text-xl a-underline">projects</a>
-          <a href="#" className="text-xl a-underline">contact</a>
+          <a href="#" className="text-xl a-underline">{t("navbar.home")}</a>
+          <a href="#" className="text-xl a-underline">{t("navbar.aboutme")}</a>
+          <a href="#" className="text-xl a-underline">{t("navbar.projects")}</a>
+          <a href="#" className="text-xl a-underline">{t("navbar.contact")}</a>
         </div>
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           <img
@@ -89,13 +87,14 @@ const NavBar = () => {
           />
         </button>
         <div
-          className={`absolute top-14 right-0 w-full flex flex-col items-center md:hidden transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-96' : 'max-h-0'
-            }`}
+          className={`absolute top-14 right-0 w-full flex flex-col items-center md:hidden transition-all duration-300 overflow-hidden ${
+            menuOpen ? 'max-h-96' : 'max-h-0'
+          }`}
         >
-          <a href="#" className="p-3 text-xl  w-full text-center">home</a>
-          <a href="#" className="p-3 text-xl border-t w-full text-center z-0">about me</a>
-          <a href="#" className="p-3 text-xl border-t w-full text-center z-0">projects</a>
-          <a href="#" className="p-3 text-xl border-y w-full text-center z-0">contact</a>
+          <a href="#" className="p-3 text-xl w-full text-center">{t("navbar.home")}</a>
+          <a href="#" className="p-3 text-xl border-t w-full text-center z-0">{t("navbar.aboutme")}</a>
+          <a href="#" className="p-3 text-xl border-t w-full text-center z-0">{t("navbar.projects")}</a>
+          <a href="#" className="p-3 text-xl border-y w-full text-center z-0">{t("navbar.contact")}</a>
         </div>
       </div>
     </nav>

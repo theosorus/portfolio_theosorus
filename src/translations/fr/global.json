@@ -1,0 +1,8 @@
+{
+    "navbar" : {
+        "home" : "acceuil",
+        "aboutme" : "profil",
+        "projects" : "projets",
+        "contact" : "contact"
+    }
+}
