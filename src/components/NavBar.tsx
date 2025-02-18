@@ -33,14 +33,29 @@ const NavBar = () => {
       <div className="font-main text-3xl">
         <h1 className="flex items-center">Theo Castillo</h1>
       </div>
-      <div className="flex items-center justify-center mr-4">
-        <div ref={langMenuRef} className="relative inline-block bg-openai-dark-blue mr-6 font-main text-xl z-1">
-          <button onClick={() => setLangOpen(!langOpen)}>
+      <div className="flex items-center justify-center md:mr-6 mr-2">
+        <div ref={langMenuRef} className="relative inline-block bg-openai-dark-blue md:mr-6 mr-2 font-main text-xl z-1">
+          <button onClick={() => setLangOpen(!langOpen)} className="flex items-center">
             <img
               src={langIcons[language]}
               alt={language}
-              className="w-8 h-6 inline-block"
+              className="w-7 h-5 inline-block"
             />
+            <svg
+              className={`w-4 h-4 ml-1 inline-block transition-transform duration-200 ${langOpen ? 'rotate-180' : ''
+                }`}
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293
+       a1 1 0 011.414 1.414l-4 4
+       a1 1 0 01-1.414 0l-4-4
+       a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
           </button>
           {langOpen && (
             <div className="absolute left-0 top-full mt-2 border shadow z-1">
@@ -74,9 +89,8 @@ const NavBar = () => {
           />
         </button>
         <div
-          className={`absolute top-14 right-0 w-full flex flex-col items-center md:hidden transition-all duration-300 overflow-hidden ${
-            menuOpen ? 'max-h-96' : 'max-h-0'
-          }`}
+          className={`absolute top-14 right-0 w-full flex flex-col items-center md:hidden transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-96' : 'max-h-0'
+            }`}
         >
           <a href="#" className="p-3 text-xl  w-full text-center">home</a>
           <a href="#" className="p-3 text-xl border-t w-full text-center z-0">about me</a>

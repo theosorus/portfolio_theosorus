@@ -8,7 +8,7 @@ function App() {
     <>
 
     <main className='flex flex-col items-center' >
-        {/* <Skills /> */}
+        
         <NavBar/>
 
     </main>
