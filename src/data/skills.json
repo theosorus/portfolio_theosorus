@@ -64,7 +64,8 @@
     { "name": "NetBeans", "image": "netbeans.png" },
     { "name": "Eclipse", "image": "eclipse.png" },
     { "name": "JetBrains Suite", "image": "jetbrain.png" },
-    { "name": "Android Studio", "image": "android_studio.png" }
+    { "name": "Android Studio", "image": "android_studio.png" },
+    { "name": "Maven", "image": "maven.png" }
   ],
   "database": [
     { "name": "MySQL", "image": "mysql.png" },

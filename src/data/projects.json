@@ -1,0 +1,296 @@
+{
+	"projects": [
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Large Language Model",
+		"description": "In this project, I built and trained a French Large Language Model with pytorch",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/Build-a-LLM",
+		  "https://github.com/Gazeux33/Build-a-LLM",
+		  "none"
+		],
+		"image": "./projects/llm.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Neural Networks Library",
+		"description": "A Modular Neural Network library only with Numpy in python",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "Numpy", "url": "https://numpy.org/", "image": "./skills/numpy.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/NeuralNetwork",
+		  "https://github.com/Gazeux33/NeuralNetwork",
+		  "none"
+		],
+		"image": "./projects/nn.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Neural Style Transfer",
+		"description": "Implementation of Neural Style Transfert using PyTorch",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/NeuralStyleTransfert",
+		  "https://github.com/Gazeux33/NeuralStyleTransfert",
+		  "none"
+		],
+		"image": "./projects/nst.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Generative Adversial Network",
+		"description": "Implementation of a WGAN-GP on the CelebA dataset with PyTorch for face generation",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/Generative-Adversial-Network",
+		  "https://github.com/Gazeux33/Generative-Adversial-Network",
+		  "none"
+		],
+		"image": "./projects/gan2.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Cellular Automata 3D Renderer",
+		"description": "Library to visualise Cellular Automata easily with OpenGL in Python",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "OpenGL", "url": "https://www.opengl.org/", "image": "./skills/opengl.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/VisualiseCellularAutomata3DLibrary",
+		  "https://github.com/Gazeux33/VisualiseCellularAutomata3DLibrary",
+		  "none"
+		],
+		"image": "./projects/noise1.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "TradeFormer",
+		"description": "Training a financial forecasting model based on the AutoFormer architecture with PyTorch and Alpaca.py",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" },
+		  { "name": "Alpaca", "url": "https://alpaca.markets/sdks/python/", "image": "" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/TradeFormer",
+		  "https://github.com/Gazeux33/TradeFormer",
+		  "none"
+		],
+		"image": "./projects/tradeformer.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Diffusion Model",
+		"description": "A PyTorch diffusion model to generate realistic synthetic cat images from gaussian noise",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/DiffusionModel",
+		  "https://github.com/Gazeux33/DiffusionModel",
+		  "none"
+		],
+		"image": "./projects/diffusion.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "VAE",
+		"description": "VAE with PyTorch to create synthetic data",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/Variational-Autoencoders",
+		  "https://github.com/Gazeux33/Variational-Autoencoders",
+		  "none"
+		],
+		"image": "./projects/VAE.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Maze Generator and Solver",
+		"description": "A maze generator and solver using A* in python with pygame",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "Pygame", "url": "https://www.pygame.org/", "image": "./skills/pygame.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/Generating-and-Solving-Mazes",
+		  "https://github.com/Gazeux33/Generating-and-Solving-Mazes",
+		  "none"
+		],
+		"image": "./projects/maze2.png",
+		"categories": ["Personal"]
+	  },
+	  {
+		"date": 2024,
+		"type": "School Project",
+		"title": "Graph Visualizer",
+		"description": "A graph viewer in Javafx with full search algorithms",
+		"tags": [
+		  { "name": "Java", "url": "https://www.java.com/", "image": "./skills/java.webp" },
+		  { "name": "JavaFX", "url": "https://openjfx.io/", "image": "./skills/Javafx.svg" }
+		],
+		"links": [
+		  "none",
+		  "none",
+		  "none"
+		],
+		"image": "./projects/graph.png",
+		"categories": ["School","Simulations"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Car Plates Detection",
+		"description": "Create a pipeline of two finetunned YOLOv8 models to detect and analyze car plates",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "Yolo", "url": "https://docs.ultralytics.com/fr/models/yolo-world/", "image": "./skills/yolo.png" },
+		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/CarPlateDetection",
+		  "https://github.com/Gazeux33/CarPlateDetection",
+		  "none"
+		],
+		"image": "./projects/car.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Snake AI",
+		"description": "Snake AI using Neural Network in PyTorch",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "Pygame", "url": "https://www.pygame.org/", "image": "./skills/pygame.png" },
+		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/Snake-Ai",
+		  "https://github.com/Gazeux33/Snake-Ai",
+		  "none"
+		],
+		"image": "./projects/snake.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Connect4 AI",
+		"description": "Connect4 AI using Monte Carlo Tree Search",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "Pygame", "url": "https://www.pygame.org/", "image": "./skills/pygame.png" },
+		  { "name": "Monte Carlo Tree Search", "url": "https://en.wikipedia.org/wiki/Monte_Carlo_tree_search", "image": "" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/Connect4_AI",
+		  "https://github.com/Gazeux33/Connect4_AI",
+		  "none"
+		],
+		"image": "./projects/connect4.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Particles Simulation",
+		"description": "A simple particle simulation with SFML in c++",
+		"tags": [
+		  { "name": "C++", "url": "https://isocpp.org/", "image": "./skills/cpp.png" },
+		  { "name": "SFML", "url": "https://www.sfml-dev.org/", "image": "./skills/sfml.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/Particles-Simulation",
+		  "https://github.com/Gazeux33/Particles-Simulation",
+		  "none"
+		],
+		"image": "./projects/particle.png",
+		"categories": ["Personal", "Simulations"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Procedural Generation",
+		"description": "Procedural Map generation using Perlin Noise with P5.js",
+		"tags": [
+		  { "name": "js", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "image": "./skills/js.png" },
+		  { "name": "P5.js", "url": "https://p5js.org/", "image": "./skills/P5.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/Procedural-Generation",
+		  "https://github.com/Gazeux33/Procedural-Generation",
+		  "https://gazeux33.github.io/Procedural-Generation/"
+		],
+		"image": "./projects/pg.png",
+		"categories": ["Personal", "Web"]
+	  },
+	  {
+		"date": 2024,
+		"type": "School Project",
+		"title": "Towa AI",
+		"description": "An artificial intelligence for a chessboard game named Towa",
+		"tags": [
+		  { "name": "Java", "url": "https://www.java.com/", "image": "./skills/java.webp" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/IA-Towa",
+		  "https://github.com/Gazeux33/IA-Towa",
+		  "none"
+		],
+		"image": "./projects/TOWA.png",
+		"categories": ["School", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "MySuperHoroscope",
+		"description": "Online Website selling daily horoscope",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "Django", "url": "https://www.djangoproject.com/", "image": "./skills/django.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/MySuperHoroscope",
+		  "https://github.com/Gazeux33/MySuperHoroscope",
+		  "none"
+		],
+		"image": "./projects/msh.png",
+		"categories": ["Personal", "Web"]
+	  }
+	]
+  }

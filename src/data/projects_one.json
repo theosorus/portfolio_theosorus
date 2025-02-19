@@ -1,0 +1,23 @@
+{
+	"projects": [
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Large Language Model",
+		"description": "In this project, I built and trained a French Large Language Model with pytorch",
+		"tags": [
+		  { "name": "Python", "url": "https://www.python.org/", "image" : "./skills/python.png" },
+		  { "name": "PyTorch", "url": "https://pytorch.org/" , "image" : "./skills/pytorch.png"}
+		],
+		"links": [
+		  "https://github.com/Gazeux33/Build-a-LLM",
+		  "https://github.com/Gazeux33/Build-a-LLM",
+		  "none"
+		],
+		"image": "./projects/llm.png",
+		"categories": ["Personal", "AI"]
+	  }
+	  
+	]
+  }
+  

@@ -95,18 +95,21 @@ const Skills = () => {
 
 
         {/* Skills image */}
-      <div className="w-9/10   md:w-3/4   text-openai-dark-blue rounded-xl bg-white">
+      <div className="w-9/10  text-openai-dark-blue rounded-xl bg-white">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {Object.values(skillsData)[activeItem].map(
             (skill: { name: string; image: string }) => (
-              <div key={skill.name} className="p-4">
+                <div
+                key={skill.name}
+                className="p-4 transform transition-transform duration-300 hover:scale-105"
+                >
                 <img
                   src={`/skills/${skill.image}`}
                   alt={skill.name}
-                  className="md:w-20 md:h-20  sm:w-18 sm:h-18  w-17 h-17  mx-auto object-contain"
+                  className="md:w-20 md:h-20 sm:w-18 sm:h-18 w-17 h-17 mx-auto object-contain"
                 />
                 <h4 className="md:text-m text-s text-center">{skill.name}</h4>
-              </div>
+                </div>
             )
           )}
         </div>
