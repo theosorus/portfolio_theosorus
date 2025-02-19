@@ -27,7 +27,7 @@ const NavBar = () => {
   const currentLang = i18n.language as 'fr' | 'en';
 
   return (
-    <nav className="w-full h-14 border-b flex items-center justify-between px-3">
+    <nav className="fixed top-0 left-0 w-full h-14 border-b flex items-center justify-between px-3 z-50 bg-openai-dark-blue">
       <div className="font-main text-3xl">
         <h1 className="flex items-center">Theo Castillo</h1>
       </div>
@@ -65,14 +65,14 @@ const NavBar = () => {
               </button>
               <button
                 onClick={() => {i18n.changeLanguage('en');setLangOpen(false);}}
-                className="block px-4 py-2 w-full text-left"
+                className="block px-4 py-2 w-full text-left bg-openai-dark-blue mr-4 z-1"
               >
                 <span>en</span>
               </button>
             </div>
           )}
         </div>
-        <div className="hidden md:flex items-center space-x-4 items-center justify-center">
+        <div className="hidden md:flex space-x-4 items-center justify-center">
           <a href="#" className="text-xl a-underline">{t("navbar.home")}</a>
           <a href="#" className="text-xl a-underline">{t("navbar.aboutme")}</a>
           <a href="#" className="text-xl a-underline">{t("navbar.projects")}</a>
@@ -87,7 +87,7 @@ const NavBar = () => {
           />
         </button>
         <div
-          className={`absolute top-14 right-0 w-full flex flex-col items-center md:hidden transition-all duration-300 overflow-hidden ${
+          className={`absolute top-14 right-0 w-full flex flex-col items-center md:hidden transition-all duration-700 overflow-hidden bg-openai-dark-blue ${
             menuOpen ? 'max-h-96' : 'max-h-0'
           }`}
         >

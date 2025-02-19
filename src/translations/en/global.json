@@ -4,5 +4,14 @@
         "aboutme" : "about me",
         "projects" : "projects",
         "contact" : "contact"
+    },
+    "skills" : {
+        "languages": "Languages",
+        "ai": "AI / ML Data Science",
+        "webdevelopment": "Web Development",
+        "devsofware": "Development Tools & Software",
+        "database": "Databases",
+        "graphics": "Graphics & 3D",
+        "testingquality": "Testing & Quality"
     }
 }

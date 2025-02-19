@@ -1,8 +1,17 @@
 {
     "navbar" : {
-        "home" : "acceuil",
+        "home" : "accueil",
         "aboutme" : "profil",
         "projects" : "projets",
         "contact" : "contact"
+    },
+    "skills" : {
+        "languages": "Langages",
+        "ai": "IA / ML Science des données",
+        "webdevelopment": "Développement Web",
+        "devsofware": "Outils de développement & Logiciels",
+        "database": "Bases de données",
+        "graphics": "Graphiques & 3D",
+        "testingquality": "Tests & Qualité"
     }
 }

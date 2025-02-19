@@ -1,7 +1,12 @@
 import { useRef, useLayoutEffect, useState, useCallback } from "react";
 import skillsData from "../data/skills.json";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+
+  const [t, i18n] = useTranslation('global');
+
+  
   const listRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<HTMLDivElement[]>([]);
   const [highlight, setHighlight] = useState({ top: 0, height: 0 });
@@ -40,8 +45,8 @@ const Skills = () => {
   }, [activeItem, skillsData, updateHighlight]);
 
   return (
-    <div className="w-full m-4 rounded-xl flex flex-col items-stretch 
-    md:w-2/3 md:flex-row md:m-10 wrap
+    <div className="w-full m-4 rounded-xl flex flex-col items-center md:items-stretch
+    md:w-2/3 md:flex-row md:m-10 wrap z-0
     ">
 
 
@@ -59,7 +64,7 @@ const Skills = () => {
           style={{
             top: highlight.top,
             height: highlight.height,
-            width: "104%",
+            width: "107%",
           }}
         />
 
@@ -75,13 +80,13 @@ const Skills = () => {
             onClick={() => setActiveItem(index)}
             >
             <h3
-              className={`text-l ${
+              className={`text-xs  sm:text-lg md:text-base ${
               activeItem === index
           ? "text-openai-dark-blue font-main "
           : "text-white"
               }`}
             >
-              {category}
+              {t(`skills.${category}`)}
             </h3>
             </div>
         ))}
@@ -90,7 +95,7 @@ const Skills = () => {
 
 
         {/* Skills image */}
-      <div className="w-full md:w-3/4 text-openai-dark-blue rounded-xl bg-white">
+      <div className="w-9/10   md:w-3/4   text-openai-dark-blue rounded-xl bg-white">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {Object.values(skillsData)[activeItem].map(
             (skill: { name: string; image: string }) => (
@@ -98,9 +103,9 @@ const Skills = () => {
                 <img
                   src={`/skills/${skill.image}`}
                   alt={skill.name}
-                  className="w-20 h-20 mx-auto object-contain"
+                  className="md:w-20 md:h-20  sm:w-18 sm:h-18  w-17 h-17  mx-auto object-contain"
                 />
-                <h4 className="text-m text-center">{skill.name}</h4>
+                <h4 className="md:text-m text-s text-center">{skill.name}</h4>
               </div>
             )
           )}

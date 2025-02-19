@@ -1,5 +1,5 @@
 {
-  "Languages": [
+  "languages": [
     { "name": "Python", "image": "python.png" },
     { "name": "Java", "image": "java.webp" },
     { "name": "Haskell", "image": "hs.png" },
@@ -15,7 +15,7 @@
     { "name": "Bash", "image": "bash.png" },
     { "name": "ASM", "image": "asm.png" }
   ],
-  "AI / ML Data Science": [
+  "ai": [
     { "name": "Pytorch", "image": "pytorch.png" },
     { "name": "TensorFlow", "image": "tf.png" },
     { "name": "Keras", "image": "keras.png" },
@@ -34,7 +34,7 @@
     { "name": "Yolo", "image": "yolo.png" },
     { "name": "XGBoost", "image": "xgb.png" }
   ],
-  "Web Development": [
+  "webdevelopment": [
     { "name": "React", "image": "react.png" },
     { "name": "Tailwind CSS", "image": "Tailwind.png" },
     { "name": "Symfony", "image": "symfony.webp" },
@@ -51,7 +51,7 @@
     { "name": "Bootstrap", "image": "Bootstrap.png" },
     { "name": "P5.js", "image": "P5.png" }
   ],
-  "Development Tools & Software": [
+  "devsofware": [
     { "name": "GitHub", "image": "github.png" },
     { "name": "GitLab", "image": "gitlab.png" },
     { "name": "Git", "image": "git.png" },
@@ -66,7 +66,7 @@
     { "name": "JetBrains Suite", "image": "jetbrain.png" },
     { "name": "Android Studio", "image": "android_studio.png" }
   ],
-  "Databases": [
+  "database": [
     { "name": "MySQL", "image": "mysql.png" },
     { "name": "Oracle SQL Developer", "image": "oraclesql.png" },
     { "name": "Microsoft SQL Server", "image": "microsoft-sql-server.png" },
@@ -74,7 +74,7 @@
     { "name": "PostgreSQL", "image": "Postgresql.png" },
     { "name": "WinDesign", "image": "Windesign.png" }
   ],
-  "Graphics & 3D": [
+  "graphics": [
     { "name": "JavaFX", "image": "Javafx.svg" },
     { "name": "OpenGL", "image": "opengl.svg" },
     { "name": "SFML", "image": "sfml.png" },
@@ -83,7 +83,7 @@
     { "name": "PyGame", "image": "pygame.png" }
     
   ],
-  "Testing & Quality": [
+  "testingquality": [
     { "name": "Junit4/5", "image": "junit5.png" },
     { "name": "Jacoco", "image": "jacoco.png" }
   ]
