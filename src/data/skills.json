@@ -49,7 +49,8 @@
     { "name": "Vite", "image": "vite.png" },
     { "name": "Three.js", "image": "threejs.png" },
     { "name": "Bootstrap", "image": "Bootstrap.png" },
-    { "name": "P5.js", "image": "P5.png" }
+    { "name": "P5.js", "image": "P5.png" },
+    { "name": "Twig", "image": "twig.png" }
   ],
   "devsofware": [
     { "name": "GitHub", "image": "github.png" },

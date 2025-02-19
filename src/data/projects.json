@@ -4,7 +4,7 @@
 		"date": 2024,
 		"type": "Personal Project",
 		"title": "Large Language Model",
-		"description": "In this project, I built and trained a French Large Language Model with pytorch",
+		"description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
 		"tags": [
 		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
 		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
@@ -21,7 +21,7 @@
 		"date": 2024,
 		"type": "Personal Project",
 		"title": "Neural Networks Library",
-		"description": "A Modular Neural Network library only with Numpy in python",
+		"description": "A python neural network library implemented from scratch with NumPy, including linear layers, loss functions, activation functions, and optimizers.",
 		"tags": [
 		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
 		  { "name": "Numpy", "url": "https://numpy.org/", "image": "./skills/numpy.png" }
@@ -38,7 +38,7 @@
 		"date": 2024,
 		"type": "Personal Project",
 		"title": "Neural Style Transfer",
-		"description": "Implementation of Neural Style Transfert using PyTorch",
+		"description": "Implementation of neural style transfer to apply a style to an image using the VGG-19 model in Python with PyTorch.",
 		"tags": [
 		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
 		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
@@ -83,7 +83,7 @@
 		  "none"
 		],
 		"image": "./projects/noise1.png",
-		"categories": ["Personal", "AI"]
+		"categories": ["Personal", "Simulations"]
 	  },
 	  {
 		"date": 2024,
@@ -124,7 +124,7 @@
 		"date": 2024,
 		"type": "Personal Project",
 		"title": "VAE",
-		"description": "VAE with PyTorch to create synthetic data",
+		"description": "Creation and training of a variational autoencoder on the Fashion MNIST dataset to generate synthetic data using Python and PyTorch.",
 		"tags": [
 		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
 		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
@@ -158,7 +158,7 @@
 		"date": 2024,
 		"type": "School Project",
 		"title": "Graph Visualizer",
-		"description": "A graph viewer in Javafx with full search algorithms",
+		"description": "Software for visualizing graphs, calculating a minimum spanning tree, and implementing an edge bundling algorithm in JavaFx.",
 		"tags": [
 		  { "name": "Java", "url": "https://www.java.com/", "image": "./skills/java.webp" },
 		  { "name": "JavaFX", "url": "https://openjfx.io/", "image": "./skills/Javafx.svg" }
@@ -169,7 +169,7 @@
 		  "none"
 		],
 		"image": "./projects/graph.png",
-		"categories": ["School","Simulations"]
+		"categories": ["School","Simulations","Sofware"]
 	  },
 	  {
 		"date": 2024,
@@ -193,7 +193,7 @@
 		"date": 2024,
 		"type": "Personal Project",
 		"title": "Snake AI",
-		"description": "Snake AI using Neural Network in PyTorch",
+		"description": "Creation of the Snake game and an AI that learns to play the game using deep reinforcement learning with PyTorch and Pygame.",
 		"tags": [
 		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
 		  { "name": "Pygame", "url": "https://www.pygame.org/", "image": "./skills/pygame.png" },
@@ -205,13 +205,13 @@
 		  "none"
 		],
 		"image": "./projects/snake.png",
-		"categories": ["Personal", "AI"]
+		"categories": ["Personal", "AI","Simulations"]
 	  },
 	  {
 		"date": 2024,
 		"type": "Personal Project",
 		"title": "Connect4 AI",
-		"description": "Connect4 AI using Monte Carlo Tree Search",
+		"description": "Creation of the game Connect Four and an AI for the game based on the Monte Carlo algorithm using Pygame in Python.",
 		"tags": [
 		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
 		  { "name": "Pygame", "url": "https://www.pygame.org/", "image": "./skills/pygame.png" },
@@ -229,7 +229,7 @@
 		"date": 2024,
 		"type": "Personal Project",
 		"title": "Particles Simulation",
-		"description": "A simple particle simulation with SFML in c++",
+		"description": "Simulation of a particle system using SFML in C++ with Verlet integration.",
 		"tags": [
 		  { "name": "C++", "url": "https://isocpp.org/", "image": "./skills/cpp.png" },
 		  { "name": "SFML", "url": "https://www.sfml-dev.org/", "image": "./skills/sfml.png" }
@@ -263,7 +263,7 @@
 		"date": 2024,
 		"type": "School Project",
 		"title": "Towa AI",
-		"description": "An artificial intelligence for a chessboard game named Towa",
+		"description": "Implementation of rules for a board game, followed by the creation of an AI based on the Minimax algorithm for the game in Java.",
 		"tags": [
 		  { "name": "Java", "url": "https://www.java.com/", "image": "./skills/java.webp" }
 		],
@@ -279,7 +279,7 @@
 		"date": 2024,
 		"type": "Personal Project",
 		"title": "MySuperHoroscope",
-		"description": "Online Website selling daily horoscope",
+		"description": "Creation of a daily horoscope website with a payment and subscription system using Stripe, built with Django and Python.",
 		"tags": [
 		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
 		  { "name": "Django", "url": "https://www.djangoproject.com/", "image": "./skills/django.png" }
@@ -291,6 +291,129 @@
 		],
 		"image": "./projects/msh.png",
 		"categories": ["Personal", "Web"]
+	  },
+	  {
+		"date": 2024,
+		"type": "School Project",
+		"title": "Votator",
+		"description": "Front-end application built with React, Tailwind CSS, and TypeScript. It allows users to vote for tournaments on various themes by interacting with an API.",
+		"tags": [
+		  { "name": "React", "url": "https://react.dev/", "image": "./skills/react.png" },
+		  { "name": "Tailwind", "url": "https://tailwindcss.com/", "image": "./skills/Tailwind.png" },
+		  { "name": "TypeScript", "url": "https://www.typescriptlang.org/", "image": "./skills/ts.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/Votator",
+		  "https://github.com/Gazeux33/Votator",
+		  "none"
+		],
+		"image": "./projects/votator.png",
+		"categories": ["School", "Web"]
+	  },
+	  {
+		"date": 2024,
+		"type": "School Project",
+		"title": "Labyrinth game",
+		"description": "Maze game built with JavaFX, where a character must navigate through a labyrinth filled with enemies.",
+		"tags": [
+		  { "name": "Java", "url": "https://www.java.com/", "image": "./skills/java.webp" },
+		  { "name": "JavaFX", "url": "https://openjfx.io/", "image": "./skills/Javafx.svg" }
+		],
+		"links": [
+		  "none",
+		  "none",
+		  "none"
+		],
+		"image": "./projects/labyrinthe.png",
+		"categories": ["School", "Simulations"]
+	  },
+	  {
+		"date": 2024,
+		"type": "School Project",
+		"title": "Robocup Manager",
+		"description": "Full-stack application built with Symfony, Twig, and Tailwind CSS, enabling the management of robot competitions, championships, and tournament brackets.",
+		"tags": [
+		  { "name": "Symfony", "url": "https://symfony.com/", "image": "./skills/symfony.png" },
+		  { "name": "Php", "url": "https://www.php.net/", "image": "./skills/php.png" },
+		  { "name": "Tailwind", "url": "https://tailwindcss.com/", "image": "./skills/Tailwind.png" },
+		  { "name": "Twig", "url": "https://twig.symfony.com/", "image": "./skills/twig.png" }
+		],
+		"links": [
+		  "none",
+		  "none",
+		  "none"
+		],
+		"image": "./projects/robocup_manager.webp",
+		"categories": ["School", "Web"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "GymWalker",
+		"description": "Gymnasium environment where a humanoid learns to walk using reinforcement learning techniques in Python.",
+		"tags": [
+		  { "name": "Gymnasium", "url": "https://gymnasium.farama.org/", "image": "./skills/gym.svg" },
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" },
+		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/GymWalker",
+		  "https://github.com/Gazeux33/GymWalker",
+		  "none"
+		],
+		"image": "./projects/gym.png",
+		"categories": ["Personal", "AI","Simulations"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "MotivAI",
+		"description": "Tool for creating personalized cover letters using LangChain with an agent capable of conducting internet research.",
+		"tags": [
+		  { "name": "Langchain", "url": "https://python.langchain.com/", "image": "./skills/langchain.png" },
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/MotivAI",
+		  "https://github.com/Gazeux33/MotivAI",
+		  "none"
+		],
+		"image": "./projects/motivai.png",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "Personal Project",
+		"title": "Music Generation Transformer",
+		"description": "Transformer-based model for generating classical music, utilizing sparse attention and trained on the BACH dataset.",
+		"tags": [
+		  { "name": "PyTorch", "url": "https://pytorch.org/", "image": "./skills/pytorch.png" },
+		  { "name": "Python", "url": "https://www.python.org/", "image": "./skills/python.png" }
+		],
+		"links": [
+		  "https://github.com/Gazeux33/MusicGenerationTransformer",
+		  "https://github.com/Gazeux33/MusicGenerationTransformer",
+		  "none"
+		],
+		"image": "./projects/transformer.webp",
+		"categories": ["Personal", "AI"]
+	  },
+	  {
+		"date": 2024,
+		"type": "School Project",
+		"title": "MiniShell",
+		"description": "Creation of an interactive shell in C, directly in the terminal, capable of executing basic commands and running external commands.",
+		"tags": [
+		  { "name": "C", "url": "https://en.cppreference.com/w/", "image": "./skills/c.png" }
+		],
+		"links": [
+		  "none",
+		  "none",
+		  "none"
+		],
+		"image": "./projects/minishell.png",
+		"categories": ["School","Sofware"]
 	  }
 	]
   }
+  

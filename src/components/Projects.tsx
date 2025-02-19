@@ -17,7 +17,7 @@ const Projects = () => {
       {projectsData.projects.map((project: Project, index) => (
         <div
           key={index}
-          className="max-w-75 rounded overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-101 text-gray-200 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
+          className="max-w-75 rounded overflow-hidden shadow-lg transform transition-transform duration-100 hover:scale-101 text-gray-200 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
         >
           <img
             className="w-full h-40 object-cover"
@@ -25,7 +25,7 @@ const Projects = () => {
             alt={project.title}
           />
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{project.title}</div>
+            <div className="font-bold text-xl mb-2">{project.title} </div>
             <p className=" text-base">
               {project.description}
             </p>

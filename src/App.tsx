@@ -9,7 +9,6 @@ function App() {
       <main className="flex flex-col items-center pt-14">
         <NavBar />
         <Projects/>
-
       </main>
     </>
   );
