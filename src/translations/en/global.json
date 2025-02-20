@@ -1,11 +1,11 @@
 {
-    "navbar" : {
-        "home" : "home",
-        "aboutme" : "about me",
-        "projects" : "projects",
-        "contact" : "contact"
+    "navbar": {
+        "home": "home",
+        "aboutme": "about me",
+        "projects": "projects",
+        "contact": "contact"
     },
-    "skills" : {
+    "skills": {
         "languages": "Languages",
         "ai": "AI / ML Data Science",
         "webdevelopment": "Web Development",
@@ -13,5 +13,103 @@
         "database": "Databases",
         "graphics": "Graphics & 3D",
         "testingquality": "Testing & Quality"
+    },
+    "projects": {
+        "snake_ai": {
+            "title": "Snake AI",
+            "description": "Creation of the Snake game and an AI that learns to play the game using deep reinforcement learning with PyTorch and Pygame."
+        },
+        "large_language_model": {
+            "title": "Large Language Model",
+            "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python."
+        },
+        "neural_networks_library": {
+            "title": "Neural Networks Library",
+            "description": "A python neural network library implemented from scratch with NumPy, including linear layers, loss functions, activation functions, and optimizers."
+        },
+        "neural_style_transfer": {
+            "title": "Neural Style Transfer",
+            "description": "Implementation of neural style transfer to apply a style to an image using the VGG-19 model in Python with PyTorch."
+        },
+        "generative_adversial_network": {
+            "title": "Generative Adversial Network",
+            "description": "Implementation of a WGAN-GP on the CelebA dataset with PyTorch for face generation"
+        },
+        "cellular_automata_3d_renderer": {
+            "title": "Cellular Automata 3D Renderer",
+            "description": "Library to visualise Cellular Automata easily with OpenGL in Python"
+        },
+        "tradeformer": {
+            "title": "TradeFormer",
+            "description": "Training a financial forecasting model based on the AutoFormer architecture with PyTorch and Alpaca.py"
+        },
+        "diffusion_model": {
+            "title": "Diffusion Model",
+            "description": "A PyTorch diffusion model to generate realistic synthetic cat images from gaussian noise"
+        },
+        "vae": {
+            "title": "VAE",
+            "description": "Creation and training of a variational autoencoder on the Fashion MNIST dataset to generate synthetic data using Python and PyTorch."
+        },
+        "maze_generator_and_solver": {
+            "title": "Maze Generator and Solver",
+            "description": "A maze generator and solver using A* in python with pygame"
+        },
+        "graph_visualizer": {
+            "title": "Graph Visualizer",
+            "description": "Software for visualizing graphs, calculating a minimum spanning tree, and implementing an edge bundling algorithm in JavaFx."
+        },
+        "car_plates_detection": {
+            "title": "Car Plates Detection",
+            "description": "Create a pipeline of two finetunned YOLOv8 models to detect and analyze car plates"
+        },
+        "connect4_ai": {
+            "title": "Connect4 AI",
+            "description": "Creation of the game Connect Four and an AI for the game based on the Monte Carlo algorithm using Pygame in Python."
+        },
+        "particles_simulation": {
+            "title": "Particles Simulation",
+            "description": "Simulation of a particle system using SFML in C++ with Verlet integration."
+        },
+        "procedural_generation": {
+            "title": "Procedural Generation",
+            "description": "Procedural Map generation using Perlin Noise with P5.js"
+        },
+        "towa_ai": {
+            "title": "Towa AI",
+            "description": "Implementation of rules for a board game, followed by the creation of an AI based on the Minimax algorithm for the game in Java."
+        },
+        "mysuperhoroscope": {
+            "title": "MySuperHoroscope",
+            "description": "Creation of a daily horoscope website with a payment and subscription system using Stripe, built with Django and Python."
+        },
+        "votator": {
+            "title": "Votator",
+            "description": "Front-end application built with React, Tailwind CSS, and TypeScript. It allows users to vote for tournaments on various themes by interacting with an API."
+        },
+        "labyrinth_game": {
+            "title": "Labyrinth game",
+            "description": "Maze game built with JavaFX, where a character must navigate through a labyrinth filled with enemies."
+        },
+        "robocup_manager": {
+            "title": "Robocup Manager",
+            "description": "Full-stack application built with Symfony, Twig, and Tailwind CSS, enabling the management of robot competitions, championships, and tournament brackets."
+        },
+        "gymwalker": {
+            "title": "GymWalker",
+            "description": "Gymnasium environment where a humanoid learns to walk using reinforcement learning techniques in Python."
+        },
+        "motivai": {
+            "title": "MotivAI",
+            "description": "Tool for creating personalized cover letters using LangChain with an agent capable of conducting internet research."
+        },
+        "music_generation_transformer": {
+            "title": "Music Generation Transformer",
+            "description": "Transformer-based model for generating classical music, utilizing sparse attention and trained on the BACH dataset."
+        },
+        "minishell": {
+            "title": "MiniShell",
+            "description": "Creation of an interactive shell in C, directly in the terminal, capable of executing basic commands and running external commands."
+        }
     }
 }

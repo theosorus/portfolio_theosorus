@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import projectsData from '../data/projects.json';
 
 interface Project {
+  id:string;
   date: number;
   type: string;
   title: string;
@@ -12,6 +14,8 @@ interface Project {
 }
 
 const Projects = () => {
+
+  const [t] = useTranslation('global');
   return (
     <div className="w-3/4 flex flex-wrap justify-center mt-10 gap-6">
       {projectsData.projects.map((project: Project, index) => (
@@ -21,13 +25,13 @@ const Projects = () => {
         >
           <img
             className="w-full h-40 object-cover"
-            src={project.image}
+            src= {project.image}
             alt={project.title}
           />
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{project.title} </div>
+            <div className="font-bold text-xl mb-2">{t(`projects.${project.id}.title`)} </div>
             <p className=" text-base">
-              {project.description}
+            {t(`projects.${project.id}.description`)}
             </p>
           </div>
           <div className="px-6 pt-4 pb-2 flex flex-wrap gap-2">
@@ -36,7 +40,7 @@ const Projects = () => {
                 <span className="inline-block text-sm font-semibold text-gray-700">
                   {tag.name}
                 </span>
-                {tag.image && <img src={tag.image} alt="" className='w-5 h-5 ml-1' />}
+                {tag.image && <img src={tag.image} alt="" className='w-5  h-5 ml-1' />}
                 </div>
 
             ))}

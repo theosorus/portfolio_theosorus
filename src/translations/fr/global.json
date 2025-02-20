@@ -1,11 +1,11 @@
 {
-    "navbar" : {
-        "home" : "accueil",
-        "aboutme" : "profil",
-        "projects" : "projets",
-        "contact" : "contact"
+    "navbar": {
+        "home": "accueil",
+        "aboutme": "profil",
+        "projects": "projets",
+        "contact": "contact"
     },
-    "skills" : {
+    "skills": {
         "languages": "Langages",
         "ai": "IA / ML Science des données",
         "webdevelopment": "Développement Web",
@@ -13,5 +13,103 @@
         "database": "Bases de données",
         "graphics": "Graphiques & 3D",
         "testingquality": "Tests & Qualité"
+    },
+    "projects": {
+        "snake_ai": {
+            "title": "Snake IA",
+            "description": "Création du jeu Snake et d'une IA qui apprend à jouer au jeu en utilisant l'apprentissage par renforcement profond avec PyTorch et Pygame."
+        },
+        "large_language_model": {
+            "title": "Modèle de Langage Large",
+            "description": "Construction d'un modèle de langage français basé sur les transformers, entraîné sur un jeu de données français utilisant PyTorch en Python."
+        },
+        "neural_networks_library": {
+            "title": "Bibliothèque de Réseaux de Neurones",
+            "description": "Une bibliothèque Python de réseaux de neurones implémentée à partir de zéro avec NumPy, incluant des couches linéaires, des fonctions de perte, des fonctions d'activation et des optimiseurs."
+        },
+        "neural_style_transfer": {
+            "title": "Transfert de Style Neural",
+            "description": "Implémentation du transfert de style neural pour appliquer un style à une image en utilisant le modèle VGG-19 en Python avec PyTorch."
+        },
+        "generative_adversial_network": {
+            "title": "Réseau Antagoniste Génératif",
+            "description": "Implémentation d'un WGAN-GP sur le jeu de données CelebA avec PyTorch pour la génération de visages"
+        },
+        "cellular_automata_3d_renderer": {
+            "title": "Rendu 3D d'Automates Cellulaires",
+            "description": "Bibliothèque pour visualiser facilement des Automates Cellulaires avec OpenGL en Python"
+        },
+        "tradeformer": {
+            "title": "TradeFormer",
+            "description": "Entraînement d'un modèle de prévision financière basé sur l'architecture AutoFormer avec PyTorch et Alpaca.py"
+        },
+        "diffusion_model": {
+            "title": "Modèle de Diffusion",
+            "description": "Un modèle de diffusion PyTorch pour générer des images synthétiques réalistes de chats à partir de bruit gaussien"
+        },
+        "vae": {
+            "title": "VAE",
+            "description": "Création et entraînement d'un auto-encodeur variationnel sur le jeu de données Fashion MNIST pour générer des données synthétiques en utilisant Python et PyTorch."
+        },
+        "maze_generator_and_solver": {
+            "title": "Générateur et Solveur de Labyrinthe",
+            "description": "Un générateur et solveur de labyrinthe utilisant A* en Python avec Pygame"
+        },
+        "graph_visualizer": {
+            "title": "Visualiseur de Graphes",
+            "description": "Logiciel de visualisation de graphes, calcul d'arbre couvrant minimal et implémentation d'un algorithme de regroupement d'arêtes en JavaFx."
+        },
+        "car_plates_detection": {
+            "title": "Détection de Plaques d'Immatriculation",
+            "description": "Création d'un pipeline de deux modèles YOLOv8 affinés pour détecter et analyser les plaques d'immatriculation"
+        },
+        "connect4_ai": {
+            "title": "Puissance 4 IA",
+            "description": "Création du jeu Puissance 4 et d'une IA pour le jeu basée sur l'algorithme de Monte Carlo utilisant Pygame en Python."
+        },
+        "particles_simulation": {
+            "title": "Simulation de Particules",
+            "description": "Simulation d'un système de particules utilisant SFML en C++ avec intégration de Verlet."
+        },
+        "procedural_generation": {
+            "title": "Génération Procédurale",
+            "description": "Génération procédurale de carte utilisant le bruit de Perlin avec P5.js"
+        },
+        "towa_ai": {
+            "title": "Towa IA",
+            "description": "Implémentation des règles d'un jeu de plateau, suivie de la création d'une IA basée sur l'algorithme Minimax pour le jeu en Java."
+        },
+        "mysuperhoroscope": {
+            "title": "MonSuperHoroscope",
+            "description": "Création d'un site web d'horoscope quotidien avec un système de paiement et d'abonnement utilisant Stripe, construit avec Django et Python."
+        },
+        "votator": {
+            "title": "Votator",
+            "description": "Application front-end construite avec React, Tailwind CSS et TypeScript. Elle permet aux utilisateurs de voter pour des tournois sur différents thèmes en interagissant avec une API."
+        },
+        "labyrinth_game": {
+            "title": "Jeu de Labyrinthe",
+            "description": "Jeu de labyrinthe construit avec JavaFX, où un personnage doit naviguer à travers un labyrinthe rempli d'ennemis."
+        },
+        "robocup_manager": {
+            "title": "Gestionnaire Robocup",
+            "description": "Application full-stack construite avec Symfony, Twig et Tailwind CSS, permettant la gestion de compétitions de robots, de championnats et de brackets de tournois."
+        },
+        "gymwalker": {
+            "title": "GymWalker",
+            "description": "Environnement Gymnasium où un humanoïde apprend à marcher en utilisant des techniques d'apprentissage par renforcement en Python."
+        },
+        "motivai": {
+            "title": "MotivAI",
+            "description": "Outil de création de lettres de motivation personnalisées utilisant LangChain avec un agent capable de faire des recherches sur Internet."
+        },
+        "music_generation_transformer": {
+            "title": "Transformer de Génération Musicale",
+            "description": "Modèle basé sur les transformers pour générer de la musique classique, utilisant l'attention éparse et entraîné sur le jeu de données BACH."
+        },
+        "minishell": {
+            "title": "MiniShell",
+            "description": "Création d'un shell interactif en C, directement dans le terminal, capable d'exécuter des commandes de base et d'exécuter des commandes externes."
+        }
     }
 }
