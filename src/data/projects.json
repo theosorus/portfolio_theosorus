@@ -146,6 +146,70 @@
             ]
         },
         {
+            "id": "music_generation_transformer",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "Music Generation Transformer",
+            "description": "Transformer-based model for generating classical music, utilizing sparse attention and trained on the BACH dataset.",
+            "tags": [
+                {
+                    "name": "PyTorch",
+                    "url": "https://pytorch.org/",
+                    "image": "./skills/pytorch.png"
+                },
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                }
+            ],
+            "links": [
+                "https://github.com/Gazeux33/MusicGenerationTransformer",
+                "https://github.com/Gazeux33/MusicGenerationTransformer",
+                "none"
+            ],
+            "image": "./projects/transformer.webp",
+            "categories": [
+                "Personal",
+                "AI"
+            ]
+        },
+        {
+            "id": "gymwalker",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "GymWalker",
+            "description": "Gymnasium environment where a humanoid learns to walk using reinforcement learning techniques in Python.",
+            "tags": [
+                {
+                    "name": "Gymnasium",
+                    "url": "https://gymnasium.farama.org/",
+                    "image": "./skills/gym.svg"
+                },
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "PyTorch",
+                    "url": "https://pytorch.org/",
+                    "image": "./skills/pytorch.png"
+                }
+            ],
+            "links": [
+                "https://github.com/Gazeux33/GymWalker",
+                "https://github.com/Gazeux33/GymWalker",
+                "none"
+            ],
+            "image": "./projects/gym.png",
+            "categories": [
+                "Personal",
+                "AI",
+                "Simulations"
+            ]
+        },
+        {
             "id": "tradeformer",
             "date": 2024,
             "type": "Personal Project",
@@ -209,90 +273,66 @@
             ]
         },
         {
-            "id": "vae",
-            "date": 2024,
-            "type": "Personal Project",
-            "title": "VAE",
-            "description": "Creation and training of a variational autoencoder on the Fashion MNIST dataset to generate synthetic data using Python and PyTorch.",
-            "tags": [
-                {
-                    "name": "Python",
-                    "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
-                },
-                {
-                    "name": "PyTorch",
-                    "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
-                }
-            ],
-            "links": [
-                "https://github.com/Gazeux33/Variational-Autoencoders",
-                "https://github.com/Gazeux33/Variational-Autoencoders",
-                "none"
-            ],
-            "image": "./projects/VAE.png",
-            "categories": [
-                "Personal",
-                "AI"
-            ]
-        },
-        {
-            "id": "maze_generator_and_solver",
-            "date": 2024,
-            "type": "Personal Project",
-            "title": "Maze Generator and Solver",
-            "description": "A maze generator and solver using A* in python with pygame",
-            "tags": [
-                {
-                    "name": "Python",
-                    "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
-                },
-                {
-                    "name": "Pygame",
-                    "url": "https://www.pygame.org/",
-                    "image": "./skills/pygame.png"
-                }
-            ],
-            "links": [
-                "https://github.com/Gazeux33/Generating-and-Solving-Mazes",
-                "https://github.com/Gazeux33/Generating-and-Solving-Mazes",
-                "none"
-            ],
-            "image": "./projects/maze2.png",
-            "categories": [
-                "Personal"
-            ]
-        },
-        {
-            "id": "graph_visualizer",
+            "id": "votator",
             "date": 2024,
             "type": "School Project",
-            "title": "Graph Visualizer",
-            "description": "Software for visualizing graphs, calculating a minimum spanning tree, and implementing an edge bundling algorithm in JavaFx.",
+            "title": "Votator",
+            "description": "Front-end application built with React, Tailwind CSS, and TypeScript. It allows users to vote for tournaments on various themes by interacting with an API.",
             "tags": [
                 {
-                    "name": "Java",
-                    "url": "https://www.java.com/",
-                    "image": "./skills/java.webp"
+                    "name": "React",
+                    "url": "https://react.dev/",
+                    "image": "./skills/react.png"
                 },
                 {
-                    "name": "JavaFX",
-                    "url": "https://openjfx.io/",
-                    "image": "./skills/Javafx.svg"
+                    "name": "Tailwind",
+                    "url": "https://tailwindcss.com/",
+                    "image": "./skills/Tailwind.png"
+                },
+                {
+                    "name": "TypeScript",
+                    "url": "https://www.typescriptlang.org/",
+                    "image": "./skills/ts.png"
                 }
             ],
             "links": [
-                "none",
-                "none",
+                "https://github.com/Gazeux33/Votator",
+                "https://github.com/Gazeux33/Votator",
                 "none"
             ],
-            "image": "./projects/graph.png",
+            "image": "./projects/votator.png",
             "categories": [
                 "School",
-                "Simulations",
-                "Sofware"
+                "Web"
+            ]
+        },
+        {
+            "id": "particles_simulation",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "Particles Simulation",
+            "description": "Simulation of a particle system using SFML in C++ with Verlet integration.",
+            "tags": [
+                {
+                    "name": "C++",
+                    "url": "https://isocpp.org/",
+                    "image": "./skills/cpp.png"
+                },
+                {
+                    "name": "SFML",
+                    "url": "https://www.sfml-dev.org/",
+                    "image": "./skills/sfml.png"
+                }
+            ],
+            "links": [
+                "https://github.com/Gazeux33/Particles-Simulation",
+                "https://github.com/Gazeux33/Particles-Simulation",
+                "none"
+            ],
+            "image": "./projects/particle.png",
+            "categories": [
+                "Personal",
+                "Simulations"
             ]
         },
         {
@@ -327,6 +367,262 @@
             "categories": [
                 "Personal",
                 "AI"
+            ]
+        },
+        {
+            "id": "graph_visualizer",
+            "date": 2024,
+            "type": "School Project",
+            "title": "Graph Visualizer",
+            "description": "Software for visualizing graphs, calculating a minimum spanning tree, and implementing an edge bundling algorithm in JavaFx.",
+            "tags": [
+                {
+                    "name": "Java",
+                    "url": "https://www.java.com/",
+                    "image": "./skills/java.webp"
+                },
+                {
+                    "name": "JavaFX",
+                    "url": "https://openjfx.io/",
+                    "image": "./skills/Javafx.svg"
+                }
+            ],
+            "links": [
+                "none",
+                "none",
+                "none"
+            ],
+            "image": "./projects/graph.png",
+            "categories": [
+                "School",
+                "Simulations",
+                "Sofware"
+            ]
+        },
+        
+        {
+            "id": "motivai",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "MotivAI",
+            "description": "Tool for creating personalized cover letters using LangChain with an agent capable of conducting internet research.",
+            "tags": [
+                {
+                    "name": "Langchain",
+                    "url": "https://python.langchain.com/",
+                    "image": "./skills/langchain.png"
+                },
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                }
+            ],
+            "links": [
+                "https://github.com/Gazeux33/MotivAI",
+                "https://github.com/Gazeux33/MotivAI",
+                "none"
+            ],
+            "image": "./projects/motivai.png",
+            "categories": [
+                "Personal",
+                "AI"
+            ]
+        },
+        {
+            "id": "procedural_generation",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "Procedural Generation",
+            "description": "Procedural Map generation using Perlin Noise with P5.js",
+            "tags": [
+                {
+                    "name": "js",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+                    "image": "./skills/js.png"
+                },
+                {
+                    "name": "P5.js",
+                    "url": "https://p5js.org/",
+                    "image": "./skills/P5.png"
+                }
+            ],
+            "links": [
+                "https://github.com/Gazeux33/Procedural-Generation",
+                "https://github.com/Gazeux33/Procedural-Generation",
+                "https://gazeux33.github.io/Procedural-Generation/"
+            ],
+            "image": "./projects/pg.png",
+            "categories": [
+                "Personal",
+                "Web"
+            ]
+        },
+        
+        {
+            "id": "maze_generator_and_solver",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "Maze Generator and Solver",
+            "description": "A maze generator and solver using A* in python with pygame",
+            "tags": [
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "Pygame",
+                    "url": "https://www.pygame.org/",
+                    "image": "./skills/pygame.png"
+                }
+            ],
+            "links": [
+                "https://github.com/Gazeux33/Generating-and-Solving-Mazes",
+                "https://github.com/Gazeux33/Generating-and-Solving-Mazes",
+                "none"
+            ],
+            "image": "./projects/maze2.png",
+            "categories": [
+                "Personal"
+            ]
+        },
+       
+        
+        
+      
+       
+       
+       
+        {
+            "id": "mysuperhoroscope",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "MySuperHoroscope",
+            "description": "Creation of a daily horoscope website with a payment and subscription system using Stripe, built with Django and Python.",
+            "tags": [
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "Django",
+                    "url": "https://www.djangoproject.com/",
+                    "image": "./skills/django.png"
+                }
+            ],
+            "links": [
+                "https://github.com/Gazeux33/MySuperHoroscope",
+                "https://github.com/Gazeux33/MySuperHoroscope",
+                "none"
+            ],
+            "image": "./projects/msh.png",
+            "categories": [
+                "Personal",
+                "Web"
+            ]
+        },
+        {
+            "id": "robocup_manager",
+            "date": 2024,
+            "type": "School Project",
+            "title": "Robocup Manager",
+            "description": "Full-stack application built with Symfony, Twig, and Tailwind CSS, enabling the management of robot competitions, championships, and tournament brackets.",
+            "tags": [
+                {
+                    "name": "Symfony",
+                    "url": "https://symfony.com/",
+                    "image": "./skills/symfony.png"
+                },
+                {
+                    "name": "Php",
+                    "url": "https://www.php.net/",
+                    "image": "./skills/php.png"
+                },
+                {
+                    "name": "Tailwind",
+                    "url": "https://tailwindcss.com/",
+                    "image": "./skills/Tailwind.png"
+                },
+                {
+                    "name": "Twig",
+                    "url": "https://twig.symfony.com/",
+                    "image": "./skills/twig.png"
+                }
+            ],
+            "links": [
+                "none",
+                "none",
+                "none"
+            ],
+            "image": "./projects/robocup_manager.webp",
+            "categories": [
+                "School",
+                "Web"
+            ]
+        },
+        {
+            "id": "vae",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "VAE",
+            "description": "Creation and training of a variational autoencoder on the Fashion MNIST dataset to generate synthetic data using Python and PyTorch.",
+            "tags": [
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "PyTorch",
+                    "url": "https://pytorch.org/",
+                    "image": "./skills/pytorch.png"
+                }
+            ],
+            "links": [
+                "https://github.com/Gazeux33/Variational-Autoencoders",
+                "https://github.com/Gazeux33/Variational-Autoencoders",
+                "none"
+            ],
+            "image": "./projects/VAE.png",
+            "categories": [
+                "Personal",
+                "AI"
+            ]
+        },
+        
+        
+        
+        
+        
+        {
+            "id": "labyrinth_game",
+            "date": 2024,
+            "type": "School Project",
+            "title": "Labyrinth game",
+            "description": "Maze game built with JavaFX, where a character must navigate through a labyrinth filled with enemies.",
+            "tags": [
+                {
+                    "name": "Java",
+                    "url": "https://www.java.com/",
+                    "image": "./skills/java.webp"
+                },
+                {
+                    "name": "JavaFX",
+                    "url": "https://openjfx.io/",
+                    "image": "./skills/Javafx.svg"
+                }
+            ],
+            "links": [
+                "none",
+                "none",
+                "none"
+            ],
+            "image": "./projects/lab.jpg",
+            "categories": [
+                "School",
+                "Simulations"
             ]
         },
         {
@@ -398,62 +694,29 @@
                 "AI"
             ]
         },
+        
         {
-            "id": "particles_simulation",
+            "id": "minishell",
             "date": 2024,
-            "type": "Personal Project",
-            "title": "Particles Simulation",
-            "description": "Simulation of a particle system using SFML in C++ with Verlet integration.",
+            "type": "School Project",
+            "title": "MiniShell",
+            "description": "Creation of an interactive shell in C, directly in the terminal, capable of executing basic commands and running external commands.",
             "tags": [
                 {
-                    "name": "C++",
-                    "url": "https://isocpp.org/",
-                    "image": "./skills/cpp.png"
-                },
-                {
-                    "name": "SFML",
-                    "url": "https://www.sfml-dev.org/",
-                    "image": "./skills/sfml.png"
+                    "name": "C",
+                    "url": "https://en.cppreference.com/w/",
+                    "image": "./skills/c.png"
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/Particles-Simulation",
-                "https://github.com/Gazeux33/Particles-Simulation",
+                "none",
+                "none",
                 "none"
             ],
-            "image": "./projects/particle.png",
+            "image": "./projects/minishell.png",
             "categories": [
-                "Personal",
-                "Simulations"
-            ]
-        },
-        {
-            "id": "procedural_generation",
-            "date": 2024,
-            "type": "Personal Project",
-            "title": "Procedural Generation",
-            "description": "Procedural Map generation using Perlin Noise with P5.js",
-            "tags": [
-                {
-                    "name": "js",
-                    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-                    "image": "./skills/js.png"
-                },
-                {
-                    "name": "P5.js",
-                    "url": "https://p5js.org/",
-                    "image": "./skills/P5.png"
-                }
-            ],
-            "links": [
-                "https://github.com/Gazeux33/Procedural-Generation",
-                "https://github.com/Gazeux33/Procedural-Generation",
-                "https://gazeux33.github.io/Procedural-Generation/"
-            ],
-            "image": "./projects/pg.png",
-            "categories": [
-                "Personal",
-                "Web"
+                "School",
+                "Sofware"
             ]
         },
         {
@@ -478,254 +741,6 @@
             "categories": [
                 "School",
                 "AI"
-            ]
-        },
-        {
-            "id": "mysuperhoroscope",
-            "date": 2024,
-            "type": "Personal Project",
-            "title": "MySuperHoroscope",
-            "description": "Creation of a daily horoscope website with a payment and subscription system using Stripe, built with Django and Python.",
-            "tags": [
-                {
-                    "name": "Python",
-                    "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
-                },
-                {
-                    "name": "Django",
-                    "url": "https://www.djangoproject.com/",
-                    "image": "./skills/django.png"
-                }
-            ],
-            "links": [
-                "https://github.com/Gazeux33/MySuperHoroscope",
-                "https://github.com/Gazeux33/MySuperHoroscope",
-                "none"
-            ],
-            "image": "./projects/msh.png",
-            "categories": [
-                "Personal",
-                "Web"
-            ]
-        },
-        {
-            "id": "votator",
-            "date": 2024,
-            "type": "School Project",
-            "title": "Votator",
-            "description": "Front-end application built with React, Tailwind CSS, and TypeScript. It allows users to vote for tournaments on various themes by interacting with an API.",
-            "tags": [
-                {
-                    "name": "React",
-                    "url": "https://react.dev/",
-                    "image": "./skills/react.png"
-                },
-                {
-                    "name": "Tailwind",
-                    "url": "https://tailwindcss.com/",
-                    "image": "./skills/Tailwind.png"
-                },
-                {
-                    "name": "TypeScript",
-                    "url": "https://www.typescriptlang.org/",
-                    "image": "./skills/ts.png"
-                }
-            ],
-            "links": [
-                "https://github.com/Gazeux33/Votator",
-                "https://github.com/Gazeux33/Votator",
-                "none"
-            ],
-            "image": "./projects/votator.png",
-            "categories": [
-                "School",
-                "Web"
-            ]
-        },
-        {
-            "id": "labyrinth_game",
-            "date": 2024,
-            "type": "School Project",
-            "title": "Labyrinth game",
-            "description": "Maze game built with JavaFX, where a character must navigate through a labyrinth filled with enemies.",
-            "tags": [
-                {
-                    "name": "Java",
-                    "url": "https://www.java.com/",
-                    "image": "./skills/java.webp"
-                },
-                {
-                    "name": "JavaFX",
-                    "url": "https://openjfx.io/",
-                    "image": "./skills/Javafx.svg"
-                }
-            ],
-            "links": [
-                "none",
-                "none",
-                "none"
-            ],
-            "image": "./projects/lab.jpg",
-            "categories": [
-                "School",
-                "Simulations"
-            ]
-        },
-        {
-            "id": "robocup_manager",
-            "date": 2024,
-            "type": "School Project",
-            "title": "Robocup Manager",
-            "description": "Full-stack application built with Symfony, Twig, and Tailwind CSS, enabling the management of robot competitions, championships, and tournament brackets.",
-            "tags": [
-                {
-                    "name": "Symfony",
-                    "url": "https://symfony.com/",
-                    "image": "./skills/symfony.png"
-                },
-                {
-                    "name": "Php",
-                    "url": "https://www.php.net/",
-                    "image": "./skills/php.png"
-                },
-                {
-                    "name": "Tailwind",
-                    "url": "https://tailwindcss.com/",
-                    "image": "./skills/Tailwind.png"
-                },
-                {
-                    "name": "Twig",
-                    "url": "https://twig.symfony.com/",
-                    "image": "./skills/twig.png"
-                }
-            ],
-            "links": [
-                "none",
-                "none",
-                "none"
-            ],
-            "image": "./projects/robocup_manager.webp",
-            "categories": [
-                "School",
-                "Web"
-            ]
-        },
-        {
-            "id": "gymwalker",
-            "date": 2024,
-            "type": "Personal Project",
-            "title": "GymWalker",
-            "description": "Gymnasium environment where a humanoid learns to walk using reinforcement learning techniques in Python.",
-            "tags": [
-                {
-                    "name": "Gymnasium",
-                    "url": "https://gymnasium.farama.org/",
-                    "image": "./skills/gym.svg"
-                },
-                {
-                    "name": "Python",
-                    "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
-                },
-                {
-                    "name": "PyTorch",
-                    "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
-                }
-            ],
-            "links": [
-                "https://github.com/Gazeux33/GymWalker",
-                "https://github.com/Gazeux33/GymWalker",
-                "none"
-            ],
-            "image": "./projects/gym.png",
-            "categories": [
-                "Personal",
-                "AI",
-                "Simulations"
-            ]
-        },
-        {
-            "id": "motivai",
-            "date": 2024,
-            "type": "Personal Project",
-            "title": "MotivAI",
-            "description": "Tool for creating personalized cover letters using LangChain with an agent capable of conducting internet research.",
-            "tags": [
-                {
-                    "name": "Langchain",
-                    "url": "https://python.langchain.com/",
-                    "image": "./skills/langchain.png"
-                },
-                {
-                    "name": "Python",
-                    "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
-                }
-            ],
-            "links": [
-                "https://github.com/Gazeux33/MotivAI",
-                "https://github.com/Gazeux33/MotivAI",
-                "none"
-            ],
-            "image": "./projects/motivai.png",
-            "categories": [
-                "Personal",
-                "AI"
-            ]
-        },
-        {
-            "id": "music_generation_transformer",
-            "date": 2024,
-            "type": "Personal Project",
-            "title": "Music Generation Transformer",
-            "description": "Transformer-based model for generating classical music, utilizing sparse attention and trained on the BACH dataset.",
-            "tags": [
-                {
-                    "name": "PyTorch",
-                    "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
-                },
-                {
-                    "name": "Python",
-                    "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
-                }
-            ],
-            "links": [
-                "https://github.com/Gazeux33/MusicGenerationTransformer",
-                "https://github.com/Gazeux33/MusicGenerationTransformer",
-                "none"
-            ],
-            "image": "./projects/transformer.webp",
-            "categories": [
-                "Personal",
-                "AI"
-            ]
-        },
-        {
-            "id": "minishell",
-            "date": 2024,
-            "type": "School Project",
-            "title": "MiniShell",
-            "description": "Creation of an interactive shell in C, directly in the terminal, capable of executing basic commands and running external commands.",
-            "tags": [
-                {
-                    "name": "C",
-                    "url": "https://en.cppreference.com/w/",
-                    "image": "./skills/c.png"
-                }
-            ],
-            "links": [
-                "none",
-                "none",
-                "none"
-            ],
-            "image": "./projects/minishell.png",
-            "categories": [
-                "School",
-                "Sofware"
             ]
         }
     ]
