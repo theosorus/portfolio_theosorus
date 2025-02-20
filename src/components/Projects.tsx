@@ -1,5 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import projectsData from '../data/projects.json';
+import { useEffect, useState } from 'react';
+
+const categories = ["All" ,"Personal","School","AI","Simulations","Web","Software"];
 
 interface Project {
   id:string;
@@ -14,12 +17,39 @@ interface Project {
 }
 
 const Projects = () => {
-
   const [t] = useTranslation('global');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [currentProjects, setcurrentProjects] = useState<Project[]>([]);
+
+  useEffect(() =>{
+    if(selectedCategory === "All"){
+      setcurrentProjects(projectsData.projects)
+    }
+    else {
+      setcurrentProjects(projectsData.projects.filter((p) => p.categories.includes(selectedCategory)));
+    }
+    
+  } , [selectedCategory])
+
   return (
-    <div className="w-3/4 flex flex-wrap justify-center mt-10 gap-6">
-      {projectsData.projects.map((project: Project, index) => (
-        <div
+    <div className='flex flex-col items-center'>
+      <div className="flex space-x-2 mb-4">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setSelectedCategory(cat)}
+            className={`px-3 py-1 rounded ${
+              selectedCategory === cat ? 'bg-blue-300' : 'bg-gray-700'
+            }`}
+          >
+            {t(`categories.${cat}`)}
+          </button>
+        ))}
+      </div>
+
+      <div className="w-3/4 flex flex-wrap justify-center mt-10 gap-6">
+        {currentProjects.map((project: Project, index) => (
+          <div
           key={index}
           className="max-w-75 rounded overflow-hidden shadow-lg transform transition-transform duration-100 hover:scale-101 text-gray-200 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
         >
@@ -46,7 +76,8 @@ const Projects = () => {
             ))}
           </div>
         </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
