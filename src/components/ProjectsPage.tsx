@@ -1,20 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import projectsData from '../data/projects.json';
 import { useEffect, useState } from 'react';
+import { Project } from '../type';
 
 const categories = ["All" ,"Personal","School","AI","Simulations","Web","Software"];
 
-interface Project {
-  id:string;
-  date: number;
-  type: string;
-  title: string;
-  description: string;
-  tags: { name: string; url: string; image: string }[];
-  links: string[];
-  image: string;
-  categories: string[];
-}
+
 
 const Projects = () => {
   const [t] = useTranslation('global');
@@ -32,8 +23,8 @@ const Projects = () => {
   } , [selectedCategory])
 
   return (
-    <div className='flex flex-col items-center'>
-      <div className="flex space-x-2 mb-4">
+    <div className='flex flex-col items-center w-full mt-10'>
+      <div className="flex flex-wrap justify-center space-x-2 mb-4">
         {categories.map((cat) => (
           <button
             key={cat}
