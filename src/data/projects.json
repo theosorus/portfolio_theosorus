@@ -353,9 +353,9 @@
                     "image": "./skills/yolo.png"
                 },
                 {
-                    "name": "PyTorch",
-                    "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "name": "OpenCv",
+                    "url": "https://opencv.org/",
+                    "image": "./skills/opencv.png"
                 }
             ],
             "links": [
