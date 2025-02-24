@@ -1,98 +1,54 @@
- Langages de Programmation
+(
+          <div
+            key={idx}
+            className={`flex my-20 items-center justify-center ${
+              isEven ? "flex-row" : "flex-row-reverse"
+            }`}
+          >
+            <div
+              className={`rounded-xl z-1 gap-3 w-1/2 ${
+                isEven
+                  ? "mr-[-100px] justify-start text-left"
+                  : "ml-[-100px] justify-end text-right"
+              }`}
+            >
+              <h1 className="text-[#56dcfc] mb-2">
+                {p.date} • {p.type}
+              </h1>
+              <h1 className="text-2xl mb-2">{p.title}</h1>
+              <div className="bg-[rgb(41,41,85)] p-4 rounded-xl shadow-[0px_0px_20px_rgba(0,0,0,0.4)] mb-2">
+                <p>{p.description}</p>
+              </div>
+              <div className={`flex mb-2 ${isEven ? "justify-start" : "justify-end"}`}>
+                {p.tags.map((t, idx) => (
+                  <a href={t.url} key={idx} className="mr-2 text-[#56dcfc]" target="_blank">
+                    {t.name}
+                  </a>
+                ))}
+              </div>
+              <div className={`flex ${isEven ? "justify-start" : "justify-end"}`}>
+              <a className="github" href={p.links[1]} target="_blank">
+  <img
+    className="w-7 h-7 fill-[rgb(181, 184, 192)] "
+    src={github}
+    alt="Github"
+  />
+</a>
 
-    Typescript
-    Haskell
-    Python
-    Java
-    Javascript
-    HTML
-    CSS
-    PHP
-    C
-    C++
-    C#
-    Bash
-    ASM
+              </div>
 
-2. Bases de données
+              
+            </div>
 
-    MySQL
-    Oracle SQL Developer
-    Microsoft SQL Server
-    SQLite
-    PostgreSQL
-    WinDesign
+            <div className="z-0 w-1/2">
+              <img
+                className="w-300 h-55 object-cover rounded-xl"
+                src={p.image}
+                alt={p.title}
+              />
+            </div>
+          </div>
+        );
 
-3. Intelligence Artificielle / Data Science
 
-    Pytorch
-    TensorFlow
-    Pandas
-    Numpy
-    Matplotlib
-    Seaborn
-    HuggingFace
-    Kaggle
-    Scikit-learn
-    Langchain
-    Gymnasium
-    LM Studio
-    Ollama
-    XGBoost
-    OpenCV
-    Yolo
 
-4. Développement Web
-
-    React
-    Tailwind CSS
-    Symfony
-    Postman
-    AWS
-    Django
-    GSAP
-    Swagger
-    Flask
-    FastAPI
-    NodeJS
-    Vite
-    Three.js
-    Bootstrap
-    P5.js
-
-5. Tests et Qualité
-
-    Junit4/5
-    unittest
-    Jacoco
-
-6. Graphisme et 3D
-
-    OpenGL
-    SFML
-    PyGame
-
-7. Outils de Développement et Contrôle de Version
-
-    GitHub
-    GitLab
-    Git
-    Cmake
-    MakeFile
-    Unix
-    Jupyter
-    Arduino
-
-8. Frameworks et Environnements de Développement
-
-    JavaFX
-    .NET
-    WinForm
-
-9. Logiciels
-
-    VSCode
-    NetBeans
-    Eclipse
-    JetBrains Suite
-    Android Studio
