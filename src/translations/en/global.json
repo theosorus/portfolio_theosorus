@@ -110,15 +110,21 @@
         "minishell": {
             "title": "MiniShell",
             "description": "Creation of an interactive shell in C, directly in the terminal, capable of executing basic commands and running external commands."
-        }
-    },
-    "categories": {
-        "All": "All",
-        "Personal": "Personnal",
-        "School": "School",
-        "AI": "AI",
-        "Simulations": "Simulations",
-        "Web": "Web",
-        "Software": "Sofware"
+        },
+        "categories": {
+            "All": "All",
+            "Personal": "Personnal",
+            "School": "School",
+            "AI": "AI",
+            "Simulations": "Simulations",
+            "Web": "Web",
+            "Software": "Sofware"
+        },
+        "types": {
+            "Personal Project": "Personal Project",
+            "School Project": "School Project",
+            "Professional Project": "Professional Project"
+        },
+        "view_all_button" : "View all of my projects"
     }
 }

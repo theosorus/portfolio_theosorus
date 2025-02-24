@@ -2,11 +2,13 @@ import React from "react";
 import { useProjects } from "../hooks/useProjects";
 import { Project } from "../type";
 import github from "../../public/icons/github.svg";
+import { useTranslation } from "react-i18next";
 
 const MinimizedProject: React.FC = () => {
   const projectsToSee = useProjects();
+  const [t] = useTranslation('global');
   return (
-    <div className="w-3/4 mx-auto max-w-[500px] py-20">
+    <div className="w-3/4 mx-auto max-w-[500px] ">
       {projectsToSee.map((p: Project, idx) => (
         <div
           key={idx}
@@ -16,19 +18,19 @@ const MinimizedProject: React.FC = () => {
           <div className="absolute inset-0 bg-black opacity-70 rounded-xl" />
           <div className="relative p-4 text-white z-10">
             <h1 className="text-[#56dcfc]  mb-2">
-              {p.date} • {p.type}
+              {p.date} • {t(`projects.types.${p.type}`)}
             </h1>
-            <h1 className="text-2xl mb-2">{p.title}</h1>
-            <p className="my-5">{p.description}</p>
+            <h1 className="text-2xl mb-2">{t(`projects.${p.id}.title`)}</h1>
+            <p className="my-5">{t(`projects.${p.id}.description`)}</p>
             <div className="flex mb-3">
-              {p.tags.map((t, i) => (
+              {p.tags.map((tag, i) => (
                 <a
-                  href={t.url}
+                  href={tag.url}
                   key={i}
                   className="mr-2 text-[#56dcfc] hover:text-[#56dbfccb]"
                   target="_blank"
                 >
-                  {t.name}
+                  {tag.name}
                 </a>
               ))}
             </div>

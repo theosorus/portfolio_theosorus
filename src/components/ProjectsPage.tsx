@@ -33,7 +33,7 @@ const Projects = () => {
               selectedCategory === cat ? 'bg-blue-300' : 'bg-gray-700'
             }`}
           >
-            {t(`categories.${cat}`)}
+            {t(`projects.categories.${cat}`)}
           </button>
         ))}
       </div>
