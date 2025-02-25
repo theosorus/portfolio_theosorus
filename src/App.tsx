@@ -6,6 +6,7 @@ import PreviewProjects from "./components/PreviewProjects";
 
 import projectsData from './data/projects.json';
 import { Project } from "./type";
+import LandPage from "./components/LandPage";
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       <main className="flex flex-col items-center pt-14">
         <NavBar />
         {/* <Projects/> */}
-        <PreviewProjects></PreviewProjects>
+        {/* <Skills></Skills> */}
+        {/* <PreviewProjects></PreviewProjects> */}
+        <LandPage></LandPage>
         
 
       </main>

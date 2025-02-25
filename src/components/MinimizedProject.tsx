@@ -27,7 +27,7 @@ const MinimizedProject: React.FC = () => {
                 <a
                   href={tag.url}
                   key={i}
-                  className="mr-2 text-[#56dcfc] hover:text-[#56dbfccb]"
+                  className="mr-2 text-paradise-blue hover:text-paradise-blue-dark"
                   target="_blank"
                 >
                   {tag.name}

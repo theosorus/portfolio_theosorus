@@ -20,7 +20,7 @@ const PreviewProjects: React.FC = () => {
       
       
       {width >= 930 ? <NormalProjects /> : <MinimizedProject />}
-      <div className="flex gap-2 bg-[rgb(41,41,85)] p-3">
+      <div className="flex gap-2 bg-dark-purple p-3">
         <h1> {t('projects.view_all_button')}</h1>
         <img src={square_arrow} alt="Arrow Icon" className="invert opacity-70" />
       </div>

@@ -25,11 +25,11 @@ const NormalProjects: React.FC = () => {
                   : "ml-[-100px] justify-end text-right"
               }`}
             >
-              <h1 className="text-[#56dcfc] mb-2">
+              <h1 className="text-paradise-blue mb-2">
                 {p.date} • {t(`projects.types.${p.type}`)}
               </h1>
               <h1 className="text-2xl mb-2">{t(`projects.${p.id}.title`)}</h1>
-              <div className="bg-[rgb(41,41,85)] p-4 rounded-xl shadow-[0px_0px_20px_rgba(0,0,0,0.4)] mb-2">
+              <div className="bg-dark-purple p-4 rounded-xl shadow-[0px_0px_20px_rgba(0,0,0,0.4)] mb-2">
                 <p>{t(`projects.${p.id}.description`)}</p>
               </div>
               <div
@@ -38,7 +38,7 @@ const NormalProjects: React.FC = () => {
                 }`}
               >
                 {p.tags.map((tag, idx) => (
-                  <a href={tag.url} key={idx} className="mr-2 text-[#56dcfc] hover:text-[#56dbfccb]" target="_blank">
+                  <a href={tag.url} key={idx} className="mr-2 text-paradise-blue hover:text-paradise-blue-dark" target="_blank">
                     {tag.name}
                   </a>
                 ))}
