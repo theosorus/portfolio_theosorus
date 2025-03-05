@@ -7,6 +7,7 @@ import PreviewProjects from "./components/PreviewProjects";
 import projectsData from './data/projects.json';
 import { Project } from "./type";
 import LandPage from "./components/LandPage";
+import ContactUs from "./components/Contact";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         {/* <Projects/> */}
         {/* <Skills></Skills> */}
         {/* <PreviewProjects></PreviewProjects> */}
-        <LandPage></LandPage>
+        {/* <LandPage></LandPage> */}
+        <ContactUs></ContactUs>
         
 
       </main>
