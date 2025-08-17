@@ -3,7 +3,8 @@
         "home": "accueil",
         "aboutme": "profil",
         "projects": "projets",
-        "contact": "contact"
+        "contact": "contact",
+        "career": "carrière"
     },
     "skills": {
         "languages": "Langages",
@@ -14,7 +15,42 @@
         "graphics": "Graphiques & 3D",
         "testingquality": "Tests & Qualité"
     },
+    "aboutme": {
+        "title": "À propos",
+        "description_before_name": "Je m'appelle",
+        "name": "Théo",
+        "description_before_age": "J'ai",
+        "age": "19 ans",
+        "description_after_age": "et j'étudie l'informatique à l'Institut de Gradignan à Bordeaux",
+        "interest_title": "Centres d'intérêt",
+        "hobbies_title": "Loisirs",
+        "interests": {
+            "ai": "Intelligence Artificielle",
+            "ml": "Machine Learning",
+            "ds": "Data Science"
+        },
+        "hobbies": {
+            "f1": "Formule 1",
+            "ccg": "Jeux de cartes à collectionner",
+            "chess": "Échecs"
+        },
+        "all_links": "Tous les liens",
+        "download_cv": "Télécharger le CV",
+        "copied": "Copié !"
+    },
+    "footer": {
+        "name": "Théo Castillo",
+        "role": "Étudiant en informatique - Bordeaux, France",
+        "email": "theocastillo@yahoo.com",
+        "rights": "© {{year}} {{name}} - Tous droits réservés",
+        "note": "Portfolio personnel - Données non collectées",
+        "built_with": "Développé avec React & TypeScript",
+        "back_to_top": "Retour en haut",
+        "contact": "Contact"
+    },
     "projects": {
+        "title" : "Projets",
+        "scrollMessage" : "Faites défiler pour découvrir plus de projets",
         "snake_ai": {
             "title": "Snake IA",
             "description": "Création du jeu Snake et d'une IA qui apprend à jouer au jeu en utilisant l'apprentissage par renforcement profond avec PyTorch et Pygame."

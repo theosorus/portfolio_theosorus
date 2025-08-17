@@ -1,4 +1,27 @@
-[
+[ 
+    
+{
+        "start_date": "September 2025",
+        "end_date": "Present",
+        "title": "Work-study year as an AI developer ",
+        "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+        "tags": ["Company"],
+        "image" : "/career/wearegenial_logo.jpg",
+        "location" : "Bordeaux , France"
+    },
+
+
+
+
+{
+        "start_date": "June 2025",
+        "end_date": "July 2025",
+        "title": "AI Agent Builder - Freelance",
+        "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+        "tags": ["Company"],
+        "image" : "/career/wearegenial_logo.jpg",
+        "location" : "Bordeaux , France"
+    },
     {
         "start_date": "April 2025",
         "end_date": "June 2025",
@@ -16,14 +39,6 @@
         "tags": ["University"],
         "image" : "/career/universite_de_bordeaux_logo.jpg",
         "location" : "University of Bordeaux , France"
-    },
-    {
-        "start_date": "June 2025",
-        "end_date": "July 2025",
-        "title": "AI Agent Builder ",
-        "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
-        "tags": ["Company"],
-        "image" : "/career/wearegenial_logo.jpg",
-        "location" : "Bordeaux , France"
     }
+   
 ]

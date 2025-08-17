@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.0.5",
+    "gsap": "^3.13.0",
     "i18next": "^24.2.2",
     "lucide-react": "^0.539.0",
     "react": "^19.0.0",

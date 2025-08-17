@@ -3,7 +3,8 @@
         "home": "home",
         "aboutme": "about me",
         "projects": "projects",
-        "contact": "contact"
+        "contact": "contact",
+        "career": "career"
     },
     "skills": {
         "languages": "Languages",
@@ -14,7 +15,42 @@
         "graphics": "Graphics & 3D",
         "testingquality": "Testing & Quality"
     },
+    "aboutme": {
+        "title": "About Me",
+        "description_before_name": "My name is",
+        "name": "Theo",
+        "description_before_age": "I'm",
+        "age": "19 years old",
+        "description_after_age": "and I'm studying computer science at the Gradignan Institute in Bordeaux",
+        "interest_title": "Interest",
+        "hobbies_title": "Hobbies",
+        "interests": {
+            "ai": "Artificial Intelligence",
+            "ml": "Machine Learning",
+            "ds": "Data Science"
+        },
+        "hobbies": {
+            "f1": "Formula 1",
+            "ccg": "Collectible card games",
+            "chess": "Chess"
+        },
+        "all_links": "All links",
+        "download_cv": "Download CV",
+        "copied": "Copied!"
+    },
+    "footer": {
+        "name": "Théo Castillo",
+        "role": "Computer science student - Bordeaux, France",
+        "email": "theocastillo@yahoo.com",
+        "rights": "© {{year}} {{name}} - All rights reserved",
+        "note": "Personal portfolio - No data collected",
+        "built_with": "Built with React & TypeScript",
+        "back_to_top": "Back to top",
+        "contact": "Contact"
+    },
     "projects": {
+    "title" : "Projects",
+    "scrollMessage" : "Scroll to discover more projects",
         "snake_ai": {
             "title": "Snake AI",
             "description": "Creation of the Snake game and an AI that learns to play the game using deep reinforcement learning with PyTorch and Pygame."

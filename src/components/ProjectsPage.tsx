@@ -20,8 +20,8 @@ const Projects = () => {
   }, [selectedCategory])
 
   return (
-    <div className='flex flex-col items-center w-full mt-12'>
-      <h1 className="text-4xl font-bold text-font-color mb-8">Projects</h1>
+    <div id="projects" className='flex flex-col items-center w-full mt-12'>
+      <h1 className="text-4xl font-bold text-font-color mb-8">{t("projects.title")}</h1>
       {/* Filtres de catégories */}
       <div className="flex flex-wrap justify-center gap-3 mb-8">
         {categories.map((cat) => (
@@ -98,7 +98,7 @@ const Projects = () => {
         {/* Indicateur de scroll */}
         {currentProjects.length > 6 && (
           <div className="text-center text-slate-400 text-xs mt-4 opacity-60">
-            Faites défiler pour découvrir plus de projets
+            {t('projects.scrollMessage')}
           </div>
         )}
       </div>

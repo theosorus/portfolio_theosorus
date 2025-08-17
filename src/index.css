@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* Smooth scrolling for in-page anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent anchored sections from being hidden behind the fixed navbar */
+[id] {
+  scroll-margin-top: 4rem; /* navbar height ~3.5rem, add a bit of buffer */
+}
+
 @theme {
   --color-dark-purple : rgb(41,41,85);
   --color-light-purple : rgb(86, 68, 196);

@@ -73,10 +73,11 @@ const NavBar = () => {
           )}
         </div>
         <div className="hidden md:flex space-x-4 items-center justify-center">
-          <a href="#" className="text-xl a-underline">{t("navbar.home")}</a>
-          <a href="#" className="text-xl a-underline">{t("navbar.aboutme")}</a>
-          <a href="#" className="text-xl a-underline">{t("navbar.projects")}</a>
-          <a href="#" className="text-xl a-underline">{t("navbar.contact")}</a>
+          <a href="#home" className="text-xl a-underline">{t("navbar.home")}</a>
+          <a href="#about-me" className="text-xl a-underline">{t("navbar.aboutme")}</a>
+          <a href="#career" className="text-xl a-underline">{t("navbar.career")}</a>
+          <a href="#projects" className="text-xl a-underline">{t("navbar.projects")}</a>
+          
         </div>
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           <img
@@ -91,10 +92,11 @@ const NavBar = () => {
             menuOpen ? 'max-h-96' : 'max-h-0'
           }`}
         >
-          <a href="#" className="p-3 text-xl w-full text-center">{t("navbar.home")}</a>
-          <a href="#" className="p-3 text-xl border-t w-full text-center z-0">{t("navbar.aboutme")}</a>
-          <a href="#" className="p-3 text-xl border-t w-full text-center z-0">{t("navbar.projects")}</a>
-          <a href="#" className="p-3 text-xl border-y w-full text-center z-0">{t("navbar.contact")}</a>
+          <a href="#home" className="p-3 text-xl w-full text-center">{t("navbar.home")}</a>
+          <a href="#about-me" className="p-3 text-xl border-t w-full text-center z-0">{t("navbar.aboutme")}</a>
+          <a href="#career" className="p-3 text-xl border-t w-full text-center z-0">{t("navbar.career")}</a>
+          <a href="#projects" className="p-3 text-xl border-t w-full text-center z-0">{t("navbar.projects")}</a>
+          
         </div>
       </div>
     </nav>

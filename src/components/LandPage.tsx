@@ -12,7 +12,7 @@ const LandPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-start px-4 md:px-16 relative">
+  <div id="home" className="min-h-screen flex flex-col justify-center items-start px-4 md:px-16 relative">
       {/* Contenu principal */}
       <div className="max-w-4xl ml-4 md:ml-8">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">

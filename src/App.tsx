@@ -7,9 +7,13 @@ import AboutMe from "./components/AboutMe";
 import projectsData from './data/projects.json';
 import { Project } from "./type";
 import LandPage from "./components/LandPage";
-import ContactUs from "./components/Contact";
 import Career from "./components/Career";
 import Footer from "./components/Footer";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+(window as any).gsap = gsap;
+(window as any).ScrollTrigger = ScrollTrigger;
 
 function App() {
   return (

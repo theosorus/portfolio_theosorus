@@ -1,45 +1,70 @@
-import { Mail, Github, Linkedin, Download, ExternalLink } from 'lucide-react';
+import { Mail, Github, Linkedin, Download, ExternalLink, Check } from 'lucide-react';
+import { useTranslation } from "react-i18next";
+import { useState } from 'react';
 
 export const AboutMe = () => {
-  const handleEmailClick = () => {
-    window.location.href = 'mailto:theo@example.com'; // Remplacez par votre email
+  const [t, i18n] = useTranslation('global');
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const handleEmailClick = async () => {
+    try {
+      await navigator.clipboard.writeText('theocastillo@yahoo.com');
+      setEmailCopied(true);
+      // Réinitialiser l'animation après 2 secondes
+      setTimeout(() => setEmailCopied(false), 600);
+    } catch (err) {
+      console.error('Erreur lors de la copie:', err);
+      // Fallback pour les navigateurs plus anciens
+      const textArea = document.createElement('textarea');
+      textArea.value = 'theocastillo@yahoo.com';
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 1000);
+    }
   };
 
   const handleDownloadCV = () => {
-    // Remplacez par le chemin vers votre CV
+    // Choisit le bon CV selon la langue active (ex: 'fr', 'en', 'fr-FR')
+    const lang = (i18n?.language || '').toLowerCase();
+    const isFr = lang.startsWith('fr');
+  const fileName = isFr ? 'cv_tcastillo_fr.pdf' : 'resume_tcastillo_en.pdf';
     const link = document.createElement('a');
-    link.href = '/cv/theo-cv.pdf';
-    link.download = 'Theo_CV.pdf';
+    link.href = `/cv/${fileName}`;
+    link.download = fileName;
     link.click();
   };
 
   const socialLinks = [
     {
-      name: 'Email',
+      name: 'theocastillo@yahoo.com',
       icon: Mail,
       action: handleEmailClick,
-      color: 'bg-blue-500 hover:bg-blue-600',
+      color: emailCopied ? 'bg-green-500 hover:bg-green-600' : 'bg-blue-500 hover:bg-blue-600',
+      isEmail: true,
     },
     {
-      name: 'GitHub',
+      name: 'theosorus',
       icon: Github,
-      href: 'https://github.com/votre-username',
+      href: 'https://github.com/theosorus',
       color: 'bg-gray-800 hover:bg-gray-900',
     },
     {
-      name: 'LinkedIn',
+      name: "Theo Castillo",
       icon: Linkedin,
-      href: 'https://linkedin.com/in/votre-profile',
+      href: 'https://www.linkedin.com/in/theo-castillo/',
       color: 'bg-blue-600 hover:bg-blue-700',
     },
     {
-      name: 'Kaggle',
+      name: "Gazeux's Kaggle",
       icon: ExternalLink,
-      href: 'https://kaggle.com/votre-profile',
+      href: 'https://www.kaggle.com/gazeux330000',
       color: 'bg-cyan-500 hover:bg-cyan-600',
     },
     {
-      name: 'Download CV',
+      name: t('aboutme.download_cv'),
       icon: Download,
       action: handleDownloadCV,
       color: 'bg-green-500 hover:bg-green-600',
@@ -47,15 +72,15 @@ export const AboutMe = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center py-16 px-4 min-h-screen">
-      <div className="w-full max-w-4xl">
+    <div id="about-me" className="w-full flex flex-col items-center py-0 px-4 min-h-[90vh]">
+      <div className="w-full max-w-3xl">
         {/* Titre About Me */}
-        <h1 className="text-4xl font-bold text-font-color mb-8 ">
-          About Me
+        <h1 className="text-4xl font-bold text-font-color text-center mb-7">
+          {t('aboutme.title')}
         </h1>
 
         {/* Layout selon le schéma */}
-        <div className=" rounded-2xl shadow-lg overflow-hidden">
+        <div className="rounded-xl shadow-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-0">
             
             {/* Section Image (gauche) - Encore plus large */}
@@ -63,54 +88,53 @@ export const AboutMe = () => {
               <img
                 src="/theo.jpeg"
                 alt="Theo"
-                className="w-full h-full min-h-[500px] object-cover"
+                className="w-full h-full min-h-[450px] object-cover"
               />
             </div>
 
             {/* Section Description + Interest + Hobbies (droite) */}
-            <div className="lg:col-span-2 p-8 space-y-6">
+            <div className="lg:col-span-2 p-7 space-y-5">
               
               {/* Description */}
               <div>
-                <h3 className="text-xl font-bold mb-3">Description</h3>
                 <p className="text-lg">
-                  My name is <b>Theo</b>, I'm <b>19 years old </b> and I'm studying <b>computer science</b> at the Gradignan Institute in Bordeaux
+                  {t('aboutme.description_before_name')} <b className='text-blue-600'>{t('aboutme.name')}</b>, {t('aboutme.description_before_age')} <b className='text-blue-600'>{t('aboutme.age')}</b> {t('aboutme.description_after_age')}
                 </p>
               </div>
 
               {/* Interest et Hobbies en deux colonnes */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-5">
                 {/* Interest (Expertise) */}
                 <div>
-                  <h3 className="text-xl font-bold  mb-3">Interest</h3>
+                  <h3 className="text-xl font-bold mb-3">{t('aboutme.interest_title')}</h3>
                   <div className="space-y-2">
                     <div className="bg-purple-100 text-purple-800 px-3 py-2 rounded-lg text-sm font-medium">
-                      Intelligence Artificielle
+                      {t('aboutme.interests.ai')}
                     </div>
                     <div className="bg-blue-100 text-blue-800 px-3 py-2 rounded-lg text-sm font-medium">
-                      Machine Learning
+                      {t('aboutme.interests.ml')}
                     </div>
                     <div className="bg-green-100 text-green-800 px-3 py-2 rounded-lg text-sm font-medium">
-                      Data Science
+                      {t('aboutme.interests.ds')}
                     </div>
                   </div>
                 </div>
 
                 {/* Hobbies */}
                 <div>
-                  <h3 className="text-xl font-bold  mb-3">Hobbies</h3>
+                  <h3 className="text-xl font-bold mb-3">{t('aboutme.hobbies_title')}</h3>
                   <div className="space-y-2">
-                    <div className="flex items-center text-lg ">
+                    <div className="flex items-center text-lg">
                       <span className="mr-3">🏎️</span>
-                      Formule 1
+                      {t('aboutme.hobbies.f1')}
                     </div>
-                    <div className="flex items-center text-lg ">
+                    <div className="flex items-center text-lg">
                       <span className="mr-3">🎴</span>
-                      Jeux de cartes à collectionner
+                      {t('aboutme.hobbies.ccg')}
                     </div>
-                    <div className="flex items-center text-lg ">
+                    <div className="flex items-center text-lg">
                       <span className="mr-3">♟️</span>
-                      Échecs
+                      {t('aboutme.hobbies.chess')}
                     </div>
                   </div>
                 </div>
@@ -118,20 +142,22 @@ export const AboutMe = () => {
 
               {/* All links */}
               <div>
-                <h3 className="text-xl font-bold mb-4">All links</h3>
+                <h3 className="text-xl font-bold mb-4">{t('aboutme.all_links')}</h3>
                 <div className="flex flex-wrap gap-3">
                   {socialLinks.map((link, index) => {
-                    const IconComponent = link.icon;
+          const IconComponent = link.isEmail && emailCopied ? Check : link.icon;
                     
-                    if (link.action) {
+        if (link.action) {
                       return (
                         <button
                           key={index}
                           onClick={link.action}
-                          className={`${link.color} text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 flex items-center gap-2 shadow-md`}
+                          className={`${link.color} text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 shadow-md ${
+                            emailCopied && link.isEmail ? 'animate-pulse' : ''
+                          }`}
                         >
-                          <IconComponent size={16} />
-                          {link.name}
+                          <IconComponent size={14} />
+          {link.isEmail && emailCopied ? t('aboutme.copied') : link.name}
                         </button>
                       );
                     }
@@ -144,7 +170,7 @@ export const AboutMe = () => {
                         rel="noopener noreferrer"
                         className={`${link.color} text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 flex items-center gap-2 shadow-md`}
                       >
-                        <IconComponent size={16} />
+                        <IconComponent size={14} />
                         {link.name}
                       </a>
                     );
