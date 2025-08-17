@@ -4,7 +4,7 @@
             "id": "large_language_model",
             "date": 2024,
             "type": "Personal Project",
-            "title": "Large Language Model",
+            "title": "French Language Model",
             "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
             "tags": [
                 {

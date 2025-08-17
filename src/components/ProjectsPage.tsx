@@ -5,32 +5,33 @@ import { Project } from '../type';
 
 const categories = ["All" ,"Personal","School","AI","Simulations","Web","Software"];
 
-
-
 const Projects = () => {
   const [t] = useTranslation('global');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [currentProjects, setcurrentProjects] = useState<Project[]>([]);
 
-  useEffect(() =>{
+  useEffect(() => {
     if(selectedCategory === "All"){
       setcurrentProjects(projectsData.projects)
     }
     else {
       setcurrentProjects(projectsData.projects.filter((p) => p.categories.includes(selectedCategory)));
     }
-    
-  } , [selectedCategory])
+  }, [selectedCategory])
 
   return (
-    <div className='flex flex-col items-center w-full mt-10'>
-      <div className="flex flex-wrap justify-center space-x-2 mb-4">
+    <div className='flex flex-col items-center w-full mt-12'>
+      <h1 className="text-4xl font-bold text-font-color mb-8">Projects</h1>
+      {/* Filtres de catégories */}
+      <div className="flex flex-wrap justify-center gap-3 mb-8">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-3 py-1 rounded ${
-              selectedCategory === cat ? 'bg-blue-300' : 'bg-gray-700'
+            className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
+              selectedCategory === cat 
+                ? 'bg-slate-100 text-slate-900 border-slate-200 shadow-sm' 
+                : 'bg-transparent text-slate-400 border-slate-600 hover:text-slate-200 hover:border-slate-400'
             }`}
           >
             {t(`projects.categories.${cat}`)}
@@ -38,40 +39,71 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="w-3/4 flex flex-wrap justify-center mt-10 gap-6">
-        {currentProjects.map((project: Project, index) => (
-          <div
-          key={index}
-          className="max-w-75 rounded overflow-hidden shadow-lg transform transition-transform duration-100 hover:scale-101 text-gray-200 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
+      {/* Galerie scrollable verticale */}
+      <div className="w-full max-w-7xl px-4">
+        <div 
+          className="max-h-[650px] overflow-y-auto pr-3 scrollbar-thin scrollbar-track-slate-700/20 scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
+          style={{
+            scrollbarColor: 'var(--color-openai-purple) transparent',
+          }}
         >
-          <img
-            className="w-full h-40 object-cover"
-            src= {project.image}
-            alt={project.title}
-          />
-          <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{t(`projects.${project.id}.title`)} </div>
-            <p className=" text-base">
-            {t(`projects.${project.id}.description`)}
-            </p>
-          </div>
-          <div className="px-6 pt-4 pb-2 flex flex-wrap gap-2">
-            {project.tags.map((tag, idx) => (
-                <div key={idx} className='flex bg-gray-200 rounded-full px-3 py-1'>
-                <span className="inline-block text-sm font-semibold text-gray-700">
-                  {tag.name}
-                </span>
-                {tag.image && <img src={tag.image} alt="" className='w-5  h-5 ml-1' />}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-2">
+            {currentProjects.map((project: Project, index) => (
+              <div
+                key={index}
+                className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1"
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
                 </div>
+                
+                <div className="p-5">
+                  <h3 className="font-semibold text-lg mb-2 text-slate-100 leading-tight">
+                    {t(`projects.${project.id}.title`)}
+                  </h3>
+                  <p className="text-slate-300 text-xs leading-relaxed mb-3 line-clamp-3">
+                    {t(`projects.${project.id}.description`)}
+                  </p>
 
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, idx) => (
+                      <div 
+                        key={idx} 
+                        className='flex items-center bg-slate-800/60 backdrop-blur-sm rounded-lg px-2.5 py-1 border border-slate-700/50 transition-colors duration-200 hover:bg-slate-700/60'
+                      >
+                        <span className="text-xs font-medium text-slate-200">
+                          {tag.name}
+                        </span>
+                        {tag.image && (
+                          <img 
+                            src={tag.image} 
+                            alt="" 
+                            className='w-3.5 h-3.5 ml-1 rounded opacity-80' 
+                          />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
-        ))}
+        
+        {/* Indicateur de scroll */}
+        {currentProjects.length > 6 && (
+          <div className="text-center text-slate-400 text-xs mt-4 opacity-60">
+            Faites défiler pour découvrir plus de projets
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default Projects;
-

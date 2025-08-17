@@ -1,0 +1,29 @@
+[
+    {
+        "start_date": "April 2025",
+        "end_date": "June 2025",
+        "title": "Machine learning research internship",
+        "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+        "tags": ["University", "Internship"],
+        "image" : "/career/ochanomizu_logo.jpg",
+        "location" : "Bekki Lab - Ochanomizu University, Japan"
+    },
+    {
+        "start_date": "September 2024",
+        "end_date": "",
+        "title": "Bachelor of Computer Science",
+        "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+        "tags": ["University"],
+        "image" : "/career/universite_de_bordeaux_logo.jpg",
+        "location" : "University of Bordeaux , France"
+    },
+    {
+        "start_date": "June 2025",
+        "end_date": "July 2025",
+        "title": "AI Agent Builder ",
+        "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+        "tags": ["Company"],
+        "image" : "/career/wearegenial_logo.jpg",
+        "location" : "Bordeaux , France"
+    }
+]
