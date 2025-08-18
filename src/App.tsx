@@ -7,6 +7,7 @@ import Career from "./components/Career";
 import Footer from "./components/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Skills from "./components/Skills";
 
 (window as any).gsap = gsap;
 (window as any).ScrollTrigger = ScrollTrigger;

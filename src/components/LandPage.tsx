@@ -22,18 +22,23 @@ const LandPage = () => {
         
         <div className="space-y-6 text-lg md:text-xl lg:text-2xl text-font-color leading-relaxed">
           <p>
-            Welcome to my portfolio! I am a computer science student and autodidact{' '}
-            <span className="text-blue-600 font-medium">polyglot</span> with a passion for{' '}
-            <span className="text-blue-600 font-medium">data science</span> and living languages.
+            Welcome to my portfolio! I am a computer science student with a passion for{' '}
+            <span className="text-blue-600 font-medium">Artificial Intelligence</span>, particularly{' '}
+            <span className="text-blue-600 font-medium">Deep Learning</span> and{' '}
+            <span className="text-blue-600 font-medium">Machine Learning</span>.
           </p>
-          
           <p>
-            I particularly like programming{' '}
-            <span className="text-blue-600 font-medium">AI</span> and{' '}
-            <span className="text-blue-600 font-medium">NLP</span> programs as it allows me to combine my interests in languages and technology.
+            I especially enjoy working on projects that involve{' '}
+            <span className="text-blue-600 font-medium">Computer Vision</span> and{' '}
+            <span className="text-blue-600 font-medium">NLP</span>.
           </p>
+          {/* <p>
+            I have a particular interest in{' '}
+            <span className="text-blue-600 font-medium">model design</span> and{' '}
+            <span className="text-blue-600 font-medium">architecture</span>, 
+            exploring how different neural network structures can be optimized for specific tasks and domains.
+          </p> */}
         </div>
-      </div>
 
       {/* Flèche vers le bas */}
       <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
@@ -51,6 +56,7 @@ const LandPage = () => {
         </button>
       </div>
     </div>
+  </div>
   );
 };
 
