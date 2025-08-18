@@ -1,5 +1,4 @@
-import { useRef, FormEvent } from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import careerData from '../data/career.json';
 
 interface CareerItem {
@@ -13,7 +12,7 @@ interface CareerItem {
 }
 
 export const Career = () => {
-  const [t, i18n] = useTranslation('global');
+  // const [t, i18n] = useTranslation('global');
   
   const formatDate = (dateString: string) => {
     return dateString || 'Present';

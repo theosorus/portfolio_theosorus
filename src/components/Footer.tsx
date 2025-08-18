@@ -1,9 +1,9 @@
-import { ChevronUp } from 'lucide-react';
+
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [t, i18n] = useTranslation('global');
+  const [t] = useTranslation('global');
     
 
   return (

@@ -35,7 +35,7 @@
         "start_date": "September 2024",
         "end_date": "",
         "title": "Bachelor of Computer Science",
-        "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+        "description": "Bachelor of Computer Science, International track",
         "tags": ["University"],
         "image" : "/career/universite_de_bordeaux_logo.jpg",
         "location" : "University of Bordeaux , France"
