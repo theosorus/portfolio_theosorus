@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const langIcons: Record<'en' | 'fr', string> = {
-  en: '/icons/uk.webp',
-  fr: '/icons/france.webp',
+  en: './icons/uk.webp',
+  fr: './icons/france.webp',
 };
 
 const NavBar = () => {
