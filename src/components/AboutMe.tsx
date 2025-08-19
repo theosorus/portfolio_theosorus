@@ -2,7 +2,7 @@ import { Mail, Github, Linkedin, Download, ExternalLink, Check } from 'lucide-re
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
 import hobbiesInterestData from '../data/hobbies_interest.json';
-import SimpleParallax from "simple-parallax-js";
+// import SimpleParallax from "simple-parallax-js";
 
 export const AboutMe = () => {
   const [t, i18n] = useTranslation('global');
