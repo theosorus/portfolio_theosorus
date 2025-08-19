@@ -83,6 +83,18 @@ export const Career = () => {
                   {getLocalizedField(item, 'description', lang)}
                 </p>
                 
+                {/***** Tags *****/}
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {item.tags.map((tag, tagIndex) => (
+                    <span 
+                      key={tagIndex}
+                      className="inline-block px-2 py-1 rounded-md text-xs bg-blue-600 text-font-color"
+                    >
+                      {t(`career.tags.${tag}`)}
+                    </span>
+                  ))}
+                </div>
+                
                 {/***** Date - aligned right *****/}
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm md:text-base text-gray-500 text-right">
                   <span>

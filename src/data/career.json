@@ -9,9 +9,9 @@
         "description": "A one-year work-study program as an AI developer at Genial, a company specializing in AI solutions for other companies.",
         "description_en": "A one-year work-study program as an AI developer at Genial, a company specializing in AI solutions for other companies.",
         "description_fr": "Alternance d'un an en tant que développeur IA chez Genial, une entreprise spécialisée dans les solutions d'IA pour d'autres entreprises.",
-        "tags": ["Company"],
+        "tags": ["company"],
         "image" : "./career/wearegenial_logo.jpg",
-        "location" : "Bordeaux, France"
+        "location" : "Genial - Bordeaux, France"
     },
 {
         "start_date": "June 2025",
@@ -22,9 +22,9 @@
         "description": "Freelance mission for the creation and maintenance of specialized AI agents",
         "description_en": "Freelance mission for the creation and maintenance of specialized AI agents",
         "description_fr": "Mission en freelance pour la création et la maintenance d'agents IA spécialisés",
-        "tags": ["Company"],
+        "tags": ["company"],
         "image" : "./career/wearegenial_logo.jpg",
-        "location" : "Bordeaux, France"
+        "location" : "Genial - Bordeaux, France"
     },
     {
         "start_date": "April 2025",
@@ -35,7 +35,7 @@
         "description": "A ten-week research and development internship in machine learning using functional programming at Ochanomizu University in Japan",
         "description_en": "A ten-week research and development internship in machine learning using functional programming at Ochanomizu University in Japan",
         "description_fr": "Stage de recherche et développement de dix semaines en machine learning utilisant la programmation fonctionnelle à l'Université d'Ochanomizu au Japon",
-        "tags": ["University", "Internship"],
+        "tags": ["university", "internship"],
         "image" : "./career/ochanomizu_logo.jpg",
         "location" : "Bekki Lab - Ochanomizu University, Japan"
     },
@@ -48,7 +48,7 @@
         "description": "Bachelor of Computer Science, International track",
         "description_en": "Bachelor of Computer Science, International track",
         "description_fr": "BUT Informatique, parcours international",
-        "tags": ["University"],
+        "tags": ["university"],
         "image" : "./career/universite_de_bordeaux_logo.jpg",
         "location" : "University of Bordeaux, France",
         "location_en": "University of Bordeaux, France",

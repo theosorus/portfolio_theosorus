@@ -2,6 +2,7 @@ import { Mail, Github, Linkedin, Download, ExternalLink, Check } from 'lucide-re
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
 import hobbiesInterestData from '../data/hobbies_interest.json';
+import SimpleParallax from "simple-parallax-js";
 
 export const AboutMe = () => {
   const [t, i18n] = useTranslation('global');
@@ -75,7 +76,7 @@ export const AboutMe = () => {
   ];
 
   return (
-    <div id="about-me" className="w-full flex flex-col items-center py-0 px-4 min-h-[80vh] ">
+    <div id="about-me" className="w-full flex flex-col items-center py-0 px-4 min-h-[90vh] ">
       <div className="w-full max-w-5xl">
         {/* Titre About Me */}
         {/* <h1 className="text-4xl font-bold text-font-color text-center mb-7">
@@ -87,12 +88,14 @@ export const AboutMe = () => {
           <div className="grid grid-cols-1 lg:grid-cols-6 gap-0">
             
             {/* Section Image (gauche) - Plus grande : 3/6 au lieu de 2/6 */}
-            <div className="lg:col-span-3">
-              <img
-                src="./island.jpeg"
-                alt="Theo"
-                className="w-full h-full min-h-[450px] object-cover"
-              />
+            <div className="lg:col-span-3 h-full">
+              {/* <SimpleParallax orientation="up" scale={1.1}> */}
+                <img
+                  src="./island.jpeg"
+                  alt="Theo"
+                  className="w-full h-full min-h-[450px] object-cover"
+                />
+              {/* </SimpleParallax> */}
             </div>
 
             {/* Section Description + Interest + Hobbies (droite) - 3/6 au lieu de 4/6 */}

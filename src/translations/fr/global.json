@@ -8,7 +8,12 @@
     },
     "career": {
         "title": "Parcours",
-        "present": "Présent"
+        "present": "Présent",
+        "tags": {
+            "company": "Entreprise",
+            "university": "Université",
+            "internship": "Stage"
+        }
     },
     "landpage": {
         "greeting": "Bonjour, je suis",

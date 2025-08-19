@@ -8,7 +8,12 @@
     },
     "career": {
         "title": "Career Track",
-        "present": "Present"
+        "present": "Present",
+        "tags": {
+            "company": "Company",
+            "university": "University",
+            "internship": "Internship"
+        }
     },
     "landpage": {
         "greeting": "Hello, I'm",
