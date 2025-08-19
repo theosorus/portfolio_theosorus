@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig(({ command }) => {
-  const base = command === 'serve' ? '/' : '/portfolio_gazeux/'
+  const base = command === 'serve' ? '/' : '/'
   
   return {
     plugins: [react(), tailwindcss()],
