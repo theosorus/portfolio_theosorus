@@ -5,10 +5,9 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 // Use a conditional base so local dev server doesn't use the GitHub Pages base.
 export default defineConfig(() => {
-  const base =  '/portfolio_gazeux/'
 
   return {
-    base,
     plugins: [react(), tailwindcss()],
+    base: "/portfolio_gazeux/", // Set the base path for GitHub Pages
   }
 })
