@@ -31,10 +31,10 @@
         "end_date": "June 2025",
         "title": "Machine learning research internship",
         "title_en": "Machine learning research internship",
-        "title_fr": "Stage de recherche en apprentissage automatique",
+        "title_fr": "Stage de recherche en Machine Learning",
         "description": "A ten-week research and development internship in machine learning using functional programming at Ochanomizu University in Japan",
         "description_en": "A ten-week research and development internship in machine learning using functional programming at Ochanomizu University in Japan",
-        "description_fr": "Stage de recherche et développement de dix semaines en machine learning utilisant la programmation fonctionnelle à l'Université Ochanomizu au Japon",
+        "description_fr": "Stage de recherche et développement de dix semaines en machine learning utilisant la programmation fonctionnelle à l'Université d'Ochanomizu au Japon",
         "tags": ["University", "Internship"],
         "image" : "./career/ochanomizu_logo.jpg",
         "location" : "Bekki Lab - Ochanomizu University, Japan"

@@ -76,7 +76,7 @@ export const AboutMe = () => {
 
   return (
     <div id="about-me" className="w-full flex flex-col items-center py-0 px-4 min-h-[80vh] ">
-      <div className="w-full max-w-4xl">
+      <div className="w-full max-w-5xl">
         {/* Titre About Me */}
         {/* <h1 className="text-4xl font-bold text-font-color text-center mb-7">
           {t('aboutme.title')}
@@ -89,7 +89,7 @@ export const AboutMe = () => {
             {/* Section Image (gauche) - Plus grande : 3/6 au lieu de 2/6 */}
             <div className="lg:col-span-3">
               <img
-                src="./theo.jpeg"
+                src="./island.jpeg"
                 alt="Theo"
                 className="w-full h-full min-h-[450px] object-cover"
               />
