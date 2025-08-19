@@ -15,7 +15,7 @@ const Footer = () => {
           
           {/* Informations personnelles */}
           <div className="space-y-2">
-            <p className="font-medium text-gray-900">{t('footer.name')}</p>
+            <p className="font-medium text-font-color">{t('footer.name')}</p>
             <p className="text-sm text-gray-600">{t('footer.role')}</p>
             <a 
               href={`mailto:${t('footer.email')}`} 
