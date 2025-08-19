@@ -1,6 +1,8 @@
 import { ChevronDown } from 'lucide-react';
+import { useTranslation } from "react-i18next";
 
 const LandPage = () => {
+  const [t] = useTranslation('global');
   const scrollToNext = () => {
     const aboutSection = document.getElementById('about-me') || document.querySelector('[data-section="about"]');
     if (aboutSection) {
@@ -16,21 +18,21 @@ const LandPage = () => {
       {/* Contenu principal */}
       <div className="max-w-4xl ml-4 md:ml-8">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
-          Hello, I'm{' '}
-          <span className="text-blue-600">Théo</span>
+          {t('landpage.greeting')}{' '}
+          <span className="text-blue-600">{t('landpage.name')}</span>
         </h1>
         
         <div className="space-y-6 text-lg md:text-xl lg:text-2xl text-font-color leading-relaxed">
           <p>
-            Welcome to my portfolio! I am a computer science student with a passion for{' '}
-            <span className="text-blue-600 font-medium">Artificial Intelligence</span>, particularly{' '}
-            <span className="text-blue-600 font-medium">Deep Learning</span> and{' '}
-            <span className="text-blue-600 font-medium">Machine Learning</span>.
+            {t('landpage.welcome')}{' '}
+            <span className="text-blue-600 font-medium">{t('landpage.ai')}</span>, {t('landpage.particularly')}{' '}
+            <span className="text-blue-600 font-medium">{t('landpage.deeplearning')}</span> {t('landpage.and')}{' '}
+            <span className="text-blue-600 font-medium">{t('landpage.machinelearning')}</span>.
           </p>
           <p>
-            I especially enjoy working on projects that involve{' '}
-            <span className="text-blue-600 font-medium">Computer Vision</span> and{' '}
-            <span className="text-blue-600 font-medium">NLP</span>.
+            {t('landpage.enjoy')}{' '}
+            <span className="text-blue-600 font-medium">{t('landpage.computervision')}</span> {t('landpage.and')}{' '}
+            <span className="text-blue-600 font-medium">{t('landpage.nlp')}</span>.
           </p>
           {/* <p>
             I have a particular interest in{' '}
@@ -45,7 +47,7 @@ const LandPage = () => {
         <button
           onClick={scrollToNext}
           className="flex flex-col items-center space-y-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 group"
-          aria-label="Scroll to next section"
+          aria-label={t('landpage.scrollNextSection')}
         >
           <div className="animate-bounce">
             <ChevronDown 

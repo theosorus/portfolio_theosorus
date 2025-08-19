@@ -1,6 +1,7 @@
 import { Mail, Github, Linkedin, Download, ExternalLink, Check } from 'lucide-react';
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
+import hobbiesInterestData from '../data/hobbies_interest.json';
 
 export const AboutMe = () => {
   const [t, i18n] = useTranslation('global');
@@ -30,12 +31,14 @@ export const AboutMe = () => {
     // Choisit le bon CV selon la langue active (ex: 'fr', 'en', 'fr-FR')
     const lang = (i18n?.language || '').toLowerCase();
     const isFr = lang.startsWith('fr');
-  const fileName = isFr ? 'cv_tcastillo_fr.pdf' : 'resume_tcastillo_en.pdf';
+    const fileName = isFr ? 'cv_tcastillo_fr.pdf' : 'resume_tcastillo_en.pdf';
     const link = document.createElement('a');
     link.href = `/cv/${fileName}`;
     link.download = fileName;
     link.click();
   };
+
+  const { interests, hobbies } = hobbiesInterestData;
 
   const socialLinks = [
     {
@@ -67,24 +70,24 @@ export const AboutMe = () => {
       name: t('aboutme.download_cv'),
       icon: Download,
       action: handleDownloadCV,
-      color: 'bg-green-500 hover:bg-green-600',
+      color: 'bg-dark-purple',
     },
   ];
 
   return (
-    <div id="about-me" className="w-full flex flex-col items-center py-0 px-4 min-h-[90vh]">
-      <div className="w-full max-w-3xl">
+    <div id="about-me" className="w-full flex flex-col items-center py-0 px-4 min-h-[80vh] ">
+      <div className="w-full max-w-4xl">
         {/* Titre About Me */}
-        <h1 className="text-4xl font-bold text-font-color text-center mb-7">
+        {/* <h1 className="text-4xl font-bold text-font-color text-center mb-7">
           {t('aboutme.title')}
-        </h1>
+        </h1> */}
 
-        {/* Layout selon le schéma */}
-        <div className="rounded-xl shadow-lg overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-0">
+        {/* Layout selon le schéma - Ratio plus équilibré 3:3 */}
+        <div className="rounded-2xl shadow-2xl overflow-hidden  ">
+          <div className="grid grid-cols-1 lg:grid-cols-6 gap-0">
             
-            {/* Section Image (gauche) - Encore plus large */}
-            <div className="lg:col-span-2">
+            {/* Section Image (gauche) - Plus grande : 3/6 au lieu de 2/6 */}
+            <div className="lg:col-span-3">
               <img
                 src="/theo.jpeg"
                 alt="Theo"
@@ -92,62 +95,59 @@ export const AboutMe = () => {
               />
             </div>
 
-            {/* Section Description + Interest + Hobbies (droite) */}
-            <div className="lg:col-span-2 p-7 space-y-5">
+            {/* Section Description + Interest + Hobbies (droite) - 3/6 au lieu de 4/6 */}
+            <div className="lg:col-span-3 p-8 space-y-8">
               
               {/* Description */}
               <div>
-                <p className="text-lg">
+                <p className="text-lg leading-relaxed text-font-color ">
                   {t('aboutme.description_before_name')} <b className='text-blue-600'>{t('aboutme.name')}</b>, {t('aboutme.description_before_age')} <b className='text-blue-600'>{t('aboutme.age')}</b> {t('aboutme.description_after_age')}
                 </p>
               </div>
 
-              {/* Interest et Hobbies en deux colonnes */}
-              <div className="grid md:grid-cols-2 gap-5">
-                {/* Interest (Expertise) */}
+              {/* Interest et Hobbies - Design épuré */}
+              <div className="space-y-8">
+                
+                {/* Interests */}
                 <div>
-                  <h3 className="text-xl font-bold mb-3">{t('aboutme.interest_title')}</h3>
-                  <div className="space-y-2">
-                    <div className="bg-purple-100 text-purple-800 px-3 py-2 rounded-lg text-sm font-medium">
-                      {t('aboutme.interests.ai')}
-                    </div>
-                    <div className="bg-blue-100 text-blue-800 px-3 py-2 rounded-lg text-sm font-medium">
-                      {t('aboutme.interests.ml')}
-                    </div>
-                    <div className="bg-green-100 text-green-800 px-3 py-2 rounded-lg text-sm font-medium">
-                      {t('aboutme.interests.ds')}
-                    </div>
+                  <h3 className="text-2xl font-semibold mb-5  border-b border-gray-500 pb-2">{t('aboutme.interest_title')}</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {interests.map((interest) => (
+                      <div key={interest.key} className="group">
+                        <span className={`bg-white text-gray-600 px-4 py-2.5 rounded-xl text-sm font-medium shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-default `}>
+                          {t(`aboutme.interests.${interest.key}`)}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
                 {/* Hobbies */}
                 <div>
-                  <h3 className="text-xl font-bold mb-3">{t('aboutme.hobbies_title')}</h3>
-                  <div className="space-y-2">
-                    <div className="flex items-center text-lg">
-                      <span className="mr-3">🏎️</span>
-                      {t('aboutme.hobbies.f1')}
-                    </div>
-                    <div className="flex items-center text-lg">
-                      <span className="mr-3">🎴</span>
-                      {t('aboutme.hobbies.ccg')}
-                    </div>
-                    <div className="flex items-center text-lg">
-                      <span className="mr-3">♟️</span>
-                      {t('aboutme.hobbies.chess')}
-                    </div>
+                  <h3 className="text-2xl font-semibold mb-5  border-b border-gray-500 pb-2">{t('aboutme.hobbies_title')}</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {hobbies.map((hobby) => (
+                      <div key={hobby.key} className={`group bg-white text-gray-600 px-3 py-1 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-default flex items-center gap-2`}>
+                        <span className="text-lg group-hover:scale-110 transition-transform duration-200">
+                          {hobby.emoji}
+                        </span>
+                        <span className="text-sm font-medium">
+                          {t(`aboutme.hobbies.${hobby.key}`)}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
 
               {/* All links */}
               <div>
-                <h3 className="text-xl font-bold mb-4">{t('aboutme.all_links')}</h3>
+                <h3 className="text-2xl font-semibold mb-5  border-b border-gray-500 pb-2">{t('aboutme.all_links')}</h3>
                 <div className="flex flex-wrap gap-3">
                   {socialLinks.map((link, index) => {
-          const IconComponent = link.isEmail && emailCopied ? Check : link.icon;
+                    const IconComponent = link.isEmail && emailCopied ? Check : link.icon;
                     
-        if (link.action) {
+                    if (link.action) {
                       return (
                         <button
                           key={index}
@@ -157,7 +157,7 @@ export const AboutMe = () => {
                           }`}
                         >
                           <IconComponent size={14} />
-          {link.isEmail && emailCopied ? t('aboutme.copied') : link.name}
+                          {link.isEmail && emailCopied ? t('aboutme.copied') : link.name}
                         </button>
                       );
                     }

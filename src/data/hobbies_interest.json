@@ -1,0 +1,14 @@
+{
+  "interests": [
+    { "key": "ai" },
+    { "key": "ml" },
+    { "key": "ds" }
+  ],
+  "hobbies": [
+    { "key": "f1", "emoji": "🏎️" },
+    { "key": "ccg", "emoji": "🎴" },
+    { "key": "chess", "emoji": "♟️" },
+    { "key": "travel", "emoji": "✈️" },
+    {"key" : "running", "emoji": "🏃‍♂️"}
+  ]
+}

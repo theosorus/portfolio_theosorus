@@ -6,6 +6,20 @@
         "contact": "contact",
         "career": "carrière"
     },
+    "landpage": {
+        "greeting": "Bonjour, je suis",
+        "name": "Théo",
+        "welcome": "Bienvenue sur mon portfolio ! Je suis un étudiant en informatique passionné par",
+        "ai": "l'Intelligence Artificielle",
+        "particularly": "particulièrement",
+        "deeplearning": "le Deep Learning",
+        "and": "et",
+        "machinelearning": "le Machine Learning",
+        "enjoy": "J'aime particulièrement travailler sur des projets qui impliquent",
+        "computervision": "Vision par Ordinateur",
+        "nlp": "le NLP",
+        "scrollNextSection": "Défiler vers la section suivante"
+    },
     "skills": {
         "languages": "Langages",
         "ai": "IA / ML Science des données",
@@ -32,7 +46,9 @@
         "hobbies": {
             "f1": "Formule 1",
             "ccg": "Jeux de cartes à collectionner",
-            "chess": "Échecs"
+            "chess": "Échecs",
+            "travel": "Voyages",
+            "running": "Running"
         },
         "all_links": "Tous les liens",
         "download_cv": "Télécharger le CV",
