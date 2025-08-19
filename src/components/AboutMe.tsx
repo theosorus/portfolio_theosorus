@@ -89,7 +89,7 @@ export const AboutMe = () => {
             {/* Section Image (gauche) - Plus grande : 3/6 au lieu de 2/6 */}
             <div className="lg:col-span-3">
               <img
-                src="/theo.jpeg"
+                src="./theo.jpeg"
                 alt="Theo"
                 className="w-full h-full min-h-[450px] object-cover"
               />

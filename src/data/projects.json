@@ -10,12 +10,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "../skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "../skills/pytorch.png"
                 }
             ],
             "links": [
@@ -23,7 +23,7 @@
                 "https://github.com/Gazeux33/Build-a-LLM",
                 "none"
             ],
-            "image": "./projects/llm.png",
+            "image": "../projects/llm.png",
             "categories": [
                 "Personal",
                 "AI"
@@ -39,12 +39,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "Numpy",
                     "url": "https://numpy.org/",
-                    "image": "/skills/numpy.png"
+                    "image": "./skills/numpy.png"
                 }
             ],
             "links": [
@@ -52,7 +52,7 @@
                 "https://github.com/Gazeux33/NeuralNetwork",
                 "none"
             ],
-            "image": "/projects/nn.png",
+            "image": "./projects/nn.png",
             "categories": [
                 "Personal",
                 "AI"
@@ -68,12 +68,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "/skills/pytorch.png"
+                    "image": "./skills/pytorch.png"
                 }
             ],
             "links": [
@@ -81,7 +81,7 @@
                 "https://github.com/Gazeux33/NeuralStyleTransfert",
                 "none"
             ],
-            "image": "/projects/nst.png",
+            "image": "./projects/nst.png",
             "categories": [
                 "Personal",
                 "AI"
@@ -97,12 +97,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "/skills/pytorch.png"
+                    "image": "./skills/pytorch.png"
                 }
             ],
             "links": [
@@ -110,7 +110,7 @@
                 "https://github.com/Gazeux33/Generative-Adversial-Network",
                 "none"
             ],
-            "image": "/projects/gan2.png",
+            "image": "./projects/gan2.png",
             "categories": [
                 "Personal",
                 "AI"
@@ -126,12 +126,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "OpenGL",
                     "url": "https://www.opengl.org/",
-                    "image": "/skills/opengl.png"
+                    "image": "./skills/opengl.png"
                 }
             ],
             "links": [
@@ -139,7 +139,7 @@
                 "https://github.com/Gazeux33/VisualiseCellularAutomata3DLibrary",
                 "none"
             ],
-            "image": "/projects/noise1.png",
+            "image": "./projects/noise1.png",
             "categories": [
                 "Personal",
                 "Simulations"
@@ -155,12 +155,12 @@
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "/skills/pytorch.png"
+                    "image": "./skills/pytorch.png"
                 },
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 }
             ],
             "links": [
@@ -168,7 +168,7 @@
                 "https://github.com/Gazeux33/MusicGenerationTransformer",
                 "none"
             ],
-            "image": "/projects/transformer.webp",
+            "image": "./projects/transformer.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -184,17 +184,17 @@
                 {
                     "name": "Gymnasium",
                     "url": "https://gymnasium.farama.org/",
-                    "image": "/skills/gym.svg"
+                    "image": "./skills/gym.svg"
                 },
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "/skills/pytorch.png"
+                    "image": "./skills/pytorch.png"
                 }
             ],
             "links": [
@@ -202,7 +202,7 @@
                 "https://github.com/Gazeux33/GymWalker",
                 "none"
             ],
-            "image": "/projects/gym.png",
+            "image": "./projects/gym.png",
             "categories": [
                 "Personal",
                 "AI",
@@ -219,12 +219,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "/skills/pytorch.png"
+                    "image": "./skills/pytorch.png"
                 },
                 {
                     "name": "Alpaca",
@@ -237,7 +237,7 @@
                 "https://github.com/Gazeux33/TradeFormer",
                 "none"
             ],
-            "image": "/projects/tradeformer.png",
+            "image": "./projects/tradeformer.png",
             "categories": [
                 "Personal",
                 "AI"
@@ -253,12 +253,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "/skills/pytorch.png"
+                    "image": "./skills/pytorch.png"
                 }
             ],
             "links": [
@@ -266,7 +266,7 @@
                 "https://github.com/Gazeux33/DiffusionModel",
                 "none"
             ],
-            "image": "/projects/diffusion.png",
+            "image": "./projects/diffusion.png",
             "categories": [
                 "Personal",
                 "AI"
@@ -282,17 +282,17 @@
                 {
                     "name": "React",
                     "url": "https://react.dev/",
-                    "image": "/skills/react.png"
+                    "image": "./skills/react.png"
                 },
                 {
                     "name": "Tailwind",
                     "url": "https://tailwindcss.com/",
-                    "image": "/skills/Tailwind.png"
+                    "image": "./skills/Tailwind.png"
                 },
                 {
                     "name": "TypeScript",
                     "url": "https://www.typescriptlang.org/",
-                    "image": "/skills/ts.png"
+                    "image": "./skills/ts.png"
                 }
             ],
             "links": [
@@ -300,7 +300,7 @@
                 "https://github.com/Gazeux33/Votator",
                 "none"
             ],
-            "image": "/projects/votator.png",
+            "image": "./projects/votator.png",
             "categories": [
                 "School",
                 "Web"
@@ -316,12 +316,12 @@
                 {
                     "name": "C++",
                     "url": "https://isocpp.org/",
-                    "image": "/skills/cpp.png"
+                    "image": "./skills/cpp.png"
                 },
                 {
                     "name": "SFML",
                     "url": "https://www.sfml-dev.org/",
-                    "image": "/skills/sfml.png"
+                    "image": "./skills/sfml.png"
                 }
             ],
             "links": [
@@ -329,7 +329,7 @@
                 "https://github.com/Gazeux33/Particles-Simulation",
                 "none"
             ],
-            "image": "/projects/particle.png",
+            "image": "./projects/particle.png",
             "categories": [
                 "Personal",
                 "Simulations"
@@ -345,17 +345,17 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "Yolo",
                     "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
-                    "image": "/skills/yolo.png"
+                    "image": "./skills/yolo.png"
                 },
                 {
                     "name": "OpenCv",
                     "url": "https://opencv.org/",
-                    "image": "/skills/opencv.png"
+                    "image": "./skills/opencv.png"
                 }
             ],
             "links": [
@@ -363,7 +363,7 @@
                 "https://github.com/Gazeux33/CarPlateDetection",
                 "none"
             ],
-            "image": "/projects/car.png",
+            "image": "./projects/car.png",
             "categories": [
                 "Personal",
                 "AI"
@@ -379,12 +379,12 @@
                 {
                     "name": "Java",
                     "url": "https://www.java.com/",
-                    "image": "/skills/java.webp"
+                    "image": "./skills/java.webp"
                 },
                 {
                     "name": "JavaFX",
                     "url": "https://openjfx.io/",
-                    "image": "/skills/Javafx.svg"
+                    "image": "./skills/Javafx.svg"
                 }
             ],
             "links": [
@@ -392,7 +392,7 @@
                 "none",
                 "none"
             ],
-            "image": "/projects/graph.png",
+            "image": "./projects/graph.png",
             "categories": [
                 "School",
                 "Simulations",
@@ -410,12 +410,12 @@
                 {
                     "name": "Langchain",
                     "url": "https://python.langchain.com/",
-                    "image": "/skills/langchain.png"
+                    "image": "./skills/langchain.png"
                 },
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 }
             ],
             "links": [
@@ -423,7 +423,7 @@
                 "https://github.com/Gazeux33/MotivAI",
                 "none"
             ],
-            "image": "/projects/motivai.png",
+            "image": "./projects/motivai.png",
             "categories": [
                 "Personal",
                 "AI"
@@ -439,12 +439,12 @@
                 {
                     "name": "js",
                     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-                    "image": "/skills/js.png"
+                    "image": "./skills/js.png"
                 },
                 {
                     "name": "P5.js",
                     "url": "https://p5js.org/",
-                    "image": "/skills/P5.png"
+                    "image": "./skills/P5.png"
                 }
             ],
             "links": [
@@ -452,7 +452,7 @@
                 "https://github.com/Gazeux33/Procedural-Generation",
                 "https://gazeux33.github.io/Procedural-Generation/"
             ],
-            "image": "/projects/pg.png",
+            "image": "./projects/pg.png",
             "categories": [
                 "Personal",
                 "Web"
@@ -469,12 +469,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "Pygame",
                     "url": "https://www.pygame.org/",
-                    "image": "/skills/pygame.png"
+                    "image": "./skills/pygame.png"
                 }
             ],
             "links": [
@@ -482,7 +482,7 @@
                 "https://github.com/Gazeux33/Generating-and-Solving-Mazes",
                 "none"
             ],
-            "image": "/projects/maze2.png",
+            "image": "./projects/maze2.png",
             "categories": [
                 "Personal"
             ]
@@ -504,12 +504,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "Django",
                     "url": "https://www.djangoproject.com/",
-                    "image": "/skills/django.png"
+                    "image": "./skills/django.png"
                 }
             ],
             "links": [
@@ -517,7 +517,7 @@
                 "https://github.com/Gazeux33/MySuperHoroscope",
                 "none"
             ],
-            "image": "/projects/msh.png",
+            "image": "./projects/msh.png",
             "categories": [
                 "Personal",
                 "Web"
@@ -533,22 +533,22 @@
                 {
                     "name": "Symfony",
                     "url": "https://symfony.com/",
-                    "image": "/skills/symfony.png"
+                    "image": "./skills/symfony.png"
                 },
                 {
                     "name": "Php",
                     "url": "https://www.php.net/",
-                    "image": "/skills/php.png"
+                    "image": "./skills/php.png"
                 },
                 {
                     "name": "Tailwind",
                     "url": "https://tailwindcss.com/",
-                    "image": "/skills/Tailwind.png"
+                    "image": "./skills/Tailwind.png"
                 },
                 {
                     "name": "Twig",
                     "url": "https://twig.symfony.com/",
-                    "image": "/skills/twig.png"
+                    "image": "./skills/twig.png"
                 }
             ],
             "links": [
@@ -556,7 +556,7 @@
                 "none",
                 "none"
             ],
-            "image": "/projects/robocup_manager.webp",
+            "image": "./projects/robocup_manager.webp",
             "categories": [
                 "School",
                 "Web"
@@ -572,12 +572,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "/skills/pytorch.png"
+                    "image": "./skills/pytorch.png"
                 }
             ],
             "links": [
@@ -585,7 +585,7 @@
                 "https://github.com/Gazeux33/Variational-Autoencoders",
                 "none"
             ],
-            "image": "/projects/VAE.png",
+            "image": "./projects/VAE.png",
             "categories": [
                 "Personal",
                 "AI"
@@ -606,12 +606,12 @@
                 {
                     "name": "Java",
                     "url": "https://www.java.com/",
-                    "image": "/skills/java.webp"
+                    "image": "./skills/java.webp"
                 },
                 {
                     "name": "JavaFX",
                     "url": "https://openjfx.io/",
-                    "image": "/skills/Javafx.svg"
+                    "image": "./skills/Javafx.svg"
                 }
             ],
             "links": [
@@ -619,7 +619,7 @@
                 "none",
                 "none"
             ],
-            "image": "/projects/lab.jpg",
+            "image": "./projects/lab.jpg",
             "categories": [
                 "School",
                 "Simulations"
@@ -635,17 +635,17 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "Pygame",
                     "url": "https://www.pygame.org/",
-                    "image": "/skills/pygame.png"
+                    "image": "./skills/pygame.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "/skills/pytorch.png"
+                    "image": "./skills/pytorch.png"
                 }
             ],
             "links": [
@@ -653,7 +653,7 @@
                 "https://github.com/Gazeux33/Snake-Ai",
                 "none"
             ],
-            "image": "/projects/snake.png",
+            "image": "./projects/snake.png",
             "categories": [
                 "Personal",
                 "AI",
@@ -670,12 +670,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "/skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "Pygame",
                     "url": "https://www.pygame.org/",
-                    "image": "/skills/pygame.png"
+                    "image": "./skills/pygame.png"
                 },
                 {
                     "name": "Monte Carlo Tree Search",
@@ -688,7 +688,7 @@
                 "https://github.com/Gazeux33/Connect4_AI",
                 "none"
             ],
-            "image": "/projects/connect4.png",
+            "image": "./projects/connect4.png",
             "categories": [
                 "Personal",
                 "AI"
@@ -705,7 +705,7 @@
                 {
                     "name": "C",
                     "url": "https://en.cppreference.com/w/",
-                    "image": "/skills/c.png"
+                    "image": "./skills/c.png"
                 }
             ],
             "links": [
@@ -713,7 +713,7 @@
                 "none",
                 "none"
             ],
-            "image": "/projects/minishell.png",
+            "image": "./projects/minishell.png",
             "categories": [
                 "School",
                 "Software"
@@ -729,7 +729,7 @@
                 {
                     "name": "Java",
                     "url": "https://www.java.com/",
-                    "image": "/skills/java.webp"
+                    "image": "./skills/java.webp"
                 }
             ],
             "links": [
@@ -737,7 +737,7 @@
                 "https://github.com/Gazeux33/IA-Towa",
                 "none"
             ],
-            "image": "/projects/TOWA.png",
+            "image": "./projects/TOWA.png",
             "categories": [
                 "School",
                 "AI"
