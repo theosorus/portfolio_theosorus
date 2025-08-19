@@ -3,30 +3,38 @@
 {
         "start_date": "September 2025",
         "end_date": "Present",
-        "title": "Work-study year as an AI developer ",
-        "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+        "title": "Work-study year as an AI developer",
+        "title_en": "Work-study year as an AI developer",
+        "title_fr": "Alternance développeur IA",
+        "description": "A one-year work-study program as an AI developer at Genial, a company specializing in AI solutions for other companies.",
+        "description_en": "A one-year work-study program as an AI developer at Genial, a company specializing in AI solutions for other companies.",
+        "description_fr": "Alternance d'un an en tant que développeur IA chez Genial, une entreprise spécialisée dans les solutions d'IA pour d'autres entreprises.",
         "tags": ["Company"],
         "image" : "./career/wearegenial_logo.jpg",
-        "location" : "Bordeaux , France"
+        "location" : "Bordeaux, France"
     },
-
-
-
-
 {
         "start_date": "June 2025",
         "end_date": "July 2025",
         "title": "AI Agent Builder - Freelance",
-        "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+        "title_en": "AI Agent Builder - Freelance",
+        "title_fr": "Concepteur d'agents IA - Freelance",
+        "description": "Freelance mission for the creation and maintenance of specialized AI agents",
+        "description_en": "Freelance mission for the creation and maintenance of specialized AI agents",
+        "description_fr": "Mission en freelance pour la création et la maintenance d'agents IA spécialisés",
         "tags": ["Company"],
         "image" : "./career/wearegenial_logo.jpg",
-        "location" : "Bordeaux , France"
+        "location" : "Bordeaux, France"
     },
     {
         "start_date": "April 2025",
         "end_date": "June 2025",
         "title": "Machine learning research internship",
-        "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+        "title_en": "Machine learning research internship",
+        "title_fr": "Stage de recherche en apprentissage automatique",
+        "description": "A ten-week research and development internship in machine learning using functional programming at Ochanomizu University in Japan",
+        "description_en": "A ten-week research and development internship in machine learning using functional programming at Ochanomizu University in Japan",
+        "description_fr": "Stage de recherche et développement de dix semaines en machine learning utilisant la programmation fonctionnelle à l'Université Ochanomizu au Japon",
         "tags": ["University", "Internship"],
         "image" : "./career/ochanomizu_logo.jpg",
         "location" : "Bekki Lab - Ochanomizu University, Japan"
@@ -35,10 +43,16 @@
         "start_date": "September 2024",
         "end_date": "",
         "title": "Bachelor of Computer Science",
+        "title_en": "Bachelor of Computer Science",
+        "title_fr": "BUT Informatique",
         "description": "Bachelor of Computer Science, International track",
+        "description_en": "Bachelor of Computer Science, International track",
+        "description_fr": "BUT Informatique, parcours international",
         "tags": ["University"],
         "image" : "./career/universite_de_bordeaux_logo.jpg",
-        "location" : "University of Bordeaux , France"
+        "location" : "University of Bordeaux, France",
+        "location_en": "University of Bordeaux, France",
+        "location_fr": "Université de Bordeaux, France"
     }
    
 ]

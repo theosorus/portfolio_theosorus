@@ -6,6 +6,10 @@
         "contact": "contact",
         "career": "career"
     },
+    "career": {
+        "title": "Career Track",
+        "present": "Present"
+    },
     "landpage": {
         "greeting": "Hello, I'm",
         "name": "Théo",

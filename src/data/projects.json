@@ -10,12 +10,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "../skills/python.png"
+                    "image": "./skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "../skills/pytorch.png"
+                    "image": "./skills/pytorch.png"
                 }
             ],
             "links": [
@@ -23,7 +23,7 @@
                 "https://github.com/Gazeux33/Build-a-LLM",
                 "none"
             ],
-            "image": "../projects/llm.png",
+            "image": "./projects/llm.png",
             "categories": [
                 "Personal",
                 "AI"
