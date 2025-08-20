@@ -29,7 +29,7 @@ const NavBar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full h-14 border-b flex items-center justify-between px-3 z-50 bg-openai-dark-blue">
       <div className="font-main text-3xl">
-        <h1 className="flex items-center">Theo Castillo</h1>
+        <h1 className="flex items-center">Théo Castillo</h1>
       </div>
       <div className="flex items-center justify-center md:mr-6 mr-2">
         <div
@@ -81,7 +81,7 @@ const NavBar = () => {
         </div>
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           <img
-            src="/public/icons/menu.svg"
+            src="./icons/menu.svg"
             alt="Menu"
             className="w-8 h-8"
             style={{ filter: 'invert(1)' }}
