@@ -51,7 +51,13 @@ const Projects = () => {
             {currentProjects.map((project: Project, index) => (
               <div
                 key={index}
-                className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1"
+                className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1 cursor-pointer"
+                onClick={() => {
+                  // Ouvre le premier lien s'il existe et n'est pas "none"
+                  if (project.links && project.links[0] && project.links[0] !== "none") {
+                    window.open(project.links[0], '_blank', 'noopener,noreferrer');
+                  }
+                }}
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -75,6 +81,7 @@ const Projects = () => {
                       <div 
                         key={idx} 
                         className='flex items-center bg-slate-800/60 backdrop-blur-sm rounded-lg px-2.5 py-1 border border-slate-700/50 transition-colors duration-200 hover:bg-slate-700/60'
+                        onClick={(e) => e.stopPropagation()} // Empêche le clic sur le tag de déclencher le lien du projet
                       >
                         <span className="text-xs font-medium text-slate-200">
                           {tag.name}

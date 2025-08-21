@@ -1,5 +1,34 @@
 {
     "projects": [
+                {
+            "id": "hask_gpt",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "HaskGPT",
+            "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+            "tags": [
+                {
+                    "name": "Haskell",
+                    "url": "https://www.haskell.org/",
+                    "image": "./skills/hs.png"
+                },
+                {
+                    "name": "Hasktorch",
+                    "url": "http://hasktorch.org/",
+                    "image": "./skills/hasktorch.png"
+                }
+            ],
+            "links": [
+                "https://github.com/theosorus/GPT2-Hasktorch",
+                "https://github.com/theosorus/GPT2-Hasktorch",
+                "none"
+            ],
+            "image": "./projects/HaskGPT.png",
+            "categories": [
+                "Personal",
+                "AI"
+            ]
+        },
         {
             "id": "large_language_model",
             "date": 2024,
@@ -19,8 +48,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/Build-a-LLM",
-                "https://github.com/Gazeux33/Build-a-LLM",
+                "https://github.com/theosorus/French-Language-Model",
+                "https://github.com/theosorus/French-Language-Model",
                 "none"
             ],
             "image": "./projects/llm.png",
@@ -29,6 +58,7 @@
                 "AI"
             ]
         },
+
         {
             "id": "neural_networks_library",
             "date": 2024,
@@ -48,8 +78,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/NeuralNetwork",
-                "https://github.com/Gazeux33/NeuralNetwork",
+                "https://github.com/theosorus/NeuralNetwork",
+                "https://github.com/theosorus/NeuralNetwork",
                 "none"
             ],
             "image": "./projects/nn.png",
@@ -77,8 +107,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/NeuralStyleTransfert",
-                "https://github.com/Gazeux33/NeuralStyleTransfert",
+                "https://github.com/theosorus/NeuralStyleTransfert",
+                "https://github.com/theosorus/NeuralStyleTransfert",
                 "none"
             ],
             "image": "./projects/nst.png",
@@ -106,8 +136,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/Generative-Adversial-Network",
-                "https://github.com/Gazeux33/Generative-Adversial-Network",
+                "https://github.com/theosorus/Generative-Adversial-Network",
+                "https://github.com/theosorus/Generative-Adversial-Network",
                 "none"
             ],
             "image": "./projects/gan2.png",
@@ -135,8 +165,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/VisualiseCellularAutomata3DLibrary",
-                "https://github.com/Gazeux33/VisualiseCellularAutomata3DLibrary",
+                "https://github.com/theosorus/VisualiseCellularAutomata3DLibrary",
+                "https://github.com/theosorus/VisualiseCellularAutomata3DLibrary",
                 "none"
             ],
             "image": "./projects/noise1.png",
@@ -164,8 +194,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/MusicGenerationTransformer",
-                "https://github.com/Gazeux33/MusicGenerationTransformer",
+                "https://github.com/theosorus/MusicGenerationTransformer",
+                "https://github.com/theosorus/MusicGenerationTransformer",
                 "none"
             ],
             "image": "./projects/transformer.webp",
@@ -198,8 +228,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/GymWalker",
-                "https://github.com/Gazeux33/GymWalker",
+                "https://github.com/theosorus/GymWalker",
+                "https://github.com/theosorus/GymWalker",
                 "none"
             ],
             "image": "./projects/gym.png",
@@ -233,8 +263,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/TradeFormer",
-                "https://github.com/Gazeux33/TradeFormer",
+                "https://github.com/theosorus/TradeFormer",
+                "https://github.com/theosorus/TradeFormer",
                 "none"
             ],
             "image": "./projects/tradeformer.png",
@@ -262,8 +292,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/DiffusionModel",
-                "https://github.com/Gazeux33/DiffusionModel",
+                "https://github.com/theosorus/DiffusionModel",
+                "https://github.com/theosorus/DiffusionModel",
                 "none"
             ],
             "image": "./projects/diffusion.png",
@@ -296,8 +326,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/Votator",
-                "https://github.com/Gazeux33/Votator",
+                "https://github.com/theosorus/Votator",
+                "https://github.com/theosorus/Votator",
                 "none"
             ],
             "image": "./projects/votator.png",
@@ -325,8 +355,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/Particles-Simulation",
-                "https://github.com/Gazeux33/Particles-Simulation",
+                "https://github.com/theosorus/Particles-Simulation",
+                "https://github.com/theosorus/Particles-Simulation",
                 "none"
             ],
             "image": "./projects/particle.png",
@@ -359,8 +389,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/CarPlateDetection",
-                "https://github.com/Gazeux33/CarPlateDetection",
+                "https://github.com/theosorus/CarPlateDetection",
+                "https://github.com/theosorus/CarPlateDetection",
                 "none"
             ],
             "image": "./projects/car.png",
@@ -419,8 +449,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/MotivAI",
-                "https://github.com/Gazeux33/MotivAI",
+                "https://github.com/theosorus/MotivAI",
+                "https://github.com/theosorus/MotivAI",
                 "none"
             ],
             "image": "./projects/motivai.png",
@@ -448,9 +478,9 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/Procedural-Generation",
-                "https://github.com/Gazeux33/Procedural-Generation",
-                "https://gazeux33.github.io/Procedural-Generation/"
+                "https://github.com/theosorus/Procedural-Generation",
+                "https://github.com/theosorus/Procedural-Generation",
+                "https://theosorus.github.io/Procedural-Generation/"
             ],
             "image": "./projects/pg.png",
             "categories": [
@@ -478,8 +508,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/Generating-and-Solving-Mazes",
-                "https://github.com/Gazeux33/Generating-and-Solving-Mazes",
+                "https://github.com/theosorus/Generating-and-Solving-Mazes",
+                "https://github.com/theosorus/Generating-and-Solving-Mazes",
                 "none"
             ],
             "image": "./projects/maze2.png",
@@ -513,8 +543,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/MySuperHoroscope",
-                "https://github.com/Gazeux33/MySuperHoroscope",
+                "https://github.com/theosorus/MySuperHoroscope",
+                "https://github.com/theosorus/MySuperHoroscope",
                 "none"
             ],
             "image": "./projects/msh.png",
@@ -581,8 +611,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/Variational-Autoencoders",
-                "https://github.com/Gazeux33/Variational-Autoencoders",
+                "https://github.com/theosorus/Variational-Autoencoders",
+                "https://github.com/theosorus/Variational-Autoencoders",
                 "none"
             ],
             "image": "./projects/VAE.png",
@@ -649,8 +679,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/Snake-Ai",
-                "https://github.com/Gazeux33/Snake-Ai",
+                "https://github.com/theosorus/Snake-Ai",
+                "https://github.com/theosorus/Snake-Ai",
                 "none"
             ],
             "image": "./projects/snake.png",
@@ -684,8 +714,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/Connect4_AI",
-                "https://github.com/Gazeux33/Connect4_AI",
+                "https://github.com/theosorus/Connect4_AI",
+                "https://github.com/theosorus/Connect4_AI",
                 "none"
             ],
             "image": "./projects/connect4.png",
@@ -733,8 +763,8 @@
                 }
             ],
             "links": [
-                "https://github.com/Gazeux33/IA-Towa",
-                "https://github.com/Gazeux33/IA-Towa",
+                "https://github.com/theosorus/IA-Towa",
+                "https://github.com/theosorus/IA-Towa",
                 "none"
             ],
             "image": "./projects/TOWA.png",

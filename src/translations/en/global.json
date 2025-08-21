@@ -173,6 +173,10 @@
             "title": "MiniShell",
             "description": "Creation of an interactive shell in C, directly in the terminal, capable of executing basic commands and running external commands."
         },
+        "hask_gpt": {
+            "title": "GPT2 in Haskell",
+            "description": "GPT2 implementation in Haskell with the Hasktorch library, inspired by Andrej Karpathy's Pytorch implementation."
+        },
         "categories": {
             "All": "All",
             "Personal": "Personnal",
