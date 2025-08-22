@@ -1,12 +1,20 @@
 import { Mail, Github, Linkedin, Download, ExternalLink, Check } from 'lucide-react';
 import hobbiesInterestData from '../data/hobbies_interest.json';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export const AboutMe = () => {
   const [t] = useTranslation('global');
-
   const [emailCopied, setEmailCopied] = useState(false);
+  const emailButtonRef = useRef<HTMLButtonElement | null>(null);
+  const [emailButtonWidth, setEmailButtonWidth] = useState('auto');
+
+  useEffect(() => {
+    if (emailButtonRef.current && emailButtonWidth === 'auto') {
+      const width = emailButtonRef.current.offsetWidth;
+      setEmailButtonWidth(`${width}px`);
+    }
+  }, [emailButtonWidth]);
 
   const handleEmailClick = async () => {
     try {
@@ -142,13 +150,17 @@ const { interests, hobbies } = hobbiesInterestData;
                       return (
                         <button
                           key={index}
+                          ref={link.isEmail ? emailButtonRef : null}
                           onClick={link.action}
+                          style={link.isEmail ? { width: emailButtonWidth } : {}}
                           className={`${link.color} text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 shadow-md ${
                             emailCopied && link.isEmail ? 'animate-pulse' : ''
                           }`}
                         >
                           <IconComponent size={14} />
-                          {link.isEmail && emailCopied ? t('aboutme.copied') : link.name}
+                          <span className={link.isEmail && emailCopied ? 'flex-1 text-center' : ''}>
+                            {link.isEmail && emailCopied ? t('aboutme.copied') : link.name}
+                          </span>
                         </button>
                       );
                     }
