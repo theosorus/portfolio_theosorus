@@ -1,5 +1,8 @@
 
 # TODO
 - [ ] Parallax img
-- [ ] Links repo
+- [x] Links repo
 - [ ] Manage responsive
+- [x] Logo des langue
+- [ ] add formulaTracker
+

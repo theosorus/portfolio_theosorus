@@ -30,6 +30,40 @@
             ]
         },
         {
+            "id": "formula_tracker",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "Formula Tracker",
+            "description": "Entraîner un modèle YOLO sur un dataset personnalisé de Formule 1 afin de détecter les voitures selon leur écurie.",
+            "tags": [
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "Yolo",
+                    "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
+                    "image": "./skills/yolo.png"
+                },
+                 {
+                    "name": "OpenCv",
+                    "url": "https://opencv.org/",
+                    "image": "./skills/opencv.png"
+                }
+            ],
+            "links": [
+                "https://github.com/theosorus/FormulaTracker",
+                "https://github.com/theosorus/FormulaTracker",
+                "none"
+            ],
+            "image": "./projects/formula_tracker.png",
+            "categories": [
+                "Personal",
+                "AI"
+            ]
+        },
+        {
             "id": "large_language_model",
             "date": 2024,
             "type": "Personal Project",
@@ -78,8 +112,8 @@
                 }
             ],
             "links": [
-                "https://github.com/theosorus/NeuralNetwork",
-                "https://github.com/theosorus/NeuralNetwork",
+                "https://github.com/theosorus/NeuralNetworkLibrary",
+                "https://github.com/theosorus/NeuralNetworkLibrary",
                 "none"
             ],
             "image": "./projects/nn.png",

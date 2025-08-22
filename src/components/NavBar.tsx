@@ -56,17 +56,19 @@ const NavBar = () => {
             </svg>
           </button>
           {langOpen && (
-            <div className="absolute left-0 top-full mt-2 border shadow z-1">
+            <div className="absolute left-0 top-full mt-2 border shadow z-1 min-w-20">
               <button
                 onClick={() => {i18n.changeLanguage('fr');setLangOpen(false);}}
-                className="block px-4 py-2 w-full text-left bg-openai-dark-blue mr-4 z-1"
+                className="flex items-center px-4 py-2 w-full text-left bg-openai-dark-blue hover:bg-gray-700 transition-colors whitespace-nowrap"
               >
+                <img src={langIcons.fr} alt="fr" className="w-5 h-3 mr-2" />
                 <span>fr</span>
               </button>
               <button
                 onClick={() => {i18n.changeLanguage('en');setLangOpen(false);}}
-                className="block px-4 py-2 w-full text-left bg-openai-dark-blue mr-4 z-1"
+                className="flex items-center px-4 py-2 w-full text-left bg-openai-dark-blue hover:bg-gray-700 transition-colors whitespace-nowrap"
               >
+                <img src={langIcons.en} alt="en" className="w-5 h-3 mr-2" />
                 <span>en</span>
               </button>
             </div>

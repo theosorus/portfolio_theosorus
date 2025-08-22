@@ -177,6 +177,10 @@
             "title": "GPT2 in Haskell",
             "description": "GPT2 implementation in Haskell with the Hasktorch library, inspired by Andrej Karpathy's Pytorch implementation."
         },
+        "formula_tracker": {
+            "title": "Formula Tracker",
+            "description": "Training a YOLO model on a custom Formula 1 dataset to detect cars based on their team."
+        },
         "categories": {
             "All": "All",
             "Personal": "Personnal",
