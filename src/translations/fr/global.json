@@ -1,10 +1,10 @@
 {
     "navbar": {
-        "home": "accueil",
-        "aboutme": "profil",
-        "projects": "projets",
-        "contact": "contact",
-        "career": "carrière"
+        "home": "Accueil",
+        "aboutme": "Profil",
+        "projects": "Projets",
+        "contact": "Contact",
+        "career": "Carrière"
     },
     "career": {
         "title": "Parcours",
@@ -44,7 +44,7 @@
         "name": "Théo",
         "description_before_age": "J'ai",
         "age": "19 ans",
-        "description_after_age": "et j'étudie l'informatique à l'Institut de Gradignan à Bordeaux",
+        "description_after_age": "et j'étudie l'informatique à l'IUT de Gradignan à Bordeaux",
         "interest_title": "Centres d'intérêt",
         "hobbies_title": "Loisirs",
         "interests": {

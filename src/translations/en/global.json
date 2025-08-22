@@ -1,10 +1,10 @@
 {
     "navbar": {
-        "home": "home",
-        "aboutme": "about me",
-        "projects": "projects",
+        "home": "Home",
+        "aboutme": "About me",
+        "projects": "Projects",
         "contact": "contact",
-        "career": "career"
+        "career": "Career"
     },
     "career": {
         "title": "Career Track",

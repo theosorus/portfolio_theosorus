@@ -1,7 +1,40 @@
 import { Mail, Github, Linkedin, Download, ExternalLink, Check } from 'lucide-react';
 import hobbiesInterestData from '../data/hobbies_interest.json';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
+
+type ChipProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Chip = ({ children, className = '' }: ChipProps) => (
+  <li
+    role="listitem"
+    tabIndex={0}
+    className={`group inline-flex items-center gap-2 rounded-full border border-gray-200/70 bg-white/80 backdrop-blur px-3.5 py-2 text-sm font-medium text-gray-700 shadow-sm ring-1 ring-gray-200 transition
+                hover:shadow-md hover:ring-blue-300 motion-safe:hover:-translate-y-0.5
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${className}`}
+  >
+    <span
+      className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400"
+      aria-hidden
+    />
+    {children}
+  </li>
+);
+
+const EmojiChip = ({ children, className = '' }: ChipProps) => (
+  <li
+    role="listitem"
+    tabIndex={0}
+    className={`group inline-flex items-center gap-2 rounded-xl border border-gray-200/70 bg-white/90 backdrop-blur px-3.5 py-2 text-sm font-medium text-gray-700 shadow-sm ring-1 ring-gray-200 transition
+                hover:shadow-md hover:ring-emerald-300 motion-safe:hover:-translate-y-0.5
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${className}`}
+  >
+    {children}
+  </li>
+);
 
 export const AboutMe = () => {
   const [t] = useTranslation('global');
@@ -42,7 +75,18 @@ export const AboutMe = () => {
     link.click();
   };
 
-const { interests, hobbies } = hobbiesInterestData;
+  const { interests, hobbies } = hobbiesInterestData as {
+    interests: { key: string }[];
+    hobbies: { key: string; emoji: string }[];
+  };
+
+  // --- Améliorations UI/UX pour Interests & Hobbies ---
+  const MAX_VISIBLE = 8; // Nombre de chips visibles par défaut (mobile friendly)
+  const [showAllInterests, setShowAllInterests] = useState(false);
+  const [showAllHobbies, setShowAllHobbies] = useState(false);
+
+  const visibleInterests = showAllInterests ? interests : interests.slice(0, MAX_VISIBLE);
+  const visibleHobbies = showAllHobbies ? hobbies : hobbies.slice(0, MAX_VISIBLE);
 
   const socialLinks = [
     {
@@ -81,71 +125,140 @@ const { interests, hobbies } = hobbiesInterestData;
   return (
     <div id="about-me" className="w-full flex flex-col items-center py-0 px-4 min-h-[90vh]">
       <div className="w-full max-w-5xl">
-        {/* Layout avec Flexbox au lieu de Grid */}
         <div className="rounded-2xl shadow-2xl overflow-hidden">
           <div className="flex flex-col lg:flex-row">
-            
-            {/* Section Image (gauche) - Equivalent à lg:col-span-3 */}
+            {/* Image */}
             <div className="flex-1 lg:flex-[1_1_50%]">
               <img
                 src="./island.jpeg"
                 alt="Theo"
                 className="w-full h-full min-h-[450px] object-cover"
+                loading="lazy"
               />
             </div>
 
-            {/* Section Description + Interest + Hobbies (droite) - Equivalent à lg:col-span-3 */}
+            {/* Contenu */}
             <div className="flex-1 lg:flex-[1_1_50%] p-8 space-y-8">
-              
               {/* Description */}
               <div>
                 <p className="text-lg leading-relaxed text-font-color">
-                  {t('aboutme.description_before_name')} <b className='text-blue-600'>{t('aboutme.name')}</b>, {t('aboutme.description_before_age')} <b className='text-blue-600'>{t('aboutme.age')}</b> {t('aboutme.description_after_age')}
+                  {t('aboutme.description_before_name')}{' '}
+                  <b className="text-blue-600">{t('aboutme.name')}</b>, {t('aboutme.description_before_age')}{' '}
+                  <b className="text-blue-600">{t('aboutme.age')}</b> {t('aboutme.description_after_age')}
                 </p>
               </div>
 
-              {/* Interest et Hobbies - Design épuré */}
-              <div className="space-y-8">
-                
+              {/* Interests & Hobbies – version améliorée */}
+              <div className="space-y-10">
                 {/* Interests */}
-                <div>
-                  <h3 className="text-2xl font-semibold mb-5 border-b border-gray-500 pb-2">{t('aboutme.interest_title')}</h3>
-                  <div className="flex flex-wrap gap-3">
-                    {interests.map((interest) => (
-                      <div key={interest.key} className="group">
-                        <span className="bg-white text-gray-600 px-4 py-2.5 rounded-xl text-sm font-medium shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-default">
-                          {t(`aboutme.interests.${interest.key}`)}
-                        </span>
-                      </div>
+                <section aria-labelledby="interests-title">
+                  <h3
+                    id="interests-title"
+                    className="text-2xl font-semibold mb-5 border-b border-gray-500 pb-2 flex items-center justify-between"
+                  >
+                    <span>{t('aboutme.interest_title')}</span>
+                    <span className="text-sm text-gray-500">
+                      <span className="sr-only">{t('aboutme.interest_title')}</span>
+                      {interests.length}
+                    </span>
+                  </h3>
+
+                  <ul
+                    role="list"
+                    aria-label={t('aboutme.interest_title')}
+                    className="flex flex-wrap gap-2.5"
+                  >
+                    {visibleInterests.map((interest) => (
+                      <Chip key={interest.key}>
+                        {t(`aboutme.interests.${interest.key}`)}
+                      </Chip>
                     ))}
-                  </div>
-                </div>
+                  </ul>
+
+                  {interests.length > MAX_VISIBLE && (
+                    <div className="mt-4">
+                      <button
+                        type="button"
+                        aria-expanded={showAllInterests}
+                        onClick={() => setShowAllInterests((v) => !v)}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-blue-700 hover:text-blue-800 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+                      >
+                        {showAllInterests
+                          ? t('aboutme.show_less', 'Afficher moins')
+                          : t('aboutme.show_more', 'Afficher plus')}
+                        <span
+                          aria-hidden
+                          className={`transition-transform ${showAllInterests ? 'rotate-180' : ''}`}
+                        >
+                          ▾
+                        </span>
+                      </button>
+                    </div>
+                  )}
+                </section>
 
                 {/* Hobbies */}
-                <div>
-                  <h3 className="text-2xl font-semibold mb-5 border-b border-gray-500 pb-2">{t('aboutme.hobbies_title')}</h3>
-                  <div className="flex flex-wrap gap-3">
-                    {hobbies.map((hobby) => (
-                      <div key={hobby.key} className="group bg-white text-gray-600 px-3 py-1 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-default flex items-center gap-2">
-                        <span className="text-lg group-hover:scale-110 transition-transform duration-200">
+                <section aria-labelledby="hobbies-title">
+                  <h3
+                    id="hobbies-title"
+                    className="text-2xl font-semibold mb-5 border-b border-gray-500 pb-2 flex items-center justify-between"
+                  >
+                    <span>{t('aboutme.hobbies_title')}</span>
+                    <span className="text-sm text-gray-500">
+                      <span className="sr-only">{t('aboutme.hobbies_title')}</span>
+                      {hobbies.length}
+                    </span>
+                  </h3>
+
+                  <ul
+                    role="list"
+                    aria-label={t('aboutme.hobbies_title')}
+                    className="flex flex-wrap gap-2.5"
+                  >
+                    {visibleHobbies.map((hobby) => (
+                      <EmojiChip key={hobby.key}>
+                        <span className="text-base md:text-lg leading-none transition-transform group-hover:scale-110">
                           {hobby.emoji}
                         </span>
-                        <span className="text-sm font-medium">
+                        <span className="text-sm md:text-[0.95rem]">
                           {t(`aboutme.hobbies.${hobby.key}`)}
                         </span>
-                      </div>
+                      </EmojiChip>
                     ))}
-                  </div>
-                </div>
+                  </ul>
+
+                  {hobbies.length > MAX_VISIBLE && (
+                    <div className="mt-4">
+                      <button
+                        type="button"
+                        aria-expanded={showAllHobbies}
+                        onClick={() => setShowAllHobbies((v) => !v)}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-emerald-700 hover:text-emerald-800 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
+                      >
+                        {showAllHobbies
+                          ? t('aboutme.show_less', 'Afficher moins')
+                          : t('aboutme.show_more', 'Afficher plus')}
+                        <span
+                          aria-hidden
+                          className={`transition-transform ${showAllHobbies ? 'rotate-180' : ''}`}
+                        >
+                          ▾
+                        </span>
+                      </button>
+                    </div>
+                  )}
+                </section>
               </div>
 
-              {/* All links */}
+              {/* Liens */}
               <div>
-                <h3 className="text-2xl font-semibold mb-5 border-b border-gray-500 pb-2">{t('aboutme.all_links')}</h3>
+                <h3 className="text-2xl font-semibold mb-5 border-b border-gray-500 pb-2">
+                  {t('aboutme.all_links')}
+                </h3>
                 <div className="flex flex-wrap gap-3">
                   {socialLinks.map((link, index) => {
                     const IconComponent = link.isEmail && emailCopied ? Check : link.icon;
-                    
+
                     if (link.action) {
                       return (
                         <button
@@ -153,6 +266,7 @@ const { interests, hobbies } = hobbiesInterestData;
                           ref={link.isEmail ? emailButtonRef : null}
                           onClick={link.action}
                           style={link.isEmail ? { width: emailButtonWidth } : {}}
+                          aria-live={link.isEmail ? 'polite' : undefined}
                           className={`${link.color} text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 shadow-md ${
                             emailCopied && link.isEmail ? 'animate-pulse' : ''
                           }`}
@@ -181,6 +295,7 @@ const { interests, hobbies } = hobbiesInterestData;
                 </div>
               </div>
             </div>
+            {/* /Contenu */}
           </div>
         </div>
       </div>
