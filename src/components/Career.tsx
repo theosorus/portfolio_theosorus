@@ -59,9 +59,10 @@ export const Career = () => {
             key={index}
             className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
           >
-            <div className="flex items-start gap-4">
+            {/* Layout responsive : colonne sur mobile, ligne sur desktop */}
+            <div className="flex flex-col sm:flex-row sm:items-start gap-4">
               {/***** Logo *****/}
-              <div className="flex-shrink-0">
+              <div className="flex justify-center sm:justify-start flex-shrink-0">
                 <img
                   src={item.image}
                   alt={getLocalizedField(item, 'title', lang) || ''}
@@ -72,19 +73,19 @@ export const Career = () => {
               {/***** Content *****/}
               <div className="flex-1 min-w-0">
                 {/***** Title *****/}
-                <h2 className="text-xl md:text-2xl font-bold text-black mb-1">
+                <h2 className="text-xl md:text-2xl font-bold text-black mb-1 text-center sm:text-left">
                   {getLocalizedField(item, 'title', lang)}
                 </h2>
                 {/***** Location *****/}
-                <p className="text-base md:text-lg text-gray-700 mb-2">
+                <p className="text-base md:text-lg text-gray-700 mb-2 text-center sm:text-left">
                   {getLocalizedField(item, 'location', lang)}
                 </p>
-                <p className="text-sm md:text-base text-gray-600 mb-3 line-clamp-2">
+                <p className="text-sm md:text-base text-gray-600 mb-3 line-clamp-2 text-center sm:text-left">
                   {getLocalizedField(item, 'description', lang)}
                 </p>
                 
                 {/***** Tags *****/}
-                <div className="flex flex-wrap gap-2 mb-3">
+                <div className="flex flex-wrap gap-2 mb-3 justify-center sm:justify-start">
                   {item.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}
@@ -95,8 +96,8 @@ export const Career = () => {
                   ))}
                 </div>
                 
-                {/***** Date - aligned right *****/}
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm md:text-base text-gray-500 text-right">
+                {/***** Date *****/}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm md:text-base text-gray-500 text-center sm:text-right">
                   <span>
                     {formatDate(item.start_date)} - {item.end_date ? formatDate(item.end_date) : t('career.present')}
                   </span>
