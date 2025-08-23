@@ -1,8 +1,11 @@
 {
   "interests": [
-    { "key": "ai" },
-    { "key": "ml" },
-    { "key": "ds" }
+    { "key": "dp" },
+    {"key" : "natural_language_processing"},
+    
+    {"key" : "model_engineering"},
+    {"key" : "computer_vision"}
+    
   ],
   "hobbies": [
     { "key": "f1", "emoji": "🏎️" },

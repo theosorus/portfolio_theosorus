@@ -50,8 +50,11 @@
         "interests": {
             "ai": "Artificial Intelligence",
             "ml": "Machine Learning",
-            "ds": "Data Science"
-            
+            "ds": "Data Science",
+            "dp": "Deep Learning",
+            "model_engineering": "Model Engineering",
+            "computer_vision": "Computer Vision",
+            "natural_language_processing": "Natural Language Processing"
         },
         "hobbies": {
             "f1": "Formula 1",
