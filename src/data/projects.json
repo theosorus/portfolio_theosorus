@@ -45,11 +45,6 @@
                     "name": "Yolo",
                     "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
                     "image": "./skills/yolo.png"
-                },
-                 {
-                    "name": "OpenCv",
-                    "url": "https://opencv.org/",
-                    "image": "./skills/opencv.png"
                 }
             ],
             "links": [
