@@ -4,14 +4,23 @@ import { useTranslation } from "react-i18next";
 const LandPage = () => {
   const [t] = useTranslation('global');
   const scrollToNext = () => {
-    const aboutSection = document.getElementById('about-me') || document.querySelector('[data-section="about"]');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      // Fallback: scroll by viewport height
-      window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
-    }
-  };
+  const aboutSection = document.getElementById('about-me') || document.querySelector('[data-section="about"]');
+  if (aboutSection) {
+    const elementRect = aboutSection.getBoundingClientRect();
+    const elementTop = elementRect.top + window.pageYOffset;
+    const elementHeight = elementRect.height;
+    const windowHeight = window.innerHeight;
+    
+    const targetPosition = elementTop - (windowHeight / 2) + (elementHeight / 2);
+    
+    window.scrollTo({ 
+      top: targetPosition, 
+      behavior: 'smooth' 
+    });
+  } else {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+  }
+};
 
   return (
   <div id="home" className="min-h-screen flex flex-col justify-center items-start px-4 md:px-16 relative">
