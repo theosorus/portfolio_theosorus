@@ -29,6 +29,52 @@
                 "AI"
             ]
         },
+         {
+            "id": "deep_rubiks",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "Deep Rubiks",
+            "description": "A modern implementation of the DeepCubeA algorithm for solving Rubik's Cube using neural networks and A search with Three.js web vizualisation",
+            "tags": [
+                {
+                    "name": "PyTorch",
+                    "url": "https://pytorch.org/",
+                    "image": "./skills/pytorch.png"
+                },
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "React",
+                    "url": "https://react.dev/",
+                    "image": "./skills/react.png"
+                },
+                {
+                    "name": "Three.js",
+                    "url": "",
+                    "image": "./skills/threejs.png"
+                },
+                {
+                    "name": "FastAPI",
+                    "url": "",
+                    "image": "./skills/fastapi.png"
+                }
+                
+                
+            ],
+            "links": [
+                "https://github.com/theosorus/deep-rubiks",
+                "https://github.com/theosorus/deep-rubiks",
+                "none"
+            ],
+            "image": "./projects/rubiks2.png",
+            "categories": [
+                "Personal",
+                "AI"
+            ]
+        },
         {
             "id": "formula_tracker",
             "date": 2024,

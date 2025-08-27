@@ -184,6 +184,10 @@
             "title": "Formula Tracker",
             "description": "Entraîner un modèle YOLO sur un dataset personnalisé de Formule 1 afin de détecter les voitures selon leur écurie."
         },
+        "deep_rubiks": {
+            "title": "Deep Rubiks",
+            "description": "Une implémentation moderne de l'algorithme DeepCubeA pour résoudre un Rubik's Cube en utilisant des réseaux de neurones et A* avec une visualisation web."
+        },
 
         "categories": {
             "All": "Tout",
