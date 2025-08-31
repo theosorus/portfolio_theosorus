@@ -37,7 +37,7 @@ const EmojiChip = ({ children, className = '' }: ChipProps) => (
 );
 
 export const AboutMe = () => {
-  const [t] = useTranslation('global');
+  const [t, i18n] = useTranslation('global');
   const [emailCopied, setEmailCopied] = useState(false);
   const emailButtonRef = useRef<HTMLButtonElement | null>(null);
   const [emailButtonWidth, setEmailButtonWidth] = useState('auto');
@@ -68,8 +68,12 @@ export const AboutMe = () => {
   };
 
   const handleDownloadCV = () => {
-    const currentLang = localStorage.getItem('i18nextLng') || 'en';
+    const currentLang = i18n.language;
+    console.log('Langue détectée:', currentLang);
+
     const fileName = currentLang === 'fr' ? 'cv_tcastillo_fr.pdf' : 'resume_tcastillo_en.pdf';
+
+    console.log('Fichier à télécharger:', fileName);
     const link = document.createElement('a');
     link.href = `/cv/${fileName}`;
     link.download = fileName;
