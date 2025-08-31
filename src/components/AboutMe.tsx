@@ -68,7 +68,8 @@ export const AboutMe = () => {
   };
 
   const handleDownloadCV = () => {
-    const fileName = 'resume_tcastillo_en.pdf';
+    const currentLang = localStorage.getItem('i18nextLng') || 'en';
+    const fileName = currentLang === 'fr' ? 'cv_tcastillo_fr.pdf' : 'resume_tcastillo_en.pdf';
     const link = document.createElement('a');
     link.href = `/cv/${fileName}`;
     link.download = fileName;
