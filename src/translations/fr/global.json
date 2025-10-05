@@ -188,6 +188,10 @@
             "title": "Deep Rubiks",
             "description": "Une implémentation moderne de l'algorithme DeepCubeA pour résoudre un Rubik's Cube en utilisant des réseaux de neurones et A* avec une visualisation web."
         },
+        "argus": {
+            "title": "Argus",
+            "description": "Création d'une simulation avec Unity dans laquelle on simule un missile autoguidé par vision par ordinateur à l'aide d'un modèle YOLOv8."
+        },
 
         "categories": {
             "All": "Tout",

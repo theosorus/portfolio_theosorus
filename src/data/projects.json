@@ -1,5 +1,44 @@
 {
     "projects": [
+        {
+            "id": "argus",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "Argus",
+            "description": "Building a French language model based on transformers, trained on a French dataset using PyTorch in Python.",
+            "tags": [
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "Yolo",
+                    "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
+                    "image": "./skills/yolo.png"
+                },
+                {
+                    "name":"c#",
+                    "url":"https://learn.microsoft.com/en-us/dotnet/csharp/",
+                    "image":"./skills/csharp.png"
+                },
+                {
+                    "name":"Unity",
+                    "url":"https://unity.com/",
+                    "image":"./skills/unity.png"
+                }
+            ],
+            "links": [
+                "https://github.com/theosorus/Argus",
+                "https://github.com/theosorus/Argus",
+                "none"
+            ],
+            "image": "./projects/argus3.png",
+            "categories": [
+                "Personal",
+                "AI"
+            ]
+        },
                 {
             "id": "hask_gpt",
             "date": 2024,

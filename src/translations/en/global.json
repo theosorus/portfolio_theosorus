@@ -188,6 +188,10 @@
             "title": "Deep Rubiks",
             "description": "A modern implementation of the DeepCubeA algorithm for solving Rubik's Cube using neural networks and A* with web visualization."
         },
+        "argus": {
+            "title": "Argus",
+            "description": "Creation of a Unity simulation in which we simulate a self-guided missile using computer vision with a YOLOv8 model."
+        },
         "categories": {
             "All": "All",
             "Personal": "Personnal",
