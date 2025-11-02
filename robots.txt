@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tcastillo.me/sitemap.xml
+
+# SEO optimizations
+Crawl-delay: 1
