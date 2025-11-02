@@ -192,6 +192,10 @@
             "title": "Argus",
             "description": "Creation of a Unity simulation in which we simulate a self-guided missile using computer vision with a YOLOv8 model."
         },
+        "mcp-drawing": {
+            "title": "MCP Drawing",
+            "description": "MCP drawing application with TypeScript server and React frontend for real-time canvas visualization through Claude Desktop."
+        },
         "categories": {
             "All": "All",
             "Personal": "Personnal",

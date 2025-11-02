@@ -192,6 +192,10 @@
             "title": "Argus",
             "description": "Création d'une simulation avec Unity dans laquelle on simule un missile autoguidé par vision par ordinateur à l'aide d'un modèle YOLOv8."
         },
+        "mcp-drawing": {
+            "title": "MCP Drawing",
+            "description": "Application de dessin MCP avec serveur TypeScript et frontend React pour la visualisation canvas temps réel via Claude Desktop."
+        },
 
         "categories": {
             "All": "Tout",
