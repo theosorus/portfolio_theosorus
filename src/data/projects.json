@@ -10,7 +10,7 @@
                 {
                     "name": "MCP",
                     "url": "",
-                    "image": "./skills/mcp2.png"
+                    "image": "./skills/mcp.png"
                 },
                 {
                     "name": "Python",
@@ -44,7 +44,7 @@
                 "https://github.com/theosorus/MCP-Drawing",
                 "none"
             ],
-            "image": "./projects/mcp.png",
+            "image": "./projects/mcp2.png",
             "categories": [
                 "Personal",
                 "AI"
