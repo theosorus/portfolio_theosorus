@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 1200px;
+            height: 630px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            height: 90%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 60px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .name {
+            font-size: 72px;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .title {
+            font-size: 36px;
+            color: #1e40af;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .description {
+            font-size: 28px;
+            color: #374151;
+            line-height: 1.4;
+            margin-bottom: 40px;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skill {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        
+        .decoration {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .decoration:nth-child(1) {
+            top: -100px;
+            right: -100px;
+        }
+        
+        .decoration:nth-child(2) {
+            bottom: -100px;
+            left: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="decoration"></div>
+    <div class="decoration"></div>
+    
+    <div class="container">
+        <div class="name">Théo Castillo</div>
+        <div class="title">AI & Computer Science Student</div>
+        <div class="description">Passionate about Machine Learning, Deep Learning & Neural Networks</div>
+        <div class="skills">
+            <div class="skill">AI/ML</div>
+            <div class="skill">PyTorch</div>
+            <div class="skill">Computer Vision</div>
+            <div class="skill">React</div>
+            <div class="skill">Python</div>
+        </div>
+    </div>
+</body>
+</html>
