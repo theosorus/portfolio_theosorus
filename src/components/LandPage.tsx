@@ -1,8 +1,10 @@
 import { ChevronDown } from 'lucide-react';
 import { useTranslation } from "react-i18next";
+import ASCIIHuman from './ASCIIHuman';
 
 const LandPage = () => {
   const [t] = useTranslation('global');
+  const showColoredBackground = false; // Variable pour activer/désactiver les fonds colorés
   const scrollToNext = () => {
   const aboutSection = document.getElementById('about-me') || document.querySelector('[data-section="about"]');
   if (aboutSection) {
@@ -23,33 +25,46 @@ const LandPage = () => {
 };
 
   return (
-  <div id="home" className="min-h-screen flex flex-col justify-center items-start px-4 md:px-16 relative">
-      {/* Contenu principal */}
-      <div className="max-w-4xl ml-4 md:ml-8">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
-          {t('landpage.greeting')}{' '}
-          <span className="text-blue-600">{t('landpage.name')}</span>
-        </h1>
-        
-        <div className="space-y-6 text-lg md:text-xl lg:text-2xl text-font-color leading-relaxed">
-          <p>
-            {t('landpage.welcome')}{' '}
-            <span className="text-blue-600 font-medium">{t('landpage.ai')}</span>, {t('landpage.particularly')}{' '}
-            <span className="text-blue-600 font-medium">{t('landpage.deeplearning')}</span> {t('landpage.and')}{' '}
-            <span className="text-blue-600 font-medium">{t('landpage.machinelearning')}</span>.
-          </p>
-          <p>
-            {t('landpage.enjoy')}{' '}
-            <span className="text-blue-600 font-medium">{t('landpage.computervision')}</span> {t('landpage.and')}{' '}
-            <span className="text-blue-600 font-medium">{t('landpage.nlp')}</span>.
-          </p>
-          {/* <p>
-            I have a particular interest in{' '}
-            <span className="text-blue-600 font-medium">model design</span> and{' '}
-            <span className="text-blue-600 font-medium">architecture</span>, 
-            exploring how different neural network structures can be optimized for specific tasks and domains.
-          </p> */}
+  <div id="home" className="min-h-screen flex flex-col justify-center items-center px-4 md:px-8 relative">
+      {/* Container avec arrière-plan */}
+      <div className={`w-full max-w-6xl ${showColoredBackground ? 'bg-gradient-to-br from-amber-200 to-amber-300 rounded-3xl shadow-2xl' : ''} p-6 md:p-8`}>
+        {/* Contenu principal */}
+        <div className="flex flex-col lg:flex-row gap-6 h-full">
+          {/* Section texte - Rectangle bleu */}
+          <div className={`flex-1 ${showColoredBackground ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white' : ''} rounded-2xl p-6 md:p-8`}>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
+              {t('landpage.greeting')}{' '}
+              <span className={showColoredBackground ? "text-blue-200" : "text-blue-600"}>{t('landpage.name')}</span>
+            </h1>
+            
+            <div className="space-y-4 text-base md:text-lg lg:text-xl leading-relaxed">
+              <p>
+                {t('landpage.welcome')}{' '}
+                <span className={`${showColoredBackground ? "text-blue-200" : "text-blue-600"} font-medium`}>{t('landpage.ai')}</span>, {t('landpage.particularly')}{' '}
+                <span className={`${showColoredBackground ? "text-blue-200" : "text-blue-600"} font-medium`}>{t('landpage.deeplearning')}</span> {t('landpage.and')}{' '}
+                <span className={`${showColoredBackground ? "text-blue-200" : "text-blue-600"} font-medium`}>{t('landpage.machinelearning')}</span>.
+              </p>
+              <p>
+                {t('landpage.enjoy')}{' '}
+                <span className={`${showColoredBackground ? "text-blue-200" : "text-blue-600"} font-medium`}>{t('landpage.computervision')}</span> {t('landpage.and')}{' '}
+                <span className={`${showColoredBackground ? "text-blue-200" : "text-blue-600"} font-medium`}>{t('landpage.nlp')}</span>.
+              </p>
+            </div>
+          </div>
+          
+          {/* ASCII Human Component - Rectangle rouge Desktop */}
+          <div className={`hidden lg:flex flex-shrink-0 ${showColoredBackground ? 'bg-gradient-to-br from-red-500 to-red-600' : ''} rounded-2xl p-6 items-center justify-center min-h-[400px] min-w-[300px]`}>
+            <div className="flex items-center justify-center w-full h-full">
+              <ASCIIHuman className="scale-125" />
+            </div>
+          </div>
         </div>
+        
+        {/* ASCII Human Component Mobile - En dessous du texte */}
+        <div className={`lg:hidden flex justify-center mt-6 ${showColoredBackground ? 'bg-gradient-to-br from-red-500 to-red-600' : ''} rounded-2xl p-6`}>
+          <ASCIIHuman className="scale-100" isMobile={true} />
+        </div>
+      </div>
 
       {/* Flèche vers le bas */}
       <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
@@ -67,7 +82,6 @@ const LandPage = () => {
         </button>
       </div>
     </div>
-  </div>
   );
 };
 
