@@ -57,39 +57,39 @@ export const Career = () => {
         {careerData.map((item: CareerItem, index: number) => (
           <div
             key={index}
-            className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             {/* Layout responsive : colonne sur mobile, ligne sur desktop */}
-            <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-start gap-3">
               {/***** Logo *****/}
               <div className="flex justify-center sm:justify-start flex-shrink-0">
                 <img
                   src={item.image}
                   alt={getLocalizedField(item, 'title', lang) || ''}
-                  className="w-13 h-13 object-contain"
+                  className="w-10 h-10 object-contain"
                 />
               </div>
 
               {/***** Content *****/}
               <div className="flex-1 min-w-0">
                 {/***** Title *****/}
-                <h2 className="text-xl md:text-2xl font-bold text-black mb-1 text-center sm:text-left">
+                <h2 className="text-lg md:text-xl font-semibold text-black mb-1 text-center sm:text-left">
                   {getLocalizedField(item, 'title', lang)}
                 </h2>
                 {/***** Location *****/}
-                <p className="text-base md:text-lg text-gray-700 mb-2 text-center sm:text-left">
+                <p className="text-sm md:text-base text-gray-700 mb-2 text-center sm:text-left">
                   {getLocalizedField(item, 'location', lang)}
                 </p>
-                <p className="text-sm md:text-base text-gray-600 mb-3 line-clamp-2 text-center sm:text-left">
+                <p className="text-xs md:text-sm text-gray-600 mb-2 line-clamp-2 text-center sm:text-left">
                   {getLocalizedField(item, 'description', lang)}
                 </p>
                 
                 {/***** Tags *****/}
-                <div className="flex flex-wrap gap-2 mb-3 justify-center sm:justify-start">
+                <div className="flex flex-wrap gap-1.5 mb-2 justify-center sm:justify-start">
                   {item.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}
-                      className="inline-block px-2 py-1 rounded-md text-xs bg-blue-600 text-font-color"
+                      className="inline-block px-2 py-0.5 rounded text-xs bg-blue-600 text-font-color"
                     >
                       {t(`career.tags.${tag}`)}
                     </span>
@@ -97,7 +97,7 @@ export const Career = () => {
                 </div>
                 
                 {/***** Date *****/}
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm md:text-base text-gray-500 text-center sm:text-right">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs md:text-sm text-gray-500 text-center sm:text-right">
                   <span>
                     {formatDate(item.start_date)} - {item.end_date ? formatDate(item.end_date) : t('career.present')}
                   </span>
