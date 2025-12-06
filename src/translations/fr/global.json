@@ -65,7 +65,13 @@
         },
         "all_links": "Tous les liens",
         "download_cv": "Télécharger le CV",
-        "copied": "Copié !"
+        "copied": "Copié !",
+        "controls": {
+            "speed": "Vit",
+            "muscle": "Mus",
+            "quality": "Qua",
+            "glow": "Lum"
+        }
     },
     "footer": {
         "name": "Théo Castillo",

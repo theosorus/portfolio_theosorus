@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface ASCIIHumanProps {
   className?: string;
@@ -18,6 +19,7 @@ interface BodyPart {
 }
 
 const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
+  const [t] = useTranslation('global');
   const canvasRef = useRef<HTMLPreElement>(null);
   const animationRef = useRef<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -308,7 +310,7 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
       {showControls && (
         <div className={`controls-panel ${isMobile ? 'mt-6 flex flex-col gap-4 max-w-xs mx-auto' : 'absolute top-6 -right-16 flex-col gap-2'} flex opacity-80 hover:opacity-100 transition-all duration-300 bg-slate-900/10 backdrop-blur-sm border border-slate-700/20 rounded-lg ${isMobile ? 'p-4' : 'p-2'}`}>
         <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
-          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>Vit</label>
+          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>{t('aboutme.controls.speed')}</label>
           <input
             type="range"
             min="0"
@@ -321,7 +323,7 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
         </div>
         
         <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
-          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>Mus</label>
+          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>{t('aboutme.controls.muscle')}</label>
           <input
             type="range"
             min="0"
@@ -334,7 +336,7 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
         </div>
         
         <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
-          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>Qua</label>
+          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>{t('aboutme.controls.quality')}</label>
           <input
             type="range"
             min="30"
@@ -347,7 +349,7 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
         </div>
         
         <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
-          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>Glow</label>
+          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>{t('aboutme.controls.glow')}</label>
           <input
             type="range"
             min="0"
