@@ -75,7 +75,17 @@
         "note": "Personal portfolio - No data collected",
         "built_with": "Built with React & TypeScript",
         "back_to_top": "Back to top",
-        "contact": "Contact"
+        "contact": "Contact",
+        "see_also": "See also",
+        "portfolios": {
+            "zao": "Zao's portfolio",
+            "clement": "Clement's portfolio (soon)",
+            "alexandre": "Alexandre's portfolio",
+            "rodolphe": "Rodolphe's portfolio", 
+            "antoine": "Antoine's portfolio",
+            "elias": "Elias's portfolio (soon)",
+            "mathieu": "Mathieu's portfolio"
+        }
     },
     "projects": {
     "title" : "Projects",

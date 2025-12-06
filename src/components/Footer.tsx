@@ -25,6 +25,38 @@ const Footer = () => {
             </a>
           </div>
 
+          {/* Section See Also */}
+          <div className="text-center space-y-2 w-1/4 flex-shrink-0">
+            <h3 className="text-xs text-gray-500 uppercase tracking-wider">{t('footer.see_also')}</h3>
+            <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-xs">
+              {[
+                { key: 'zao', url: 'https://zaofromage.github.io/portfolio/' },
+                { key: 'clement', url: null },
+                { key: 'alexandre', url: 'https://carcroks.github.io/' },
+                { key: 'rodolphe', url: 'https://rodolphe.sh/' },
+                { key: 'antoine', url: 'https://labian0.github.io/' },
+                { key: 'elias', url: null },
+                { key: 'mathieu', url: 'https://matjay.me/' }
+              ].map(({ key, url }) => 
+                url ? (
+                  <a 
+                    key={key}
+                    href={url}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-purple-400 transition-colors whitespace-nowrap flex-shrink-0"
+                  >
+                    {t(`footer.portfolios.${key}`)}
+                  </a>
+                ) : (
+                  <span key={key} className="text-gray-500 cursor-not-allowed whitespace-nowrap flex-shrink-0">
+                    {t(`footer.portfolios.${key}`)}
+                  </span>
+                )
+              )}
+            </div>
+          </div>
+
           {/* Mentions légales courtes */}
           <div className="text-sm text-gray-500 text-center md:text-right space-y-1">
             <p>{t('footer.rights', { year: currentYear, name: t('footer.name') })}</p>

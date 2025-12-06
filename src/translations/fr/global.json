@@ -75,7 +75,17 @@
         "note": "Portfolio personnel - Données non collectées",
         "built_with": "Développé avec React & TypeScript",
         "back_to_top": "Retour en haut",
-        "contact": "Contact"
+        "contact": "Contact",
+        "see_also": "Voir aussi",
+        "portfolios": {
+            "zao": "Portfolio de Zao",
+            "clement": "Portfolio de Clement (bientôt)",
+            "alexandre": "Portfolio d'Alexandre",
+            "rodolphe": "Portfolio de Rodolphe", 
+            "antoine": "Portfolio d'Antoine",
+            "elias": "Portfolio d'Elias (bientôt)",
+            "mathieu": "Portfolio de Mathieu"
+        }
     },
     "projects": {
         "title" : "Projets",
