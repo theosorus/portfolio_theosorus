@@ -10,9 +10,30 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
   const animationRef = useRef<number>();
   const [controls, setControls] = useState({
     speed: 25,
-    muscle: 10,
-    quality: 55
+    muscle: 20,
+    quality: 55,
+    glow: 50
   });
+  const [showControls, setShowControls] = useState(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const container = document.querySelector('.ascii-human-container');
+      
+      if (container && !container.contains(target)) {
+        setShowControls(false);
+      }
+    };
+
+    if (showControls) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showControls]);
 
   useEffect(() => {
     // Fast noise implementation
@@ -220,20 +241,37 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
   };
 
   return (
-    <div className={`ascii-human-container relative inline-block ${className}`}>
-      <pre 
-        ref={canvasRef}
-        className="ascii-canvas font-mono text-[6px] leading-[6px] tracking-wider text-purple-400 whitespace-pre select-none"
-        style={{
-          textShadow: '0 0 10px rgba(147, 51, 234, 0.6), 0 0 20px rgba(147, 51, 234, 0.3)',
-          transform: 'translateZ(0)',
-          willChange: 'contents',
-          fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
-          filter: 'brightness(1.2) contrast(1.3)'
-        }}
-      />
+    <div className={`ascii-human-container ${isMobile ? 'flex flex-col items-center' : 'relative inline-block'} ${className}`}>
+      {/* Container du bonhomme avec engrenage */}
+      <div className="relative inline-block">
+        <pre 
+          ref={canvasRef}
+          className="ascii-canvas font-mono text-[6px] leading-[6px] tracking-wider text-purple-400 whitespace-pre select-none"
+          style={{
+            textShadow: `0 0 ${controls.glow * 0.1}px rgba(147, 51, 234, ${controls.glow * 0.008}), 0 0 ${controls.glow * 0.2}px rgba(147, 51, 234, ${controls.glow * 0.006}), 0 0 ${controls.glow * 0.3}px rgba(147, 51, 234, ${controls.glow * 0.004}), 0 0 ${controls.glow * 0.4}px rgba(147, 51, 234, ${controls.glow * 0.002})`,
+            transform: 'translateZ(0)',
+            willChange: 'contents',
+            fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+            filter: `brightness(${1 + controls.glow * 0.006}) contrast(${1 + controls.glow * 0.008})`,
+            animation: controls.glow > 0 ? 'glow 2s ease-in-out infinite alternate' : 'none'
+          }}
+        />
+        
+        {/* Bouton engrenage - toujours à droite du bonhomme */}
+        <button
+          onClick={() => setShowControls(!showControls)}
+          className="absolute top-0 right-0 w-4 h-4 flex items-center justify-center text-slate-400 hover:text-purple-400 transition-colors duration-300 z-10"
+          aria-label="Toggle controls"
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5a3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97c0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1c0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/>
+          </svg>
+        </button>
+      </div>
       
-      <div className={`controls-panel ${isMobile ? 'relative top-0 right-0 mt-4 flex-row justify-center' : 'absolute top-10 -right-12 flex-col'} flex gap-2 opacity-60 hover:opacity-90 transition-opacity duration-500`}>
+      {/* Sliders */}
+      {showControls && (
+        <div className={`controls-panel ${isMobile ? 'mt-4 flex flex-row flex-wrap justify-center gap-2 max-w-xs' : 'absolute top-6 -right-16 flex-col gap-2'} flex opacity-80 hover:opacity-100 transition-all duration-300 bg-slate-900/10 backdrop-blur-sm border border-slate-700/20 rounded-lg p-2`}>
         <div className="control-group flex items-center gap-1">
           <label className="text-[9px] font-normal text-slate-400 uppercase tracking-widest">Vit</label>
           <input
@@ -272,9 +310,35 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
           />
           <span className="text-[8px] text-slate-300 min-w-[12px] text-right font-normal">{controls.quality}</span>
         </div>
-      </div>
+        
+        <div className="control-group flex items-center gap-1">
+          <label className="text-[9px] font-normal text-slate-400 uppercase tracking-widest">Glow</label>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value={controls.glow}
+            onChange={(e) => updateControls('glow', parseInt(e.target.value))}
+            className="w-10 h-0.5 bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider"
+          />
+          <span className="text-[8px] text-slate-300 min-w-[12px] text-right font-normal">{controls.glow}</span>
+        </div>
+        </div>
+      )}
 
       <style>{`
+        @keyframes glow {
+          0% {
+            filter: brightness(1.2) contrast(1.3);
+          }
+          50% {
+            filter: brightness(1.4) contrast(1.5);
+          }
+          100% {
+            filter: brightness(1.2) contrast(1.3);
+          }
+        }
+        
         .slider {
           background: transparent;
         }

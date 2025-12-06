@@ -67,7 +67,7 @@ const LandPage = () => {
       </div>
 
       {/* Flèche vers le bas */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
+      <div className="hidden lg:block absolute bottom-12 left-1/2 transform -translate-x-1/2">
         <button
           onClick={scrollToNext}
           className="flex flex-col items-center space-y-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 group"
