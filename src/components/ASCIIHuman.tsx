@@ -47,7 +47,7 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       const target = event.target as HTMLElement;
       const controlsPanel = document.querySelector('.controls-panel');
       const gearButton = document.querySelector('.gear-button');
@@ -61,9 +61,11 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
     };
 
     document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
     };
   }, [showControls]);
 
