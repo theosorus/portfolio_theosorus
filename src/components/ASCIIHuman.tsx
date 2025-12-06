@@ -49,16 +49,18 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      const container = document.querySelector('.ascii-human-container');
+      const controlsPanel = document.querySelector('.controls-panel');
+      const gearButton = document.querySelector('.gear-button');
       
-      if (container && !container.contains(target)) {
+      // Ferme si on clique en dehors du panneau et du bouton engrenage
+      if (showControls && 
+          controlsPanel && !controlsPanel.contains(target) &&
+          gearButton && !gearButton.contains(target)) {
         setShowControls(false);
       }
     };
 
-    if (showControls) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -290,7 +292,7 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
         {/* Bouton engrenage - toujours à droite du bonhomme */}
         <button
           onClick={() => setShowControls(!showControls)}
-          className={`absolute top-0 right-0 ${isMobile ? 'w-8 h-8' : 'w-4 h-4'} flex items-center justify-center text-slate-400 hover:text-purple-400 transition-colors duration-300 z-10`}
+          className={`gear-button absolute top-0 right-0 ${isMobile ? 'w-8 h-8' : 'w-4 h-4'} flex items-center justify-center text-slate-400 hover:text-purple-400 transition-colors duration-300 z-10`}
           aria-label="Toggle controls"
         >
           <svg width={isMobile ? "20" : "12"} height={isMobile ? "20" : "12"} viewBox="0 0 24 24" fill="currentColor">
