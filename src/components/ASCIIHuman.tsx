@@ -60,14 +60,21 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleClickOutside);
+    // Utilise seulement mousedown sur desktop et touchstart sur mobile
+    if (isMobile) {
+      document.addEventListener('touchstart', handleClickOutside);
+    } else {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
+      if (isMobile) {
+        document.removeEventListener('touchstart', handleClickOutside);
+      } else {
+        document.removeEventListener('mousedown', handleClickOutside);
+      }
     };
-  }, [showControls]);
+  }, [showControls, isMobile]);
 
   useEffect(() => {
     // Fast noise implementation
