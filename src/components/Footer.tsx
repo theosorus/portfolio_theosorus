@@ -26,9 +26,9 @@ const Footer = () => {
           </div>
 
           {/* Section See Also */}
-          <div className="text-center space-y-2 w-1/4 flex-shrink-0">
-            <h3 className="text-xs text-gray-500 uppercase tracking-wider">{t('footer.see_also')}</h3>
-            <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-xs">
+          <div className="text-left md:text-center space-y-2 md:w-1/4 md:flex-shrink-0 w-full">
+            <h3 className="text-xs text-gray-500 tracking-wider">{t('footer.see_also')} : </h3>
+            <div className="flex flex-wrap justify-start md:justify-center gap-x-2 gap-y-2 text-xs md:gap-x-3 md:gap-y-1">
               {[
                 { key: 'zao', url: 'https://zaofromage.github.io/portfolio/' },
                 { key: 'clement', url: null },
@@ -44,12 +44,12 @@ const Footer = () => {
                     href={url}
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-purple-400 transition-colors whitespace-nowrap flex-shrink-0"
+                    className="text-gray-500 hover:text-purple-400 transition-colors whitespace-nowrap flex-shrink-0 px-2 py-1 rounded-md bg-gray-800/20 md:bg-transparent md:px-0 md:py-0"
                   >
                     {t(`footer.portfolios.${key}`)}
                   </a>
                 ) : (
-                  <span key={key} className="text-gray-500 cursor-not-allowed whitespace-nowrap flex-shrink-0">
+                  <span key={key} className="text-gray-500 cursor-not-allowed whitespace-nowrap flex-shrink-0 px-2 py-1 rounded-md bg-gray-800/10 md:bg-transparent md:px-0 md:py-0">
                     {t(`footer.portfolios.${key}`)}
                   </span>
                 )
