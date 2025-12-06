@@ -30,8 +30,8 @@ const Projects = () => {
             onClick={() => setSelectedCategory(cat)}
             className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
               selectedCategory === cat 
-                ? 'bg-slate-100 text-slate-900 border-slate-200 shadow-sm' 
-                : 'bg-transparent text-slate-400 border-slate-600 hover:text-slate-200 hover:border-slate-400'
+                ? 'bg-purple-500 text-white border-purple-400 shadow-sm' 
+                : 'bg-transparent text-white border-purple-500 hover:text-white hover:border-purple-400'
             }`}
           >
             {t(`projects.categories.${cat}`)}
@@ -80,7 +80,7 @@ const Projects = () => {
                     {project.tags.map((tag, idx) => (
                       <div 
                         key={idx} 
-                        className='flex items-center bg-slate-800/60 backdrop-blur-sm rounded-lg px-2.5 py-1 border border-slate-700/50 transition-colors duration-200 hover:bg-slate-700/60'
+                        className='flex items-center bg-slate-800/60 backdrop-blur-sm rounded-lg px-2.5 py-1 border border-slate-700/50 transition-colors duration-200 hover:bg-purple-800/40'
                         onClick={(e) => e.stopPropagation()} // Empêche le clic sur le tag de déclencher le lien du projet
                       >
                         <span className="text-xs font-medium text-slate-200">
@@ -104,7 +104,7 @@ const Projects = () => {
         
         {/* Indicateur de scroll */}
         {currentProjects.length > 6 && (
-          <div className="text-center text-slate-400 text-xs mt-4 opacity-60">
+          <div className="text-center text-purple-400 text-xs mt-4 opacity-60">
             {t('projects.scrollMessage')}
           </div>
         )}

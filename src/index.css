@@ -50,7 +50,7 @@ body {
   left: -3px;
   width: 0%;
   height: 2px;
-  background-color: currentColor;
+  background-color: var(--color-openai-purple);
   transition: width 0.3s;
 }
 
