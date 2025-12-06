@@ -126,7 +126,7 @@ export const AboutMe = () => {
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-sm">💡</span>
+                  <div className="w-3 h-3 bg-blue-300 rounded-full"></div>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-font-color">{t('aboutme.interest_title')}</h3>
@@ -157,7 +157,7 @@ export const AboutMe = () => {
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-sm">🎨</span>
+                  <div className="w-3 h-3 bg-purple-300 rounded-full"></div>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-font-color">{t('aboutme.hobbies_title')}</h3>
@@ -189,7 +189,7 @@ export const AboutMe = () => {
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4 flex-1">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-gray-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-sm">🔗</span>
+                  <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-font-color">{t('aboutme.all_links')}</h3>
