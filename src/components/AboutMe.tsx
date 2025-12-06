@@ -3,39 +3,6 @@ import hobbiesInterestData from '../data/hobbies_interest.json';
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-type ChipProps = {
-  children: React.ReactNode;
-  className?: string;
-};
-
-const Chip = ({ children, className = '' }: ChipProps) => (
-  <li
-    role="listitem"
-    tabIndex={0}
-    className={`group inline-flex items-center gap-1.5 rounded-full border border-gray-200/70 bg-white/80 backdrop-blur px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm ring-1 ring-gray-200 transition
-                hover:shadow-md hover:ring-blue-300 motion-safe:hover:-translate-y-0.5
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${className}`}
-  >
-    <span
-      className="h-1 w-1 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400"
-      aria-hidden
-    />
-    {children}
-  </li>
-);
-
-const EmojiChip = ({ children, className = '' }: ChipProps) => (
-  <li
-    role="listitem"
-    tabIndex={0}
-    className={`group inline-flex items-center gap-1.5 rounded-lg border border-gray-200/70 bg-white/90 backdrop-blur px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm ring-1 ring-gray-200 transition
-                hover:shadow-md hover:ring-emerald-300 motion-safe:hover:-translate-y-0.5
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${className}`}
-  >
-    {children}
-  </li>
-);
-
 export const AboutMe = () => {
   const [t, i18n] = useTranslation('global');
   const [emailCopied, setEmailCopied] = useState(false);

@@ -5,9 +5,21 @@ interface ASCIIHumanProps {
   isMobile?: boolean;
 }
 
+interface BodyPart {
+  y: number;
+  rx: number;
+  rz: number;
+  h: number;
+  taperT: number;
+  taperB: number;
+  curve: number;
+  offsetX?: number;
+  offsetZ?: number;
+}
+
 const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
   const canvasRef = useRef<HTMLPreElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(0);
   const [controls, setControls] = useState({
     speed: 25,
     muscle: 20,
@@ -72,7 +84,6 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
     let time = 0;
 
     let bodyPoints = new Float32Array(0);
-    let pointsCount = 0;
 
     const zBuffer = new Float32Array(W * H);
     const charBuffer = new Uint8Array(W * H);
@@ -80,7 +91,7 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
     const charLen = chars.length - 1;
 
     // Body definition
-    const bodyParts = {
+    const bodyParts: Record<string, BodyPart> = {
       head: { y: 0.07, rx: 0.065, rz: 0.07, h: 0.11, taperT: 0.7, taperB: 0.8, curve: 0.2 },
       neck: { y: 0.14, rx: 0.03, rz: 0.03, h: 0.05, taperT: 1.0, taperB: 1.2, curve: 0 },
       chest: { y: 0.24, rx: 0.09, rz: 0.06, h: 0.14, taperT: 1.1, taperB: 0.85, curve: 0.3 },
@@ -146,7 +157,6 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
       }
       
       bodyPoints = new Float32Array(tempPoints);
-      pointsCount = tempPoints.length / 6;
     };
 
     const render = () => {
