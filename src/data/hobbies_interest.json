@@ -8,10 +8,10 @@
     
   ],
   "hobbies": [
-    { "key": "f1", "emoji": "🏎️" },
-    { "key": "ccg", "emoji": "🎴" },
-    { "key": "chess", "emoji": "♟️" },
-    { "key": "travel", "emoji": "✈️" },
-    {"key" : "running", "emoji": "🏃‍♂️"}
+    { "key": "f1", "emoji": "" },
+    { "key": "ccg", "emoji": "" },
+    { "key": "chess", "emoji": "" },
+    { "key": "travel", "emoji": "" },
+    {"key" : "running", "emoji": ""}
   ]
 }

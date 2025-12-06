@@ -128,179 +128,146 @@ export const AboutMe = () => {
   ];
 
   return (
-    <div id="about-me" className="w-full flex flex-col items-center py-0 px-3 min-h-[75vh]">
-      <div className="w-full max-w-4xl">
-        <div className="rounded-xl shadow-xl overflow-hidden">
-          <div className="flex flex-col lg:flex-row">
-            {/* Image */}
-            <div className="flex-1 lg:flex-[1_1_45%]">
-              <img
-                src="./island.jpeg"
-                alt="Theo"
-                className="w-full h-full min-h-[340px] lg:min-h-[380px] object-cover"
-                loading="lazy"
-              />
-            </div>
-
-            {/* Contenu */}
-            <div className="flex-1 lg:flex-[1_1_55%] p-6 space-y-6">
-              {/* Description */}
-              <div>
-                <p className="text-sm lg:text-base leading-relaxed text-font-color">
-                  {t('aboutme.description_before_name')}{' '}
-                  <b className="text-blue-600">{t('aboutme.name')}</b>, {t('aboutme.description_before_age')}{' '}
-                  <b className="text-blue-600">{t('aboutme.age')}</b> {t('aboutme.description_after_age')}
+    <div id="about-me" className="w-full flex flex-col items-center py-12 px-4">
+      <div className="w-full max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:items-stretch">
+          
+          {/* Card Image avec info personnelle */}
+          <div className="lg:col-span-1 flex">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-6 flex-1">
+              <div className="relative">
+                <img
+                  src="./island.jpeg"
+                  alt="Theo"
+                  className="w-full aspect-square object-cover rounded-lg"
+                  loading="lazy"
+                />
+              </div>
+              
+              <div className="text-center space-y-3">
+                <h3 className="text-xl font-bold text-font-color">{t('aboutme.name')}</h3>
+                <p className="text-base text-font-color leading-relaxed">
+                  {t('aboutme.description_before_age')} <span className="text-blue-600 font-semibold">{t('aboutme.age')}</span> {t('aboutme.description_after_age')}
                 </p>
               </div>
+            </div>
+          </div>
 
-              {/* Interests & Hobbies – version améliorée */}
-              <div className="space-y-7">
-                {/* Interests */}
-                <section aria-labelledby="interests-title">
-                  <h3
-                    id="interests-title"
-                    className="text-xl font-semibold mb-3 border-b border-gray-400 pb-1.5 flex items-center justify-between"
-                  >
-                    <span>{t('aboutme.interest_title')}</span>
-                    <span className="text-xs text-gray-500">
-                      <span className="sr-only">{t('aboutme.interest_title')}</span>
-                      {interests.length}
-                    </span>
-                  </h3>
-
-                  <ul
-                    role="list"
-                    aria-label={t('aboutme.interest_title')}
-                    className="flex flex-wrap gap-2"
-                  >
-                    {visibleInterests.map((interest) => (
-                      <Chip key={interest.key}>
-                        {t(`aboutme.interests.${interest.key}`)}
-                      </Chip>
-                    ))}
-                  </ul>
-
-                  {interests.length > MAX_VISIBLE && (
-                    <div className="mt-3">
-                      <button
-                        type="button"
-                        aria-expanded={showAllInterests}
-                        onClick={() => setShowAllInterests((v) => !v)}
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-700 hover:text-blue-800 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
-                      >
-                        {showAllInterests
-                          ? t('aboutme.show_less', 'Afficher moins')
-                          : t('aboutme.show_more', 'Afficher plus')}
-                        <span
-                          aria-hidden
-                          className={`transition-transform text-sm ${showAllInterests ? 'rotate-180' : ''}`}
-                        >
-                          ▾
-                        </span>
-                      </button>
-                    </div>
-                  )}
-                </section>
-
-                {/* Hobbies */}
-                <section aria-labelledby="hobbies-title">
-                  <h3
-                    id="hobbies-title"
-                    className="text-xl font-semibold mb-3 border-b border-gray-400 pb-1.5 flex items-center justify-between"
-                  >
-                    <span>{t('aboutme.hobbies_title')}</span>
-                    <span className="text-xs text-gray-500">
-                      <span className="sr-only">{t('aboutme.hobbies_title')}</span>
-                      {hobbies.length}
-                    </span>
-                  </h3>
-
-                  <ul
-                    role="list"
-                    aria-label={t('aboutme.hobbies_title')}
-                    className="flex flex-wrap gap-2"
-                  >
-                    {visibleHobbies.map((hobby) => (
-                      <EmojiChip key={hobby.key}>
-                        <span className="text-base leading-none transition-transform group-hover:scale-110">
-                          {hobby.emoji}
-                        </span>
-                        <span className="text-sm">
-                          {t(`aboutme.hobbies.${hobby.key}`)}
-                        </span>
-                      </EmojiChip>
-                    ))}
-                  </ul>
-
-                  {hobbies.length > MAX_VISIBLE && (
-                    <div className="mt-3">
-                      <button
-                        type="button"
-                        aria-expanded={showAllHobbies}
-                        onClick={() => setShowAllHobbies((v) => !v)}
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-700 hover:text-emerald-800 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded"
-                      >
-                        {showAllHobbies
-                          ? t('aboutme.show_less', 'Afficher moins')
-                          : t('aboutme.show_more', 'Afficher plus')}
-                        <span
-                          aria-hidden
-                          className={`transition-transform text-sm ${showAllHobbies ? 'rotate-180' : ''}`}
-                        >
-                          ▾
-                        </span>
-                      </button>
-                    </div>
-                  )}
-                </section>
-              </div>
-
-              {/* Liens */}
-              <div>
-                <h3 className="text-xl font-semibold mb-3 border-b border-gray-400 pb-1.5">
-                  {t('aboutme.all_links')}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {socialLinks.map((link, index) => {
-                    const IconComponent = link.isEmail && emailCopied ? Check : link.icon;
-
-                    if (link.action) {
-                      return (
-                        <button
-                          key={index}
-                          ref={link.isEmail ? emailButtonRef : null}
-                          onClick={link.action}
-                          style={link.isEmail ? { width: emailButtonWidth } : {}}
-                          aria-live={link.isEmail ? 'polite' : undefined}
-                          className={`${link.color} text-white px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-300 hover:scale-105 flex items-center gap-1.5 shadow-md ${
-                            emailCopied && link.isEmail ? 'animate-pulse' : ''
-                          }`}
-                        >
-                          <IconComponent size={12} />
-                          <span className={link.isEmail && emailCopied ? 'flex-1 text-center' : ''}>
-                            {link.isEmail && emailCopied ? t('aboutme.copied') : link.name}
-                          </span>
-                        </button>
-                      );
-                    }
-
-                    return (
-                      <a
-                        key={index}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${link.color} text-white px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-200 hover:scale-105 flex items-center gap-1.5 shadow-md`}
-                      >
-                        <IconComponent size={12} />
-                        {link.name}
-                      </a>
-                    );
-                  })}
+          {/* Contenu principal */}
+          <div className="lg:col-span-2 space-y-6 flex flex-col h-full">
+            {/* Interests */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white text-sm">💡</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-font-color">{t('aboutme.interest_title')}</h3>
                 </div>
               </div>
+              
+              <div className="flex flex-wrap gap-2">
+                {visibleInterests.map((interest) => (
+                  <span key={interest.key} className="inline-block bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 border border-blue-500/20">
+                    {t(`aboutme.interests.${interest.key}`)}
+                  </span>
+                ))}
+              </div>
+
+              {interests.length > MAX_VISIBLE && (
+                <button
+                  type="button"
+                  aria-expanded={showAllInterests}
+                  onClick={() => setShowAllInterests((v) => !v)}
+                  className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
+                >
+                  {showAllInterests ? 'Voir moins' : `+${interests.length - MAX_VISIBLE} autres`}
+                </button>
+              )}
             </div>
-            {/* /Contenu */}
+
+            {/* Hobbies */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white text-sm">🎨</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-font-color">{t('aboutme.hobbies_title')}</h3>
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-2">
+                {visibleHobbies.map((hobby) => (
+                  <span key={hobby.key} className="inline-flex items-center gap-1.5 bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 border border-purple-500/20">
+                    <span className="text-sm">{hobby.emoji}</span>
+                    {t(`aboutme.hobbies.${hobby.key}`)}
+                  </span>
+                ))}
+              </div>
+
+              {hobbies.length > MAX_VISIBLE && (
+                <button
+                  type="button"
+                  aria-expanded={showAllHobbies}
+                  onClick={() => setShowAllHobbies((v) => !v)}
+                  className="text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors"
+                >
+                  {showAllHobbies ? 'Voir moins' : `+${hobbies.length - MAX_VISIBLE} autres`}
+                </button>
+              )}
+            </div>
+
+            {/* Liens sociaux */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4 flex-1">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-gray-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white text-sm">🔗</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-font-color">{t('aboutme.all_links')}</h3>
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-3">
+                {socialLinks.map((link, index) => {
+                  const IconComponent = link.isEmail && emailCopied ? Check : link.icon;
+
+                  if (link.action) {
+                    return (
+                      <button
+                        key={index}
+                        ref={link.isEmail ? emailButtonRef : null}
+                        onClick={link.action}
+                        style={link.isEmail ? { minWidth: emailButtonWidth } : {}}
+                        aria-live={link.isEmail ? 'polite' : undefined}
+                        className={`${link.color} text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-3 flex-shrink-0 ${
+                          emailCopied && link.isEmail ? 'animate-pulse' : ''
+                        }`}
+                      >
+                        <IconComponent size={16} />
+                        <span className={link.isEmail && emailCopied ? 'flex-1 text-center' : ''}>
+                          {link.isEmail && emailCopied ? t('aboutme.copied') : link.name}
+                        </span>
+                      </button>
+                    );
+                  }
+
+                  return (
+                    <a
+                      key={index}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${link.color} text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-3 flex-shrink-0`}
+                    >
+                      <IconComponent size={16} />
+                      {link.name}
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
