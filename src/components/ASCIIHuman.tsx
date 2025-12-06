@@ -47,7 +47,10 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+    // Fermeture par clic en dehors seulement sur desktop
+    if (isMobile) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       const controlsPanel = document.querySelector('.controls-panel');
       const gearButton = document.querySelector('.gear-button');
@@ -60,19 +63,10 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
       }
     };
 
-    // Utilise seulement mousedown sur desktop et touchstart sur mobile
-    if (isMobile) {
-      document.addEventListener('touchstart', handleClickOutside);
-    } else {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      if (isMobile) {
-        document.removeEventListener('touchstart', handleClickOutside);
-      } else {
-        document.removeEventListener('mousedown', handleClickOutside);
-      }
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [showControls, isMobile]);
 
