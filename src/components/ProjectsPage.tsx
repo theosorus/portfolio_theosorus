@@ -47,11 +47,11 @@ const Projects = () => {
             scrollbarColor: 'var(--color-openai-purple) transparent',
           }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-2">
             {currentProjects.map((project: Project, index) => (
               <div
                 key={index}
-                className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1 cursor-pointer"
+                className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1 cursor-pointer"
                 onClick={() => {
                   // Ouvre le premier lien s'il existe et n'est pas "none"
                   if (project.links && project.links[0] && project.links[0] !== "none") {
@@ -61,15 +61,15 @@ const Projects = () => {
               >
                 <div className="relative overflow-hidden">
                   <img
-                    className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-110"
                     src={project.image}
                     alt={project.title}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
                 </div>
                 
-                <div className="p-5">
-                  <h3 className="font-semibold text-lg mb-2 text-slate-100 leading-tight">
+                <div className="p-4">
+                  <h3 className="font-semibold text-base mb-2 text-slate-100 leading-tight">
                     {t(`projects.${project.id}.title`)}
                   </h3>
                   <p className="text-slate-300 text-xs leading-relaxed mb-3 line-clamp-3">
