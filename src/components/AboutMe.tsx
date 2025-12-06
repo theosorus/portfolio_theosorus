@@ -122,67 +122,108 @@ export const AboutMe = () => {
 
           {/* Contenu principal */}
           <div className="lg:col-span-2 space-y-6 flex flex-col h-full">
-            {/* Interests */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <div className="w-3 h-3 bg-blue-300 rounded-full"></div>
+            {/* Grid pour Interests/Hobbies et nouvelles sections */}
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+              {/* Colonne gauche: Interests et I'm working on */}
+              <div className="space-y-6">
+                {/* Interests */}
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                      <div className="w-3 h-3 bg-blue-300 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-font-color">{t('aboutme.interest_title')}</h3>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {visibleInterests.map((interest) => (
+                      <span key={interest.key} className="inline-block bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs font-medium transition-all duration-300 hover:scale-105 border border-blue-500/20">
+                        {t(`aboutme.interests.${interest.key}`)}
+                      </span>
+                    ))}
+                  </div>
+
+                  {interests.length > MAX_VISIBLE && (
+                    <button
+                      type="button"
+                      aria-expanded={showAllInterests}
+                      onClick={() => setShowAllInterests((v) => !v)}
+                      className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
+                    >
+                      {showAllInterests ? 'Voir moins' : `+${interests.length - MAX_VISIBLE} autres`}
+                    </button>
+                  )}
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-font-color">{t('aboutme.interest_title')}</h3>
+
+                {/* I'm working on */}
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+                      <div className="w-3 h-3 bg-orange-300 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-font-color">{t('aboutme.working_on_title')}</h3>
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm text-font-color/80 leading-relaxed">
+                    {t('aboutme.working_on_description')}
+                  </p>
                 </div>
-              </div>
-              
-              <div className="flex flex-wrap gap-2">
-                {visibleInterests.map((interest) => (
-                  <span key={interest.key} className="inline-block bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 border border-blue-500/20">
-                    {t(`aboutme.interests.${interest.key}`)}
-                  </span>
-                ))}
               </div>
 
-              {interests.length > MAX_VISIBLE && (
-                <button
-                  type="button"
-                  aria-expanded={showAllInterests}
-                  onClick={() => setShowAllInterests((v) => !v)}
-                  className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
-                >
-                  {showAllInterests ? 'Voir moins' : `+${interests.length - MAX_VISIBLE} autres`}
-                </button>
-              )}
-            </div>
+              {/* Colonne droite: Hobbies et For the future */}
+              <div className="space-y-6">
+                {/* Hobbies */}
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
+                      <div className="w-3 h-3 bg-purple-300 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-font-color">{t('aboutme.hobbies_title')}</h3>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {visibleHobbies.map((hobby) => (
+                      <span key={hobby.key} className="inline-flex items-center gap-1 bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs font-medium transition-all duration-300 hover:scale-105 border border-purple-500/20">
+                        <span className="text-sm">{hobby.emoji}</span>
+                        {t(`aboutme.hobbies.${hobby.key}`)}
+                      </span>
+                    ))}
+                  </div>
 
-            {/* Hobbies */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
-                  <div className="w-3 h-3 bg-purple-300 rounded-full"></div>
+                  {hobbies.length > MAX_VISIBLE && (
+                    <button
+                      type="button"
+                      aria-expanded={showAllHobbies}
+                      onClick={() => setShowAllHobbies((v) => !v)}
+                      className="text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors"
+                    >
+                      {showAllHobbies ? 'Voir moins' : `+${hobbies.length - MAX_VISIBLE} autres`}
+                    </button>
+                  )}
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-font-color">{t('aboutme.hobbies_title')}</h3>
+
+                {/* For the future */}
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
+                      <div className="w-3 h-3 bg-green-300 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-font-color">{t('aboutme.future_title')}</h3>
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm text-font-color/80 leading-relaxed">
+                    {t('aboutme.future_description')}
+                  </p>
                 </div>
               </div>
-              
-              <div className="flex flex-wrap gap-2">
-                {visibleHobbies.map((hobby) => (
-                  <span key={hobby.key} className="inline-flex items-center gap-1.5 bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 border border-purple-500/20">
-                    <span className="text-sm">{hobby.emoji}</span>
-                    {t(`aboutme.hobbies.${hobby.key}`)}
-                  </span>
-                ))}
-              </div>
-
-              {hobbies.length > MAX_VISIBLE && (
-                <button
-                  type="button"
-                  aria-expanded={showAllHobbies}
-                  onClick={() => setShowAllHobbies((v) => !v)}
-                  className="text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors"
-                >
-                  {showAllHobbies ? 'Voir moins' : `+${hobbies.length - MAX_VISIBLE} autres`}
-                </button>
-              )}
             </div>
 
             {/* Liens sociaux */}

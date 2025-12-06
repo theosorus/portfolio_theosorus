@@ -66,6 +66,10 @@
         "all_links": "Tous les liens",
         "download_cv": "Télécharger le CV",
         "copied": "Copié !",
+        "working_on_title": "En cours",
+        "working_on_description": "Je travaille actuellement sur la découverte et l'utilisation de techniques d'intelligence artificielle.",
+        "future_title": "Pour l'avenir",
+        "future_description": "Intégrer une école d'ingénieur en alternance dans une entreprise qui me plaît.",
         "controls": {
             "speed": "Vit",
             "muscle": "Mus",

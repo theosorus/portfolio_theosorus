@@ -66,6 +66,10 @@
         "all_links": "All links",
         "download_cv": "Download CV",
         "copied": "Copied !",
+        "working_on_title": "I'm working on",
+        "working_on_description": "I am currently working on the discovery and use of artificial intelligence techniques.",
+        "future_title": "For the future",
+        "future_description": "Join an engineering school with a work-study programme at a company I like.",
         "controls": {
             "speed": "Spd",
             "muscle": "Mus",
