@@ -104,7 +104,7 @@ const Projects = () => {
         
         {/* Indicateur de scroll */}
         {currentProjects.length > 6 && (
-          <div className="text-center text-purple-400 text-xs mt-4 opacity-60">
+          <div className="text-center text-white text-xs mt-4 opacity-60">
             {t('projects.scrollMessage')}
           </div>
         )}

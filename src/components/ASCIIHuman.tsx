@@ -20,6 +20,7 @@ interface BodyPart {
 const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
   const canvasRef = useRef<HTMLPreElement>(null);
   const animationRef = useRef<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [controls, setControls] = useState({
     speed: 25,
     muscle: 20,
@@ -27,6 +28,23 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
     glow: 50
   });
   const [showControls, setShowControls] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Intersection Observer for visibility detection
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(containerRef.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -160,7 +178,7 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
     };
 
     const render = () => {
-      if (!canvasRef.current) return;
+      if (!canvasRef.current || !isVisible) return;
 
       rotSpeed = controls.speed / 1000;
       muscleFactor = controls.muscle / 10;
@@ -237,21 +255,23 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
     };
 
     bakeBody();
-    render();
+    if (isVisible) {
+      render();
+    }
 
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [controls]);
+  }, [controls, isVisible]);
 
   const updateControls = (key: keyof typeof controls, value: number) => {
     setControls(prev => ({ ...prev, [key]: value }));
   };
 
   return (
-    <div className={`ascii-human-container ${isMobile ? 'flex flex-col items-center' : 'relative inline-block'} ${className}`}>
+    <div ref={containerRef} className={`ascii-human-container ${isMobile ? 'flex flex-col items-center' : 'relative inline-block'} ${className}`}>
       {/* Container du bonhomme avec engrenage */}
       <div className="relative inline-block">
         <pre 
@@ -270,10 +290,10 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
         {/* Bouton engrenage - toujours à droite du bonhomme */}
         <button
           onClick={() => setShowControls(!showControls)}
-          className="absolute top-0 right-0 w-4 h-4 flex items-center justify-center text-slate-400 hover:text-purple-400 transition-colors duration-300 z-10"
+          className={`absolute top-0 right-0 ${isMobile ? 'w-8 h-8' : 'w-4 h-4'} flex items-center justify-center text-slate-400 hover:text-purple-400 transition-colors duration-300 z-10`}
           aria-label="Toggle controls"
         >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+          <svg width={isMobile ? "20" : "12"} height={isMobile ? "20" : "12"} viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5a3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97c0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1c0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/>
           </svg>
         </button>
@@ -281,57 +301,57 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
       
       {/* Sliders */}
       {showControls && (
-        <div className={`controls-panel ${isMobile ? 'mt-4 flex flex-row flex-wrap justify-center gap-2 max-w-xs' : 'absolute top-6 -right-16 flex-col gap-2'} flex opacity-80 hover:opacity-100 transition-all duration-300 bg-slate-900/10 backdrop-blur-sm border border-slate-700/20 rounded-lg p-2`}>
-        <div className="control-group flex items-center gap-1">
-          <label className="text-[9px] font-normal text-slate-400 uppercase tracking-widest">Vit</label>
+        <div className={`controls-panel ${isMobile ? 'mt-6 flex flex-col gap-4 max-w-xs mx-auto' : 'absolute top-6 -right-16 flex-col gap-2'} flex opacity-80 hover:opacity-100 transition-all duration-300 bg-slate-900/10 backdrop-blur-sm border border-slate-700/20 rounded-lg ${isMobile ? 'p-4' : 'p-2'}`}>
+        <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
+          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>Vit</label>
           <input
             type="range"
             min="0"
             max="100"
             value={controls.speed}
             onChange={(e) => updateControls('speed', parseInt(e.target.value))}
-            className="w-10 h-0.5 bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider"
+            className={`${isMobile ? 'w-20 h-1' : 'w-10 h-0.5'} bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider`}
           />
-          <span className="text-[8px] text-slate-300 min-w-[12px] text-right font-normal">{controls.speed}</span>
+          <span className={`${isMobile ? 'text-xs' : 'text-[8px]'} text-slate-300 ${isMobile ? 'min-w-[20px]' : 'min-w-[12px]'} text-right font-normal`}>{controls.speed}</span>
         </div>
         
-        <div className="control-group flex items-center gap-1">
-          <label className="text-[9px] font-normal text-slate-400 uppercase tracking-widest">Mus</label>
+        <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
+          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>Mus</label>
           <input
             type="range"
             min="0"
             max="20"
             value={controls.muscle}
             onChange={(e) => updateControls('muscle', parseInt(e.target.value))}
-            className="w-10 h-0.5 bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider"
+            className={`${isMobile ? 'w-20 h-1' : 'w-10 h-0.5'} bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider`}
           />
-          <span className="text-[8px] text-slate-300 min-w-[12px] text-right font-normal">{controls.muscle}</span>
+          <span className={`${isMobile ? 'text-xs' : 'text-[8px]'} text-slate-300 ${isMobile ? 'min-w-[20px]' : 'min-w-[12px]'} text-right font-normal`}>{controls.muscle}</span>
         </div>
         
-        <div className="control-group flex items-center gap-1">
-          <label className="text-[9px] font-normal text-slate-400 uppercase tracking-widest">Qua</label>
+        <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
+          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>Qua</label>
           <input
             type="range"
             min="30"
             max="80"
             value={controls.quality}
             onChange={(e) => updateControls('quality', parseInt(e.target.value))}
-            className="w-10 h-0.5 bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider"
+            className={`${isMobile ? 'w-20 h-1' : 'w-10 h-0.5'} bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider`}
           />
-          <span className="text-[8px] text-slate-300 min-w-[12px] text-right font-normal">{controls.quality}</span>
+          <span className={`${isMobile ? 'text-xs' : 'text-[8px]'} text-slate-300 ${isMobile ? 'min-w-[20px]' : 'min-w-[12px]'} text-right font-normal`}>{controls.quality}</span>
         </div>
         
-        <div className="control-group flex items-center gap-1">
-          <label className="text-[9px] font-normal text-slate-400 uppercase tracking-widest">Glow</label>
+        <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
+          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>Glow</label>
           <input
             type="range"
             min="0"
             max="100"
             value={controls.glow}
             onChange={(e) => updateControls('glow', parseInt(e.target.value))}
-            className="w-10 h-0.5 bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider"
+            className={`${isMobile ? 'w-20 h-1' : 'w-10 h-0.5'} bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider`}
           />
-          <span className="text-[8px] text-slate-300 min-w-[12px] text-right font-normal">{controls.glow}</span>
+          <span className={`${isMobile ? 'text-xs' : 'text-[8px]'} text-slate-300 ${isMobile ? 'min-w-[20px]' : 'min-w-[12px]'} text-right font-normal`}>{controls.glow}</span>
         </div>
         </div>
       )}
@@ -355,8 +375,8 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
         
         .slider::-webkit-slider-thumb {
           appearance: none;
-          width: 5px;
-          height: 5px;
+          width: 12px;
+          height: 12px;
           background: #9333ea;
           border-radius: 50%;
           cursor: pointer;
@@ -367,13 +387,13 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
         
         .slider::-webkit-slider-thumb:hover {
           opacity: 1;
-          transform: scale(1.5);
+          transform: scale(1.3);
           box-shadow: 0 0 8px rgba(147, 51, 234, 0.3);
         }
         
         .slider::-moz-range-thumb {
-          width: 5px;
-          height: 5px;
+          width: 12px;
+          height: 12px;
           background: #9333ea;
           border-radius: 50%;
           cursor: pointer;
