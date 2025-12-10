@@ -10,6 +10,8 @@ const NavBar = () => {
   const [t, i18n] = useTranslation('global');
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
   const langMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,10 +26,34 @@ const NavBar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+      
+      lastScrollY = currentScrollY;
+      setScrollPosition(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const currentLang = i18n.language as 'fr' | 'en';
 
   return (
-    <nav className="fixed top-0 left-0 w-full h-14 border-b flex items-center justify-between px-3 z-50 bg-openai-dark-blue">
+    <nav className={`fixed top-0 left-0 w-full h-14 border-b flex items-center justify-between px-3 z-50 bg-openai-dark-blue transition-transform duration-300 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="font-main text-3xl">
         <h1 className="flex items-center">Théo Castillo</h1>
       </div>

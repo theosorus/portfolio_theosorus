@@ -38,6 +38,13 @@ body {
   color: var(--color-font-color);
 }
 
+/* Navbar scroll effect */
+nav {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
 
 .a-underline {
   position: relative;
