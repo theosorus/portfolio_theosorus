@@ -35,7 +35,7 @@ const Footer = () => {
                 { key: 'alexandre', url: 'https://carcroks.github.io/' },
                 { key: 'rodolphe', url: 'https://rodolphe.sh/' },
                 { key: 'antoine', url: 'https://labian0.github.io/' },
-                { key: 'elias', url: null },
+                { key: 'elias', url: 'https://eliasgauthier.fr' },
                 { key: 'mathieu', url: 'https://matjay.me/' }
               ].map(({ key, url }) => 
                 url ? (

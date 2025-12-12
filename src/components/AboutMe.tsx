@@ -129,9 +129,6 @@ export const AboutMe = () => {
                 {/* Interests */}
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                      <div className="w-3 h-3 bg-blue-300 rounded-full"></div>
-                    </div>
                     <div>
                       <h3 className="text-lg font-semibold text-font-color">{t('aboutme.interest_title')}</h3>
                     </div>
@@ -160,9 +157,6 @@ export const AboutMe = () => {
                 {/* I'm working on */}
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
-                      <div className="w-3 h-3 bg-orange-300 rounded-full"></div>
-                    </div>
                     <div>
                       <h3 className="text-lg font-semibold text-font-color">{t('aboutme.working_on_title')}</h3>
                     </div>
@@ -179,9 +173,6 @@ export const AboutMe = () => {
                 {/* Hobbies */}
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
-                      <div className="w-3 h-3 bg-purple-300 rounded-full"></div>
-                    </div>
                     <div>
                       <h3 className="text-lg font-semibold text-font-color">{t('aboutme.hobbies_title')}</h3>
                     </div>
@@ -211,9 +202,6 @@ export const AboutMe = () => {
                 {/* For the future */}
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
-                      <div className="w-3 h-3 bg-green-300 rounded-full"></div>
-                    </div>
                     <div>
                       <h3 className="text-lg font-semibold text-font-color">{t('aboutme.future_title')}</h3>
                     </div>
@@ -229,9 +217,6 @@ export const AboutMe = () => {
             {/* Liens sociaux */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4 flex-1">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-gray-600 rounded-lg flex items-center justify-center">
-                  <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
-                </div>
                 <div>
                   <h3 className="text-lg font-semibold text-font-color">{t('aboutme.all_links')}</h3>
                 </div>
