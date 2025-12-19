@@ -3,6 +3,7 @@ import { useProjects } from "../hooks/useProjects";
 import { Project } from "../type";
 import github from "../../public/icons/github.svg";
 import { useTranslation } from "react-i18next";
+import GithubStars from "./GithubStars";
 
 const NormalProjects: React.FC = () => {
   const projectsToSee = useProjects();
@@ -19,7 +20,7 @@ const NormalProjects: React.FC = () => {
             }`}
           >
             <div
-              className={`rounded-xl z-1 gap-3 w-1/2 ${
+              className={`rounded-xl z-1 gap-3 w-1/2 relative ${
                 isEven
                   ? "mr-[-100px] justify-start text-left"
                   : "ml-[-100px] justify-end text-right"
@@ -44,7 +45,7 @@ const NormalProjects: React.FC = () => {
                 ))}
               </div>
               <div className={`flex ${isEven ? "justify-start" : "justify-end"}`}>
-              <a className="github " href={p.links[1]} target="_blank">
+                <a className="github" href={p.links[1]} target="_blank">
                   <img
                     className="w-7 h-7 fill-[rgb(181, 184, 192)] opacity-70 hover:opacity-90"
                     style={{ filter: "invert(100%)" }}
@@ -52,6 +53,9 @@ const NormalProjects: React.FC = () => {
                     alt="Github"
                   />
                 </a>
+              </div>
+              <div className="absolute bottom-0 right-0">
+                <GithubStars githubUrl={p.links[1]} />
               </div>
             </div>
             <div className="z-0 w-1/2">

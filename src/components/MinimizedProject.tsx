@@ -3,6 +3,7 @@ import { useProjects } from "../hooks/useProjects";
 import { Project } from "../type";
 import github from "../../public/icons/github.svg";
 import { useTranslation } from "react-i18next";
+import GithubStars from "./GithubStars";
 
 const MinimizedProject: React.FC = () => {
   const projectsToSee = useProjects();
@@ -16,7 +17,7 @@ const MinimizedProject: React.FC = () => {
           style={{ backgroundImage: `url(${p.image})`, height: "400px" }}
         >
           <div className="absolute inset-0 bg-black opacity-70 rounded-xl" />
-          <div className="relative p-4 text-white z-10">
+          <div className="relative p-4 text-white z-10 w-full">
             <h1 className="text-[#56dcfc]  mb-2">
               {p.date} • {t(`projects.types.${p.type}`)}
             </h1>
@@ -34,15 +35,18 @@ const MinimizedProject: React.FC = () => {
                 </a>
               ))}
             </div>
-            <div className="flex">
+            <div className="flex items-start">
               <a className="github" href={p.links[1]} target="_blank">
-              <img
-                    className="w-7 h-7 fill-[rgb(181, 184, 192)] opacity-90 hover:opacity-100"
-                    style={{ filter: "invert(100%)" }}
-                    src={github}
-                    alt="Github"
-                  />
+                <img
+                  className="w-7 h-7 fill-[rgb(181, 184, 192)] opacity-90 hover:opacity-100"
+                  style={{ filter: "invert(100%)" }}
+                  src={github}
+                  alt="Github"
+                />
               </a>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <GithubStars githubUrl={p.links[1]} />
             </div>
           </div>
         </div>

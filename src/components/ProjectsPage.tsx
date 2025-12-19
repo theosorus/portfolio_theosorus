@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import projectsData from '../data/projects.json';
 import { useEffect, useState } from 'react';
 import { Project } from '../type';
+import GithubStars from './GithubStars';
 
 const categories = ["All" ,"Personal","School","AI","Simulations","Web","Software"];
 
@@ -51,7 +52,7 @@ const Projects = () => {
             {currentProjects.map((project: Project, index) => (
               <div
                 key={index}
-                className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1 cursor-pointer"
+                className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1 cursor-pointer relative"
                 onClick={() => {
                   // Ouvre le premier lien s'il existe et n'est pas "none"
                   if (project.links && project.links[0] && project.links[0] !== "none") {
@@ -67,8 +68,8 @@ const Projects = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
                 </div>
-                
-                <div className="p-4">
+
+                <div className="p-4 pb-12">
                   <h3 className="font-semibold text-base mb-2 text-slate-100 leading-tight">
                     {t(`projects.${project.id}.title`)}
                   </h3>
@@ -78,8 +79,8 @@ const Projects = () => {
 
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, idx) => (
-                      <div 
-                        key={idx} 
+                      <div
+                        key={idx}
                         className='flex items-center bg-slate-800/60 backdrop-blur-sm rounded-lg px-2.5 py-1 border border-slate-700/50 transition-colors duration-200 hover:bg-purple-800/40'
                         onClick={(e) => e.stopPropagation()} // Empêche le clic sur le tag de déclencher le lien du projet
                       >
@@ -87,15 +88,19 @@ const Projects = () => {
                           {tag.name}
                         </span>
                         {tag.image && (
-                          <img 
-                            src={tag.image} 
-                            alt="" 
-                            className='w-3.5 h-3.5 ml-1 rounded opacity-80' 
+                          <img
+                            src={tag.image}
+                            alt=""
+                            className='w-3.5 h-3.5 ml-1 rounded opacity-80'
                           />
                         )}
                       </div>
                     ))}
                   </div>
+                </div>
+
+                <div className="absolute bottom-3 right-3">
+                  <GithubStars githubUrl={project.links[1]} />
                 </div>
               </div>
             ))}
