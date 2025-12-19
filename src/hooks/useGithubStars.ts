@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 interface GitHubStarsCache {
-  [repoUrl: string]: number;
+  [repoUrl: string]: number | null;
 }
 
 const starsCache: GitHubStarsCache = {};
@@ -34,7 +34,7 @@ export const useGithubStars = (githubUrl: string | undefined) => {
       return;
     }
 
-    // Vérifier le cache
+    // Vérifier le cache (null signifie "erreur déjà rencontrée", on ne réessaie pas)
     if (starsCache[githubUrl] !== undefined) {
       setStars(starsCache[githubUrl]);
       return;
@@ -68,14 +68,14 @@ export const useGithubStars = (githubUrl: string | undefined) => {
           setStars(starCount);
         } else {
           console.error(`GitHub API error for ${githubUrl}:`, response.status, response.statusText);
-          // En cas d'erreur, mettre 0 en cache pour éviter les requêtes répétées
-          starsCache[githubUrl] = 0;
+          // En cas d'erreur, mettre null en cache pour éviter les requêtes répétées
+          starsCache[githubUrl] = null;
           setStars(null);
         }
       } catch (error) {
         console.error('Error fetching GitHub stars for', githubUrl, ':', error);
-        // En cas d'erreur, mettre 0 en cache
-        starsCache[githubUrl] = 0;
+        // En cas d'erreur, mettre null en cache
+        starsCache[githubUrl] = null;
         setStars(null);
       } finally {
         setLoading(false);
