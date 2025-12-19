@@ -105,6 +105,11 @@
                     "name": "Hasktorch",
                     "url": "http://hasktorch.org/",
                     "image": "./skills/hasktorch.png"
+                },
+                {
+                    "name": "Docker",
+                    "url": "https://www.docker.com/",
+                    "image": "./skills/docker.png"
                 }
             ],
             "links": [
