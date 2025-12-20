@@ -216,6 +216,10 @@
             "title": "MCP Drawing",
             "description": "MCP drawing application with TypeScript server and React frontend for real-time canvas visualization through Claude Desktop."
         },
+        "mcp-terraform": {
+            "title": "MCP Terraform",
+            "description": "Deploy an MCP server capable of interacting with a database using Terraform on a virtual machine with the Scaleway provider to interact with LLMs like Mistral."
+        },
         "categories": {
             "All": "All",
             "Personal": "Personnal",
