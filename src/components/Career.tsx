@@ -52,65 +52,60 @@ export const Career = () => {
         </h1>
       </div>
 
-      {/***** Career Cards with Simple Timeline *****/}
-      <div className="w-full max-w-5xl relative">
-        {/* Simple timeline line on right */}
-        <div className="absolute right-8 top-8 bottom-8 w-0.5 bg-purple-500 hidden lg:block"></div>
-        
-        <div className="space-y-6">
-          {careerData.map((item: CareerItem, index: number) => (
-            <div key={index} className="relative flex items-center gap-6">
-              {/* Career Card */}
-              <div className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                  {/* Logo */}
-                  <div className="flex justify-center sm:justify-start flex-shrink-0">
-                    <img
-                      src={item.image}
-                      alt={getLocalizedField(item, 'title', lang) || ''}
-                      className="w-12 h-12 object-contain rounded-lg p-1 bg-white/10 border border-white/20"
-                    />
-                  </div>
+      {/***** Career Cards *****/}
+      <div className="w-full max-w-4xl space-y-4">
+        {careerData.map((item: CareerItem, index: number) => (
+          <div
+            key={index}
+            className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            {/* Layout responsive : colonne sur mobile, ligne sur desktop */}
+            <div className="flex flex-col sm:flex-row sm:items-start gap-3">
+              {/***** Logo *****/}
+              <div className="flex justify-center sm:justify-start flex-shrink-0">
+                <img
+                  src={item.image}
+                  alt={getLocalizedField(item, 'title', lang) || ''}
+                  className="w-10 h-10 object-contain"
+                />
+              </div>
 
-                  {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    <h2 className="text-lg font-semibold text-font-color mb-1 text-center sm:text-left">
-                      {getLocalizedField(item, 'title', lang)}
-                    </h2>
-                    <p className="text-sm text-font-color/80 mb-2 text-center sm:text-left">
-                      {getLocalizedField(item, 'location', lang)}
-                    </p>
-                    <p className="text-xs text-font-color/70 mb-3 text-center sm:text-left">
-                      {getLocalizedField(item, 'description', lang)}
-                    </p>
-                    
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-1.5 mb-3 justify-center sm:justify-start">
-                      {item.tags.map((tag, tagIndex) => (
-                        <span 
-                          key={tagIndex}
-                          className="inline-block px-2 py-1 rounded text-xs bg-purple-500/20 text-purple-300 border border-purple-500/30"
-                        >
-                          {t(`career.tags.${tag}`)}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    {/* Date */}
-                    <div className="text-xs text-font-color/60 text-center sm:text-left">
-                      {formatDate(item.start_date)} - {item.end_date ? formatDate(item.end_date) : t('career.present')}
-                    </div>
-                  </div>
+              {/***** Content *****/}
+              <div className="flex-1 min-w-0">
+                {/***** Title *****/}
+                <h2 className="text-lg md:text-xl font-semibold text-black mb-1 text-center sm:text-left">
+                  {getLocalizedField(item, 'title', lang)}
+                </h2>
+                {/***** Location *****/}
+                <p className="text-sm md:text-base text-gray-700 mb-2 text-center sm:text-left">
+                  {getLocalizedField(item, 'location', lang)}
+                </p>
+                <p className="text-xs md:text-sm text-gray-600 mb-2 line-clamp-2 text-center sm:text-left">
+                  {getLocalizedField(item, 'description', lang)}
+                </p>
+                
+                {/***** Tags *****/}
+                <div className="flex flex-wrap gap-1.5 mb-2 justify-center sm:justify-start">
+                  {item.tags.map((tag, tagIndex) => (
+                    <span 
+                      key={tagIndex}
+                      className="inline-block px-2 py-0.5 rounded text-xs bg-blue-600 text-font-color"
+                    >
+                      {t(`career.tags.${tag}`)}
+                    </span>
+                  ))}
+                </div>
+                
+                {/***** Date *****/}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs md:text-sm text-gray-500 text-center sm:text-right">
+                  <span>
+                    {formatDate(item.start_date)} - {item.end_date ? formatDate(item.end_date) : t('career.present')}
+                  </span>
                 </div>
               </div>
-              
-              {/* Simple timeline dot */}
-              <div className="hidden lg:flex flex-col items-center justify-center w-16 flex-shrink-0">
-                <div className="w-3 h-3 bg-purple-500 rounded-full border-2 border-white"></div>
-              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
