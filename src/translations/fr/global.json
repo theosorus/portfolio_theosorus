@@ -4,7 +4,8 @@
         "aboutme": "Profil",
         "projects": "Projets",
         "contact": "Contact",
-        "career": "Carrière"
+        "career": "Carrière",
+        "travel": "Voyages"
     },
     "career": {
         "title": "Parcours",
@@ -77,6 +78,13 @@
             "glow": "Lum"
         }
     },
+    "travel": {
+        "title": "Mes Voyages",
+        "description": "Découvrez les pays que j'ai eu la chance de visiter",
+        "visited": "Visité",
+        "not_visited": "Non visité",
+        "countries_visited": "pays visités"
+    },
     "footer": {
         "name": "Théo Castillo",
         "role": "Étudiant en informatique - Bordeaux, France",
@@ -91,7 +99,7 @@
             "zao": "Portfolio de Zao",
             "clement": "Portfolio de Clement (bientôt)",
             "alexandre": "Portfolio d'Alexandre",
-            "rodolphe": "Portfolio de Rodolphe", 
+            "rodolphe": "Portfolio de Rodolphe",
             "antoine": "Portfolio d'Antoine",
             "elias": "Portfolio d'Elias (bientôt)",
             "mathieu": "Portfolio de Mathieu"

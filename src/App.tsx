@@ -7,6 +7,7 @@ import Career from "./components/Career";
 import Footer from "./components/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+ import TravelGlobe from "./components/TravelGlobe";
 // import Skills from "./components/Skills";
 
 (window as any).gsap = gsap;
@@ -21,6 +22,7 @@ function App() {
         <LandPage />
         <AboutMe />
         <Career />
+         <TravelGlobe />
         {/* <Skills /> */}
         <Projects/>
         <Footer />

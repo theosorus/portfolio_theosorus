@@ -4,7 +4,8 @@
         "aboutme": "About me",
         "projects": "Projects",
         "contact": "contact",
-        "career": "Career"
+        "career": "Career",
+        "travel": "Travel"
     },
     "career": {
         "title": "Career Track",
@@ -77,6 +78,13 @@
             "glow": "Glo"
         }
     },
+    "travel": {
+        "title": "My Travels",
+        "description": "Discover the countries I've had the chance to visit",
+        "visited": "Visited",
+        "not_visited": "Not visited",
+        "countries_visited": "countries visited"
+    },
     "footer": {
         "name": "Théo Castillo",
         "role": "Computer science student - Bordeaux, France",
@@ -91,7 +99,7 @@
             "zao": "Zao's portfolio",
             "clement": "Clement's portfolio (soon)",
             "alexandre": "Alexandre's portfolio",
-            "rodolphe": "Rodolphe's portfolio", 
+            "rodolphe": "Rodolphe's portfolio",
             "antoine": "Antoine's portfolio",
             "elias": "Elias's portfolio (soon)",
             "mathieu": "Mathieu's portfolio"
