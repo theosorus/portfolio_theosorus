@@ -82,9 +82,15 @@ export const AboutMe = () => {
     },
     {
       name: "Gazeux's Kaggle",
-      icon: ExternalLink,
+      customIcon: '/icons/kaggle.png',
       href: 'https://www.kaggle.com/gazeux330000',
       color: 'bg-cyan-500 hover:bg-cyan-600',
+    },
+    {
+      name: "Gazeux's Huggingface",
+      customIcon: '/icons/huggingface-color.png',
+      href: 'https://huggingface.co/Gazeux33',
+      color: 'bg-yellow-500 hover:bg-yellow-600',
     },
     {
       name: t('aboutme.download_cv'),
@@ -238,7 +244,7 @@ export const AboutMe = () => {
                           emailCopied && link.isEmail ? 'animate-pulse' : ''
                         }`}
                       >
-                        <IconComponent size={16} />
+                        {IconComponent && <IconComponent size={16} />}
                         <span className={link.isEmail && emailCopied ? 'flex-1 text-center' : ''}>
                           {link.isEmail && emailCopied ? t('aboutme.copied') : link.name}
                         </span>
@@ -254,7 +260,11 @@ export const AboutMe = () => {
                       rel="noopener noreferrer"
                       className={`${link.color} text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-3 flex-shrink-0`}
                     >
-                      <IconComponent size={16} />
+                      {link.customIcon ? (
+                        <img src={link.customIcon} alt="" className="w-4 h-4" />
+                      ) : (
+                        IconComponent && <IconComponent size={16} />
+                      )}
                       {link.name}
                     </a>
                   );

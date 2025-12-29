@@ -15,6 +15,7 @@ interface CareerItem {
   location: string;
   location_en?: string;
   location_fr?: string;
+  report?: string;
 }
 
 export const Career = () => {
@@ -87,7 +88,7 @@ export const Career = () => {
                 {/***** Tags *****/}
                 <div className="flex flex-wrap gap-1.5 mb-2 justify-center sm:justify-start">
                   {item.tags.map((tag, tagIndex) => (
-                    <span 
+                    <span
                       key={tagIndex}
                       className="inline-block px-2 py-0.5 rounded text-xs bg-blue-600 text-font-color"
                     >
@@ -95,12 +96,24 @@ export const Career = () => {
                     </span>
                   ))}
                 </div>
-                
-                {/***** Date *****/}
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs md:text-sm text-gray-500 text-center sm:text-right">
-                  <span>
+
+                {/***** Date and Report *****/}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs md:text-sm text-gray-500 gap-2">
+                  <span className="text-center sm:text-left">
                     {formatDate(item.start_date)} - {item.end_date ? formatDate(item.end_date) : t('career.present')}
                   </span>
+                  {item.report && (
+                    <a
+                      href={item.report}
+                      download
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-700 hover:bg-blue-800 text-white text-xs font-medium rounded-md transition-colors duration-200 self-center sm:self-auto"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      {t('career.download_report')}
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

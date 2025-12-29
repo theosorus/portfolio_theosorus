@@ -9,6 +9,7 @@
     "career": {
         "title": "Parcours",
         "present": "Présent",
+        "download_report": "Télécharger le rapport",
         "tags": {
             "company": "Entreprise",
             "university": "Université",

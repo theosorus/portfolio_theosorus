@@ -1,6 +1,6 @@
 import React from 'react';
 import { useGithubStars } from '../hooks/useGithubStars';
-import github from '../../public/icons/github.svg';
+import github from '../icons/github.svg';
 
 interface GithubStarsProps {
   githubUrl: string | undefined;

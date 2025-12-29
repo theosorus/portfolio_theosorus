@@ -1,7 +1,7 @@
 import React from "react";
 import { useProjects } from "../hooks/useProjects";
 import { Project } from "../type";
-import github from "../../public/icons/github.svg";
+import github from "../icons/github.svg";
 import { useTranslation } from "react-i18next";
 import GithubStars from "./GithubStars";
 

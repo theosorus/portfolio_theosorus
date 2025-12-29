@@ -37,7 +37,8 @@
         "description_fr": "Stage de recherche et développement de dix semaines en machine learning utilisant la programmation fonctionnelle à l'Université d'Ochanomizu au Japon",
         "tags": ["university", "internship"],
         "image" : "./career/ochanomizu_logo.jpg",
-        "location" : "Bekki Lab - Ochanomizu University, Japan"
+        "location" : "Bekki Lab - Ochanomizu University, Japan",
+        "report": "/career/tcastillo_ochanomizu_intership_report.pdf"
     },
     {
         "start_date": "September 2024",

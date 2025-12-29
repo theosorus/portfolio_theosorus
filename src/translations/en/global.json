@@ -9,6 +9,7 @@
     "career": {
         "title": "Career Track",
         "present": "Present",
+        "download_report": "Download report",
         "tags": {
             "company": "Company",
             "university": "University",
