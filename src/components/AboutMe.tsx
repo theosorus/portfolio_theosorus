@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Download, ExternalLink, Check } from 'lucide-react';
+import { Mail, Github, Linkedin, Download, Check } from 'lucide-react';
 import hobbiesInterestData from '../data/hobbies_interest.json';
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
