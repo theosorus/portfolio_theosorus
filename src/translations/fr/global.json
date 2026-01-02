@@ -221,7 +221,10 @@
             "title": "MCP Terraform",
             "description": "Déployer un serveur MCP capable d'interagir avec une base de données avec Terraform sur une machine virtuelle avec le provider Scaleway pour interagir avec des LLM comme Mistral."
         },
-
+        "veridisquo": {
+            "title": "VeridisQuo :  Détection de deepfakes",
+            "description": "Modèle et application de détection de deepfakes utilisant une approche hybride combinant analyse spatiale et fréquentielle."
+        },
         "categories": {
             "All": "Tout",
             "Personal": "Personnel",
