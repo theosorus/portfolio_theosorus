@@ -42,38 +42,7 @@
                 "AI"
             ]
         },
-        {
-            "id": "mcp-terraform",
-            "date": 2025,
-            "type": "School Project",
-            "title": "MCP Terraform",
-            "description": "Deploy an MCP server capable of interacting with a database using Terraform on a virtual machine with the Scaleway provider to interact with LLMs like Mistral.",
-            "tags": [
-                {
-                    "name": "Terraform",
-                    "url": "",
-                    "image": "./skills/terraform.png"
-                },
-                {
-                    "name": "Docker",
-                    "url": "https://www.docker.com/",
-                    "image": "./skills/docker.png"
-                },
-                {
-                    "name": "MCP",
-                    "url": "",
-                    "image": "./skills/mcp.png"
-                }
-            ],
-            "links": [
-                "none"
-            ],
-            "image": "./projects/mcp-terraform.png",
-            "categories": [
-                "School",
-                "AI"
-            ]
-        },
+       
         {
             "id": "mcp-drawing",
             "date": 2024,
@@ -193,6 +162,38 @@
             "image": "./projects/HaskGPT.png",
             "categories": [
                 "Personal",
+                "AI"
+            ]
+        },
+         {
+            "id": "mcp-terraform",
+            "date": 2025,
+            "type": "School Project",
+            "title": "MCP Terraform",
+            "description": "Deploy an MCP server capable of interacting with a database using Terraform on a virtual machine with the Scaleway provider to interact with LLMs like Mistral.",
+            "tags": [
+                {
+                    "name": "Terraform",
+                    "url": "",
+                    "image": "./skills/terraform.png"
+                },
+                {
+                    "name": "Docker",
+                    "url": "https://www.docker.com/",
+                    "image": "./skills/docker.png"
+                },
+                {
+                    "name": "MCP",
+                    "url": "",
+                    "image": "./skills/mcp.png"
+                }
+            ],
+            "links": [
+                "none"
+            ],
+            "image": "./projects/mcp-terraform.png",
+            "categories": [
+                "School",
                 "AI"
             ]
         },
