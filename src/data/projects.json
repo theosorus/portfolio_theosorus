@@ -42,56 +42,6 @@
                 "AI"
             ]
         },
-       
-        {
-            "id": "mcp-drawing",
-            "date": 2024,
-            "type": "Personal Project",
-            "title": "MCP Drawing",
-            "description": "MCP drawing application with TypeScript server and React frontend for real-time canvas visualization through Claude Desktop. ",
-            "tags": [
-                {
-                    "name": "MCP",
-                    "url": "",
-                    "image": "./skills/mcp.png"
-                },
-                {
-                    "name": "Python",
-                    "url": "",
-                    "image": "./skills/python.png"
-                },
-                {
-                    "name": "TypeScript",
-                    "url": "",
-                    "image": "./skills/ts.png"
-                },
-                {
-                    "name": "js",
-                    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-                    "image": "./skills/js.png"
-                },
-                {
-                    "name": "React",
-                    "url": "",
-                    "image": "./skills/react.png"
-                },
-                {
-                    "name": "Express",
-                    "url": "",
-                    "image": "./skills/express.png"
-                }
-            ],
-            "links": [
-                "https://github.com/theosorus/MCP-Drawing",
-                "https://github.com/theosorus/MCP-Drawing",
-                "none"
-            ],
-            "image": "./projects/mcp2.png",
-            "categories": [
-                "Personal",
-                "AI"
-            ]
-        },
         {
             "id": "argus",
             "date": 2024,
@@ -160,6 +110,55 @@
                 "none"
             ],
             "image": "./projects/HaskGPT.png",
+            "categories": [
+                "Personal",
+                "AI"
+            ]
+        },
+         {
+            "id": "mcp-drawing",
+            "date": 2024,
+            "type": "Personal Project",
+            "title": "MCP Drawing",
+            "description": "MCP drawing application with TypeScript server and React frontend for real-time canvas visualization through Claude Desktop. ",
+            "tags": [
+                {
+                    "name": "MCP",
+                    "url": "",
+                    "image": "./skills/mcp.png"
+                },
+                {
+                    "name": "Python",
+                    "url": "",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "TypeScript",
+                    "url": "",
+                    "image": "./skills/ts.png"
+                },
+                {
+                    "name": "js",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+                    "image": "./skills/js.png"
+                },
+                {
+                    "name": "React",
+                    "url": "",
+                    "image": "./skills/react.png"
+                },
+                {
+                    "name": "Express",
+                    "url": "",
+                    "image": "./skills/express.png"
+                }
+            ],
+            "links": [
+                "https://github.com/theosorus/MCP-Drawing",
+                "https://github.com/theosorus/MCP-Drawing",
+                "none"
+            ],
+            "image": "./projects/mcp2.png",
             "categories": [
                 "Personal",
                 "AI"
