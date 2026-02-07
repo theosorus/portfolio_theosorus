@@ -13,7 +13,7 @@ const categories = ["All" ,"Personal","School","AI","Simulations","Web","Softwar
 const Projects = () => {
   const [t] = useTranslation('global');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [currentProjects, setcurrentProjects] = useState<Project[]>([]);
+  const [currentProjects, setcurrentProjects] = useState<Project[]>(projectsData.projects);
   const sectionRef = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef(false);
 
@@ -45,7 +45,7 @@ const Projects = () => {
           },
           ease: 'back.out(1.2)',
           scrollTrigger: {
-            trigger: '#projects',
+            trigger: sectionRef.current,
             start: 'top 70%',
             onEnter: () => { hasAnimated.current = true; },
           },

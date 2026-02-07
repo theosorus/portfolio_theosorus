@@ -36,10 +36,14 @@ const NavBar = () => {
           ref={langMenuRef}
           className="relative inline-block bg-openai-dark-blue md:mr-6 mr-2 font-main text-xl z-1"
         >
-          <button onClick={() => setLangOpen(!langOpen)} className="flex items-center">
-            <img src={langIcons[currentLang]} alt={currentLang} className="w-7 h-5 inline-block" />
+          <button
+            onClick={() => setLangOpen(!langOpen)}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm"
+          >
+            <img src={langIcons[currentLang]} alt={currentLang} className="w-6 h-4 rounded-sm object-cover" />
+            <span className="text-sm font-medium uppercase tracking-wide">{currentLang}</span>
             <svg
-              className={`w-4 h-4 ml-1 inline-block transition-transform duration-200 ${
+              className={`w-3.5 h-3.5 transition-transform duration-300 ${
                 langOpen ? 'rotate-180' : ''
               }`}
               viewBox="0 0 20 20"
@@ -56,20 +60,34 @@ const NavBar = () => {
             </svg>
           </button>
           {langOpen && (
-            <div className="absolute left-0 top-full mt-2 border shadow z-1 min-w-20">
+            <div className="absolute left-0 top-full mt-2 rounded-lg border border-white/20 shadow-xl backdrop-blur-sm overflow-hidden bg-slate-900/95 min-w-[120px] animate-fadeIn">
               <button
                 onClick={() => {i18n.changeLanguage('fr');setLangOpen(false);}}
-                className="flex items-center px-4 py-2 w-full text-left bg-openai-dark-blue hover:bg-gray-700 transition-colors whitespace-nowrap"
+                className={`flex items-center gap-3 px-4 py-2.5 w-full text-left transition-all duration-200 ${
+                  currentLang === 'fr' ? 'bg-purple-500/20 text-purple-300' : 'hover:bg-white/10'
+                }`}
               >
-                <img src={langIcons.fr} alt="fr" className="w-5 h-3 mr-2" />
-                <span>fr</span>
+                <img src={langIcons.fr} alt="fr" className="w-6 h-4 rounded-sm object-cover" />
+                <span className="text-sm font-medium uppercase tracking-wide">FR</span>
+                {currentLang === 'fr' && (
+                  <svg className="w-4 h-4 ml-auto text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                )}
               </button>
               <button
                 onClick={() => {i18n.changeLanguage('en');setLangOpen(false);}}
-                className="flex items-center px-4 py-2 w-full text-left bg-openai-dark-blue hover:bg-gray-700 transition-colors whitespace-nowrap"
+                className={`flex items-center gap-3 px-4 py-2.5 w-full text-left transition-all duration-200 ${
+                  currentLang === 'en' ? 'bg-purple-500/20 text-purple-300' : 'hover:bg-white/10'
+                }`}
               >
-                <img src={langIcons.en} alt="en" className="w-5 h-3 mr-2" />
-                <span>en</span>
+                <img src={langIcons.en} alt="en" className="w-6 h-4 rounded-sm object-cover" />
+                <span className="text-sm font-medium uppercase tracking-wide">EN</span>
+                {currentLang === 'en' && (
+                  <svg className="w-4 h-4 ml-auto text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                )}
               </button>
             </div>
           )}
