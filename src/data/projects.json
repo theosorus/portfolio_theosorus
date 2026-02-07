@@ -34,7 +34,9 @@
                 }
             ],
             "links": [
-                "https://github.com/VeridisQuo-orga/VeridisQuo"
+                "https://github.com/VeridisQuo-orga/VeridisQuo",
+                "https://github.com/VeridisQuo-orga/VeridisQuo",
+                "none"
             ],
             "image": "./projects/veridisquo3.png",
             "categories": [
