@@ -1,28 +1,14 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const langIcons: Record<'en' | 'fr', string> = {
-  en: './icons/uk.webp',
-  fr: './icons/france.webp',
-};
+const langs = [
+  { code: 'fr' as const, icon: './icons/france.webp' },
+  { code: 'en' as const, icon: './icons/uk.webp' },
+];
 
 const NavBar = () => {
   const [t, i18n] = useTranslation('global');
   const [menuOpen, setMenuOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
-  const langMenuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (langMenuRef.current && !langMenuRef.current.contains(event.target as Node)) {
-        setLangOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
 
   const currentLang = i18n.language as 'fr' | 'en';
 
@@ -32,65 +18,24 @@ const NavBar = () => {
         <h1 className="flex items-center">Théo Castillo</h1>
       </div>
       <div className="flex items-center justify-center md:mr-6 mr-2">
-        <div
-          ref={langMenuRef}
-          className="relative inline-block bg-openai-dark-blue md:mr-6 mr-2 font-main text-xl z-1"
-        >
-          <button
-            onClick={() => setLangOpen(!langOpen)}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm"
-          >
-            <img src={langIcons[currentLang]} alt={currentLang} className="w-6 h-4 rounded-sm object-cover" />
-            <span className="text-sm font-medium uppercase tracking-wide">{currentLang}</span>
-            <svg
-              className={`w-3.5 h-3.5 transition-transform duration-300 ${
-                langOpen ? 'rotate-180' : ''
+        <div className="relative flex items-center md:mr-6 mr-2 rounded-full bg-white/5 border border-white/10 p-0.5">
+          {/* Sliding highlight */}
+          <div
+            className="absolute top-0.5 bottom-0.5 w-[calc(50%-2px)] rounded-full bg-openai-purple/20 border border-openai-purple/40 transition-all duration-300 ease-out"
+            style={{ left: currentLang === 'fr' ? '2px' : 'calc(50% + 0px)' }}
+          />
+          {langs.map(({ code, icon }) => (
+            <button
+              key={code}
+              onClick={() => i18n.changeLanguage(code)}
+              className={`relative z-10 flex items-center gap-1.5 px-3 py-1 rounded-full transition-all duration-300 cursor-pointer ${
+                currentLang === code ? 'text-white' : 'text-white/40 hover:text-white/70'
               }`}
-              viewBox="0 0 20 20"
-              fill="currentColor"
             >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293
-                  a1 1 0 011.414 1.414l-4 4
-                  a1 1 0 01-1.414 0l-4-4
-                  a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
-          {langOpen && (
-            <div className="absolute left-0 top-full mt-2 rounded-lg border border-white/20 shadow-xl backdrop-blur-sm overflow-hidden bg-slate-900/95 min-w-[120px] animate-fadeIn">
-              <button
-                onClick={() => {i18n.changeLanguage('fr');setLangOpen(false);}}
-                className={`flex items-center gap-3 px-4 py-2.5 w-full text-left transition-all duration-200 ${
-                  currentLang === 'fr' ? 'bg-purple-500/20 text-purple-300' : 'hover:bg-white/10'
-                }`}
-              >
-                <img src={langIcons.fr} alt="fr" className="w-6 h-4 rounded-sm object-cover" />
-                <span className="text-sm font-medium uppercase tracking-wide">FR</span>
-                {currentLang === 'fr' && (
-                  <svg className="w-4 h-4 ml-auto text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                )}
-              </button>
-              <button
-                onClick={() => {i18n.changeLanguage('en');setLangOpen(false);}}
-                className={`flex items-center gap-3 px-4 py-2.5 w-full text-left transition-all duration-200 ${
-                  currentLang === 'en' ? 'bg-purple-500/20 text-purple-300' : 'hover:bg-white/10'
-                }`}
-              >
-                <img src={langIcons.en} alt="en" className="w-6 h-4 rounded-sm object-cover" />
-                <span className="text-sm font-medium uppercase tracking-wide">EN</span>
-                {currentLang === 'en' && (
-                  <svg className="w-4 h-4 ml-auto text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                )}
-              </button>
-            </div>
-          )}
+              <img src={icon} alt={code} className="w-5 h-3.5 rounded-sm object-cover" />
+              <span className="text-xs font-medium uppercase tracking-wider">{code}</span>
+            </button>
+          ))}
         </div>
         <div className="hidden md:flex space-x-4 items-center justify-center">
           <a href="#home" className="text-xl a-underline">{t("navbar.home")}</a>
