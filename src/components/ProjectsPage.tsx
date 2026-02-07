@@ -1,8 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import projectsData from '../data/projects.json';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Project } from '../type';
 import GithubStars from './GithubStars';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const categories = ["All" ,"Personal","School","AI","Simulations","Web","Software"];
 
@@ -10,6 +14,8 @@ const Projects = () => {
   const [t] = useTranslation('global');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [currentProjects, setcurrentProjects] = useState<Project[]>([]);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
     if(selectedCategory === "All"){
@@ -20,8 +26,55 @@ const Projects = () => {
     }
   }, [selectedCategory])
 
+  // Scroll-triggered animations
+  useEffect(() => {
+    if (hasAnimated.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo('.project-card',
+        { y: 60, opacity: 0, scale: 0.9 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.6,
+          stagger: {
+            each: 0.08,
+            grid: 'auto',
+            from: 'start',
+          },
+          ease: 'back.out(1.2)',
+          scrollTrigger: {
+            trigger: '#projects',
+            start: 'top 70%',
+            onEnter: () => { hasAnimated.current = true; },
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  // Re-animate when category changes
+  useEffect(() => {
+    if (!hasAnimated.current) return;
+
+    gsap.fromTo('.project-card',
+      { y: 30, opacity: 0, scale: 0.95 },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.4,
+        stagger: 0.05,
+        ease: 'power2.out',
+      }
+    );
+  }, [currentProjects]);
+
   return (
-    <div id="projects" className='flex flex-col items-center w-full mt-12'>
+    <div id="projects" ref={sectionRef} className='flex flex-col items-center w-full mt-12'>
       <h1 className="text-4xl font-bold text-font-color mb-8">{t("projects.title")}</h1>
       {/* Filtres de catégories */}
       <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -52,7 +105,7 @@ const Projects = () => {
             {currentProjects.map((project: Project, index) => (
               <div
                 key={index}
-                className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1 cursor-pointer relative"
+                className="project-card group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1 cursor-pointer relative"
                 onClick={() => {
                   // Ouvre le premier lien s'il existe et n'est pas "none"
                   if (project.links && project.links[0] && project.links[0] !== "none") {

@@ -9,6 +9,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import Skills from "./components/Skills";
 
+gsap.registerPlugin(ScrollTrigger);
+
 (window as any).gsap = gsap;
 (window as any).ScrollTrigger = ScrollTrigger;
 
