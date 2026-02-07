@@ -132,7 +132,7 @@ const ASCIIHuman = ({ className = '', isMobile = false, onColorChange }: ASCIIHu
 
     const zBuffer = new Float32Array(W * H);
     const charBuffer = new Uint8Array(W * H);
-    const chars = " ..::--==+*#%@@";
+    const chars = " .,:;~=+*x#%@@";
     const charLen = chars.length - 1;
 
     // Body definition
