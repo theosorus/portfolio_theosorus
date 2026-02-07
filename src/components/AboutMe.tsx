@@ -92,12 +92,6 @@ export const AboutMe = () => {
       href: 'https://huggingface.co/Gazeux33',
       color: 'bg-yellow-500 hover:bg-yellow-600',
     },
-    {
-      name: t('aboutme.download_cv'),
-      icon: Download,
-      action: handleDownloadCV,
-      color: 'bg-purple-600 hover:bg-purple-700',
-    },
   ];
 
   return (
@@ -123,6 +117,14 @@ export const AboutMe = () => {
                   {t('aboutme.description_before_age')} <span className="text-blue-600 font-semibold">{t('aboutme.age')}</span> {t('aboutme.description_after_age')}
                 </p>
               </div>
+
+              <button
+                onClick={handleDownloadCV}
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
+              >
+                <Download size={16} />
+                {t('aboutme.download_cv')}
+              </button>
             </div>
           </div>
 
