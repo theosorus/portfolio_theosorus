@@ -1,12 +1,13 @@
 import { ChevronDown } from 'lucide-react';
 import { useTranslation } from "react-i18next";
 import ASCIIHuman from './ASCIIHuman';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 const LandPage = () => {
   const [t] = useTranslation('global');
   const hasAnimated = useRef(false);
+  const [accentColor, setAccentColor] = useState('#2563eb');
   const showColoredBackground = false; // Variable pour activer/désactiver les fonds colorés
 
   useEffect(() => {
@@ -63,20 +64,20 @@ const LandPage = () => {
           <div className={`flex-1 ${showColoredBackground ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white' : ''} rounded-2xl p-6 md:p-8`}>
             <h1 className="hero-title text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
               {t('landpage.greeting')}{' '}
-              <span className={showColoredBackground ? "text-blue-200" : "text-blue-600"}>{t('landpage.name')}</span>
+              <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.name')}</span>
             </h1>
-            
+
             <div className="space-y-4 text-base md:text-lg lg:text-xl leading-relaxed">
               <p className="hero-description">
                 {t('landpage.welcome')}{' '}
-                <span className={`${showColoredBackground ? "text-blue-200" : "text-blue-600"} font-medium`}>{t('landpage.ai')}</span>, {t('landpage.particularly')}{' '}
-                <span className={`${showColoredBackground ? "text-blue-200" : "text-blue-600"} font-medium`}>{t('landpage.deeplearning')}</span> {t('landpage.and')}{' '}
-                <span className={`${showColoredBackground ? "text-blue-200" : "text-blue-600"} font-medium`}>{t('landpage.machinelearning')}</span>.
+                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.ai')}</span>, {t('landpage.particularly')}{' '}
+                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.deeplearning')}</span> {t('landpage.and')}{' '}
+                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.machinelearning')}</span>.
               </p>
               <p className="hero-description">
                 {t('landpage.enjoy')}{' '}
-                <span className={`${showColoredBackground ? "text-blue-200" : "text-blue-600"} font-medium`}>{t('landpage.computervision')}</span> {t('landpage.and')}{' '}
-                <span className={`${showColoredBackground ? "text-blue-200" : "text-blue-600"} font-medium`}>{t('landpage.nlp')}</span>.
+                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.computervision')}</span> {t('landpage.and')}{' '}
+                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.nlp')}</span>.
               </p>
             </div>
           </div>
@@ -84,14 +85,14 @@ const LandPage = () => {
           {/* ASCII Human Component - Rectangle rouge Desktop */}
           <div className={`ascii-container hidden lg:flex flex-shrink-0 ${showColoredBackground ? 'bg-gradient-to-br from-red-500 to-red-600' : ''} rounded-2xl p-6 items-center justify-center min-h-[400px] min-w-[300px]`}>
             <div className="flex items-center justify-center w-full h-full">
-              <ASCIIHuman className="scale-125" />
+              <ASCIIHuman className="scale-125" onColorChange={setAccentColor} />
             </div>
           </div>
         </div>
         
         {/* ASCII Human Component Mobile - En dessous du texte */}
         <div className={`ascii-container lg:hidden flex justify-center mt-6 ${showColoredBackground ? 'bg-gradient-to-br from-red-500 to-red-600' : ''} rounded-2xl p-6`}>
-          <ASCIIHuman className="scale-100" isMobile={true} />
+          <ASCIIHuman className="scale-100" isMobile={true} onColorChange={setAccentColor} />
         </div>
       </div>
 

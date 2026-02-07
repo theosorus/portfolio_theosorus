@@ -75,7 +75,8 @@
             "speed": "Spd",
             "muscle": "Mus",
             "quality": "Qua",
-            "glow": "Glo"
+            "glow": "Glo",
+            "color": "Color"
         }
     },
     "footer": {

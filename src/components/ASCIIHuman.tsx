@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 interface ASCIIHumanProps {
   className?: string;
   isMobile?: boolean;
+  onColorChange?: (color: string) => void;
 }
 
 interface BodyPart {
@@ -18,7 +19,7 @@ interface BodyPart {
   offsetZ?: number;
 }
 
-const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
+const ASCIIHuman = ({ className = '', isMobile = false, onColorChange }: ASCIIHumanProps) => {
   const [t] = useTranslation('global');
   const canvasRef = useRef<HTMLPreElement>(null);
   const animationRef = useRef<number>(0);
@@ -27,8 +28,27 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
     speed: 25,
     muscle: 20,
     quality: 55,
-    glow: 50
+    glow: 50,
+    color: '#9333ea'
   });
+
+  const colorPresets = [
+    { hex: '#9333ea', label: 'Purple' },
+    { hex: '#06b6d4', label: 'Cyan' },
+    { hex: '#22c55e', label: 'Green' },
+    { hex: '#eab308', label: 'Yellow' },
+    { hex: '#f97316', label: 'Orange' },
+    { hex: '#3b82f6', label: 'Blue' },
+    { hex: '#ef4444', label: 'Red' },
+  ];
+
+  // Convert hex to rgb components
+  const hexToRgb = (hex: string) => {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return { r, g, b };
+  };
   const [showControls, setShowControls] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -273,7 +293,7 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
     };
   }, [controls, isVisible]);
 
-  const updateControls = (key: keyof typeof controls, value: number) => {
+  const updateControls = (key: 'speed' | 'muscle' | 'quality' | 'glow', value: number) => {
     setControls(prev => ({ ...prev, [key]: value }));
   };
 
@@ -281,11 +301,15 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
     <div ref={containerRef} className={`ascii-human-container ${isMobile ? 'flex flex-col items-center' : 'relative inline-block'} ${className}`}>
       {/* Container du bonhomme avec engrenage */}
       <div className="relative inline-block">
-        <pre 
+        <pre
           ref={canvasRef}
-          className="ascii-canvas font-mono text-[6px] leading-[6px] tracking-wider text-purple-400 whitespace-pre select-none"
+          className="ascii-canvas font-mono text-[6px] leading-[6px] tracking-wider whitespace-pre select-none"
           style={{
-            textShadow: `0 0 ${controls.glow * 0.1}px rgba(147, 51, 234, ${controls.glow * 0.008}), 0 0 ${controls.glow * 0.2}px rgba(147, 51, 234, ${controls.glow * 0.006}), 0 0 ${controls.glow * 0.3}px rgba(147, 51, 234, ${controls.glow * 0.004}), 0 0 ${controls.glow * 0.4}px rgba(147, 51, 234, ${controls.glow * 0.002})`,
+            color: controls.color,
+            textShadow: (() => {
+              const { r, g, b } = hexToRgb(controls.color);
+              return `0 0 ${controls.glow * 0.1}px rgba(${r}, ${g}, ${b}, ${controls.glow * 0.008}), 0 0 ${controls.glow * 0.2}px rgba(${r}, ${g}, ${b}, ${controls.glow * 0.006}), 0 0 ${controls.glow * 0.3}px rgba(${r}, ${g}, ${b}, ${controls.glow * 0.004}), 0 0 ${controls.glow * 0.4}px rgba(${r}, ${g}, ${b}, ${controls.glow * 0.002})`;
+            })(),
             transform: 'translateZ(0)',
             willChange: 'contents',
             fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
@@ -297,121 +321,107 @@ const ASCIIHuman = ({ className = '', isMobile = false }: ASCIIHumanProps) => {
         {/* Bouton engrenage - toujours à droite du bonhomme */}
         <button
           onClick={() => setShowControls(!showControls)}
-          className={`gear-button absolute top-0 right-0 ${isMobile ? 'w-8 h-8' : 'w-4 h-4'} flex items-center justify-center text-slate-400 hover:text-purple-400 transition-colors duration-300 z-10`}
+          className={`gear-button absolute top-0 right-0 ${isMobile ? 'w-8 h-8' : 'w-5 h-5'} flex items-center justify-center text-slate-400 transition-colors duration-300 z-10`}
+          style={{ ['--gear-color' as string]: controls.color }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = controls.color)}
+          onMouseLeave={(e) => (e.currentTarget.style.color = '')}
           aria-label="Toggle controls"
         >
-          <svg width={isMobile ? "20" : "12"} height={isMobile ? "20" : "12"} viewBox="0 0 24 24" fill="currentColor">
+          <svg width={isMobile ? "20" : "14"} height={isMobile ? "20" : "14"} viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5a3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97c0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1c0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/>
           </svg>
         </button>
       </div>
       
-      {/* Sliders */}
+      {/* Settings Panel */}
       {showControls && (
-        <div className={`controls-panel ${isMobile ? 'mt-6 flex flex-col gap-4 max-w-xs mx-auto' : 'absolute top-6 -right-16 flex-col gap-2'} flex opacity-80 hover:opacity-100 transition-all duration-300 bg-slate-900/10 backdrop-blur-sm border border-slate-700/20 rounded-lg ${isMobile ? 'p-4' : 'p-2'}`}>
-        <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
-          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>{t('aboutme.controls.speed')}</label>
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value={controls.speed}
-            onChange={(e) => updateControls('speed', parseInt(e.target.value))}
-            className={`${isMobile ? 'w-20 h-1' : 'w-10 h-0.5'} bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider`}
-          />
-          <span className={`${isMobile ? 'text-xs' : 'text-[8px]'} text-slate-300 ${isMobile ? 'min-w-[20px]' : 'min-w-[12px]'} text-right font-normal`}>{controls.speed}</span>
-        </div>
-        
-        <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
-          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>{t('aboutme.controls.muscle')}</label>
-          <input
-            type="range"
-            min="0"
-            max="20"
-            value={controls.muscle}
-            onChange={(e) => updateControls('muscle', parseInt(e.target.value))}
-            className={`${isMobile ? 'w-20 h-1' : 'w-10 h-0.5'} bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider`}
-          />
-          <span className={`${isMobile ? 'text-xs' : 'text-[8px]'} text-slate-300 ${isMobile ? 'min-w-[20px]' : 'min-w-[12px]'} text-right font-normal`}>{controls.muscle}</span>
-        </div>
-        
-        <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
-          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>{t('aboutme.controls.quality')}</label>
-          <input
-            type="range"
-            min="30"
-            max="80"
-            value={controls.quality}
-            onChange={(e) => updateControls('quality', parseInt(e.target.value))}
-            className={`${isMobile ? 'w-20 h-1' : 'w-10 h-0.5'} bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider`}
-          />
-          <span className={`${isMobile ? 'text-xs' : 'text-[8px]'} text-slate-300 ${isMobile ? 'min-w-[20px]' : 'min-w-[12px]'} text-right font-normal`}>{controls.quality}</span>
-        </div>
-        
-        <div className={`control-group flex items-center ${isMobile ? 'gap-3' : 'gap-1'}`}>
-          <label className={`${isMobile ? 'text-xs' : 'text-[9px]'} font-normal text-slate-400 uppercase tracking-widest ${isMobile ? 'min-w-[40px]' : ''}`}>{t('aboutme.controls.glow')}</label>
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value={controls.glow}
-            onChange={(e) => updateControls('glow', parseInt(e.target.value))}
-            className={`${isMobile ? 'w-20 h-1' : 'w-10 h-0.5'} bg-transparent border-b border-slate-400/50 appearance-none cursor-pointer slider`}
-          />
-          <span className={`${isMobile ? 'text-xs' : 'text-[8px]'} text-slate-300 ${isMobile ? 'min-w-[20px]' : 'min-w-[12px]'} text-right font-normal`}>{controls.glow}</span>
-        </div>
+        <div
+          className={`controls-panel ${isMobile ? 'mt-4 flex flex-col gap-3 max-w-xs mx-auto' : 'absolute top-6 -right-28 flex-col gap-1.5'} flex bg-slate-900/40 backdrop-blur-sm border border-slate-700/20 rounded-lg ${isMobile ? 'p-4' : 'p-2'} transition-all duration-300`}
+        >
+          {/* Sliders */}
+          {([
+            { key: 'speed' as const, min: 0, max: 100 },
+            { key: 'muscle' as const, min: 0, max: 20 },
+            { key: 'quality' as const, min: 30, max: 80 },
+            { key: 'glow' as const, min: 0, max: 100 },
+          ]).map(({ key, min, max }) => (
+            <div key={key} className={`flex items-center ${isMobile ? 'gap-3' : 'gap-1.5'}`}>
+              <label className={`${isMobile ? 'text-xs min-w-[60px]' : 'text-[9px] min-w-[28px]'} text-slate-400 uppercase tracking-wider`}>
+                {t(`aboutme.controls.${key}`)}
+              </label>
+              <input
+                type="range"
+                min={min}
+                max={max}
+                value={controls[key]}
+                onChange={(e) => updateControls(key, parseInt(e.target.value))}
+                className={`${isMobile ? 'w-24' : 'w-14'} h-0.5 appearance-none cursor-pointer slider rounded-full`}
+                style={{
+                  background: `linear-gradient(to right, ${controls.color} 0%, ${controls.color} ${((controls[key] - min) / (max - min)) * 100}%, rgba(148,163,184,0.2) ${((controls[key] - min) / (max - min)) * 100}%, rgba(148,163,184,0.2) 100%)`,
+                }}
+              />
+              <span className={`${isMobile ? 'text-xs min-w-[20px]' : 'text-[8px] min-w-[14px]'} text-slate-400 text-right tabular-nums`}>
+                {controls[key]}
+              </span>
+            </div>
+          ))}
+
+          {/* Color dots */}
+          <div className={`flex ${isMobile ? 'gap-2 mt-1' : 'gap-1 mt-0.5'} flex-wrap`}>
+            {colorPresets.map(({ hex }) => (
+              <button
+                key={hex}
+                onClick={() => {
+                  setControls(prev => ({ ...prev, color: hex }));
+                  onColorChange?.(hex);
+                }}
+                className={`${isMobile ? 'w-6 h-6' : 'w-3.5 h-3.5'} rounded-full transition-all duration-200 ${
+                  controls.color === hex ? 'ring-1 ring-white ring-offset-1 ring-offset-transparent scale-110' : 'hover:scale-125'
+                }`}
+                style={{ backgroundColor: hex }}
+                aria-label={`Color ${hex}`}
+              />
+            ))}
+          </div>
         </div>
       )}
 
       <style>{`
         @keyframes glow {
-          0% {
-            filter: brightness(1.2) contrast(1.3);
-          }
-          50% {
-            filter: brightness(1.4) contrast(1.5);
-          }
-          100% {
-            filter: brightness(1.2) contrast(1.3);
-          }
+          0% { filter: brightness(1.2) contrast(1.3); }
+          50% { filter: brightness(1.4) contrast(1.5); }
+          100% { filter: brightness(1.2) contrast(1.3); }
         }
-        
-        .slider {
-          background: transparent;
-        }
-        
+
         .slider::-webkit-slider-thumb {
           appearance: none;
           width: 12px;
           height: 12px;
-          background: #9333ea;
+          background: ${controls.color};
           border-radius: 50%;
           cursor: pointer;
-          box-shadow: none;
-          transition: all 0.3s ease;
-          opacity: 0.8;
+          box-shadow: 0 0 4px ${controls.color}60;
+          transition: all 0.2s ease;
         }
-        
+
         .slider::-webkit-slider-thumb:hover {
-          opacity: 1;
           transform: scale(1.3);
-          box-shadow: 0 0 8px rgba(147, 51, 234, 0.3);
+          box-shadow: 0 0 10px ${controls.color}80;
         }
-        
+
         .slider::-moz-range-thumb {
           width: 12px;
           height: 12px;
-          background: #9333ea;
+          background: ${controls.color};
           border-radius: 50%;
           cursor: pointer;
           border: none;
-          box-shadow: none;
-          opacity: 0.8;
+          box-shadow: 0 0 4px ${controls.color}60;
         }
-        
+
         .slider::-moz-range-thumb:hover {
-          opacity: 1;
-          transform: scale(1.5);
+          transform: scale(1.3);
+          box-shadow: 0 0 10px ${controls.color}80;
         }
       `}</style>
     </div>
