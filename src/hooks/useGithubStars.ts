@@ -1,5 +1,29 @@
 import { useEffect, useState } from 'react';
 
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+const CACHE_PREFIX = 'gh_stars_';
+
+const getCached = (key: string): number | null => {
+  try {
+    const raw = sessionStorage.getItem(CACHE_PREFIX + key);
+    if (!raw) return null;
+    const { stars, ts } = JSON.parse(raw);
+    if (Date.now() - ts > CACHE_TTL) {
+      sessionStorage.removeItem(CACHE_PREFIX + key);
+      return null;
+    }
+    return stars;
+  } catch {
+    return null;
+  }
+};
+
+const setCached = (key: string, stars: number) => {
+  try {
+    sessionStorage.setItem(CACHE_PREFIX + key, JSON.stringify({ stars, ts: Date.now() }));
+  } catch { /* sessionStorage full or unavailable */ }
+};
+
 export const useGithubStars = (githubUrl: string | undefined) => {
   const [stars, setStars] = useState<number | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -10,21 +34,26 @@ export const useGithubStars = (githubUrl: string | undefined) => {
       return;
     }
 
+    const cleanUrl = githubUrl.trim().replace(/\/$/, '');
+    const match = cleanUrl.match(/github\.com\/([^\/]+)\/([^\/\?#]+)/);
+    if (!match) {
+      setStars(null);
+      return;
+    }
+
+    const [, owner, repo] = match;
+    const cacheKey = `${owner}/${repo}`;
+
+    const cached = getCached(cacheKey);
+    if (cached !== null) {
+      setStars(cached);
+      return;
+    }
+
     const fetchStars = async () => {
       setLoading(true);
       try {
-        const cleanUrl = githubUrl.trim().replace(/\/$/, '');
-        const match = cleanUrl.match(/github\.com\/([^\/]+)\/([^\/\?#]+)/);
-
-        if (!match) {
-          setStars(null);
-          setLoading(false);
-          return;
-        }
-
-        const [, owner, repo] = match;
-        const apiUrl = `https://api.github.com/repos/${owner}/${repo}`;
-
+        const apiUrl = `https://api.github.com/repos/${cacheKey}`;
         const token = import.meta.env.VITE_API_TOKEN_GITHUB;
         const headers: HeadersInit = {};
         if (token) {
@@ -35,7 +64,9 @@ export const useGithubStars = (githubUrl: string | undefined) => {
 
         if (response.ok) {
           const data = await response.json();
-          setStars(data.stargazers_count || 0);
+          const count = data.stargazers_count || 0;
+          setCached(cacheKey, count);
+          setStars(count);
         } else {
           console.error(`GitHub API error for ${githubUrl}:`, response.status, response.statusText);
           setStars(null);
