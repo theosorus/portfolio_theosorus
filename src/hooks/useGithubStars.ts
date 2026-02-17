@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 const CACHE_PREFIX = 'gh_stars_';
+const WORKER_URL = import.meta.env.VITE_WORKER_URL;
 
 const getCached = (key: string): number | null => {
   try {
@@ -53,22 +54,34 @@ export const useGithubStars = (githubUrl: string | undefined) => {
     const fetchStars = async () => {
       setLoading(true);
       try {
-        const apiUrl = `https://api.github.com/repos/${cacheKey}`;
-        const token = import.meta.env.VITE_API_TOKEN_GITHUB;
-        const headers: HeadersInit = {};
-        if (token) {
-          headers['Authorization'] = `Bearer ${token}`;
+        let count: number | null = null;
+
+        // Primary: call Cloudflare Worker proxy
+        if (WORKER_URL) {
+          try {
+            const response = await fetch(`${WORKER_URL}/stars/${owner}/${repo}`);
+            if (response.ok) {
+              const data = await response.json();
+              count = data.stars ?? null;
+            }
+          } catch {
+            // Worker unreachable, fall through to fallback
+          }
         }
 
-        const response = await fetch(apiUrl, { headers });
+        // Fallback: call GitHub API directly (unauthenticated, 60 req/hour)
+        if (count === null) {
+          const response = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+          if (response.ok) {
+            const data = await response.json();
+            count = data.stargazers_count ?? null;
+          }
+        }
 
-        if (response.ok) {
-          const data = await response.json();
-          const count = data.stargazers_count || 0;
+        if (count !== null) {
           setCached(cacheKey, count);
           setStars(count);
         } else {
-          console.error(`GitHub API error for ${githubUrl}:`, response.status, response.statusText);
           setStars(null);
         }
       } catch (error) {

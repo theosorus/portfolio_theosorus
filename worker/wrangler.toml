@@ -1,0 +1,7 @@
+name = "github-stars-proxy"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+
+[vars]
+ALLOWED_ORIGIN = "https://tcastillo.me"
+CACHE_TTL_SECONDS = "600"
