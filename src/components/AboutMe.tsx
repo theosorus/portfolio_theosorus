@@ -2,9 +2,11 @@ import { Mail, Github, Linkedin, Download, Check } from 'lucide-react';
 import hobbiesInterestData from '../data/hobbies_interest.json';
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAge } from '../hooks/useAge';
 
 export const AboutMe = () => {
   const [t, i18n] = useTranslation('global');
+  const { age, countdown } = useAge();
   const [emailCopied, setEmailCopied] = useState(false);
   const emailButtonRef = useRef<HTMLButtonElement | null>(null);
   const [emailButtonWidth, setEmailButtonWidth] = useState('auto');
@@ -114,7 +116,12 @@ export const AboutMe = () => {
               <div className="text-center space-y-3">
                 <h3 className="text-xl font-bold text-font-color">{t('aboutme.name')}</h3>
                 <p className="text-base text-font-color leading-relaxed">
-                  {t('aboutme.description_before_age')} <span className="text-blue-600 font-semibold">{t('aboutme.age')}</span> {t('aboutme.description_after_age')}
+                  {t('aboutme.description_before_age')}{' '}
+                  <span className="text-blue-600 font-semibold">{age} {t('aboutme.years_old')}</span>{' '}
+                  <span className="text-font-color/50 text-sm">
+                    ({t('aboutme.countdown_prefix')} {countdown.days}{t('aboutme.countdown_days')} {String(countdown.hours).padStart(2, '0')}h{String(countdown.minutes).padStart(2, '0')}m{String(countdown.seconds).padStart(2, '0')}s)
+                  </span>{' '}
+                  {t('aboutme.description_after_age')}
                 </p>
               </div>
 
