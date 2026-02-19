@@ -1,43 +1,42 @@
-[ 
-    
-{
+[
+    {
         "start_date": "September 2025",
         "end_date": "Present",
-        "title": "Work-study year as an AI developer",
-        "title_en": "Work-study year as an AI developer",
-        "title_fr": "Alternance développeur IA",
-        "description": "A one-year work-study program as an AI developer at Genial, a company specializing in AI solutions for other companies.",
-        "description_en": "A one-year work-study program as an AI developer at Genial, a company specializing in AI solutions for other companies.",
-        "description_fr": "Alternance d'un an en tant que développeur IA chez Genial, une entreprise spécialisée dans les solutions d'IA pour d'autres entreprises.",
+        "title": "AI Developer – Work-Study Program",
+        "title_en": "AI Developer – Work-Study Program",
+        "title_fr": "Développeur IA – Alternance",
+        "description": "One-year work-study program at Genial, a startup building specialized AI agents for businesses. Designed and deployed AI agents for clients, managed RAG pipelines with context engineering and multi-agent orchestration, developed MCP servers and tools for agents, and handled iterative client feedback loops.",
+        "description_en": "One-year work-study program at Genial, a startup building specialized AI agents for businesses. Designed and deployed AI agents for clients, managed RAG pipelines with context engineering and multi-agent orchestration, developed MCP servers and tools for agents, and handled iterative client feedback loops.",
+        "description_fr": "Alternance d'un an chez Genial, startup spécialisée dans la création d'agents IA pour les entreprises. Conception et déploiement d'agents IA clients, gestion de pipelines RAG avec context engineering et orchestration multi-agents, développement de serveurs MCP et de tools pour les agents, et gestion itérative des retours clients.",
         "tags": ["company"],
-        "image" : "./career/wearegenial_logo.jpg",
-        "location" : "Genial - Bordeaux, France"
+        "image": "./career/wearegenial_logo.jpg",
+        "location": "Genial - Bordeaux, France"
     },
-{
+    {
         "start_date": "June 2025",
         "end_date": "July 2025",
-        "title": "AI Agent Builder - Freelance",
-        "title_en": "AI Agent Builder - Freelance",
-        "title_fr": "Concepteur d'agents IA - Freelance",
-        "description": "Freelance mission for the creation and maintenance of specialized AI agents",
-        "description_en": "Freelance mission for the creation and maintenance of specialized AI agents",
-        "description_fr": "Mission en freelance pour la création et la maintenance d'agents IA spécialisés",
+        "title": "AI Agent Builder – Freelance",
+        "title_en": "AI Agent Builder – Freelance",
+        "title_fr": "Concepteur d'agents IA – Freelance",
+        "description": "One-month freelance mission at Genial as an AI developer. Built and maintained specialized AI agents, set up and managed a sole proprietorship. First professional experience with autonomous project ownership.",
+        "description_en": "One-month freelance mission at Genial as an AI developer. Built and maintained specialized AI agents, set up and managed a sole proprietorship. First professional experience with autonomous project ownership.",
+        "description_fr": "Mission freelance d'un mois chez Genial en tant que développeur IA. Création et maintenance d'agents IA spécialisés, création et gestion d'une auto-entreprise. Première expérience professionnelle avec une gestion autonome de projets.",
         "tags": ["company"],
-        "image" : "./career/wearegenial_logo.jpg",
-        "location" : "Genial - Bordeaux, France"
+        "image": "./career/wearegenial_logo.jpg",
+        "location": "Genial - Bordeaux, France"
     },
     {
         "start_date": "April 2025",
         "end_date": "June 2025",
-        "title": "Machine learning research internship",
-        "title_en": "Machine learning research internship",
-        "title_fr": "Stage de recherche en Machine Learning",
-        "description": "A ten-week research and development internship in machine learning using functional programming at Ochanomizu University in Japan",
-        "description_en": "A ten-week research and development internship in machine learning using functional programming at Ochanomizu University in Japan",
-        "description_fr": "Stage de recherche et développement de dix semaines en machine learning utilisant la programmation fonctionnelle à l'Université d'Ochanomizu au Japon",
+        "title": "Machine Learning Research Intern",
+        "title_en": "Machine Learning Research Intern",
+        "title_fr": "Stagiaire en recherche Machine Learning",
+        "description": "Ten-week research internship at Bekki Lab, Ochanomizu University (Tokyo). Reproduced the GPT-2 architecture in Haskell using the Hasktorch library, exploring functional programming applied to deep learning. Worked in an NLP and machine learning research environment.",
+        "description_en": "Ten-week research internship at Bekki Lab, Ochanomizu University (Tokyo). Reproduced the GPT-2 architecture in Haskell using the Hasktorch library, exploring functional programming applied to deep learning. Worked in an NLP and machine learning research environment.",
+        "description_fr": "Stage de recherche de dix semaines au Bekki Lab, Université d'Ochanomizu (Tokyo). Reproduction de l'architecture GPT-2 en Haskell avec la bibliothèque Hasktorch, exploration de la programmation fonctionnelle appliquée au deep learning. Travail dans un environnement de recherche en NLP et machine learning.",
         "tags": ["university", "internship"],
-        "image" : "./career/ochanomizu_logo.jpg",
-        "location" : "Bekki Lab - Ochanomizu University, Japan",
+        "image": "./career/ochanomizu_logo.jpg",
+        "location": "Bekki Lab - Ochanomizu University, Japan",
         "report": "/career/tcastillo_ochanomizu_intership_report.pdf"
     },
     {
@@ -46,14 +45,13 @@
         "title": "Bachelor of Computer Science",
         "title_en": "Bachelor of Computer Science",
         "title_fr": "BUT Informatique",
-        "description": "Bachelor of Computer Science, International track",
-        "description_en": "Bachelor of Computer Science, International track",
-        "description_fr": "BUT Informatique, parcours international",
+        "description": "Bachelor of Computer Science (International track) at IUT de Gradignan, University of Bordeaux. Coursework in software engineering, databases, web development, system administration, artificial intelligence, and mathematics.",
+        "description_en": "Bachelor of Computer Science (International track) at IUT de Gradignan, University of Bordeaux. Coursework in software engineering, databases, web development, system administration, artificial intelligence, and mathematics.",
+        "description_fr": "BUT Informatique (parcours international) à l'IUT de Gradignan, Université de Bordeaux. Enseignements en génie logiciel, bases de données, développement web, administration système, intelligence artificielle et mathématiques.",
         "tags": ["university"],
-        "image" : "./career/universite_de_bordeaux_logo.jpg",
-        "location" : "University of Bordeaux, France",
+        "image": "./career/universite_de_bordeaux_logo.jpg",
+        "location": "University of Bordeaux, France",
         "location_en": "University of Bordeaux, France",
         "location_fr": "Université de Bordeaux, France"
     }
-   
 ]

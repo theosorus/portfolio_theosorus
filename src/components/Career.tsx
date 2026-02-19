@@ -81,7 +81,7 @@ export const Career = () => {
                 <p className="text-sm md:text-base text-gray-700 mb-2 text-center sm:text-left">
                   {getLocalizedField(item, 'location', lang)}
                 </p>
-                <p className="text-xs md:text-sm text-gray-600 mb-2 line-clamp-2 text-center sm:text-left">
+                <p className="text-xs md:text-sm text-gray-600 mb-2 text-center sm:text-left">
                   {getLocalizedField(item, 'description', lang)}
                 </p>
                 
