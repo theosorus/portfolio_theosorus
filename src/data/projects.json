@@ -1,6 +1,103 @@
 {
     "projects": [
         {
+            "id": "ant_colony",
+            "date": 2025,
+            "type": "Personal Project",
+            "title": "Ant Colony",
+            "description": "Raising and observing a colony of Messor Barbarus harvester ants, currently around fifty individuals.",
+            "tags": [
+                {
+                    "name": "Messor Barbarus",
+                    "url": "",
+                    "image": ""
+                },
+                {
+                    "name": "Myrmecology",
+                    "url": "",
+                    "image": ""
+                }
+            ],
+            "links": [
+                "none",
+                "none",
+                "none"
+            ],
+            "image": "./projects/ants.jpg",
+            "categories": [
+                "Personal",
+                "IRL"
+            ]
+        },
+        {
+            "id": "homelab",
+            "date": 2025,
+            "type": "Personal Project",
+            "title": "HomeLab",
+            "description": "Self-hosted homelab built on an Nvidia Jetson Nano featuring a self-hosted drive, a DNS filtering server, and an LLM inference endpoint.",
+            "tags": [
+                {
+                    "name": "Linux",
+                    "url": "",
+                    "image": "./skills/linux.png"
+                },
+                {
+                    "name": "Docker",
+                    "url": "https://www.docker.com/",
+                    "image": "./skills/docker.png"
+                }
+            ],
+            "links": [
+                "none",
+                "none",
+                "none"
+            ],
+            "image": "./projects/homelab.jpg",
+            "categories": [
+                "Personal",
+                "IRL"
+            ]
+        },
+        {
+            "id": "yolo_vs_cnn",
+            "date": 2025,
+            "type": "School Project",
+            "title": "YOLO vs CNN",
+            "description": "Comparison of YOLOv11 and a custom CNN for 3D object detection and localization with an Intel RealSense D435i camera.",
+            "tags": [
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "Yolo",
+                    "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
+                    "image": "./skills/yolo.png"
+                },
+                {
+                    "name": "PyTorch",
+                    "url": "https://pytorch.org/",
+                    "image": "./skills/pytorch.png"
+                },
+                {
+                    "name": "OpenCv",
+                    "url": "https://opencv.org/",
+                    "image": "./skills/opencv.png"
+                }
+            ],
+            "links": [
+                "none",
+                "none",
+                "none"
+            ],
+            "image": "./projects/yvc_good.jpg",
+            "categories": [
+                "School",
+                "AI"
+            ]
+        },
+        {
             "id": "veridisquo",
             "date": 2025,
             "type": "Personal Project",

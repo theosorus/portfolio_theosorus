@@ -65,7 +65,8 @@
             "ccg": "Collectible card games",
             "chess": "Chess",
             "travel": "Traveling",
-            "running": "Running"
+            "running": "Running",
+            "skating": "Skateboarding"
         },
         "all_links": "All links",
         "download_cv": "Download CV",
@@ -229,6 +230,18 @@
             "title": "VeridisQuo : DeepFake detection",
             "description": "Model and application of deepfake detection using a hybrid approach combining spatial and frequency analysis."
         },
+        "homelab": {
+            "title": "HomeLab",
+            "description": "Self-hosted homelab built on an Nvidia Jetson Nano featuring a self-hosted drive, a DNS filtering server, and an LLM inference endpoint."
+        },
+        "ant_colony": {
+            "title": "Ant Colony",
+            "description": "Raising and observing a colony of Messor Barbarus harvester ants, currently around fifty individuals."
+        },
+        "yolo_vs_cnn": {
+            "title": "YOLO vs CNN",
+            "description": "Comparison of YOLOv11 and a custom CNN for 3D object detection and localization with an Intel RealSense D435i camera."
+        },
         "categories": {
             "All": "All",
             "Personal": "Personnal",
@@ -236,7 +249,8 @@
             "AI": "AI",
             "Simulations": "Simulations",
             "Web": "Web",
-            "Software": "Sofware"
+            "Software": "Sofware",
+            "IRL": "IRL"
         },
         "types": {
             "Personal Project": "Personal Project",

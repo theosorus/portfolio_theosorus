@@ -65,7 +65,8 @@
             "ccg": "Jeux de cartes à collectionner",
             "chess": "Échecs",
             "travel": "Voyages",
-            "running": "Running"
+            "running": "Running",
+            "skating": "Skateboard"
         },
         "all_links": "Tous les liens",
         "download_cv": "Télécharger le CV",
@@ -229,6 +230,18 @@
             "title": "VeridisQuo :  Détection de deepfakes",
             "description": "Modèle et application de détection de deepfakes utilisant une approche hybride combinant analyse spatiale et fréquentielle."
         },
+        "homelab": {
+            "title": "HomeLab",
+            "description": "Homelab auto-hébergé sur une Nvidia Jetson Nano avec un drive personnel, un serveur DNS filtrant et un endpoint d'inférence pour LLM."
+        },
+        "ant_colony": {
+            "title": "Élevage de fourmis",
+            "description": "Élevage et observation d'une colonie de fourmis moissonneuses Messor Barbarus d'une cinquantaine d'individus."
+        },
+        "yolo_vs_cnn": {
+            "title": "YOLO vs CNN",
+            "description": "Comparaison de YOLOv11 et d'un CNN personnalisé pour la détection et la localisation d'objets 3D avec une caméra Intel RealSense D435i."
+        },
         "categories": {
             "All": "Tout",
             "Personal": "Personnel",
@@ -236,7 +249,8 @@
             "AI": "IA",
             "Simulations": "Simulations",
             "Web": "Web",
-            "Software": "Logiciels"
+            "Software": "Logiciels",
+            "IRL": "IRL"
         },
         "types": {
             "Personal Project": "Projet Personnel",

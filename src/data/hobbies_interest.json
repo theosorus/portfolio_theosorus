@@ -12,6 +12,7 @@
     { "key": "ccg", "emoji": "" },
     { "key": "chess", "emoji": "" },
     { "key": "travel", "emoji": "" },
-    {"key" : "running", "emoji": ""}
+    {"key" : "running", "emoji": ""},
+    {"key" : "skating", "emoji": ""}
   ]
 }

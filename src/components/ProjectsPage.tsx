@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const categories = ["All" ,"Personal","School","AI","Simulations","Web","Software"];
+const categories = ["All" ,"Personal","School","AI","Simulations","Web","Software","IRL"];
 
 const Projects = () => {
   const [t] = useTranslation('global');
