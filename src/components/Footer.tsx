@@ -36,15 +36,15 @@ const Footer = () => {
           <div className="text-left md:text-center space-y-2 md:w-1/4 md:flex-shrink-0 w-full">
             <h3 className="text-xs text-gray-500 tracking-wider">{t('footer.see_also')} : </h3>
             <div className="flex flex-wrap justify-start md:justify-center gap-x-2 gap-y-2 text-xs md:gap-x-3 md:gap-y-1">
-              {shuffle_func([
+              {[{ key: 'clement', url: 'https://clembarr.dev' }, ...shuffle_func([
                 { key: 'zao', url: 'https://zaofromage.github.io/portfolio/' },
-                { key: 'clement', url: null },
+
                 { key: 'alexandre', url: 'https://carcroks.github.io/' },
                 { key: 'rodolphe', url: 'https://rodolphe.sh/' },
                 { key: 'antoine', url: 'https://labian0.github.io/' },
                 { key: 'elias', url: 'https://eliasgauthier.fr' },
                 { key: 'mathieu', url: 'https://matjay.me/' }
-              ]).map(({ key, url }) => 
+              ])].map(({ key, url }) => 
                 url ? (
                   <a 
                     key={key}
