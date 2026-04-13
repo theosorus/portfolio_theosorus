@@ -48,7 +48,7 @@
         "years_old": "years old",
         "countdown_prefix": "for",
         "countdown_days": "d",
-        "description_after_age": "and I'm studying computer science at the Gradignan Institute in Bordeaux",
+        "description_after_age": "and I'm an engineering apprentice at INP-ENSEEIHT (N7) in Toulouse",
         "interest_title": "Interest",
         "hobbies_title": "Hobbies",
         "interests": {
@@ -73,7 +73,7 @@
         "working_on_title": "I'm working on",
         "working_on_description": "I am currently working on the discovery and use of artificial intelligence techniques.",
         "future_title": "For the future",
-        "future_description": "Join an engineering school with a work-study programme at a company I like.",
+        "future_description": "Earn my engineering degree and contribute to AI integration in the space sector.",
         "controls": {
             "speed": "Spd",
             "muscle": "Mus",
