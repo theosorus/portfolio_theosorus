@@ -1,13 +1,60 @@
 [
     {
+        "start_date": "September 2026",
+        "end_date": "2029",
+        "title": "AI/ML Engineer Apprentice, Brain-Computer Interfaces",
+        "title_en": "AI/ML Engineer Apprentice, Brain-Computer Interfaces",
+        "title_fr": "Alternant Ingénieur IA/ML, Interfaces Cerveau-Machine",
+        "bullets_en": [
+            "Development of a prototype for processing and classifying brain signals using ML/DL algorithms on an HPC Linux cluster",
+            "Analysis of business needs and identification of relevant AI use cases in the space domain (robotic tool control, cognitive monitoring of operators and astronauts)",
+            "State of the art of brain-computer interface technologies applied to the space sector"
+        ],
+        "bullets_fr": [
+            "Développement d'un prototype de traitement et classification de signaux cérébraux par algorithmes ML/DL sur cluster HPC Linux",
+            "Analyse des besoins métiers et identification de cas d'usages pertinents pour l'intégration de l'IA dans le domaine spatial (contrôle d'outils robotisés, monitoring cognitif d'opérateurs et d'astronautes)",
+            "État de l'art des technologies d'interfaces cerveau-machine appliquées au domaine spatial"
+        ],
+        "tags": ["company"],
+        "image": "./career/cnes.png",
+        "location": "CNES (Centre National d'Études Spatiales) - Toulouse, France"
+    },
+    {
+        "start_date": "September 2026",
+        "end_date": "2029",
+        "title": "Engineering Degree, Digital Systems",
+        "title_en": "Engineering Degree, Digital Systems",
+        "title_fr": "Diplôme d'ingénieur, Systèmes Numériques",
+        "bullets_en": [
+            "Engineering degree (apprenticeship track) specializing in Digital Systems",
+            "In partnership with CNES"
+        ],
+        "bullets_fr": [
+            "Diplôme d'ingénieur en apprentissage, spécialité Systèmes Numériques",
+            "En partenariat avec le CNES"
+        ],
+        "tags": ["university"],
+        "image": "./career/n7.jpg",
+        "location": "INP-ENSEEIHT (N7) - Toulouse, France"
+    },
+    {
         "start_date": "September 2025",
-        "end_date": "Present",
-        "title": "AI Developer – Work-Study Program",
-        "title_en": "AI Developer – Work-Study Program",
-        "title_fr": "Développeur IA – Alternance",
-        "description": "One-year work-study program at Genial, a startup building specialized AI agents for businesses. Designed and deployed AI agents for clients, managed RAG pipelines with context engineering and multi-agent orchestration, developed MCP servers and tools for agents, and handled iterative client feedback loops.",
-        "description_en": "One-year work-study program at Genial, a startup building specialized AI agents for businesses. Designed and deployed AI agents for clients, managed RAG pipelines with context engineering and multi-agent orchestration, developed MCP servers and tools for agents, and handled iterative client feedback loops.",
-        "description_fr": "Alternance d'un an chez Genial, startup spécialisée dans la création d'agents IA pour les entreprises. Conception et déploiement d'agents IA clients, gestion de pipelines RAG avec context engineering et orchestration multi-agents, développement de serveurs MCP et de tools pour les agents, et gestion itérative des retours clients.",
+        "end_date": "June 2026",
+        "title": "AI Developer, Work-Study Program",
+        "title_en": "AI Developer, Work-Study Program",
+        "title_fr": "Développeur IA, Alternance",
+        "bullets_en": [
+            "Designed and deployed specialized AI agents for B2B clients, from requirements analysis to production",
+            "Architected RAG pipelines with context engineering, multi-agent orchestration and MCP servers",
+            "Containerization with Docker and CI/CD pipeline setup for robust deployments",
+            "Managed iterative client feedback loops and continuous solution adaptation"
+        ],
+        "bullets_fr": [
+            "Conception et déploiement d'agents IA spécialisés pour des clients B2B, de l'analyse du besoin à la mise en production",
+            "Architecture et gestion de pipelines RAG avec context engineering, orchestration multi-agents et serveurs MCP",
+            "Conteneurisation avec Docker, mise en place de chaînes CI/CD pour un déploiement robuste",
+            "Gestion itérative des retours clients et adaptation continue des solutions déployées"
+        ],
         "tags": ["company"],
         "image": "./career/wearegenial_logo.jpg",
         "location": "Genial - Bordeaux, France"
@@ -15,12 +62,17 @@
     {
         "start_date": "June 2025",
         "end_date": "July 2025",
-        "title": "AI Agent Builder – Freelance",
-        "title_en": "AI Agent Builder – Freelance",
-        "title_fr": "Concepteur d'agents IA – Freelance",
-        "description": "One-month freelance mission at Genial as an AI developer. Built and maintained specialized AI agents, set up and managed a sole proprietorship. First professional experience with autonomous project ownership.",
-        "description_en": "One-month freelance mission at Genial as an AI developer. Built and maintained specialized AI agents, set up and managed a sole proprietorship. First professional experience with autonomous project ownership.",
-        "description_fr": "Mission freelance d'un mois chez Genial en tant que développeur IA. Création et maintenance d'agents IA spécialisés, création et gestion d'une auto-entreprise. Première expérience professionnelle avec une gestion autonome de projets.",
+        "title": "AI Agent Builder, Freelance",
+        "title_en": "AI Agent Builder, Freelance",
+        "title_fr": "Concepteur d'agents IA, Freelance",
+        "bullets_en": [
+            "Built and maintained specialized AI agents with full autonomy",
+            "Set up and managed a sole proprietorship (first entrepreneurial experience)"
+        ],
+        "bullets_fr": [
+            "Création et maintenance d'agents IA spécialisés en autonomie complète",
+            "Création et gestion d'une auto-entreprise (première expérience entrepreneuriale)"
+        ],
         "tags": ["company"],
         "image": "./career/wearegenial_logo.jpg",
         "location": "Genial - Bordeaux, France"
@@ -31,23 +83,35 @@
         "title": "Machine Learning Research Intern",
         "title_en": "Machine Learning Research Intern",
         "title_fr": "Stagiaire en recherche Machine Learning",
-        "description": "Ten-week research internship at Bekki Lab, Ochanomizu University (Tokyo). Reproduced the GPT-2 architecture in Haskell using the Hasktorch library, exploring functional programming applied to deep learning. Worked in an NLP and machine learning research environment.",
-        "description_en": "Ten-week research internship at Bekki Lab, Ochanomizu University (Tokyo). Reproduced the GPT-2 architecture in Haskell using the Hasktorch library, exploring functional programming applied to deep learning. Worked in an NLP and machine learning research environment.",
-        "description_fr": "Stage de recherche de dix semaines au Bekki Lab, Université d'Ochanomizu (Tokyo). Reproduction de l'architecture GPT-2 en Haskell avec la bibliothèque Hasktorch, exploration de la programmation fonctionnelle appliquée au deep learning. Travail dans un environnement de recherche en NLP et machine learning.",
+        "bullets_en": [
+            "Reproduced the GPT-2 architecture in Haskell using the Hasktorch library (functional programming applied to deep learning)",
+            "Worked in an NLP/ML research environment at Bekki Lab, Ochanomizu University, Tokyo"
+        ],
+        "bullets_fr": [
+            "Reproduction de l'architecture GPT-2 en Haskell avec la bibliothèque Hasktorch (programmation fonctionnelle appliquée au deep learning)",
+            "Travail dans un environnement de recherche NLP/ML au Bekki Lab, Université d'Ochanomizu, Tokyo"
+        ],
         "tags": ["university", "internship"],
         "image": "./career/ochanomizu_logo.jpg",
         "location": "Bekki Lab - Ochanomizu University, Japan",
         "report": "/career/tcastillo_ochanomizu_intership_report.pdf"
     },
     {
-        "start_date": "September 2024",
-        "end_date": "",
+        "start_date": "September 2023",
+        "end_date": "June 2026",
         "title": "Bachelor of Computer Science",
         "title_en": "Bachelor of Computer Science",
         "title_fr": "BUT Informatique",
-        "description": "Bachelor of Computer Science (International track) at IUT de Gradignan, University of Bordeaux. Coursework in software engineering, databases, web development, system administration, artificial intelligence, and mathematics.",
-        "description_en": "Bachelor of Computer Science (International track) at IUT de Gradignan, University of Bordeaux. Coursework in software engineering, databases, web development, system administration, artificial intelligence, and mathematics.",
-        "description_fr": "BUT Informatique (parcours international) à l'IUT de Gradignan, Université de Bordeaux. Enseignements en génie logiciel, bases de données, développement web, administration système, intelligence artificielle et mathématiques.",
+        "bullets_en": [
+            "International track at IUT de Gradignan, University of Bordeaux",
+            "Coursework in software engineering, databases, web development, system administration, AI and mathematics",
+            "Ranked 1st out of 66 students (semester 5)"
+        ],
+        "bullets_fr": [
+            "Parcours international à l'IUT de Gradignan, Université de Bordeaux",
+            "Enseignements en génie logiciel, bases de données, développement web, administration système, IA et mathématiques",
+            "Classé 1er sur 66 étudiants (S5)"
+        ],
         "tags": ["university"],
         "image": "./career/universite_de_bordeaux_logo.jpg",
         "location": "University of Bordeaux, France",

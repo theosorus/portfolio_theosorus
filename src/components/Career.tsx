@@ -5,11 +5,13 @@ interface CareerItem {
   start_date: string;
   end_date: string;
   title: string;
-  description: string;
+  description?: string;
   title_en?: string;
   title_fr?: string;
   description_en?: string;
   description_fr?: string;
+  bullets_en?: string[];
+  bullets_fr?: string[];
   tags: string[];
   image: string;
   location: string;
@@ -81,9 +83,25 @@ export const Career = () => {
                 <p className="text-sm md:text-base text-gray-700 mb-2 text-center sm:text-left">
                   {getLocalizedField(item, 'location', lang)}
                 </p>
-                <p className="text-xs md:text-sm text-gray-600 mb-2 text-center sm:text-left">
-                  {getLocalizedField(item, 'description', lang)}
-                </p>
+                {(() => {
+                  const bullets = lang === 'fr' ? item.bullets_fr : item.bullets_en;
+                  if (bullets && bullets.length > 0) {
+                    return (
+                      <ul className="text-xs md:text-sm text-gray-600 mb-2 space-y-1 text-left list-none">
+                        {bullets.map((bullet, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-500 flex-shrink-0" />
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    );
+                  }
+                  const desc = getLocalizedField(item, 'description', lang);
+                  return desc ? (
+                    <p className="text-xs md:text-sm text-gray-600 mb-2 text-center sm:text-left">{desc}</p>
+                  ) : null;
+                })()}
                 
                 {/***** Tags *****/}
                 <div className="flex flex-wrap gap-1.5 mb-2 justify-center sm:justify-start">
