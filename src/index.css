@@ -1,61 +1,39 @@
 @import "tailwindcss";
 
-/* Smooth scrolling for in-page anchors */
 html {
   scroll-behavior: smooth;
 }
 
-/* Prevent anchored sections from being hidden behind the fixed navbar */
 [id] {
-  scroll-margin-top: 4rem; /* navbar height ~3.5rem, add a bit of buffer */
+  scroll-margin-top: 4rem;
 }
 
 @theme {
-  --color-dark-purple : rgb(41,41,85);
-  --color-light-purple : rgb(86, 68, 196);
-  --color-font-color : #F1F1F1;
-  --color-openai-dark-blue : #0E315C;
-  --color-darker-blue : #09213F;
-  --color-openai-purple : #C5BFEE;
-  --color-theo-white : #F1F1F1;
-  
-  --color-paradise-blue : #56dcfc;
-  --color-paradise-blue-dark : #56dbfccb;
+  --color-bg: #03224C;
+  --color-bg-elevated: #021A3B;
+  --color-fg: #F1F3F8;
+  --color-fg-muted: #B8C4DA;
+  --color-fg-dim: #6F82A0;
+  --color-hairline: rgba(255, 255, 255, 0.10);
+  --color-accent: #A78BFA;
 
-    --font-main: "Poppins", sans-serif;
-    --font-domine: "Domine", serif;
-  }
-  
-  @font-face {
-    font-family: 'Domine';
-    src: url('/fonts/domine/Domine-VariableFont_wght.ttf') format('truetype');
+  --color-openai-dark-blue: #03224C;
+  --color-font-color: #F1F3F8;
+
+  --font-main: "Poppins", sans-serif;
+  --font-domine: "Domine", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
+@font-face {
+  font-family: 'Domine';
+  src: url('/fonts/domine/Domine-VariableFont_wght.ttf') format('truetype');
+}
 
 body {
   font-family: var(--font-main);
-  background-color: var(--color-openai-dark-blue);
-  color: var(--color-font-color);
-}
-
-
-.a-underline {
-  position: relative;
-}
-
-.a-underline::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: -3px;
-  width: 0%;
-  height: 2px;
-  background-color: var(--color-openai-purple);
-  transition: width 0.3s;
-}
-
-.a-underline:hover::after {
-  width: 70%;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
 }
 
 .simple-parallax-container {

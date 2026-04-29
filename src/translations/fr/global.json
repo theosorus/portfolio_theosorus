@@ -1,54 +1,41 @@
 {
     "navbar": {
-        "home": "Accueil",
-        "aboutme": "Profil",
-        "projects": "Projets",
-        "contact": "Contact",
-        "career": "Carrière"
+        "aboutme": "profil",
+        "career": "parcours",
+        "projects": "projets"
     },
     "career": {
         "title": "Parcours",
-        "present": "Présent",
-        "download_report": "Télécharger le rapport",
+        "present": "présent",
+        "download_report": "rapport",
         "tags": {
-            "company": "Entreprise",
-            "university": "Université",
-            "internship": "Stage",
-            "apprenticeship": "Apprentissage",
-            "ai": "IA"
+            "company": "entreprise",
+            "university": "université",
+            "internship": "stage",
+            "apprenticeship": "apprentissage",
+            "ai": "ia"
         }
     },
     "landpage": {
-        "greeting": "Bonjour, je suis",
-        "name": "Théo",
-        "welcome": "Bienvenue ! Je suis apprenti ingénieur au CNES (Centre National d'Études Spatiales), je travaille sur",
-        "ai": "l'Intelligence Artificielle",
-        "bridge": "appliquée, à l'intersection de la",
-        "research": "recherche",
-        "and": "et de la",
-        "production": "production",
-        "scrollNextSection": "Défiler vers la section suivante"
-    },
-    "skills": {
-        "languages": "Langages",
-        "ai": "IA / ML Science des données",
-        "webdevelopment": "Développement Web",
-        "devsofware": "Outils de développement & Logiciels",
-        "database": "Bases de données",
-        "graphics": "Graphiques & 3D",
-        "testingquality": "Tests & Qualité"
+        "status": "Toulouse / Bordeaux, France",
+        "name_full": "Théo Castillo",
+        "role_line": "Ingénieur Informatique @ ENSEEIHT  |  Ingénieur IA/ML @ CNES",
+        "bio_intro": "Je suis apprenti ingénieur au CNES (Centre National d'Études Spatiales), je travaille sur l'",
+        "bio_ai": "Intelligence Artificielle",
+        "bio_bridge": " appliquée, à l'intersection de la ",
+        "bio_research": "recherche",
+        "bio_and": " et de la ",
+        "bio_production": "production",
+        "bio_end": ".",
+        "cta_projects": "projets",
+        "cta_cv": "cv",
+        "cta_contact": "contact"
     },
     "aboutme": {
-        "title": "À propos",
-        "description_before_name": "Je m'appelle",
-        "name": "Théo",
-        "description_before_age": "J'ai",
-        "years_old": "ans",
-        "countdown_prefix": "encore",
-        "countdown_days": "j",
-        "description_after_age": "et je suis apprenti ingénieur à l'ENSEEIHT (N7) à Toulouse, en alternance au CNES (Centre National d'Études Spatiales)",
-        "interest_title": "Centres d'intérêt",
-        "hobbies_title": "Loisirs",
+        "section_title": "Profil",
+        "about_paragraph": "Je suis Théo Castillo, apprenti ingénieur à l'ENSEEIHT (Toulouse INP) et ingénieur IA/ML au CNES, où je conçois des outils de traitement et de classification de signaux cérébraux par deep learning. Plus largement, je m'intéresse au passage des idées de recherche à des systèmes qui tournent vraiment en production.",
+        "interest_title": "centres d'intérêt",
+        "hobbies_title": "hors travail",
         "interests": {
             "ai": "Intelligence Artificielle",
             "ml": "Machine Learning",
@@ -65,45 +52,26 @@
             "travel": "Voyages",
             "running": "Running"
         },
-        "all_links": "Tous les liens",
-        "download_cv": "Télécharger le CV",
-        "view_cv": "Voir le CV",
-        "copied": "Copié !",
-        "working_on_title": "En cours",
-        "working_on_description": "Je travaille actuellement sur la découverte et l'utilisation de techniques d'intelligence artificielle.",
-        "future_title": "Pour l'avenir",
-        "future_description": "Obtenir mon diplôme d'ingénieur et contribuer à l'intégration de l'IA dans le domaine spatial.",
-        "controls": {
-            "speed": "Vit",
-            "muscle": "Mus",
-            "quality": "Qua",
-            "glow": "Lum",
-            "color": "Couleur"
-        }
+        "all_links": "liens",
+        "download_cv": "télécharger",
+        "view_cv": "voir",
+        "copied": "copié"
     },
     "footer": {
-        "name": "Théo Castillo",
-        "role": "Étudiant en informatique - Bordeaux, France",
-        "email": "theocastillo@yahoo.com",
-        "rights": "© {{year}} {{name}} - Tous droits réservés",
-        "note": "Portfolio personnel - Données non collectées",
-        "built_with": "Développé avec React & TypeScript",
-        "back_to_top": "Retour en haut",
-        "contact": "Contact",
-        "see_also": "Voir aussi",
+        "back_to_top": "haut",
+        "see_also": "voir aussi",
         "portfolios": {
-            "zao": "Portfolio de Zao",
-            "clement": "Portfolio de Clement",
-            "alexandre": "Portfolio d'Alexandre",
-            "rodolphe": "Portfolio de Rodolphe", 
-            "antoine": "Portfolio d'Antoine",
-            "elias": "Portfolio d'Elias",
-            "mathieu": "Portfolio de Mathieu"
+            "zao": "zao",
+            "clement": "clement",
+            "alexandre": "alexandre",
+            "rodolphe": "rodolphe",
+            "antoine": "antoine",
+            "elias": "elias",
+            "mathieu": "mathieu"
         }
     },
     "projects": {
-        "title" : "Projets",
-        "scrollMessage" : "Faites défiler pour découvrir plus de projets",
+        "title": "Projets",
         "snake_ai": {
             "title": "Snake IA",
             "description": "Création du jeu Snake et d'une IA qui apprend à jouer au jeu en utilisant l'apprentissage par renforcement profond avec PyTorch et Pygame."

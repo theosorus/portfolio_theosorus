@@ -1,54 +1,41 @@
 {
     "navbar": {
-        "home": "Home",
-        "aboutme": "About me",
-        "projects": "Projects",
-        "contact": "contact",
-        "career": "Career"
+        "aboutme": "about",
+        "career": "experience",
+        "projects": "projects"
     },
     "career": {
-        "title": "Career Track",
-        "present": "Present",
-        "download_report": "Download report",
+        "title": "Experience",
+        "present": "present",
+        "download_report": "report",
         "tags": {
-            "company": "Company",
-            "university": "University",
-            "internship": "Internship",
-            "apprenticeship": "Apprenticeship",
-            "ai": "AI"
+            "company": "company",
+            "university": "university",
+            "internship": "internship",
+            "apprenticeship": "apprenticeship",
+            "ai": "ai"
         }
     },
     "landpage": {
-        "greeting": "Hello, I'm",
-        "name": "Théo",
-        "welcome": "Welcome! I'm an engineering apprentice at the CNES (French Space Agency), working on applied",
-        "ai": "Artificial Intelligence",
-        "bridge": "at the intersection of",
-        "research": "research",
-        "and": "and",
-        "production": "production",
-        "scrollNextSection": "Scroll to next section"
-    },
-    "skills": {
-        "languages": "Languages",
-        "ai": "AI / ML Data Science",
-        "webdevelopment": "Web Development",
-        "devsofware": "Development Tools & Software",
-        "database": "Databases",
-        "graphics": "Graphics & 3D",
-        "testingquality": "Testing & Quality"
+        "status": "Toulouse / Bordeaux, France",
+        "name_full": "Théo Castillo",
+        "role_line": "Computer Science Engineer @ ENSEEIHT  |  AI/ML Engineer @ CNES",
+        "bio_intro": "I'm an engineering apprentice at the CNES (French Space Agency), working on applied ",
+        "bio_ai": "Artificial Intelligence",
+        "bio_bridge": " at the intersection of ",
+        "bio_research": "research",
+        "bio_and": " and ",
+        "bio_production": "production",
+        "bio_end": ".",
+        "cta_projects": "projects",
+        "cta_cv": "cv",
+        "cta_contact": "contact"
     },
     "aboutme": {
-        "title": "About Me",
-        "description_before_name": "My name is",
-        "name": "Theo",
-        "description_before_age": "I'm",
-        "years_old": "years old",
-        "countdown_prefix": "for",
-        "countdown_days": "d",
-        "description_after_age": "and I'm an engineering apprentice at ENSEEIHT (N7) in Toulouse, with an apprenticeship at the CNES (French Space Agency)",
-        "interest_title": "Interest",
-        "hobbies_title": "Hobbies",
+        "section_title": "About",
+        "about_paragraph": "I'm Théo Castillo, engineering apprentice at ENSEEIHT (Toulouse INP) and AI/ML engineer at CNES, where I build tools to process and classify brain signals with deep learning. More broadly, I'm interested in turning research ideas into systems that actually run in production.",
+        "interest_title": "interests",
+        "hobbies_title": "outside work",
         "interests": {
             "ai": "Artificial Intelligence",
             "ml": "Machine Learning",
@@ -65,45 +52,26 @@
             "travel": "Traveling",
             "running": "Running"
         },
-        "all_links": "All links",
-        "download_cv": "Download CV",
-        "view_cv": "View CV",
-        "copied": "Copied !",
-        "working_on_title": "I'm working on",
-        "working_on_description": "I am currently working on the discovery and use of artificial intelligence techniques.",
-        "future_title": "For the future",
-        "future_description": "Earn my engineering degree and contribute to AI integration in the space sector.",
-        "controls": {
-            "speed": "Spd",
-            "muscle": "Mus",
-            "quality": "Qua",
-            "glow": "Glo",
-            "color": "Color"
-        }
+        "all_links": "links",
+        "download_cv": "download",
+        "view_cv": "view",
+        "copied": "copied"
     },
     "footer": {
-        "name": "Théo Castillo",
-        "role": "Computer science student - Bordeaux, France",
-        "email": "theocastillo@yahoo.com",
-        "rights": "© {{year}} {{name}} - All rights reserved",
-        "note": "Personal portfolio - No data collected",
-        "built_with": "Built with React & TypeScript",
-        "back_to_top": "Back to top",
-        "contact": "Contact",
-        "see_also": "See also",
+        "back_to_top": "top",
+        "see_also": "see also",
         "portfolios": {
-            "zao": "Zao's portfolio",
-            "clement": "Clement's portfolio",
-            "alexandre": "Alexandre's portfolio",
-            "rodolphe": "Rodolphe's portfolio", 
-            "antoine": "Antoine's portfolio",
-            "elias": "Elias's portfolio",
-            "mathieu": "Mathieu's portfolio"
+            "zao": "zao",
+            "clement": "clement",
+            "alexandre": "alexandre",
+            "rodolphe": "rodolphe",
+            "antoine": "antoine",
+            "elias": "elias",
+            "mathieu": "mathieu"
         }
     },
     "projects": {
-    "title" : "Projects",
-    "scrollMessage" : "Scroll to discover more projects",
+    "title": "Projects",
         "snake_ai": {
             "title": "Snake AI",
             "description": "Creation of the Snake game and an AI that learns to play the game using deep reinforcement learning with PyTorch and Pygame."

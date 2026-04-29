@@ -4,7 +4,7 @@
         "end_date": "September 2029",
         "title": "AI/ML Engineer Apprentice, Brain-Computer Interfaces",
         "title_en": "AI/ML Engineer Apprentice, Brain-Computer Interfaces",
-        "title_fr": "Alternant Ingénieur IA/ML, Interfaces Cerveau-Machine",
+        "title_fr": "Apprenti Ingénieur IA/ML, Interfaces Cerveau-Machine",
         "bullets_en": [
             "Development of a prototype for processing and classifying brain signals using ML/DL algorithms on an HPC Linux cluster",
             "Analysis of business needs and identification of relevant AI use cases in the space domain (robotic tool control, cognitive monitoring of operators and astronauts)",
@@ -44,7 +44,7 @@
         "end_date": "June 2026",
         "title": "AI Developer, Work-Study Program",
         "title_en": "AI Developer, Work-Study Program",
-        "title_fr": "Développeur IA, Alternance",
+        "title_fr": "Développeur IA, Apprentissage",
         "bullets_en": [
             "Designed and deployed specialized AI agents for B2B clients, from requirements analysis to production",
             "Architected RAG pipelines with context engineering, multi-agent orchestration and MCP servers",

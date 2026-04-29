@@ -5,39 +5,17 @@ import AboutMe from "./components/AboutMe";
 import LandPage from "./components/LandPage";
 import Career from "./components/Career";
 import Footer from "./components/Footer";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import Skills from "./components/Skills";
-
-gsap.registerPlugin(ScrollTrigger);
-
-(window as any).gsap = gsap;
-(window as any).ScrollTrigger = ScrollTrigger;
 
 function App() {
   return (
-    <>
-      <main className="flex flex-col items-center pt-14">
-        <NavBar />
-        
-        <LandPage />
-        <AboutMe />
-        <Career />
-        {/* <Skills /> */}
-        <Projects/>
-        <Footer />
-        
-        
-        
-        {/* Uncomment the following lines if you want to include Skills and PreviewProjects components */}
-        {/* <Skills /> */}
-
-
-        
-
-
-      </main>
-    </>
+    <main className="flex flex-col items-center pt-14 bg-bg">
+      <NavBar />
+      <LandPage />
+      <AboutMe />
+      <Career />
+      <Projects />
+      <Footer />
+    </main>
   );
 }
 

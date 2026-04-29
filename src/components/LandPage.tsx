@@ -1,114 +1,89 @@
-import { ChevronDown } from 'lucide-react';
-import { useTranslation } from "react-i18next";
-import ASCIIHuman from './ASCIIHuman';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
+import { useCV } from '../hooks/useCV';
 
 const LandPage = () => {
   const [t] = useTranslation('global');
   const hasAnimated = useRef(false);
-  const [accentColor, setAccentColor] = useState('#2563eb');
-  const showColoredBackground = false; // Variable pour activer/désactiver les fonds colorés
+  const { view } = useCV();
 
   useEffect(() => {
     if (hasAnimated.current) return;
     hasAnimated.current = true;
-
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-    // 1. "Bonjour, je suis Théo"
-    tl.fromTo('.hero-title',
-      { y: 60, opacity: 0, filter: 'blur(10px)' },
-      { y: 0, opacity: 1, filter: 'blur(0px)', duration: 0.9 }
-    )
-    // 2. Les deux paragraphes de description
-    .fromTo('.hero-description',
-      { y: 40, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.7, stagger: 0.12 },
-      '-=0.2'
-    )
-    // 3. Le bonhomme ASCII + scroll indicator
-    .fromTo('.ascii-container, .scroll-indicator',
-      { scale: 0.8, opacity: 0, filter: 'blur(15px)' },
-      { scale: 1, opacity: 1, filter: 'blur(0px)', duration: 1 },
-      '-=0.3'
+    gsap.fromTo(
+      '.hero-block',
+      { opacity: 0, y: 14 },
+      { opacity: 1, y: 0, duration: 0.55, stagger: 0.08, ease: 'power2.out' },
     );
   }, []);
 
-  const scrollToNext = () => {
-  const aboutSection = document.getElementById('about-me') || document.querySelector('[data-section="about"]');
-  if (aboutSection) {
-    const elementRect = aboutSection.getBoundingClientRect();
-    const elementTop = elementRect.top + window.pageYOffset;
-    const elementHeight = elementRect.height;
-    const windowHeight = window.innerHeight;
-    
-    const targetPosition = elementTop - (windowHeight / 2) + (elementHeight / 2);
-    
-    window.scrollTo({ 
-      top: targetPosition, 
-      behavior: 'smooth' 
-    });
-  } else {
-    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
-  }
-};
-
   return (
-  <div id="home" className="min-h-screen flex flex-col justify-center items-center px-4 md:px-8 relative">
-      {/* Container avec arrière-plan */}
-      <div className={`w-full max-w-6xl ${showColoredBackground ? 'bg-gradient-to-br from-amber-200 to-amber-300 rounded-3xl shadow-2xl' : ''} p-6 md:p-8`}>
-        {/* Contenu principal */}
-        <div className="flex flex-col lg:flex-row gap-6 h-full">
-          {/* Section texte - Rectangle bleu */}
-          <div className={`flex-1 ${showColoredBackground ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white' : ''} rounded-2xl p-6 md:p-8`}>
-            <h1 className="hero-title text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
-              {t('landpage.greeting')}{' '}
-              <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.name')}</span>
-            </h1>
-
-            <div className="space-y-4 text-base md:text-lg lg:text-xl leading-relaxed">
-              <p className="hero-description">
-                {t('landpage.welcome')}{' '}
-                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.ai')}</span>{' '}
-                {t('landpage.bridge')}{' '}
-                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.research')}</span>{' '}
-                {t('landpage.and')}{' '}
-                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.production')}</span>.
-              </p>
-            </div>
-          </div>
-          
-          {/* ASCII Human Component - Rectangle rouge Desktop */}
-          <div className={`ascii-container hidden lg:flex flex-shrink-0 ${showColoredBackground ? 'bg-gradient-to-br from-red-500 to-red-600' : ''} rounded-2xl p-6 items-center justify-center min-h-[400px] min-w-[300px]`}>
-            <div className="flex items-center justify-center w-full h-full">
-              <ASCIIHuman className="scale-125" onColorChange={setAccentColor} />
-            </div>
-          </div>
-        </div>
-        
-        {/* ASCII Human Component Mobile - En dessous du texte */}
-        <div className={`ascii-container lg:hidden flex justify-center mt-6 ${showColoredBackground ? 'bg-gradient-to-br from-red-500 to-red-600' : ''} rounded-2xl p-6`}>
-          <ASCIIHuman className="scale-100" isMobile={true} onColorChange={setAccentColor} />
-        </div>
-      </div>
-
-      {/* Flèche vers le bas */}
-      <div className="scroll-indicator hidden lg:block absolute bottom-12 left-1/2 transform -translate-x-1/2">
-        <button
-          onClick={scrollToNext}
-          className="flex flex-col items-center space-y-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 group"
-          aria-label={t('landpage.scrollNextSection')}
+    <section
+      id="home"
+      className="min-h-[88vh] w-full max-w-3xl mx-auto px-6 flex flex-col justify-center"
+    >
+      <div className="flex flex-col items-start gap-7">
+        <div
+          className="hero-block inline-flex items-center gap-2 text-xs text-fg-muted px-3 py-1 rounded-full border border-white/[0.12] bg-white/[0.03]"
+          style={{ fontFamily: 'var(--font-mono)' }}
         >
-          <div className="animate-bounce">
-            <ChevronDown 
-              size={32} 
-              className="group-hover:scale-110 transition-transform duration-300" 
-            />
-          </div>
-        </button>
+          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
+          {t('landpage.status')}
+        </div>
+
+        <div className="hero-block flex flex-col gap-3">
+          <h1
+            className="text-5xl md:text-6xl lg:text-7xl leading-tight"
+            style={{ fontFamily: 'var(--font-domine)' }}
+          >
+            {t('landpage.name_full')}
+          </h1>
+          <p
+            className="text-sm md:text-base text-fg-muted"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
+            {t('landpage.role_line')}
+          </p>
+          <div className="h-px w-16 bg-accent/60 mt-1" />
+        </div>
+
+        <p className="hero-block text-base md:text-lg text-fg-muted leading-relaxed max-w-2xl">
+          {t('landpage.bio_intro')}
+          <span className="text-fg font-medium">{t('landpage.bio_ai')}</span>
+          {t('landpage.bio_bridge')}
+          <span className="text-fg font-medium">{t('landpage.bio_research')}</span>
+          {t('landpage.bio_and')}
+          <span className="text-fg font-medium">{t('landpage.bio_production')}</span>
+          {t('landpage.bio_end')}
+        </p>
+
+        <div
+          className="hero-block flex flex-wrap gap-x-6 gap-y-3 mt-2 text-sm"
+          style={{ fontFamily: 'var(--font-mono)' }}
+        >
+          <a
+            href="#projects"
+            className="text-fg-muted hover:text-accent transition-colors"
+          >
+            → {t('landpage.cta_projects')}
+          </a>
+          <button
+            type="button"
+            onClick={view}
+            className="text-fg-muted hover:text-accent transition-colors"
+          >
+            ↓ {t('landpage.cta_cv')}
+          </button>
+          <a
+            href="#about-me"
+            className="text-fg-muted hover:text-accent transition-colors"
+          >
+            ✉ {t('landpage.cta_contact')}
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

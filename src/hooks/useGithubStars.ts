@@ -36,7 +36,7 @@ export const useGithubStars = (githubUrl: string | undefined) => {
     }
 
     const cleanUrl = githubUrl.trim().replace(/\/$/, '');
-    const match = cleanUrl.match(/github\.com\/([^\/]+)\/([^\/\?#]+)/);
+    const match = cleanUrl.match(/github\.com\/([^/]+)\/([^/?#]+)/);
     if (!match) {
       setStars(null);
       return;

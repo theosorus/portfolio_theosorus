@@ -1,97 +1,87 @@
-
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [t] = useTranslation('global');
-    
-  const shuffle_func = (array: any[]) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-};
+
+  const shuffle = <T,>(array: T[]): T[] => {
+    const out = [...array];
+    for (let i = out.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [out[i], out[j]] = [out[j], out[i]];
+    }
+    return out;
+  };
+
+  const portfolios = [
+    { key: 'clement', url: 'https://clembarr.dev' },
+    ...shuffle([
+      { key: 'zao', url: 'https://zaofromage.github.io/portfolio/' },
+      { key: 'alexandre', url: 'https://carcroks.github.io/' },
+      { key: 'rodolphe', url: 'https://rodolphe.sh/' },
+      { key: 'antoine', url: 'https://labian0.github.io/' },
+      { key: 'elias', url: 'https://eliasgauthier.fr' },
+      { key: 'mathieu', url: 'https://matjay.me/' },
+    ]),
+  ];
 
   return (
-    <footer className="w-full bg-darker-blue border-gray-200 py-8 px-4 mt-20">
-      <div className="max-w-6xl mx-auto">
-        
-        {/* Contenu principal */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
-          
-          {/* Informations personnelles */}
-          <div className="space-y-2">
-            <p className="font-medium text-font-color">{t('footer.name')}</p>
-            <p className="text-sm text-gray-600">{t('footer.role')}</p>
-            <a 
-              href={`mailto:${t('footer.email')}`} 
-              className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
+    <footer className="w-full max-w-3xl mx-auto px-6 pt-10 pb-12 mt-12 border-t border-white/[0.08]">
+      <div
+        className="flex flex-col gap-6 text-xs"
+        style={{ fontFamily: 'var(--font-mono)' }}
+      >
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="text-fg-muted">
+            Théo Castillo · {currentYear}
+          </div>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <a
+              href="mailto:theocastillo@yahoo.com"
+              className="text-fg-dim hover:text-accent transition-colors"
             >
-              {t('footer.email')}
+              email
             </a>
-          </div>
-
-          {/* Section See Also */}
-          <div className="text-left md:text-center space-y-2 md:w-1/4 md:flex-shrink-0 w-full">
-            <h3 className="text-xs text-gray-500 tracking-wider">{t('footer.see_also')} : </h3>
-            <div className="flex flex-wrap justify-start md:justify-center gap-x-2 gap-y-2 text-xs md:gap-x-3 md:gap-y-1">
-              {[{ key: 'clement', url: 'https://clembarr.dev' }, ...shuffle_func([
-                { key: 'zao', url: 'https://zaofromage.github.io/portfolio/' },
-
-                { key: 'alexandre', url: 'https://carcroks.github.io/' },
-                { key: 'rodolphe', url: 'https://rodolphe.sh/' },
-                { key: 'antoine', url: 'https://labian0.github.io/' },
-                { key: 'elias', url: 'https://eliasgauthier.fr' },
-                { key: 'mathieu', url: 'https://matjay.me/' }
-              ])].map(({ key, url }) => 
-                url ? (
-                  <a 
-                    key={key}
-                    href={url}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-purple-400 transition-colors whitespace-nowrap flex-shrink-0 px-2 py-1 rounded-md bg-gray-800/20 md:bg-transparent md:px-0 md:py-0"
-                  >
-                    {t(`footer.portfolios.${key}`)}
-                  </a>
-                ) : (
-                  <span key={key} className="text-gray-500 cursor-not-allowed whitespace-nowrap flex-shrink-0 px-2 py-1 rounded-md bg-gray-800/10 md:bg-transparent md:px-0 md:py-0">
-                    {t(`footer.portfolios.${key}`)}
-                  </span>
-                )
-              )}
-            </div>
-          </div>
-
-          {/* Mentions légales courtes */}
-          <div className="text-sm text-gray-500 text-center md:text-right space-y-1">
-            <p>{t('footer.rights', { year: currentYear, name: t('footer.name') })}</p>
-            <p>{t('footer.note')}</p>
+            <a
+              href="https://github.com/theosorus"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-fg-dim hover:text-accent transition-colors"
+            >
+              github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/theo-castillo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-fg-dim hover:text-accent transition-colors"
+            >
+              linkedin
+            </a>
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="text-fg-dim hover:text-accent transition-colors"
+            >
+              ↑ {t('footer.back_to_top')}
+            </button>
           </div>
         </div>
 
-        {/* Ligne de séparation et liens */}
-        <div className="border-t border-gray-300 mt-6 pt-4">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-            <p className="text-xs text-gray-400">
-              {t('footer.built_with')}
-            </p>
-            
-            <div className="flex space-x-4 text-xs">
-              <button 
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 text-fg-dim">
+          <span>{t('footer.see_also')}:</span>
+          <div className="flex flex-wrap gap-x-3 gap-y-1">
+            {portfolios.map(({ key, url }) => (
+              <a
+                key={key}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-fg-dim hover:text-accent transition-colors"
               >
-                {t('footer.back_to_top')}
-              </button>
-              <a 
-                href={`mailto:${t('footer.email')}`} 
-                className="text-gray-400 hover:text-blue-600 transition-colors"
-              >
-                {t('footer.contact')}
+                {t(`footer.portfolios.${key}`)}
               </a>
-            </div>
+            ))}
           </div>
         </div>
       </div>

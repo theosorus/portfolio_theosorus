@@ -1,304 +1,243 @@
-import { Mail, Github, Linkedin, Download, Check, Eye } from 'lucide-react';
-import hobbiesInterestData from '../data/hobbies_interest.json';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useAge } from '../hooks/useAge';
+import { Download, Eye, Github, Linkedin, Mail, Check } from 'lucide-react';
+import hobbiesInterestData from '../data/hobbies_interest.json';
+import { useCV } from '../hooks/useCV';
 
-export const AboutMe = () => {
-  const [t, i18n] = useTranslation('global');
-  const { age, countdown } = useAge();
+const AboutMe = () => {
+  const [t] = useTranslation('global');
+  const { download, view } = useCV();
   const [emailCopied, setEmailCopied] = useState(false);
-  const emailButtonRef = useRef<HTMLButtonElement | null>(null);
-  const [emailButtonWidth, setEmailButtonWidth] = useState('auto');
+  const email = 'theocastillo@yahoo.com';
 
-  useEffect(() => {
-    if (emailButtonRef.current && emailButtonWidth === 'auto') {
-      const width = emailButtonRef.current.offsetWidth;
-      setEmailButtonWidth(`${width}px`);
-    }
-  }, [emailButtonWidth]);
-
-  const handleEmailClick = async () => {
+  const handleEmailCopy = async () => {
     try {
-      await navigator.clipboard.writeText('theocastillo@yahoo.com');
-      setEmailCopied(true);
-      setTimeout(() => setEmailCopied(false), 600);
-    } catch (err) {
-      console.error('Erreur lors de la copie:', err);
+      await navigator.clipboard.writeText(email);
+    } catch {
       const textArea = document.createElement('textarea');
-      textArea.value = 'theocastillo@yahoo.com';
+      textArea.value = email;
       document.body.appendChild(textArea);
       textArea.select();
       document.execCommand('copy');
       document.body.removeChild(textArea);
-      setEmailCopied(true);
-      setTimeout(() => setEmailCopied(false), 1000);
     }
-  };
-
-  const getCVFileName = () => {
-    const currentLang = i18n.language;
-    return currentLang === 'fr' ? 'cv_tcastillo_fr.pdf' : 'resume_tcastillo_en.pdf';
-  };
-
-  const handleDownloadCV = () => {
-    const fileName = getCVFileName();
-    const link = document.createElement('a');
-    link.href = `/cv/${fileName}`;
-    link.download = fileName;
-    link.click();
-  };
-
-  const handleViewCV = () => {
-    const fileName = getCVFileName();
-    window.open(`/cv/${fileName}`, '_blank', 'noopener,noreferrer');
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 1500);
   };
 
   const { interests, hobbies } = hobbiesInterestData as {
     interests: { key: string }[];
-    hobbies: { key: string; emoji: string }[];
+    hobbies: { key: string; emoji?: string }[];
   };
 
-  // --- Améliorations UI/UX pour Interests & Hobbies ---
-  const MAX_VISIBLE = 6; // Réduit de 8 à 6
-  const [showAllInterests, setShowAllInterests] = useState(false);
-  const [showAllHobbies, setShowAllHobbies] = useState(false);
+  type LinkRow = {
+    key: string;
+    label: string;
+    icon: typeof Github;
+    href?: string;
+    onClick?: () => void;
+    isEmail?: boolean;
+  };
 
-  const visibleInterests = showAllInterests ? interests : interests.slice(0, MAX_VISIBLE);
-  const visibleHobbies = showAllHobbies ? hobbies : hobbies.slice(0, MAX_VISIBLE);
-
-  const socialLinks = [
+  const links: LinkRow[] = [
+    { key: 'github', label: 'theosorus', icon: Github, href: 'https://github.com/theosorus' },
+    { key: 'linkedin', label: 'theo-castillo', icon: Linkedin, href: 'https://www.linkedin.com/in/theo-castillo/' },
     {
-      name: 'theocastillo@yahoo.com',
-      icon: Mail,
-      action: handleEmailClick,
-      color: emailCopied ? 'bg-green-500 hover:bg-green-600' : 'bg-blue-500 hover:bg-blue-600',
-      isEmail: true,
-    },
-    {
-      name: 'theosorus',
-      icon: Github,
-      href: 'https://github.com/theosorus',
-      color: 'bg-gray-800 hover:bg-gray-900',
-    },
-    {
-      name: "Theo Castillo",
-      icon: Linkedin,
-      href: 'https://www.linkedin.com/in/theo-castillo/',
-      color: 'bg-blue-600 hover:bg-blue-700',
-    },
-    {
-      name: "Gazeux's Kaggle",
-      customIcon: '/icons/kaggle.png',
-      href: 'https://www.kaggle.com/gazeux330000',
-      color: 'bg-cyan-500 hover:bg-cyan-600',
-    },
-    {
-      name: "Gazeux's Huggingface",
-      customIcon: '/icons/huggingface-color.png',
+      key: 'huggingface',
+      label: 'Gazeux33',
+      icon: ({ size }: { size: number }) => (
+        <img
+          src="/icons/huggingface-color.png"
+          alt=""
+          width={size}
+          height={size}
+          className="object-contain"
+        />
+      ),
       href: 'https://huggingface.co/Gazeux33',
-      color: 'bg-yellow-500 hover:bg-yellow-600',
+    } as unknown as LinkRow,
+    {
+      key: 'kaggle',
+      label: 'gazeux330000',
+      icon: ({ size }: { size: number }) => (
+        <img
+          src="/icons/kaggle.png"
+          alt=""
+          width={size}
+          height={size}
+          className="object-contain"
+        />
+      ),
+      href: 'https://www.kaggle.com/gazeux330000',
+    } as unknown as LinkRow,
+    {
+      key: 'email',
+      label: emailCopied ? t('aboutme.copied') : email,
+      icon: emailCopied ? Check : Mail,
+      onClick: handleEmailCopy,
+      isEmail: true,
     },
   ];
 
   return (
-    <div id="about-me" className="w-full flex flex-col items-center py-12 px-4">
-      <div className="w-full max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:items-stretch">
-          
-          {/* Card Image avec info personnelle */}
-          <div className="lg:col-span-1 flex">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-6 flex-1">
-              <div className="relative">
-                <img
-                  src="./island.jpeg"
-                  alt="Theo"
-                  className="w-full aspect-square object-cover rounded-lg"
-                  loading="lazy"
-                />
-              </div>
-              
-              <div className="text-center space-y-3">
-                <h3 className="text-xl font-bold text-font-color">{t('aboutme.name')}</h3>
-                <p className="text-base text-font-color leading-relaxed">
-                  {t('aboutme.description_before_age')}{' '}
-                  <span className="text-blue-600 font-semibold">{age} {t('aboutme.years_old')}</span>{' '}
-                  <span className="text-font-color/50 text-sm">
-                    ({t('aboutme.countdown_prefix')} {countdown.days}{t('aboutme.countdown_days')} {String(countdown.hours).padStart(2, '0')}h{String(countdown.minutes).padStart(2, '0')}m{String(countdown.seconds).padStart(2, '0')}s)
-                  </span>{' '}
-                  {t('aboutme.description_after_age')}
-                </p>
-              </div>
+    <section
+      id="about-me"
+      className="w-full max-w-3xl mx-auto px-6 py-20 md:py-24"
+    >
+      <h2
+        className="text-2xl md:text-3xl mb-8"
+        style={{ fontFamily: 'var(--font-domine)' }}
+      >
+        {t('aboutme.section_title')}
+      </h2>
+      <div className="border-t border-white/[0.10]" />
 
-              <div className="flex gap-2">
-                <button
-                  onClick={handleDownloadCV}
-                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
-                >
-                  <Download size={16} />
-                  {t('aboutme.download_cv')}
-                </button>
-                <button
-                  onClick={handleViewCV}
-                  aria-label={t('aboutme.view_cv')}
-                  title={t('aboutme.view_cv')}
-                  className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2.5 rounded-lg transition-all duration-300 hover:scale-105 flex items-center justify-center"
-                >
-                  <Eye size={16} />
-                </button>
-              </div>
-            </div>
+      <div className="pt-10 flex flex-col gap-12">
+        {/* About */}
+        <div className="flex flex-col sm:flex-row gap-6 items-start">
+          <img
+            src="./island.jpeg"
+            alt="Théo Castillo"
+            className="w-28 h-28 rounded-lg object-cover flex-shrink-0 border border-white/[0.10]"
+            loading="lazy"
+          />
+          <p className="text-base text-fg-muted leading-relaxed max-w-prose">
+            {t('aboutme.about_paragraph')}
+          </p>
+        </div>
+
+        {/* Interests */}
+        <div>
+          <h3
+            className="text-xs uppercase tracking-wider text-fg-dim mb-4"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
+{t('aboutme.interest_title')}
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {interests.map((interest) => (
+              <span
+                key={interest.key}
+                className="inline-flex items-center text-xs text-fg-muted bg-white/[0.04] hover:bg-white/[0.08] hover:text-accent border border-white/[0.10] hover:border-accent/40 px-2.5 py-1 rounded-md transition-colors"
+                style={{ fontFamily: 'var(--font-mono)' }}
+              >
+                {t(`aboutme.interests.${interest.key}`)}
+              </span>
+            ))}
           </div>
+        </div>
 
-          {/* Contenu principal */}
-          <div className="lg:col-span-2 space-y-6 flex flex-col h-full">
-            {/* Grid pour Interests/Hobbies et nouvelles sections */}
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-              {/* Colonne gauche: Interests et I'm working on */}
-              <div className="space-y-6">
-                {/* Interests */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div>
-                      <h3 className="text-lg font-semibold text-font-color">{t('aboutme.interest_title')}</h3>
-                    </div>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {visibleInterests.map((interest) => (
-                      <span key={interest.key} className="inline-block bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs font-medium transition-all duration-300 hover:scale-105 border border-blue-500/20">
-                        {t(`aboutme.interests.${interest.key}`)}
-                      </span>
-                    ))}
-                  </div>
+        {/* Outside work */}
+        <div>
+          <h3
+            className="text-xs uppercase tracking-wider text-fg-dim mb-4"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
+{t('aboutme.hobbies_title')}
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {hobbies.map((hobby) => (
+              <span
+                key={hobby.key}
+                className="inline-flex items-center text-xs text-fg-muted bg-white/[0.04] hover:bg-white/[0.08] hover:text-accent border border-white/[0.10] hover:border-accent/40 px-2.5 py-1 rounded-md transition-colors"
+                style={{ fontFamily: 'var(--font-mono)' }}
+              >
+                {t(`aboutme.hobbies.${hobby.key}`)}
+              </span>
+            ))}
+          </div>
+        </div>
 
-                  {interests.length > MAX_VISIBLE && (
-                    <button
-                      type="button"
-                      aria-expanded={showAllInterests}
-                      onClick={() => setShowAllInterests((v) => !v)}
-                      className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
-                    >
-                      {showAllInterests ? 'Voir moins' : `+${interests.length - MAX_VISIBLE} autres`}
-                    </button>
+        {/* Links */}
+        <div>
+          <h3
+            className="text-xs uppercase tracking-wider text-fg-dim mb-4"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
+{t('aboutme.all_links')}
+          </h3>
+          <ul
+            className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
+            {links.map((link) => {
+              const Icon = link.icon as React.ComponentType<{ size: number }>;
+              const inner = (
+                <span className="inline-flex items-center gap-3 px-3 py-2 w-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.10] hover:border-accent/40 rounded-md transition-colors group">
+                  <Icon size={14} />
+                  <span className="text-fg-dim w-20 flex-shrink-0 text-xs uppercase tracking-wider">
+                    {link.key}
+                  </span>
+                  <span className="text-fg-muted group-hover:text-accent transition-colors truncate">
+                    {link.label}
+                  </span>
+                  {link.href && (
+                    <span className="ml-auto text-fg-dim group-hover:text-accent transition-colors text-xs" aria-hidden>
+                      ↗
+                    </span>
                   )}
-                </div>
+                </span>
+              );
 
-                {/* I'm working on */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div>
-                      <h3 className="text-lg font-semibold text-font-color">{t('aboutme.working_on_title')}</h3>
-                    </div>
-                  </div>
-                  
-                  <p className="text-sm text-font-color/80 leading-relaxed">
-                    {t('aboutme.working_on_description')}
-                  </p>
-                </div>
-              </div>
-
-              {/* Colonne droite: Hobbies et For the future */}
-              <div className="space-y-6">
-                {/* Hobbies */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div>
-                      <h3 className="text-lg font-semibold text-font-color">{t('aboutme.hobbies_title')}</h3>
-                    </div>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {visibleHobbies.map((hobby) => (
-                      <span key={hobby.key} className="inline-flex items-center gap-1 bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs font-medium transition-all duration-300 hover:scale-105 border border-purple-500/20">
-                        <span className="text-sm">{hobby.emoji}</span>
-                        {t(`aboutme.hobbies.${hobby.key}`)}
-                      </span>
-                    ))}
-                  </div>
-
-                  {hobbies.length > MAX_VISIBLE && (
-                    <button
-                      type="button"
-                      aria-expanded={showAllHobbies}
-                      onClick={() => setShowAllHobbies((v) => !v)}
-                      className="text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors"
-                    >
-                      {showAllHobbies ? 'Voir moins' : `+${hobbies.length - MAX_VISIBLE} autres`}
-                    </button>
-                  )}
-                </div>
-
-                {/* For the future */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div>
-                      <h3 className="text-lg font-semibold text-font-color">{t('aboutme.future_title')}</h3>
-                    </div>
-                  </div>
-                  
-                  <p className="text-sm text-font-color/80 leading-relaxed">
-                    {t('aboutme.future_description')}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Liens sociaux */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 space-y-4 flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <div>
-                  <h3 className="text-lg font-semibold text-font-color">{t('aboutme.all_links')}</h3>
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap gap-3">
-                {socialLinks.map((link, index) => {
-                  const IconComponent = link.isEmail && emailCopied ? Check : link.icon;
-
-                  if (link.action) {
-                    return (
-                      <button
-                        key={index}
-                        ref={link.isEmail ? emailButtonRef : null}
-                        onClick={link.action}
-                        style={link.isEmail ? { minWidth: emailButtonWidth } : {}}
-                        aria-live={link.isEmail ? 'polite' : undefined}
-                        className={`${link.color} text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-3 flex-shrink-0 ${
-                          emailCopied && link.isEmail ? 'animate-pulse' : ''
-                        }`}
-                      >
-                        {IconComponent && <IconComponent size={16} />}
-                        <span className={link.isEmail && emailCopied ? 'flex-1 text-center' : ''}>
-                          {link.isEmail && emailCopied ? t('aboutme.copied') : link.name}
-                        </span>
-                      </button>
-                    );
-                  }
-
-                  return (
+              return (
+                <li key={link.key}>
+                  {link.href ? (
                     <a
-                      key={index}
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`${link.color} text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-3 flex-shrink-0`}
+                      className="block"
                     >
-                      {link.customIcon ? (
-                        <img src={link.customIcon} alt="" className="w-4 h-4" />
-                      ) : (
-                        IconComponent && <IconComponent size={16} />
-                      )}
-                      {link.name}
+                      {inner}
                     </a>
-                  );
-                })}
-              </div>
-            </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={link.onClick}
+                      className="block w-full text-left"
+                      aria-live="polite"
+                    >
+                      {inner}
+                    </button>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        {/* CV */}
+        <div>
+          <h3
+            className="text-xs uppercase tracking-wider text-fg-dim mb-4"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
+cv
+          </h3>
+          <div
+            className="flex flex-wrap items-center gap-3 text-sm"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
+            <button
+              type="button"
+              onClick={download}
+              className="inline-flex items-center gap-2 px-3 py-2 bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.10] hover:border-accent/40 rounded-md text-fg-muted hover:text-accent transition-colors"
+            >
+              <Download size={14} />
+              {t('aboutme.download_cv')}
+            </button>
+            <button
+              type="button"
+              onClick={view}
+              className="inline-flex items-center gap-2 px-3 py-2 bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.10] hover:border-accent/40 rounded-md text-fg-muted hover:text-accent transition-colors"
+            >
+              <Eye size={14} />
+              {t('aboutme.view_cv')}
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
