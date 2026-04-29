@@ -7,7 +7,7 @@ import Career from "./components/Career";
 import Footer from "./components/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 // import Skills from "./components/Skills";
 
 gsap.registerPlugin(ScrollTrigger);
