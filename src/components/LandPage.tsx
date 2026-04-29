@@ -70,14 +70,11 @@ const LandPage = () => {
             <div className="space-y-4 text-base md:text-lg lg:text-xl leading-relaxed">
               <p className="hero-description">
                 {t('landpage.welcome')}{' '}
-                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.ai')}</span>, {t('landpage.particularly')}{' '}
-                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.deeplearning')}</span> {t('landpage.and')}{' '}
-                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.machinelearning')}</span>.
-              </p>
-              <p className="hero-description">
-                {t('landpage.enjoy')}{' '}
-                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.computervision')}</span> {t('landpage.and')}{' '}
-                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.nlp')}</span>.
+                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.ai')}</span>{' '}
+                {t('landpage.bridge')}{' '}
+                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.research')}</span>{' '}
+                {t('landpage.and')}{' '}
+                <span className="font-medium transition-colors duration-300" style={{ color: accentColor }}>{t('landpage.production')}</span>.
               </p>
             </div>
           </div>

@@ -21,15 +21,12 @@
     "landpage": {
         "greeting": "Hello, I'm",
         "name": "Théo",
-        "welcome": "Welcome to my portfolio! I am a computer science student with a passion for",
+        "welcome": "Welcome! I'm an engineering apprentice at the CNES (French Space Agency), working on applied",
         "ai": "Artificial Intelligence",
-        "particularly": "particularly",
-        "deeplearning": "Deep Learning",
+        "bridge": "at the intersection of",
+        "research": "research",
         "and": "and",
-        "machinelearning": "Machine Learning",
-        "enjoy": "I especially enjoy working on projects that involve",
-        "computervision": "Computer Vision",
-        "nlp": "NLP",
+        "production": "production",
         "scrollNextSection": "Scroll to next section"
     },
     "skills": {
