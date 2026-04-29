@@ -26,12 +26,12 @@
         "title_en": "Engineering Degree, Digital Systems",
         "title_fr": "Diplôme d'ingénieur, Systèmes Numériques",
         "bullets_en": [
-            "Engineering degree (apprenticeship track) specializing in Digital Systems",
-            "In partnership with CNES"
+            "Engineering degree (apprenticeship track) in Digital Systems (SN), in partnership with CNES",
+            "AI and machine learning, software engineering, signal & image processing, cloud, networks, cybersecurity"
         ],
         "bullets_fr": [
-            "Diplôme d'ingénieur en apprentissage, spécialité Systèmes Numériques",
-            "En partenariat avec le CNES"
+            "Diplôme d'ingénieur par apprentissage, spécialité Systèmes Numériques (SN), en partenariat avec le CNES",
+            "IA et apprentissage automatique, génie logiciel, traitement du signal et de l'image, cloud, réseaux, cybersécurité"
         ],
         "tags": ["university"],
         "image": "./career/n7.jpg",
