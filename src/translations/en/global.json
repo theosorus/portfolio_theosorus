@@ -20,6 +20,8 @@
         "status": "Toulouse / Bordeaux, France",
         "name_full": "Théo Castillo",
         "role_line": "Computer Science Engineer @ ENSEEIHT  |  AI/ML Engineer @ CNES",
+        "role_part1": "Computer Science Engineer @ ENSEEIHT",
+        "role_part2": "AI/ML Engineer @ CNES",
         "bio_intro": "I'm an engineering apprentice at the CNES (French Space Agency), working on applied ",
         "bio_ai": "Artificial Intelligence",
         "bio_bridge": " at the intersection of ",

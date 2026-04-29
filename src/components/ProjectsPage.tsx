@@ -22,7 +22,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full max-w-6xl mx-auto px-6 py-20 md:py-24"
+      className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24"
     >
       <div className="max-w-3xl mx-auto md:mx-0">
         <h2

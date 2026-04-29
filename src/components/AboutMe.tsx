@@ -82,7 +82,7 @@ const AboutMe = () => {
   return (
     <section
       id="about-me"
-      className="w-full max-w-3xl mx-auto px-6 py-20 md:py-24"
+      className="w-full max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24"
     >
       <h2
         className="text-2xl md:text-3xl mb-8"
@@ -92,13 +92,13 @@ const AboutMe = () => {
       </h2>
       <div className="border-t border-white/[0.10]" />
 
-      <div className="pt-10 flex flex-col gap-12">
+      <div className="pt-8 sm:pt-10 flex flex-col gap-10 sm:gap-12">
         {/* About */}
-        <div className="flex flex-col sm:flex-row gap-6 items-start">
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 items-start">
           <img
             src="./island.jpeg"
             alt="Théo Castillo"
-            className="w-28 h-28 rounded-lg object-cover flex-shrink-0 border border-white/[0.10]"
+            className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg object-cover flex-shrink-0 border border-white/[0.10]"
             loading="lazy"
           />
           <p className="text-base text-fg-muted leading-relaxed max-w-prose">
@@ -163,16 +163,16 @@ const AboutMe = () => {
             {links.map((link) => {
               const Icon = link.icon as React.ComponentType<{ size: number }>;
               const inner = (
-                <span className="inline-flex items-center gap-3 px-3 py-2 w-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.10] hover:border-accent/40 rounded-md transition-colors group">
+                <span className="inline-flex items-center gap-2 sm:gap-3 px-2.5 sm:px-3 py-2 w-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.10] hover:border-accent/40 rounded-md transition-colors group">
                   <Icon size={14} />
-                  <span className="text-fg-dim w-20 flex-shrink-0 text-xs uppercase tracking-wider">
+                  <span className="text-fg-dim w-16 sm:w-20 flex-shrink-0 text-[10px] sm:text-xs uppercase tracking-wider">
                     {link.key}
                   </span>
-                  <span className="text-fg-muted group-hover:text-accent transition-colors truncate">
+                  <span className="text-fg-muted group-hover:text-accent transition-colors truncate text-xs sm:text-sm min-w-0">
                     {link.label}
                   </span>
                   {link.href && (
-                    <span className="ml-auto text-fg-dim group-hover:text-accent transition-colors text-xs" aria-hidden>
+                    <span className="ml-auto text-fg-dim group-hover:text-accent transition-colors text-xs flex-shrink-0" aria-hidden>
                       ↗
                     </span>
                   )}

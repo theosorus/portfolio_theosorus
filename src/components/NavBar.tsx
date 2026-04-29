@@ -14,16 +14,16 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full h-14 flex items-center justify-between px-6 z-50 bg-bg/85 backdrop-blur-md border-b border-white/[0.08]">
+    <nav className="fixed top-0 left-0 w-full h-14 flex items-center justify-between px-4 sm:px-6 z-50 bg-bg/85 backdrop-blur-md border-b border-white/[0.08]">
       <a
         href="#home"
-        className="text-base md:text-lg text-fg hover:text-accent transition-colors"
+        className="text-sm sm:text-base md:text-lg text-fg hover:text-accent transition-colors truncate min-w-0"
         style={{ fontFamily: 'var(--font-domine)' }}
       >
         Théo Castillo
       </a>
 
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-3 sm:gap-6 flex-shrink-0">
         <div className="hidden md:flex items-center gap-5">
           {navLinks.map((link) => (
             <a

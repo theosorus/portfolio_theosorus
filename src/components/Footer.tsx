@@ -26,7 +26,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full max-w-3xl mx-auto px-6 pt-10 pb-12 mt-12 border-t border-white/[0.08]">
+    <footer className="w-full max-w-3xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10 pb-10 sm:pb-12 mt-8 sm:mt-12 border-t border-white/[0.08]">
       <div
         className="flex flex-col gap-6 text-xs"
         style={{ fontFamily: 'var(--font-mono)' }}

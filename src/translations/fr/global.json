@@ -20,6 +20,8 @@
         "status": "Toulouse / Bordeaux, France",
         "name_full": "Théo Castillo",
         "role_line": "Ingénieur Informatique @ ENSEEIHT  |  Ingénieur IA/ML @ CNES",
+        "role_part1": "Ingénieur Informatique @ ENSEEIHT",
+        "role_part2": "Ingénieur IA/ML @ CNES",
         "bio_intro": "Je suis apprenti ingénieur au CNES (Centre National d'Études Spatiales), je travaille sur l'",
         "bio_ai": "Intelligence Artificielle",
         "bio_bridge": " appliquée, à l'intersection de la ",

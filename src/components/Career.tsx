@@ -62,7 +62,7 @@ const Career = () => {
   return (
     <section
       id="career"
-      className="w-full max-w-3xl mx-auto px-6 py-20 md:py-24"
+      className="w-full max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24"
     >
       <h2
         className="text-2xl md:text-3xl mb-8"
@@ -85,15 +85,15 @@ const Career = () => {
           return (
             <article
               key={index}
-              className="relative bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.08] hover:border-white/[0.15] rounded-lg p-5 md:p-6 transition-colors duration-300"
+              className="relative bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.08] hover:border-white/[0.15] rounded-lg p-4 sm:p-5 md:p-6 transition-colors duration-300"
             >
-              <div className="flex items-start justify-between gap-4 mb-3">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-3">
                 <div className="flex items-start gap-3 flex-1 min-w-0">
                   {item.image && (
                     <img
                       src={item.image}
                       alt=""
-                      className="w-9 h-9 object-contain flex-shrink-0"
+                      className="w-8 h-8 sm:w-9 sm:h-9 object-contain flex-shrink-0"
                       loading="lazy"
                     />
                   )}
@@ -104,7 +104,7 @@ const Career = () => {
                 </div>
 
                 <div
-                  className="flex items-center gap-2 text-xs text-fg-muted flex-shrink-0 whitespace-nowrap"
+                  className="flex items-center gap-2 text-[11px] sm:text-xs text-fg-muted flex-shrink-0 whitespace-nowrap pl-11 sm:pl-0"
                   style={{ fontFamily: 'var(--font-mono)' }}
                 >
                   {ongoing && (
