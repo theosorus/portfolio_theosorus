@@ -7,6 +7,7 @@ import Career from "./components/Career";
 import Footer from "./components/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Analytics } from "@vercel/analytics/next"
 // import Skills from "./components/Skills";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,7 +18,10 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   return (
     <>
+    <Analytics />
+
       <main className="flex flex-col items-center pt-14">
+
         <NavBar />
         
         <LandPage />
