@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Download, Check } from 'lucide-react';
+import { Mail, Github, Linkedin, Download, Check, Eye } from 'lucide-react';
 import hobbiesInterestData from '../data/hobbies_interest.json';
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -36,17 +36,22 @@ export const AboutMe = () => {
     }
   };
 
-  const handleDownloadCV = () => {
+  const getCVFileName = () => {
     const currentLang = i18n.language;
-    console.log('Langue détectée:', currentLang);
+    return currentLang === 'fr' ? 'cv_tcastillo_fr.pdf' : 'resume_tcastillo_en.pdf';
+  };
 
-    const fileName = currentLang === 'fr' ? 'cv_tcastillo_fr.pdf' : 'resume_tcastillo_en.pdf';
-
-    console.log('Fichier à télécharger:', fileName);
+  const handleDownloadCV = () => {
+    const fileName = getCVFileName();
     const link = document.createElement('a');
     link.href = `/cv/${fileName}`;
     link.download = fileName;
     link.click();
+  };
+
+  const handleViewCV = () => {
+    const fileName = getCVFileName();
+    window.open(`/cv/${fileName}`, '_blank', 'noopener,noreferrer');
   };
 
   const { interests, hobbies } = hobbiesInterestData as {
@@ -125,13 +130,23 @@ export const AboutMe = () => {
                 </p>
               </div>
 
-              <button
-                onClick={handleDownloadCV}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
-              >
-                <Download size={16} />
-                {t('aboutme.download_cv')}
-              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={handleDownloadCV}
+                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
+                >
+                  <Download size={16} />
+                  {t('aboutme.download_cv')}
+                </button>
+                <button
+                  onClick={handleViewCV}
+                  aria-label={t('aboutme.view_cv')}
+                  title={t('aboutme.view_cv')}
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2.5 rounded-lg transition-all duration-300 hover:scale-105 flex items-center justify-center"
+                >
+                  <Eye size={16} />
+                </button>
+              </div>
             </div>
           </div>
 
