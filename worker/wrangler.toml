@@ -3,5 +3,5 @@ main = "src/index.ts"
 compatibility_date = "2024-09-23"
 
 [vars]
-ALLOWED_ORIGIN = "https://tcastillo.me"
+ALLOWED_ORIGINS = "https://tcastillo.me,https://preview.tcastillo.me,http://localhost:5173"
 CACHE_TTL_SECONDS = "600"
