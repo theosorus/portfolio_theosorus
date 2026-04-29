@@ -15,9 +15,11 @@
             "Analyse des besoins métiers et identification de cas d'usages pertinents pour l'intégration de l'IA dans le domaine spatial (contrôle d'outils robotisés, monitoring cognitif d'opérateurs et d'astronautes)",
             "État de l'art des technologies d'interfaces cerveau-machine appliquées au domaine spatial"
         ],
-        "tags": ["company"],
+        "tags": ["company", "apprenticeship"],
         "image": "./career/cnes.png",
-        "location": "CNES (Centre National d'Études Spatiales) - Toulouse, France"
+        "location": "CNES (Centre National d'Études Spatiales) - Toulouse, France",
+        "location_en": "CNES (French Space Agency) - Toulouse, France",
+        "location_fr": "CNES (Centre National d'Études Spatiales) - Toulouse, France"
     },
     {
         "start_date": "September 2026",
@@ -55,7 +57,7 @@
             "Conteneurisation avec Docker, mise en place de chaînes CI/CD pour un déploiement robuste",
             "Gestion itérative des retours clients et adaptation continue des solutions déployées"
         ],
-        "tags": ["company"],
+        "tags": ["company", "apprenticeship"],
         "image": "./career/wearegenial_logo.jpg",
         "location": "Genial - Bordeaux, France"
     },
