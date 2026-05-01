@@ -85,7 +85,7 @@ const Career = () => {
           return (
             <article
               key={index}
-              className="relative bg-white/95 hover:bg-white border border-white/20 rounded-lg p-4 sm:p-5 md:p-6 transition-colors duration-300 shadow-sm hover:shadow-md"
+              className="relative bg-white border border-white/20 rounded-lg p-4 sm:p-5 md:p-6 shadow-sm"
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-3">
                 <div className="flex items-start gap-3 flex-1 min-w-0">
@@ -138,7 +138,7 @@ const Career = () => {
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[11px] tracking-wide text-white/90 bg-blue-600 px-2.5 py-[3px] rounded"
+                    className="text-[11px] tracking-wide text-gray-600 bg-gray-100 px-2 py-[3px] rounded"
                     style={{ fontFamily: 'var(--font-domine)' }}
                   >
                     {t(`career.tags.${tag}`)}
@@ -148,10 +148,10 @@ const Career = () => {
                   <a
                     href={item.report}
                     download
-                    className="ml-auto text-xs text-gray-400 hover:text-gray-700 transition-colors"
+                    className="ml-auto inline-flex items-center gap-1.5 text-[11px] text-gray-600 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 border border-gray-200 px-3 py-1.5 rounded transition-colors"
                     style={{ fontFamily: 'var(--font-mono)' }}
                   >
-                    [{t('career.download_report')} <span aria-hidden>↗</span>]
+                    {t('career.download_report')} <span aria-hidden>↗</span>
                   </a>
                 )}
               </div>
