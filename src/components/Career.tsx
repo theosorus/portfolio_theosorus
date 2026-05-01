@@ -138,8 +138,8 @@ const Career = () => {
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[11px] uppercase tracking-wider text-gray-700 border border-gray-300 bg-gray-100 px-2.5 py-1 rounded-md font-medium"
-                    style={{ fontFamily: 'var(--font-mono)' }}
+                    className="text-[11px] tracking-wide text-white/90 bg-blue-600 px-2.5 py-[3px] rounded"
+                    style={{ fontFamily: 'var(--font-domine)' }}
                   >
                     {t(`career.tags.${tag}`)}
                   </span>
