@@ -98,7 +98,7 @@ const Career = () => {
                     />
                   )}
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base md:text-lg text-gray-900 leading-snug font-medium">{title}</h3>
+                    <h3 className="text-base md:text-lg text-gray-900 leading-snug font-semibold">{title}</h3>
                     <p className="text-sm text-gray-500">{location}</p>
                   </div>
                 </div>
