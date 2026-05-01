@@ -76,7 +76,7 @@ const Projects = () => {
 
               <div className="flex flex-col flex-1 px-4 py-4 gap-2">
                 <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="text-sm text-fg leading-tight font-medium truncate">
+                  <h3 className="text-sm text-fg leading-tight font-medium">
                     {t(`projects.${project.id}.title`)}
                   </h3>
                   <span
@@ -87,7 +87,7 @@ const Projects = () => {
                   </span>
                 </div>
 
-                <p className="text-xs text-fg-muted leading-relaxed line-clamp-3">
+                <p className="text-xs text-fg-muted leading-relaxed">
                   {t(`projects.${project.id}.description`)}
                 </p>
 
