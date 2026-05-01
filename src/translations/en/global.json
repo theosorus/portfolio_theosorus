@@ -35,7 +35,12 @@
     },
     "aboutme": {
         "section_title": "About",
-        "about_paragraph": "I'm Théo Castillo, engineering apprentice at ENSEEIHT (Toulouse INP) and AI/ML engineer at CNES, where I build tools to process and classify brain signals with deep learning. More broadly, I'm interested in turning research ideas into systems that actually run in production.",
+        "name": "Théo Castillo",
+        "description_before_age": "I'm",
+        "years_old": "years old",
+        "countdown_prefix": "for",
+        "countdown_days": "d",
+        "description_after_age": "engineering apprentice at ENSEEIHT & AI/ML engineer at CNES.",
         "interest_title": "interests",
         "hobbies_title": "outside work",
         "interests": {
@@ -55,6 +60,10 @@
             "running": "Running"
         },
         "all_links": "links",
+        "working_on_title": "currently working on",
+        "working_on_description": "Deep learning applied to brain signal classification at CNES. Computer science & applied mathematics at ENSEEIHT.",
+        "future_title": "for the future",
+        "future_description": "Engineering degree at ENSEEIHT. Keep bridging AI research and production.",
         "download_cv": "download",
         "view_cv": "view",
         "copied": "copied"

@@ -35,7 +35,12 @@
     },
     "aboutme": {
         "section_title": "Profil",
-        "about_paragraph": "Je suis Théo Castillo, apprenti ingénieur à l'ENSEEIHT (Toulouse INP) et ingénieur IA/ML au CNES, où je conçois des outils de traitement et de classification de signaux cérébraux par deep learning. Plus largement, je m'intéresse au passage des idées de recherche à des systèmes qui tournent vraiment en production.",
+        "name": "Théo Castillo",
+        "description_before_age": "J'ai",
+        "years_old": "ans",
+        "countdown_prefix": "encore",
+        "countdown_days": "j",
+        "description_after_age": "apprenti ingénieur à l'ENSEEIHT & ingénieur IA/ML au CNES.",
         "interest_title": "centres d'intérêt",
         "hobbies_title": "hors travail",
         "interests": {
@@ -55,6 +60,10 @@
             "running": "Running"
         },
         "all_links": "liens",
+        "working_on_title": "en ce moment",
+        "working_on_description": "Deep learning appliqué à la classification de signaux cérébraux au CNES. Informatique & mathématiques appliquées à l'ENSEEIHT.",
+        "future_title": "pour l'avenir",
+        "future_description": "Diplôme d'ingénieur à l'ENSEEIHT. Continuer à faire le pont entre recherche IA et production.",
         "download_cv": "télécharger",
         "view_cv": "voir",
         "copied": "copié"
