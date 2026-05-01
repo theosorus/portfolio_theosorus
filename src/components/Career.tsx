@@ -62,7 +62,7 @@ const Career = () => {
   return (
     <section
       id="career"
-      className="w-full max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24"
+      className="w-full max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24"
     >
       <h2
         className="text-2xl md:text-3xl mb-8"
@@ -85,7 +85,7 @@ const Career = () => {
           return (
             <article
               key={index}
-              className="relative bg-white/[0.03] hover:bg-white/[0.05] border border-white/[0.08] hover:border-white/[0.15] rounded-lg p-4 sm:p-5 md:p-6 transition-colors duration-300"
+              className="relative bg-white/95 hover:bg-white border border-white/20 rounded-lg p-4 sm:p-5 md:p-6 transition-colors duration-300 shadow-sm hover:shadow-md"
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-3">
                 <div className="flex items-start gap-3 flex-1 min-w-0">
@@ -98,19 +98,19 @@ const Career = () => {
                     />
                   )}
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base md:text-lg text-fg leading-snug">{title}</h3>
-                    <p className="text-sm text-fg-muted">{location}</p>
+                    <h3 className="text-base md:text-lg text-gray-900 leading-snug font-medium">{title}</h3>
+                    <p className="text-sm text-gray-500">{location}</p>
                   </div>
                 </div>
 
                 <div
-                  className="flex items-center gap-2 text-[11px] sm:text-xs text-fg-muted flex-shrink-0 whitespace-nowrap pl-11 sm:pl-0"
+                  className="flex items-center gap-2 text-[11px] sm:text-xs text-gray-400 flex-shrink-0 whitespace-nowrap pl-11 sm:pl-0"
                   style={{ fontFamily: 'var(--font-mono)' }}
                 >
                   {ongoing && (
                     <span className="relative flex h-1.5 w-1.5" aria-hidden>
-                      <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-50 animate-ping" />
-                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-50 animate-ping" />
+                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
                     </span>
                   )}
                   <span>{dateRange}</span>
@@ -118,10 +118,10 @@ const Career = () => {
               </div>
 
               {bullets && bullets.length > 0 && (
-                <ul className="text-sm text-fg-muted leading-relaxed space-y-1.5 mb-3 list-none">
+                <ul className="text-sm text-gray-600 leading-relaxed space-y-1.5 mb-3 list-none">
                   {bullets.map((b, i) => (
                     <li key={i} className="flex gap-2">
-                      <span className="text-accent flex-shrink-0">·</span>
+                      <span className="text-gray-900 flex-shrink-0 font-bold">·</span>
                       <span>{b}</span>
                     </li>
                   ))}
@@ -129,7 +129,7 @@ const Career = () => {
               )}
 
               {!bullets && getLocalizedField(item, 'description') && (
-                <p className="text-sm text-fg-muted leading-relaxed mb-3">
+                <p className="text-sm text-gray-600 leading-relaxed mb-3">
                   {getLocalizedField(item, 'description')}
                 </p>
               )}
@@ -138,7 +138,7 @@ const Career = () => {
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[11px] uppercase tracking-wider text-accent border border-accent/30 bg-accent/10 px-2.5 py-1 rounded-md"
+                    className="text-[11px] uppercase tracking-wider text-gray-700 border border-gray-300 bg-gray-100 px-2.5 py-1 rounded-md font-medium"
                     style={{ fontFamily: 'var(--font-mono)' }}
                   >
                     {t(`career.tags.${tag}`)}
@@ -148,7 +148,7 @@ const Career = () => {
                   <a
                     href={item.report}
                     download
-                    className="ml-auto text-xs text-fg-muted hover:text-accent transition-colors"
+                    className="ml-auto text-xs text-gray-400 hover:text-gray-700 transition-colors"
                     style={{ fontFamily: 'var(--font-mono)' }}
                   >
                     [{t('career.download_report')} <span aria-hidden>↗</span>]

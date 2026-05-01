@@ -61,7 +61,6 @@ const Projects = () => {
           const demoUrl = project.links?.find(
             (l) => l && l !== 'none' && !isGithubUrl(l),
           );
-          const tagNames = project.tags.map((tag) => tag.name);
           const cardLink = primaryUrl && primaryUrl !== 'none' ? primaryUrl : undefined;
 
           const card = (
@@ -92,13 +91,43 @@ const Projects = () => {
                   {t(`projects.${project.id}.description`)}
                 </p>
 
-                {tagNames.length > 0 && (
-                  <p
-                    className="text-[10px] text-fg-dim leading-snug line-clamp-1"
-                    style={{ fontFamily: 'var(--font-mono)' }}
-                  >
-                    {tagNames.slice(0, 4).join(' · ')}
-                  </p>
+                {project.tags.length > 0 && (
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    {project.tags.slice(0, 5).map((tag) => (
+                      <span
+                        key={tag.name}
+                        className="relative group/tag"
+                      >
+                        {tag.image ? (
+                          <img
+                            src={tag.image}
+                            alt={tag.name}
+                            className="w-4 h-4 rounded-sm object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-200"
+                          />
+                        ) : (
+                          <span
+                            className="text-[9px] text-fg-dim px-1.5 py-0.5 bg-white/[0.04] border border-white/[0.08] rounded"
+                            style={{ fontFamily: 'var(--font-mono)' }}
+                          >
+                            {tag.name}
+                          </span>
+                        )}
+                        <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-1.5 py-0.5 text-[9px] text-fg-muted bg-bg-elevated border border-white/[0.10] rounded whitespace-nowrap opacity-0 group-hover/tag:opacity-100 transition-opacity duration-150 pointer-events-none z-10"
+                          style={{ fontFamily: 'var(--font-mono)' }}
+                        >
+                          {tag.name}
+                        </span>
+                      </span>
+                    ))}
+                    {project.tags.length > 5 && (
+                      <span
+                        className="text-[9px] text-fg-dim opacity-60"
+                        style={{ fontFamily: 'var(--font-mono)' }}
+                      >
+                        +{project.tags.length - 5}
+                      </span>
+                    )}
+                  </div>
                 )}
 
                 <div
