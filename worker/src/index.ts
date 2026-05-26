@@ -1,6 +1,6 @@
 interface Env {
   GITHUB_TOKEN: string;
-  ALLOWED_ORIGIN: string;
+  ALLOWED_ORIGINS: string;
   CACHE_TTL_SECONDS: string;
 }
 
@@ -86,8 +86,8 @@ export default {
 
 function getAllowedOrigin(request: Request, env: Env): string {
   const origin = request.headers.get('Origin') || '';
-  const allowed = [env.ALLOWED_ORIGIN, 'http://localhost:5173'];
-  return allowed.includes(origin) ? origin : env.ALLOWED_ORIGIN;
+  const allowed = env.ALLOWED_ORIGINS.split(',').map((o) => o.trim());
+  return allowed.includes(origin) ? origin : allowed[0];
 }
 
 function corsResponse(request: Request, env: Env, response: Response): Response {
