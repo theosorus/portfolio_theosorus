@@ -1,6 +1,56 @@
 {
     "projects": [
         {
+            "id": "quelimpact",
+            "date": 2026,
+            "type": "Hackathon",
+            "title": "QuelImpact: French National Assembly AI Hackathon",
+            "description": "Challenge owner at the French National Assembly's AI Hackathon: AI agents translate legislative amendments into OpenFisca simulations through a public web app showing their real impact on your household budget.",
+            "tags": [
+                {
+                    "name": "React",
+                    "url": "https://react.dev/",
+                    "image": "./skills/react.png"
+                },
+                {
+                    "name": "TypeScript",
+                    "url": "https://www.typescriptlang.org/",
+                    "image": "./skills/ts.png"
+                },
+                {
+                    "name": "Tailwind",
+                    "url": "https://tailwindcss.com/",
+                    "image": "./skills/Tailwind.png"
+                },
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "FastAPI",
+                    "url": "",
+                    "image": "./skills/fastapi.png"
+                },
+                {
+                    "name": "MCP",
+                    "url": "",
+                    "image": "./skills/mcp.png"
+                }
+            ],
+            "links": [
+                "https://github.com/theosorus/QuelImpact",
+                "https://github.com/theosorus/QuelImpact",
+                "https://quelimpact.tcastillo.me"
+            ],
+            "image": "./projects/hackaton-an.jpeg",
+            "categories": [
+                "Personal",
+                "AI",
+                "Web"
+            ]
+        },
+        {
             "id": "veridisquo",
             "date": 2025,
             "type": "Personal Project",

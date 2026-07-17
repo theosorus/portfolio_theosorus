@@ -83,6 +83,10 @@
     },
     "projects": {
         "title": "Projets",
+        "quelimpact": {
+            "title": "QuelImpact : Hackathon IA de l'Assemblée nationale",
+            "description": "Porteur du défi au Hackathon IA de l'Assemblée nationale : des agents IA traduisent les amendements en simulations OpenFisca (via MCP), au service d'une application web ouverte à tous pour comprendre l'impact réel d'un amendement sur son foyer."
+        },
         "snake_ai": {
             "title": "Snake IA",
             "description": "Création du jeu Snake et d'une IA qui apprend à jouer au jeu en utilisant l'apprentissage par renforcement profond avec PyTorch et Pygame."

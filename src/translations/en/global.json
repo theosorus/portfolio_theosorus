@@ -83,6 +83,10 @@
     },
     "projects": {
     "title": "Projects",
+        "quelimpact": {
+            "title": "QuelImpact: French National Assembly AI Hackathon",
+            "description": "Challenge owner at the French National Assembly's AI Hackathon: AI agents translate legislative amendments into OpenFisca simulations (via MCP), powering a public web app that shows the real impact of an amendment on your household."
+        },
         "snake_ai": {
             "title": "Snake AI",
             "description": "Creation of the Snake game and an AI that learns to play the game using deep reinforcement learning with PyTorch and Pygame."
