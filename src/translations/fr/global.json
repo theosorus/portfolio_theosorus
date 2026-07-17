@@ -187,6 +187,10 @@
             "title": "GPT2 en Haskell",
             "description": "Implémentation de GPT2 en Haskell avec la bibliothèque Hasktorch, inspirée de l'implémentation PyTorch d'Andrej Karpathy."
         },
+        "yolo_vs_cnn": {
+            "title": "YOLO vs CNN",
+            "description": "Comparaison entre YOLOv11 et un CNN personnalisé pour la détection et la localisation d'objets en 3D à l'aide d'une caméra Intel RealSense D435i."
+        },
         "formula_tracker": {
             "title": "Formula Tracker",
             "description": "Entraîner un modèle YOLO sur un dataset personnalisé de Formule 1 afin de détecter les voitures selon leur écurie."

@@ -167,6 +167,45 @@
                 "AI"
             ]
         },
+        {
+            "id": "yolo_vs_cnn",
+            "date": 2026,
+            "type": "School Project",
+            "title": "YOLO vs CNN",
+            "description": "Comparison of YOLOv11 and a custom CNN for 3D object detection and localization with an Intel RealSense D435i camera.",
+            "tags": [
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "Yolo",
+                    "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
+                    "image": "./skills/yolo.png"
+                },
+                {
+                    "name": "PyTorch",
+                    "url": "https://pytorch.org/",
+                    "image": "./skills/pytorch.png"
+                },
+                {
+                    "name": "OpenCv",
+                    "url": "https://opencv.org/",
+                    "image": "./skills/opencv.png"
+                }
+            ],
+            "links": [
+                "none",
+                "none",
+                "none"
+            ],
+            "image": "./projects/customCNN.gif",
+            "categories": [
+                "School",
+                "AI"
+            ]
+        },
          {
             "id": "mcp-drawing",
             "date": 2024,
