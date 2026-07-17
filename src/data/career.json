@@ -15,15 +15,11 @@
             "Analyse des besoins métiers et identification de cas d'usages pertinents pour l'intégration de l'IA dans le domaine spatial (contrôle d'outils robotisés, monitoring cognitif d'opérateurs et d'astronautes)",
             "État de l'art des technologies d'interfaces cerveau-machine appliquées au domaine spatial"
         ],
-        "tags": [
-            "company",
-            "apprenticeship"
-        ],
+        "tags": ["company", "apprenticeship"],
         "image": "./career/cnes.png",
         "location": "CNES (Centre National d'Études Spatiales) - Toulouse, France",
         "location_en": "CNES (French Space Agency) - Toulouse, France",
-        "location_fr": "CNES (Centre National d'Études Spatiales) - Toulouse, France",
-        "group": "experience"
+        "location_fr": "CNES (Centre National d'Études Spatiales) - Toulouse, France"
     },
     {
         "start_date": "September 2026",
@@ -39,12 +35,9 @@
             "Diplôme d'ingénieur par apprentissage, spécialité Systèmes Numériques (SN), en partenariat avec le CNES",
             "IA et apprentissage automatique, génie logiciel, traitement du signal et de l'image, cloud, réseaux, cybersécurité"
         ],
-        "tags": [
-            "university"
-        ],
+        "tags": ["university"],
         "image": "./career/n7.jpg",
-        "location": "ENSEEIHT (N7) - Toulouse, France",
-        "group": "education"
+        "location": "ENSEEIHT (N7) - Toulouse, France"
     },
     {
         "start_date": "September 2025",
