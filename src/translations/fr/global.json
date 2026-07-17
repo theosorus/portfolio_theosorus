@@ -186,7 +186,7 @@
             "title": "MiniShell",
             "description": "Création d'un shell interactif en C, directement dans le terminal, capable d'exécuter des commandes de base et d'exécuter des commandes externes."
         },
-         "hask_gpt": {
+        "hask_gpt": {
             "title": "GPT2 en Haskell",
             "description": "Implémentation de GPT2 en Haskell avec la bibliothèque Hasktorch, inspirée de l'implémentation PyTorch d'Andrej Karpathy."
         },
@@ -232,6 +232,6 @@
             "School Project": "Projet Scolaire",
             "Professional Project": "Projet Professionnel"
         },
-        "view_all_button" : "Voir tous mes projets"
+        "view_all_button": "Voir tous mes projets"
     }
 }
