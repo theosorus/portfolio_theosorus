@@ -1,6 +1,54 @@
 {
     "projects": [
         {
+            "id": "nanodeploy",
+            "date": 2026,
+            "type": "Personal Project",
+            "title": "Nanodeploy",
+            "description": "Self-hosted mini-Vercel for a 4 GB home server. Apps sleep at zero RAM and wake in a second, behind one login and one shared Postgres. Ships with a Claude skill that builds and deploys new apps from a prompt.",
+            "tags": [
+                {
+                    "name": "Docker",
+                    "url": "https://www.docker.com/",
+                    "image": "./skills/docker.png"
+                },
+                {
+                    "name": "TypeScript",
+                    "url": "https://www.typescriptlang.org/",
+                    "image": "./skills/ts.png"
+                },
+                {
+                    "name": "Node.js",
+                    "url": "https://nodejs.org/",
+                    "image": "./skills/nodejs.png"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "url": "https://www.postgresql.org/",
+                    "image": "./skills/Postgresql.png"
+                },
+                {
+                    "name": "React",
+                    "url": "https://react.dev/",
+                    "image": "./skills/react.png"
+                },
+                {
+                    "name": "Caddy",
+                    "url": "https://caddyserver.com/",
+                    "image": ""
+                }
+            ],
+            "links": [
+                "https://github.com/theosorus/nanodeploy"
+            ],
+            "image": "./projects/nanodeploy.png",
+            "categories": [
+                "Personal",
+                "Web",
+                "Software"
+            ]
+        },
+        {
             "id": "quelimpact",
             "date": 2026,
             "type": "Hackathon",
@@ -78,9 +126,9 @@
                     "image": "./skills/opencv.png"
                 },
                 {
-                "name": "FastAPI",
-                 "url": "",
-                 "image": "./skills/fastapi.png"
+                    "name": "FastAPI",
+                    "url": "",
+                    "image": "./skills/fastapi.png"
                 }
             ],
             "links": [
@@ -206,7 +254,7 @@
                 "AI"
             ]
         },
-         {
+        {
             "id": "mcp-drawing",
             "date": 2025,
             "type": "Personal Project",
@@ -255,7 +303,7 @@
                 "AI"
             ]
         },
-         {
+        {
             "id": "mcp-terraform",
             "date": 2026,
             "type": "School Project",
