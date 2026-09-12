@@ -23,7 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-.env
+# Every variant, not just .env: a .env.production would otherwise be committed.
+.env*
 
 .agents/
 skills-lock.json
