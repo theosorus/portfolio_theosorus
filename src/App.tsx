@@ -20,8 +20,11 @@ declare global {
 }
 
 // Exposed for debugging from the browser console; no code reads these.
-window.gsap = gsap;
-window.ScrollTrigger = ScrollTrigger;
+// Guarded because the prerender step evaluates this module under Node.
+if (typeof window !== 'undefined') {
+  window.gsap = gsap;
+  window.ScrollTrigger = ScrollTrigger;
+}
 
 function App() {
   return (
