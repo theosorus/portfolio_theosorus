@@ -236,6 +236,10 @@
         "nanodeploy": {
             "title": "Nanodeploy",
             "description": "Un mini-Vercel auto-hébergé pour un serveur maison de 4 Go. Les apps dorment à zéro RAM et se réveillent en une seconde, derrière un seul compte et un Postgres mutualisé. Livré avec une skill Claude qui code et déploie de nouvelles apps à partir d'une simple phrase."
+        },
+        "td-factory-harness": {
+            "title": "TouchDesigner Factory Harness",
+            "description": "Un harnais d'agents pour TouchDesigner, piloté par contrat. Un premier agent transforme une phrase en contrat de build validé, un humain l'approuve, puis un second agent construit le projet via MCP et vérifie chaque étape sur des critères mesurés : aucune erreur d'opérateur, une capture ni noire ni plate, un fps au-dessus du plancher."
         }
     }
 }

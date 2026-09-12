@@ -1,6 +1,44 @@
 {
     "projects": [
         {
+            "id": "td-factory-harness",
+            "date": 2026,
+            "type": "Personal Project",
+            "title": "TouchDesigner Factory Harness",
+            "description": "A contract-first agent harness for TouchDesigner. One agent turns a sentence into a validated build contract, a human approves it, then a second agent builds the project over MCP and verifies every stage against measured gates: no operator errors, a capture that is neither black nor flat, fps above the floor.",
+            "tags": [
+                {
+                    "name": "TouchDesigner",
+                    "url": "https://derivative.ca/",
+                    "image": ""
+                },
+                {
+                    "name": "Python",
+                    "url": "https://www.python.org/",
+                    "image": "./skills/python.png"
+                },
+                {
+                    "name": "MCP",
+                    "url": "",
+                    "image": "./skills/mcp.png"
+                },
+                {
+                    "name": "GLSL",
+                    "url": "",
+                    "image": "./skills/opengl.png"
+                }
+            ],
+            "links": [
+                "https://github.com/theosorus/touchdesigner-factory-harness"
+            ],
+            "image": "./projects/td-factory-harness.jpg",
+            "categories": [
+                "Personal",
+                "AI",
+                "Software"
+            ]
+        },
+        {
             "id": "nanodeploy",
             "date": 2026,
             "type": "Personal Project",
