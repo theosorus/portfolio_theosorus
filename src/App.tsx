@@ -12,8 +12,16 @@ import { Analytics } from "@vercel/analytics/react"
 
 gsap.registerPlugin(ScrollTrigger);
 
-(window as any).gsap = gsap;
-(window as any).ScrollTrigger = ScrollTrigger;
+declare global {
+  interface Window {
+    gsap: typeof gsap;
+    ScrollTrigger: typeof ScrollTrigger;
+  }
+}
+
+// Exposed for debugging from the browser console; no code reads these.
+window.gsap = gsap;
+window.ScrollTrigger = ScrollTrigger;
 
 function App() {
   return (
