@@ -10,21 +10,23 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const { render } = await import(resolve(root, 'dist-ssr/entry-server.js'));
+const { renderHome, renderLegal } = await import(resolve(root, 'dist-ssr/entry-server.js'));
 
-const appHtml = render();
-
-const indexPath = resolve(root, 'dist/index.html');
-const template = await readFile(indexPath, 'utf-8');
+const pages = [
+  ['dist/index.html', renderHome],
+  ['dist/mentions-legales.html', renderLegal],
+];
 
 const marker = '<div id="root"></div>';
-if (!template.includes(marker)) {
-  throw new Error(`prerender: expected to find ${marker} in dist/index.html`);
+for (const [relPath, renderFn] of pages) {
+  const html = renderFn();
+  const path = resolve(root, relPath);
+  const template = await readFile(path, 'utf-8');
+  if (!template.includes(marker)) {
+    throw new Error(`prerender: expected to find ${marker} in ${relPath}`);
+  }
+  await writeFile(path, template.replace(marker, `<div id="root">${html}</div>`));
+  console.log('prerendered %s (%d chars of markup inlined)', relPath, html.length);
 }
 
-const finalHtml = template.replace(marker, `<div id="root">${appHtml}</div>`);
-await writeFile(indexPath, finalHtml);
-
 await rm(resolve(root, 'dist-ssr'), { recursive: true, force: true });
-
-console.log('prerendered dist/index.html (%d chars of markup inlined)', appHtml.length);

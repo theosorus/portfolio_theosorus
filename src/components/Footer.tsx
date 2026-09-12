@@ -32,8 +32,15 @@ const Footer = () => {
         style={{ fontFamily: 'var(--font-mono)' }}
       >
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <div className="text-fg-muted">
-            Théo Castillo · {currentYear}
+          <div className="text-fg-muted flex items-center gap-2">
+            <span>Théo Castillo · {currentYear}</span>
+            <span className="text-fg-dim">·</span>
+            <a
+              href="/mentions-legales.html"
+              className="text-fg-dim hover:text-accent transition-colors"
+            >
+              {t('footer.legal_notice_link')}
+            </a>
           </div>
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             <a
