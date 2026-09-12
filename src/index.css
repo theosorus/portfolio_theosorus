@@ -28,6 +28,14 @@ html {
 @font-face {
   font-family: 'Domine';
   src: url('/fonts/domine/Domine-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/jetbrains-mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 800;
+  font-display: swap;
 }
 
 body {
