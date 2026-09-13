@@ -240,7 +240,7 @@
         },
         "td-factory-harness": {
             "title": "TouchDesigner Factory Harness",
-            "description": "Un harnais d'agents pour TouchDesigner, piloté par contrat. Un premier agent transforme une phrase en contrat de build validé, un humain l'approuve, puis un second agent construit le projet via MCP et vérifie chaque étape sur des critères mesurés : aucune erreur d'opérateur, une capture ni noire ni plate, un fps au-dessus du plancher."
+            "description": "Deux agents IA qui transforment une phrase en projet TouchDesigner fonctionnel : l'un planifie, l'autre construit via MCP, le tout vérifié automatiquement par des critères de qualité réels."
         }
     },
     "legal_notice": {

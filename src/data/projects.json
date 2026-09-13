@@ -5,7 +5,7 @@
             "date": 2026,
             "type": "Personal Project",
             "title": "TouchDesigner Factory Harness",
-            "description": "A contract-first agent harness for TouchDesigner. One agent turns a sentence into a validated build contract, a human approves it, then a second agent builds the project over MCP and verifies every stage against measured gates: no operator errors, a capture that is neither black nor flat, fps above the floor.",
+            "description": "Two AI agents that turn a text prompt into a working TouchDesigner project — one plans, one builds over MCP, both verified automatically against real quality gates.",
             "tags": [
                 {
                     "name": "TouchDesigner",
