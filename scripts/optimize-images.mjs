@@ -17,7 +17,7 @@ const jobs = [
   ['icons', 64, 82],     // same tag-chip treatment; menu/theme icons are already svg
   ['projects', 900, 82], // 4-col grid inside a 1152px container: ~280px wide, 3x covers retina
   ['career', 900, 82],
-  ['', 900, 90],         // top-level files: island.jpeg (hero photo), same retina margin
+  ['', 900, 90],         // top-level files (island.webp is handled separately as .webp is skipped below)
 ];
 
 let totalBefore = 0;
