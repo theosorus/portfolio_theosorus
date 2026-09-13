@@ -21,6 +21,28 @@ interface CareerItem {
   group?: string;
 }
 
+// `new Date("September 2026")` parses fine in Chrome but returns Invalid
+// Date in Firefox — "Month Year" isn't ISO 8601, so engines are free to
+// reject it. career.json stores dates exactly this way, so every ongoing/
+// upcoming check silently failed in Firefox. Parse "Month Year" ourselves
+// instead of trusting the engine's loose string parsing.
+const MONTH_NAMES: Record<string, number> = {
+  january: 0, february: 1, march: 2, april: 3, may: 4, june: 5,
+  july: 6, august: 7, september: 8, october: 9, november: 10, december: 11,
+};
+
+function parseLooseDate(value: string): Date | null {
+  const val = (value || '').trim();
+  if (!val) return null;
+  const match = val.match(/^([A-Za-z]+)\s+(\d{4})$/);
+  if (match) {
+    const month = MONTH_NAMES[match[1].toLowerCase()];
+    if (month !== undefined) return new Date(Number(match[2]), month, 1);
+  }
+  const d = new Date(val);
+  return isNaN(d.getTime()) ? null : d;
+}
+
 const Career = () => {
   const { t, i18n } = useTranslation('global');
   const lang = i18n.language?.startsWith('fr') ? 'fr' : 'en';
@@ -37,8 +59,8 @@ const Career = () => {
     if (!val) return t('career.present');
     const lower = val.toLowerCase();
     if (['present', 'présent', 'current', 'now'].includes(lower)) return t('career.present');
-    const d = new Date(val);
-    if (!isNaN(d.getTime())) {
+    const d = parseLooseDate(val);
+    if (d) {
       try {
         return new Intl.DateTimeFormat(i18n.language || 'en', {
           month: 'short',
@@ -54,16 +76,16 @@ const Career = () => {
   };
 
   const isUpcoming = (startDate: string): boolean => {
-    const d = new Date(startDate);
-    return !isNaN(d.getTime()) && d.getTime() > Date.now();
+    const d = parseLooseDate(startDate);
+    return d !== null && d.getTime() > Date.now();
   };
 
   const isOngoing = (item: CareerItem): boolean => {
     if (isUpcoming(item.start_date)) return false;
     const v = (item.end_date || '').toLowerCase();
     if (['present', 'présent', 'current', 'now', ''].includes(v)) return true;
-    const d = new Date(item.end_date);
-    return !isNaN(d.getTime()) && d.getTime() > Date.now();
+    const d = parseLooseDate(item.end_date);
+    return d !== null && d.getTime() > Date.now();
   };
 
   const renderCard = (item: CareerItem, index: number, compact = false) => {
@@ -75,11 +97,12 @@ const Career = () => {
     }`;
     const ongoing = isOngoing(item);
     const upcoming = isUpcoming(item.start_date);
+    const barClass = ongoing ? '!border-l-4 !border-l-accent' : '';
 
     return (
       <article
         key={index}
-        className="relative bg-white border border-white/20 rounded-lg p-4 sm:p-5 md:p-6 shadow-sm"
+        className={`relative bg-white border border-white/20 rounded-lg p-4 sm:p-5 md:p-6 shadow-sm ${barClass}`}
       >
         <div
           className={`flex flex-col gap-2 mb-3 ${
