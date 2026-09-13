@@ -79,7 +79,7 @@
             "links": [
                 "https://github.com/theosorus/nanodeploy"
             ],
-            "image": "./projects/nanodeploy.png",
+            "image": "./projects/nanodeploy.webp",
             "categories": [
                 "Personal",
                 "Web",
@@ -174,7 +174,7 @@
                 "https://github.com/VeridisQuo-orga/VeridisQuo",
                 "none"
             ],
-            "image": "./projects/veridisquo3.png",
+            "image": "./projects/veridisquo3.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -213,7 +213,7 @@
                 "https://github.com/theosorus/Argus",
                 "none"
             ],
-            "image": "./projects/argus3.png",
+            "image": "./projects/argus3.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -247,7 +247,7 @@
                 "https://github.com/theosorus/GPT2-Hasktorch",
                 "none"
             ],
-            "image": "./projects/HaskGPT.png",
+            "image": "./projects/HaskGPT.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -335,7 +335,7 @@
                 "https://github.com/theosorus/MCP-Drawing",
                 "none"
             ],
-            "image": "./projects/mcp2.png",
+            "image": "./projects/mcp2.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -367,7 +367,7 @@
             "links": [
                 "none"
             ],
-            "image": "./projects/mcp-terraform.png",
+            "image": "./projects/mcp-terraform.webp",
             "categories": [
                 "School",
                 "AI"
@@ -411,7 +411,7 @@
                 "https://github.com/theosorus/deep-rubiks",
                 "none"
             ],
-            "image": "./projects/rubiks2.png",
+            "image": "./projects/rubiks2.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -440,7 +440,7 @@
                 "https://github.com/theosorus/FormulaTracker",
                 "none"
             ],
-            "image": "./projects/formula_tracker.png",
+            "image": "./projects/formula_tracker.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -469,7 +469,7 @@
                 "https://github.com/theosorus/French-Language-Model",
                 "none"
             ],
-            "image": "./projects/llm.png",
+            "image": "./projects/llm.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -498,7 +498,7 @@
                 "https://github.com/theosorus/NeuralNetworkLibrary",
                 "none"
             ],
-            "image": "./projects/nn.png",
+            "image": "./projects/nn.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -527,7 +527,7 @@
                 "https://github.com/theosorus/NeuralStyleTransfert",
                 "none"
             ],
-            "image": "./projects/nst.png",
+            "image": "./projects/nst.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -556,7 +556,7 @@
                 "https://github.com/theosorus/Generative-Adversial-Network",
                 "none"
             ],
-            "image": "./projects/gan2.png",
+            "image": "./projects/gan2.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -585,7 +585,7 @@
                 "https://github.com/theosorus/VisualiseCellularAutomata3DLibrary",
                 "none"
             ],
-            "image": "./projects/noise1.png",
+            "image": "./projects/noise1.webp",
             "categories": [
                 "Personal",
                 "Simulations"
@@ -648,7 +648,7 @@
                 "https://github.com/theosorus/GymWalker",
                 "none"
             ],
-            "image": "./projects/gym.png",
+            "image": "./projects/gym.webp",
             "categories": [
                 "Personal",
                 "AI",
@@ -683,7 +683,7 @@
                 "https://github.com/theosorus/TradeFormer",
                 "none"
             ],
-            "image": "./projects/tradeformer.png",
+            "image": "./projects/tradeformer.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -712,7 +712,7 @@
                 "https://github.com/theosorus/DiffusionModel",
                 "none"
             ],
-            "image": "./projects/diffusion.png",
+            "image": "./projects/diffusion.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -746,7 +746,7 @@
                 "https://github.com/theosorus/Votator",
                 "none"
             ],
-            "image": "./projects/votator.png",
+            "image": "./projects/votator.webp",
             "categories": [
                 "School",
                 "Web"
@@ -775,7 +775,7 @@
                 "https://github.com/theosorus/Particles-Simulation",
                 "none"
             ],
-            "image": "./projects/particle.png",
+            "image": "./projects/particle.webp",
             "categories": [
                 "Personal",
                 "Simulations"
@@ -809,7 +809,7 @@
                 "https://github.com/theosorus/CarPlateDetection",
                 "none"
             ],
-            "image": "./projects/car.png",
+            "image": "./projects/car.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -838,7 +838,7 @@
                 "none",
                 "none"
             ],
-            "image": "./projects/graph.png",
+            "image": "./projects/graph.webp",
             "categories": [
                 "School",
                 "Simulations",
@@ -868,7 +868,7 @@
                 "https://github.com/theosorus/MotivAI",
                 "none"
             ],
-            "image": "./projects/motivai.png",
+            "image": "./projects/motivai.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -897,7 +897,7 @@
                 "https://github.com/theosorus/Procedural-Generation",
                 "https://theosorus.github.io/Procedural-Generation/"
             ],
-            "image": "./projects/pg.png",
+            "image": "./projects/pg.webp",
             "categories": [
                 "Personal",
                 "Web"
@@ -959,7 +959,7 @@
                 "https://github.com/theosorus/MySuperHoroscope",
                 "none"
             ],
-            "image": "./projects/msh.png",
+            "image": "./projects/msh.webp",
             "categories": [
                 "Personal",
                 "Web"
@@ -1027,7 +1027,7 @@
                 "https://github.com/theosorus/Variational-Autoencoders",
                 "none"
             ],
-            "image": "./projects/VAE.png",
+            "image": "./projects/VAE.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -1090,7 +1090,7 @@
                 "https://github.com/theosorus/Snake-Ai",
                 "none"
             ],
-            "image": "./projects/snake.png",
+            "image": "./projects/snake.webp",
             "categories": [
                 "Personal",
                 "AI",
@@ -1125,7 +1125,7 @@
                 "https://github.com/theosorus/Connect4_AI",
                 "none"
             ],
-            "image": "./projects/connect4.png",
+            "image": "./projects/connect4.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -1173,7 +1173,7 @@
                 "https://github.com/theosorus/IA-Towa",
                 "none"
             ],
-            "image": "./projects/TOWA.png",
+            "image": "./projects/TOWA.webp",
             "categories": [
                 "School",
                 "AI"
