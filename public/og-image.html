@@ -3,104 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        @font-face {
+            font-family: 'Domine';
+            src: url('./fonts/domine/Domine-VariableFont_wght.ttf') format('truetype');
+            font-weight: 400 700;
+        }
+
+        @font-face {
+            font-family: 'JetBrains Mono';
+            src: url('./fonts/jetbrains-mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+            font-weight: 100 800;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             width: 1200px;
             height: 630px;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+            background: #03224C;
             position: relative;
             overflow: hidden;
         }
-        
-        .container {
-            width: 90%;
-            height: 90%;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 60px;
-            box-sizing: border-box;
+
+        .glow {
+            position: absolute;
+            top: -260px;
+            right: -220px;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(167, 139, 250, 0.16) 0%, rgba(167, 139, 250, 0) 70%);
+        }
+
+        .content {
+            position: relative;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 90px 100px;
         }
-        
-        .name {
-            font-size: 72px;
-            font-weight: bold;
-            color: #2563eb;
-            margin-bottom: 20px;
-            line-height: 1.1;
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            font-size: 18px;
+            color: #B8C4DA;
+            padding: 8px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.03);
+            margin-bottom: 32px;
         }
-        
-        .title {
-            font-size: 36px;
-            color: #1e40af;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-        
-        .description {
-            font-size: 28px;
-            color: #374151;
-            line-height: 1.4;
-            margin-bottom: 40px;
-        }
-        
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .skill {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 25px;
-            font-size: 20px;
-            font-weight: 500;
-        }
-        
-        .decoration {
-            position: absolute;
-            width: 200px;
-            height: 200px;
+
+        .badge .dot {
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
+            background: #A78BFA;
         }
-        
-        .decoration:nth-child(1) {
-            top: -100px;
-            right: -100px;
+
+        .name {
+            font-family: 'Domine', serif;
+            font-size: 104px;
+            color: #F1F3F8;
+            line-height: 1.05;
+            margin-bottom: 28px;
         }
-        
-        .decoration:nth-child(2) {
-            bottom: -100px;
-            left: -100px;
+
+        .role {
+            font-size: 26px;
+            color: #B8C4DA;
+        }
+
+        .role .sep {
+            color: #6F82A0;
+            margin: 0 14px;
+        }
+
+        .rule {
+            width: 90px;
+            height: 2px;
+            background: #A78BFA;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+
+        .url {
+            position: absolute;
+            bottom: 48px;
+            right: 100px;
+            font-size: 18px;
+            color: #6F82A0;
         }
     </style>
 </head>
 <body>
-    <div class="decoration"></div>
-    <div class="decoration"></div>
-    
-    <div class="container">
+    <div class="glow"></div>
+    <div class="content">
+        <div class="badge"><span class="dot"></span>Toulouse / Bordeaux, France</div>
         <div class="name">Théo Castillo</div>
-        <div class="title">AI & Computer Science Student</div>
-        <div class="description">Passionate about Machine Learning, Deep Learning & Neural Networks</div>
-        <div class="skills">
-            <div class="skill">AI/ML</div>
-            <div class="skill">PyTorch</div>
-            <div class="skill">Computer Vision</div>
-            <div class="skill">React</div>
-            <div class="skill">Python</div>
-        </div>
+        <div class="rule"></div>
+        <div class="role">Computer Science Engineer @ ENSEEIHT<span class="sep">|</span>AI/ML Engineer @ CNES</div>
     </div>
+    <div class="url">tcastillo.me</div>
 </body>
 </html>
