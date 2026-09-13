@@ -16,6 +16,8 @@ export default defineConfig(() => {
         input: {
           main: 'index.html',
           mentionsLegales: 'mentions-legales.html',
+          frMain: 'fr/index.html',
+          frMentionsLegales: 'fr/mentions-legales.html',
         },
       },
     },

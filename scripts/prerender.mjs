@@ -10,11 +10,15 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const { renderHome, renderLegal } = await import(resolve(root, 'dist-ssr/entry-server.js'));
+const { renderHome, renderLegal, renderHomeFr, renderLegalFr } = await import(
+  resolve(root, 'dist-ssr/entry-server.js')
+);
 
 const pages = [
   ['dist/index.html', renderHome],
   ['dist/mentions-legales.html', renderLegal],
+  ['dist/fr/index.html', renderHomeFr],
+  ['dist/fr/mentions-legales.html', renderLegalFr],
 ];
 
 const marker = '<div id="root"></div>';

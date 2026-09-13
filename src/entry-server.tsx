@@ -12,10 +12,11 @@ import global_fr from './translations/fr/global.json';
  * receive the real content instead of an empty <div id="root">.
  *
  * Mirrors main.tsx / main-legal.tsx but touches no browser API: no
- * localStorage, so the language is the same 'en' default the client starts
- * from. The client still mounts with createRoot and replaces this markup,
- * which is why there is no hydration contract to honour here and why a
- * visitor sees exactly what they saw before.
+ * localStorage, so each render function sets its own language explicitly
+ * instead of relying on a stored preference. The client still mounts with
+ * createRoot and replaces this markup, which is why there is no hydration
+ * contract to honour here and why a visitor sees exactly what they saw
+ * before.
  */
 let initialized = false;
 function ensureI18n(): void {
@@ -33,6 +34,7 @@ function ensureI18n(): void {
 
 export function renderHome(): string {
   ensureI18n();
+  i18next.changeLanguage('en');
   return renderToStaticMarkup(
     <I18nextProvider i18n={i18next}>
       <App />
@@ -42,6 +44,27 @@ export function renderHome(): string {
 
 export function renderLegal(): string {
   ensureI18n();
+  i18next.changeLanguage('en');
+  return renderToStaticMarkup(
+    <I18nextProvider i18n={i18next}>
+      <MentionsLegales />
+    </I18nextProvider>,
+  );
+}
+
+export function renderHomeFr(): string {
+  ensureI18n();
+  i18next.changeLanguage('fr');
+  return renderToStaticMarkup(
+    <I18nextProvider i18n={i18next}>
+      <App />
+    </I18nextProvider>,
+  );
+}
+
+export function renderLegalFr(): string {
+  ensureI18n();
+  i18next.changeLanguage('fr');
   return renderToStaticMarkup(
     <I18nextProvider i18n={i18next}>
       <MentionsLegales />

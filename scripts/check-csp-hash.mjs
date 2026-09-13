@@ -38,7 +38,7 @@ if (!declaredHashMatch) {
 }
 const declaredHash = declaredHashMatch[0].slice(1, -1);
 
-for (const file of ['index.html', 'mentions-legales.html']) {
+for (const file of ['index.html', 'mentions-legales.html', 'fr/index.html', 'fr/mentions-legales.html']) {
   const html = await readFile(resolve(root, file), 'utf-8');
   const inline = extractInlineScript(html);
   if (!inline) {

@@ -4,6 +4,8 @@ import Footer from './Footer';
 const MentionsLegales = () => {
   const [t, i18n] = useTranslation('global');
   const currentLang = i18n.language?.startsWith('fr') ? 'fr' : 'en';
+  const homeHref =
+    typeof window !== 'undefined' && window.location.pathname.startsWith('/fr/') ? '/fr/' : '/';
 
   const sections: Array<{ heading: string; body: string; note?: string }> = [
     {
@@ -33,7 +35,7 @@ const MentionsLegales = () => {
     <>
       <nav className="fixed top-0 left-0 w-full h-14 flex items-center justify-between px-4 sm:px-6 z-50 bg-bg/85 backdrop-blur-md border-b border-white/[0.08]">
         <a
-          href="/"
+          href={homeHref}
           className="text-sm sm:text-base md:text-lg text-fg hover:text-accent transition-colors truncate min-w-0"
           style={{ fontFamily: 'var(--font-domine)' }}
         >
@@ -44,7 +46,7 @@ const MentionsLegales = () => {
           className="flex items-center gap-3 text-xs"
           style={{ fontFamily: 'var(--font-mono)' }}
         >
-          <a href="/" className="text-fg-muted hover:text-accent transition-colors">
+          <a href={homeHref} className="text-fg-muted hover:text-accent transition-colors">
             {t('legal_notice.back_link')}
           </a>
           <span className="text-fg-dim">|</span>

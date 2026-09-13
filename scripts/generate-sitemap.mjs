@@ -10,6 +10,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const pages = [
   { loc: 'https://tcastillo.me/', changefreq: 'monthly', priority: '1.0' },
   { loc: 'https://tcastillo.me/mentions-legales.html', changefreq: 'yearly', priority: '0.1' },
+  { loc: 'https://tcastillo.me/fr/', changefreq: 'monthly', priority: '1.0' },
+  { loc: 'https://tcastillo.me/fr/mentions-legales.html', changefreq: 'yearly', priority: '0.1' },
 ];
 
 const today = new Date().toISOString().slice(0, 10);

@@ -3,6 +3,10 @@ import { useTranslation } from 'react-i18next';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [t] = useTranslation('global');
+  const legalNoticeHref =
+    typeof window !== 'undefined' && window.location.pathname.startsWith('/fr/')
+      ? '/fr/mentions-legales.html'
+      : '/mentions-legales.html';
 
   const shuffle = <T,>(array: T[]): T[] => {
     const out = [...array];
@@ -36,7 +40,7 @@ const Footer = () => {
             <span>Théo Castillo · {currentYear}</span>
             <span className="text-fg-dim">·</span>
             <a
-              href="/mentions-legales.html"
+              href={legalNoticeHref}
               className="text-fg-dim hover:text-accent transition-colors"
             >
               {t('footer.legal_notice_link')}
