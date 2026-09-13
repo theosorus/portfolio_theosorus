@@ -240,7 +240,7 @@
         },
         "td-factory-harness": {
             "title": "TouchDesigner Factory Harness",
-            "description": "Two AI agents that turn a text prompt into a working TouchDesigner project — one plans, one builds over MCP, both verified automatically against real quality gates."
+            "description": "A two-agent harness that turns a text prompt into a working TouchDesigner project, verified automatically over MCP against real quality gates."
         }
     },
     "legal_notice": {
@@ -248,18 +248,18 @@
         "back_link": "← Back to the portfolio",
         "editor_heading": "Site editor",
         "editor_body": "This site is edited by Théo Castillo, as a personal, non-commercial project. Contact: theocastillo@yahoo.com.",
-        "editor_note": "Under Article 6-III of French law n° 2004-575 (LCEN), a private individual not acting in a professional capacity may withhold their address from public disclosure, provided it has been communicated to the hosting provider — which is the case here.",
+        "editor_note": "Under Article 6-III of French law n° 2004-575 (LCEN), a private individual not acting in a professional capacity may withhold their address from public disclosure, provided it has been communicated to the hosting provider, which is the case here.",
         "director_heading": "Publication director",
         "director_body": "Théo Castillo.",
         "hosting_heading": "Hosting",
-        "hosting_body": "This site is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA — vercel.com.",
+        "hosting_body": "This site is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA (vercel.com).",
         "domain_heading": "Domain name",
         "domain_body": "tcastillo.me, registered with NameCheap, Inc.",
         "processors_heading": "Third-party services",
         "processors_intro": "This site relies on the following third-party services, which may process personal data such as IP addresses:",
-        "processor_gtm": "Google Tag Manager / Google Analytics — Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, D04 E5W5, Ireland.",
-        "processor_vercel": "Vercel Analytics — Vercel Inc. (address above).",
-        "processor_cloudflare": "Cloudflare Workers, used to fetch each project's GitHub star count — Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA.",
+        "processor_gtm": "Google Tag Manager / Google Analytics: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, D04 E5W5, Ireland.",
+        "processor_vercel": "Vercel Analytics: Vercel Inc. (address above).",
+        "processor_cloudflare": "Cloudflare Workers, used to fetch each project's GitHub star count: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA.",
         "ip_heading": "Intellectual property",
         "ip_body": "The content of this site (text, project descriptions, visuals) belongs to Théo Castillo unless stated otherwise. Third-party technology logos shown as project tags are trademarks of their respective owners, used for illustration only."
     }

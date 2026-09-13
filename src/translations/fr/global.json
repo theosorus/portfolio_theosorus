@@ -240,7 +240,7 @@
         },
         "td-factory-harness": {
             "title": "TouchDesigner Factory Harness",
-            "description": "Deux agents IA qui transforment une phrase en projet TouchDesigner fonctionnel : l'un planifie, l'autre construit via MCP, le tout vérifié automatiquement par des critères de qualité réels."
+            "description": "Un harnais à deux agents qui transforme une phrase en projet TouchDesigner fonctionnel, vérifié automatiquement via MCP par des critères de qualité réels."
         }
     },
     "legal_notice": {
@@ -248,18 +248,18 @@
         "back_link": "← Retour au portfolio",
         "editor_heading": "Éditeur du site",
         "editor_body": "Ce site est édité par Théo Castillo, dans le cadre d'un projet personnel et non commercial. Contact : theocastillo@yahoo.com.",
-        "editor_note": "Conformément à l'article 6-III de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), une personne physique n'agissant pas à titre professionnel peut ne pas rendre son adresse publique, à condition de l'avoir communiquée à son hébergeur — ce qui est le cas ici.",
+        "editor_note": "Conformément à l'article 6-III de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), une personne physique n'agissant pas à titre professionnel peut ne pas rendre son adresse publique, à condition de l'avoir communiquée à son hébergeur, ce qui est le cas ici.",
         "director_heading": "Directeur de la publication",
         "director_body": "Théo Castillo.",
         "hosting_heading": "Hébergement",
-        "hosting_body": "Ce site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com.",
+        "hosting_body": "Ce site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (vercel.com).",
         "domain_heading": "Nom de domaine",
         "domain_body": "tcastillo.me, enregistré auprès de NameCheap, Inc.",
         "processors_heading": "Services tiers",
         "processors_intro": "Ce site fait appel aux services tiers suivants, susceptibles de traiter des données personnelles telles que l'adresse IP :",
-        "processor_gtm": "Google Tag Manager / Google Analytics — Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, D04 E5W5, Irlande.",
-        "processor_vercel": "Vercel Analytics — Vercel Inc. (adresse ci-dessus).",
-        "processor_cloudflare": "Cloudflare Workers, utilisé pour récupérer le nombre d'étoiles GitHub de chaque projet — Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis.",
+        "processor_gtm": "Google Tag Manager / Google Analytics : Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, D04 E5W5, Irlande.",
+        "processor_vercel": "Vercel Analytics : Vercel Inc. (adresse ci-dessus).",
+        "processor_cloudflare": "Cloudflare Workers, utilisé pour récupérer le nombre d'étoiles GitHub de chaque projet : Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis.",
         "ip_heading": "Propriété intellectuelle",
         "ip_body": "Les contenus de ce site (textes, descriptions de projets, visuels) sont la propriété de Théo Castillo, sauf mention contraire. Les logos de technologies affichés comme tags de projets sont des marques déposées de leurs propriétaires respectifs, utilisés à titre illustratif uniquement."
     }
