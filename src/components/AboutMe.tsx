@@ -89,7 +89,7 @@ const AboutMe = () => {
           <div className="lg:col-span-1 flex">
             <div className="bg-white/[0.04] border border-white/[0.10] rounded-xl p-5 sm:p-6 space-y-5 flex-1 flex flex-col">
               <img
-                src="./island.jpeg"
+                src="/island.jpeg"
                 alt="Théo Castillo"
                 className="w-full aspect-square object-cover rounded-lg border border-white/[0.10]"
                 loading="lazy"

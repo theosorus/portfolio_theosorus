@@ -5,7 +5,7 @@
             "date": 2026,
             "type": "Personal Project",
             "title": "TouchDesigner Factory Harness",
-            "description": "Two AI agents that turn a text prompt into a working TouchDesigner project — one plans, one builds over MCP, both verified automatically against real quality gates.",
+            "description": "A two-agent harness that turns a text prompt into a working TouchDesigner project, verified automatically over MCP against real quality gates.",
             "tags": [
                 {
                     "name": "TouchDesigner",
@@ -15,23 +15,23 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "MCP",
                     "url": "",
-                    "image": "./skills/mcp.png"
+                    "image": "/skills/mcp.png"
                 },
                 {
                     "name": "GLSL",
                     "url": "",
-                    "image": "./skills/opengl.png"
+                    "image": "/skills/opengl.png"
                 }
             ],
             "links": [
                 "https://github.com/theosorus/touchdesigner-factory-harness"
             ],
-            "image": "./projects/td-factory-harness.jpg",
+            "image": "/projects/td-factory-harness.jpg",
             "categories": [
                 "Personal",
                 "AI",
@@ -48,27 +48,27 @@
                 {
                     "name": "Docker",
                     "url": "https://www.docker.com/",
-                    "image": "./skills/docker.png"
+                    "image": "/skills/docker.png"
                 },
                 {
                     "name": "TypeScript",
                     "url": "https://www.typescriptlang.org/",
-                    "image": "./skills/ts.png"
+                    "image": "/skills/ts.png"
                 },
                 {
                     "name": "Node.js",
                     "url": "https://nodejs.org/",
-                    "image": "./skills/nodejs.png"
+                    "image": "/skills/nodejs.png"
                 },
                 {
                     "name": "PostgreSQL",
                     "url": "https://www.postgresql.org/",
-                    "image": "./skills/Postgresql.png"
+                    "image": "/skills/Postgresql.png"
                 },
                 {
                     "name": "React",
                     "url": "https://react.dev/",
-                    "image": "./skills/react.png"
+                    "image": "/skills/react.png"
                 },
                 {
                     "name": "Caddy",
@@ -79,7 +79,7 @@
             "links": [
                 "https://github.com/theosorus/nanodeploy"
             ],
-            "image": "./projects/nanodeploy.webp",
+            "image": "/projects/nanodeploy.webp",
             "categories": [
                 "Personal",
                 "Web",
@@ -96,32 +96,32 @@
                 {
                     "name": "React",
                     "url": "https://react.dev/",
-                    "image": "./skills/react.png"
+                    "image": "/skills/react.png"
                 },
                 {
                     "name": "TypeScript",
                     "url": "https://www.typescriptlang.org/",
-                    "image": "./skills/ts.png"
+                    "image": "/skills/ts.png"
                 },
                 {
                     "name": "Tailwind",
                     "url": "https://tailwindcss.com/",
-                    "image": "./skills/Tailwind.png"
+                    "image": "/skills/Tailwind.png"
                 },
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "FastAPI",
                     "url": "",
-                    "image": "./skills/fastapi.png"
+                    "image": "/skills/fastapi.png"
                 },
                 {
                     "name": "MCP",
                     "url": "",
-                    "image": "./skills/mcp.png"
+                    "image": "/skills/mcp.png"
                 }
             ],
             "links": [
@@ -129,7 +129,7 @@
                 "https://github.com/theosorus/QuelImpact",
                 "https://quelimpact.tcastillo.me"
             ],
-            "image": "./projects/hackaton-an.jpeg",
+            "image": "/projects/hackaton-an.jpeg",
             "categories": [
                 "Personal",
                 "AI",
@@ -146,27 +146,27 @@
                 {
                     "name": "Python",
                     "url": "",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 },
                 {
                     "name": "Yolo",
                     "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
-                    "image": "./skills/yolo.png"
+                    "image": "/skills/yolo.png"
                 },
                 {
                     "name": "OpenCv",
                     "url": "https://opencv.org/",
-                    "image": "./skills/opencv.png"
+                    "image": "/skills/opencv.png"
                 },
                 {
                     "name": "FastAPI",
                     "url": "",
-                    "image": "./skills/fastapi.png"
+                    "image": "/skills/fastapi.png"
                 }
             ],
             "links": [
@@ -174,7 +174,7 @@
                 "https://github.com/VeridisQuo-orga/VeridisQuo",
                 "none"
             ],
-            "image": "./projects/veridisquo3.webp",
+            "image": "/projects/veridisquo3.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -190,22 +190,22 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "Yolo",
                     "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
-                    "image": "./skills/yolo.png"
+                    "image": "/skills/yolo.png"
                 },
                 {
                     "name": "c#",
                     "url": "https://learn.microsoft.com/en-us/dotnet/csharp/",
-                    "image": "./skills/csharp.png"
+                    "image": "/skills/csharp.png"
                 },
                 {
                     "name": "Unity",
                     "url": "https://unity.com/",
-                    "image": "./skills/unity.png"
+                    "image": "/skills/unity.png"
                 }
             ],
             "links": [
@@ -213,7 +213,7 @@
                 "https://github.com/theosorus/Argus",
                 "none"
             ],
-            "image": "./projects/argus3.webp",
+            "image": "/projects/argus3.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -229,17 +229,17 @@
                 {
                     "name": "Haskell",
                     "url": "https://www.haskell.org/",
-                    "image": "./skills/hs.png"
+                    "image": "/skills/hs.png"
                 },
                 {
                     "name": "Hasktorch",
                     "url": "http://hasktorch.org/",
-                    "image": "./skills/hasktorch.png"
+                    "image": "/skills/hasktorch.png"
                 },
                 {
                     "name": "Docker",
                     "url": "https://www.docker.com/",
-                    "image": "./skills/docker.png"
+                    "image": "/skills/docker.png"
                 }
             ],
             "links": [
@@ -247,7 +247,7 @@
                 "https://github.com/theosorus/GPT2-Hasktorch",
                 "none"
             ],
-            "image": "./projects/HaskGPT.webp",
+            "image": "/projects/HaskGPT.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -263,22 +263,22 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "Yolo",
                     "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
-                    "image": "./skills/yolo.png"
+                    "image": "/skills/yolo.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 },
                 {
                     "name": "OpenCv",
                     "url": "https://opencv.org/",
-                    "image": "./skills/opencv.png"
+                    "image": "/skills/opencv.png"
                 }
             ],
             "links": [
@@ -286,7 +286,7 @@
                 "none",
                 "none"
             ],
-            "image": "./projects/customCNN.webp",
+            "image": "/projects/customCNN.webp",
             "categories": [
                 "School",
                 "AI"
@@ -302,32 +302,32 @@
                 {
                     "name": "MCP",
                     "url": "",
-                    "image": "./skills/mcp.png"
+                    "image": "/skills/mcp.png"
                 },
                 {
                     "name": "Python",
                     "url": "",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "TypeScript",
                     "url": "",
-                    "image": "./skills/ts.png"
+                    "image": "/skills/ts.png"
                 },
                 {
                     "name": "js",
                     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-                    "image": "./skills/js.png"
+                    "image": "/skills/js.png"
                 },
                 {
                     "name": "React",
                     "url": "",
-                    "image": "./skills/react.png"
+                    "image": "/skills/react.png"
                 },
                 {
                     "name": "Express",
                     "url": "",
-                    "image": "./skills/express.png"
+                    "image": "/skills/express.png"
                 }
             ],
             "links": [
@@ -335,7 +335,7 @@
                 "https://github.com/theosorus/MCP-Drawing",
                 "none"
             ],
-            "image": "./projects/mcp2.webp",
+            "image": "/projects/mcp2.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -351,23 +351,23 @@
                 {
                     "name": "Terraform",
                     "url": "",
-                    "image": "./skills/terraform.png"
+                    "image": "/skills/terraform.png"
                 },
                 {
                     "name": "Docker",
                     "url": "https://www.docker.com/",
-                    "image": "./skills/docker.png"
+                    "image": "/skills/docker.png"
                 },
                 {
                     "name": "MCP",
                     "url": "",
-                    "image": "./skills/mcp.png"
+                    "image": "/skills/mcp.png"
                 }
             ],
             "links": [
                 "none"
             ],
-            "image": "./projects/mcp-terraform.webp",
+            "image": "/projects/mcp-terraform.webp",
             "categories": [
                 "School",
                 "AI"
@@ -383,27 +383,27 @@
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 },
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "React",
                     "url": "https://react.dev/",
-                    "image": "./skills/react.png"
+                    "image": "/skills/react.png"
                 },
                 {
                     "name": "Three.js",
                     "url": "",
-                    "image": "./skills/threejs.png"
+                    "image": "/skills/threejs.png"
                 },
                 {
                     "name": "FastAPI",
                     "url": "",
-                    "image": "./skills/fastapi.png"
+                    "image": "/skills/fastapi.png"
                 }
             ],
             "links": [
@@ -411,7 +411,7 @@
                 "https://github.com/theosorus/deep-rubiks",
                 "none"
             ],
-            "image": "./projects/rubiks2.webp",
+            "image": "/projects/rubiks2.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -427,12 +427,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "Yolo",
                     "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
-                    "image": "./skills/yolo.png"
+                    "image": "/skills/yolo.png"
                 }
             ],
             "links": [
@@ -440,7 +440,7 @@
                 "https://github.com/theosorus/FormulaTracker",
                 "none"
             ],
-            "image": "./projects/formula_tracker.webp",
+            "image": "/projects/formula_tracker.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -456,12 +456,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 }
             ],
             "links": [
@@ -469,7 +469,7 @@
                 "https://github.com/theosorus/French-Language-Model",
                 "none"
             ],
-            "image": "./projects/llm.webp",
+            "image": "/projects/llm.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -485,12 +485,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "Numpy",
                     "url": "https://numpy.org/",
-                    "image": "./skills/numpy.png"
+                    "image": "/skills/numpy.png"
                 }
             ],
             "links": [
@@ -498,7 +498,7 @@
                 "https://github.com/theosorus/NeuralNetworkLibrary",
                 "none"
             ],
-            "image": "./projects/nn.webp",
+            "image": "/projects/nn.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -514,12 +514,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 }
             ],
             "links": [
@@ -527,7 +527,7 @@
                 "https://github.com/theosorus/NeuralStyleTransfert",
                 "none"
             ],
-            "image": "./projects/nst.webp",
+            "image": "/projects/nst.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -543,12 +543,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 }
             ],
             "links": [
@@ -556,7 +556,7 @@
                 "https://github.com/theosorus/Generative-Adversial-Network",
                 "none"
             ],
-            "image": "./projects/gan2.webp",
+            "image": "/projects/gan2.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -572,12 +572,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "OpenGL",
                     "url": "https://www.opengl.org/",
-                    "image": "./skills/opengl.png"
+                    "image": "/skills/opengl.png"
                 }
             ],
             "links": [
@@ -585,7 +585,7 @@
                 "https://github.com/theosorus/VisualiseCellularAutomata3DLibrary",
                 "none"
             ],
-            "image": "./projects/noise1.webp",
+            "image": "/projects/noise1.webp",
             "categories": [
                 "Personal",
                 "Simulations"
@@ -601,12 +601,12 @@
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 },
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 }
             ],
             "links": [
@@ -614,7 +614,7 @@
                 "https://github.com/theosorus/MusicGenerationTransformer",
                 "none"
             ],
-            "image": "./projects/transformer.webp",
+            "image": "/projects/transformer.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -630,17 +630,17 @@
                 {
                     "name": "Gymnasium",
                     "url": "https://gymnasium.farama.org/",
-                    "image": "./skills/gym.svg"
+                    "image": "/skills/gym.svg"
                 },
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 }
             ],
             "links": [
@@ -648,7 +648,7 @@
                 "https://github.com/theosorus/GymWalker",
                 "none"
             ],
-            "image": "./projects/gym.webp",
+            "image": "/projects/gym.webp",
             "categories": [
                 "Personal",
                 "AI",
@@ -665,12 +665,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 },
                 {
                     "name": "Alpaca",
@@ -683,7 +683,7 @@
                 "https://github.com/theosorus/TradeFormer",
                 "none"
             ],
-            "image": "./projects/tradeformer.webp",
+            "image": "/projects/tradeformer.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -699,12 +699,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 }
             ],
             "links": [
@@ -712,7 +712,7 @@
                 "https://github.com/theosorus/DiffusionModel",
                 "none"
             ],
-            "image": "./projects/diffusion.webp",
+            "image": "/projects/diffusion.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -728,17 +728,17 @@
                 {
                     "name": "React",
                     "url": "https://react.dev/",
-                    "image": "./skills/react.png"
+                    "image": "/skills/react.png"
                 },
                 {
                     "name": "Tailwind",
                     "url": "https://tailwindcss.com/",
-                    "image": "./skills/Tailwind.png"
+                    "image": "/skills/Tailwind.png"
                 },
                 {
                     "name": "TypeScript",
                     "url": "https://www.typescriptlang.org/",
-                    "image": "./skills/ts.png"
+                    "image": "/skills/ts.png"
                 }
             ],
             "links": [
@@ -746,7 +746,7 @@
                 "https://github.com/theosorus/Votator",
                 "none"
             ],
-            "image": "./projects/votator.webp",
+            "image": "/projects/votator.webp",
             "categories": [
                 "School",
                 "Web"
@@ -762,12 +762,12 @@
                 {
                     "name": "C++",
                     "url": "https://isocpp.org/",
-                    "image": "./skills/cpp.png"
+                    "image": "/skills/cpp.png"
                 },
                 {
                     "name": "SFML",
                     "url": "https://www.sfml-dev.org/",
-                    "image": "./skills/sfml.png"
+                    "image": "/skills/sfml.png"
                 }
             ],
             "links": [
@@ -775,7 +775,7 @@
                 "https://github.com/theosorus/Particles-Simulation",
                 "none"
             ],
-            "image": "./projects/particle.webp",
+            "image": "/projects/particle.webp",
             "categories": [
                 "Personal",
                 "Simulations"
@@ -791,17 +791,17 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "Yolo",
                     "url": "https://docs.ultralytics.com/fr/models/yolo-world/",
-                    "image": "./skills/yolo.png"
+                    "image": "/skills/yolo.png"
                 },
                 {
                     "name": "OpenCv",
                     "url": "https://opencv.org/",
-                    "image": "./skills/opencv.png"
+                    "image": "/skills/opencv.png"
                 }
             ],
             "links": [
@@ -809,7 +809,7 @@
                 "https://github.com/theosorus/CarPlateDetection",
                 "none"
             ],
-            "image": "./projects/car.webp",
+            "image": "/projects/car.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -825,12 +825,12 @@
                 {
                     "name": "Java",
                     "url": "https://www.java.com/",
-                    "image": "./skills/java.webp"
+                    "image": "/skills/java.webp"
                 },
                 {
                     "name": "JavaFX",
                     "url": "https://openjfx.io/",
-                    "image": "./skills/Javafx.svg"
+                    "image": "/skills/Javafx.svg"
                 }
             ],
             "links": [
@@ -838,7 +838,7 @@
                 "none",
                 "none"
             ],
-            "image": "./projects/graph.webp",
+            "image": "/projects/graph.webp",
             "categories": [
                 "School",
                 "Simulations",
@@ -855,12 +855,12 @@
                 {
                     "name": "Langchain",
                     "url": "https://python.langchain.com/",
-                    "image": "./skills/langchain.png"
+                    "image": "/skills/langchain.png"
                 },
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 }
             ],
             "links": [
@@ -868,7 +868,7 @@
                 "https://github.com/theosorus/MotivAI",
                 "none"
             ],
-            "image": "./projects/motivai.webp",
+            "image": "/projects/motivai.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -884,12 +884,12 @@
                 {
                     "name": "js",
                     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-                    "image": "./skills/js.png"
+                    "image": "/skills/js.png"
                 },
                 {
                     "name": "P5.js",
                     "url": "https://p5js.org/",
-                    "image": "./skills/P5.png"
+                    "image": "/skills/P5.png"
                 }
             ],
             "links": [
@@ -897,7 +897,7 @@
                 "https://github.com/theosorus/Procedural-Generation",
                 "https://theosorus.github.io/Procedural-Generation/"
             ],
-            "image": "./projects/pg.webp",
+            "image": "/projects/pg.webp",
             "categories": [
                 "Personal",
                 "Web"
@@ -913,12 +913,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "Pygame",
                     "url": "https://www.pygame.org/",
-                    "image": "./skills/pygame.png"
+                    "image": "/skills/pygame.png"
                 }
             ],
             "links": [
@@ -926,7 +926,7 @@
                 "https://github.com/theosorus/Generating-and-Solving-Mazes",
                 "none"
             ],
-            "image": "./projects/maze2.png",
+            "image": "/projects/maze2.png",
             "categories": [
                 "Personal"
             ]
@@ -941,17 +941,17 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "Django",
                     "url": "https://www.djangoproject.com/",
-                    "image": "./skills/django.png"
+                    "image": "/skills/django.png"
                 },
                 {
                     "name": "AWS",
                     "url": "https://aws.amazon.com/",
-                    "image": "./skills/aws.png"
+                    "image": "/skills/aws.png"
                 }
             ],
             "links": [
@@ -959,7 +959,7 @@
                 "https://github.com/theosorus/MySuperHoroscope",
                 "none"
             ],
-            "image": "./projects/msh.webp",
+            "image": "/projects/msh.webp",
             "categories": [
                 "Personal",
                 "Web"
@@ -975,22 +975,22 @@
                 {
                     "name": "Symfony",
                     "url": "https://symfony.com/",
-                    "image": "./skills/symfony.png"
+                    "image": "/skills/symfony.png"
                 },
                 {
                     "name": "Php",
                     "url": "https://www.php.net/",
-                    "image": "./skills/php.png"
+                    "image": "/skills/php.png"
                 },
                 {
                     "name": "Tailwind",
                     "url": "https://tailwindcss.com/",
-                    "image": "./skills/Tailwind.png"
+                    "image": "/skills/Tailwind.png"
                 },
                 {
                     "name": "Twig",
                     "url": "https://twig.symfony.com/",
-                    "image": "./skills/twig.png"
+                    "image": "/skills/twig.png"
                 }
             ],
             "links": [
@@ -998,7 +998,7 @@
                 "none",
                 "none"
             ],
-            "image": "./projects/robocup_manager.webp",
+            "image": "/projects/robocup_manager.webp",
             "categories": [
                 "School",
                 "Web"
@@ -1014,12 +1014,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 }
             ],
             "links": [
@@ -1027,7 +1027,7 @@
                 "https://github.com/theosorus/Variational-Autoencoders",
                 "none"
             ],
-            "image": "./projects/VAE.webp",
+            "image": "/projects/VAE.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -1043,12 +1043,12 @@
                 {
                     "name": "Java",
                     "url": "https://www.java.com/",
-                    "image": "./skills/java.webp"
+                    "image": "/skills/java.webp"
                 },
                 {
                     "name": "JavaFX",
                     "url": "https://openjfx.io/",
-                    "image": "./skills/Javafx.svg"
+                    "image": "/skills/Javafx.svg"
                 }
             ],
             "links": [
@@ -1056,7 +1056,7 @@
                 "none",
                 "none"
             ],
-            "image": "./projects/lab.jpg",
+            "image": "/projects/lab.jpg",
             "categories": [
                 "School",
                 "Simulations"
@@ -1072,17 +1072,17 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "Pygame",
                     "url": "https://www.pygame.org/",
-                    "image": "./skills/pygame.png"
+                    "image": "/skills/pygame.png"
                 },
                 {
                     "name": "PyTorch",
                     "url": "https://pytorch.org/",
-                    "image": "./skills/pytorch.png"
+                    "image": "/skills/pytorch.png"
                 }
             ],
             "links": [
@@ -1090,7 +1090,7 @@
                 "https://github.com/theosorus/Snake-Ai",
                 "none"
             ],
-            "image": "./projects/snake.webp",
+            "image": "/projects/snake.webp",
             "categories": [
                 "Personal",
                 "AI",
@@ -1107,12 +1107,12 @@
                 {
                     "name": "Python",
                     "url": "https://www.python.org/",
-                    "image": "./skills/python.png"
+                    "image": "/skills/python.png"
                 },
                 {
                     "name": "Pygame",
                     "url": "https://www.pygame.org/",
-                    "image": "./skills/pygame.png"
+                    "image": "/skills/pygame.png"
                 },
                 {
                     "name": "Monte Carlo Tree Search",
@@ -1125,7 +1125,7 @@
                 "https://github.com/theosorus/Connect4_AI",
                 "none"
             ],
-            "image": "./projects/connect4.webp",
+            "image": "/projects/connect4.webp",
             "categories": [
                 "Personal",
                 "AI"
@@ -1141,7 +1141,7 @@
                 {
                     "name": "C",
                     "url": "https://en.cppreference.com/w/",
-                    "image": "./skills/c.png"
+                    "image": "/skills/c.png"
                 }
             ],
             "links": [
@@ -1149,7 +1149,7 @@
                 "none",
                 "none"
             ],
-            "image": "./projects/minishell.png",
+            "image": "/projects/minishell.png",
             "categories": [
                 "School",
                 "Software"
@@ -1165,7 +1165,7 @@
                 {
                     "name": "Java",
                     "url": "https://www.java.com/",
-                    "image": "./skills/java.webp"
+                    "image": "/skills/java.webp"
                 }
             ],
             "links": [
@@ -1173,7 +1173,7 @@
                 "https://github.com/theosorus/IA-Towa",
                 "none"
             ],
-            "image": "./projects/TOWA.webp",
+            "image": "/projects/TOWA.webp",
             "categories": [
                 "School",
                 "AI"

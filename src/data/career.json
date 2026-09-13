@@ -19,7 +19,7 @@
             "company",
             "apprenticeship"
         ],
-        "image": "./career/cnes.png",
+        "image": "/career/cnes.png",
         "location": "CNES (Centre National d'Études Spatiales) - Toulouse, France",
         "location_en": "CNES (French Space Agency) - Toulouse, France",
         "location_fr": "CNES (Centre National d'Études Spatiales) - Toulouse, France",
@@ -42,7 +42,7 @@
         "tags": [
             "university"
         ],
-        "image": "./career/n7.jpg",
+        "image": "/career/n7.jpg",
         "location": "ENSEEIHT (N7) - Toulouse, France",
         "group": "education"
     },
@@ -68,7 +68,7 @@
             "company",
             "apprenticeship"
         ],
-        "image": "./career/wearegenial_logo.jpg",
+        "image": "/career/wearegenial_logo.jpg",
         "location": "Genial - Bordeaux, France",
         "group": "experience"
     },
@@ -89,7 +89,7 @@
         "tags": [
             "company"
         ],
-        "image": "./career/wearegenial_logo.jpg",
+        "image": "/career/wearegenial_logo.jpg",
         "location": "Genial - Bordeaux, France",
         "group": "experience"
     },
@@ -111,7 +111,7 @@
             "university",
             "internship"
         ],
-        "image": "./career/ochanomizu_logo.jpg",
+        "image": "/career/ochanomizu_logo.jpg",
         "location": "Bekki Lab - Ochanomizu University, Japan",
         "report": "/career/tcastillo_ochanomizu_intership_report.pdf",
         "group": "experience"
@@ -135,7 +135,7 @@
         "tags": [
             "university"
         ],
-        "image": "./career/universite_de_bordeaux_logo.jpg",
+        "image": "/career/universite_de_bordeaux_logo.jpg",
         "location": "University of Bordeaux, France",
         "location_en": "University of Bordeaux, France",
         "location_fr": "Université de Bordeaux, France",
